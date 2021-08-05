@@ -1,4 +1,0 @@
-<?php
-// CHANGE THE EMAIL WHERE THE FORM WILL BE DELIVERED HERE
-define("WEBMASTER_EMAIL", 'ccarper03@gmail.com');
-?>
