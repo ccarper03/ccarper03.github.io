@@ -88,7 +88,7 @@ input, select, textarea {
 		font-size: 19pt;
 		font-weight: 300;
 		line-height: 1.75em;
-		color: #888;
+		color: rgb(75, 75, 75);
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2204,6 +2204,10 @@ input, select, textarea {
 
 /* Main */
 
+	.overlay {
+		background-color: rgba(200,100,0,.5); /* Tint color */
+		background-blend-mode: multiply;
+	}
 	#main {
 		margin-left: 375px;
 	}
@@ -2244,6 +2248,7 @@ input, select, textarea {
 				padding: 10em 0;
 				background-size: cover;
 				background-position: center center;
+				
 			}
 
 			#main > section.one {
