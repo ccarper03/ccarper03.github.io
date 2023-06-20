@@ -1,10 +1,3 @@
-/**
-* Template Name: iPortfolio
-* Updated: May 30 2023 with Bootstrap v5.3.0
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 (function() {
   "use strict";
 
@@ -170,7 +163,7 @@
       });
 
       let portfolioFilters = select('#portfolio-flters li', true);
-
+ 
       on('click', '#portfolio-flters li', function(e) {
         e.preventDefault();
         portfolioFilters.forEach(function(el) {
@@ -188,6 +181,11 @@
     }
 
   });
+
+
+  function loadCasestudyFilter() {
+    document.getElementById("filter-casestudy-link").className = "filter-active";
+  }
 
   /**
    * Initiate portfolio lightbox 
