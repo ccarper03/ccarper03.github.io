@@ -316,12 +316,17 @@ h6 {
   #hero h1 {
     font-size: 28px;
     line-height: 36px;
+    margin-left: 20px;
   }
 
   #hero h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
+  }
+
+  #hero p,a{
+    margin-left: 20px;
   }
 }
 
