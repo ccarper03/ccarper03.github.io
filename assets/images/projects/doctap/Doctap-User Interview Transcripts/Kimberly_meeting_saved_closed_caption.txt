@@ -1,0 +1,901 @@
+[Charles Carper] 17:26:41
+Hi, how are you doing?
+
+[kimlupardus] 17:26:43
+Hi, good, how are you?
+
+[Charles Carper] 17:26:45
+Doing good. Shelby is the weird on your mom, Kim.
+
+[Shelby Matthews] 17:26:50
+No, no.
+
+[kimlupardus] 17:26:51
+Okay.
+
+[Charles Carper] 17:26:51
+I appreciate you coming out and helping us.
+
+[kimlupardus] 17:27:05
+Hey, no worries. It actually kind of worked out really well considering I had to use my telehealth app this morning.
+
+[Charles Carper] 17:27:13
+Yeah, that's what Shelby was saying.
+
+[kimlupardus] 17:27:15
+Yeah, I've had a sore throat for a few days and I was with my friend yesterday having lunch and she sent me a text message and said, Hey PS, I have Strep.
+
+[kimlupardus] 17:27:29
+And I was like, and we were together several days ago too, because I was helping her paint. So I was like, I bet that's what I have.
+
+[kimlupardus] 17:27:37
+So it worked out, worked out really well.
+
+[Charles Carper] 17:27:37
+Yeah Oh man. Well, I mean, we appreciate you helping us out, but that sucks.
+
+[kimlupardus] 17:27:41
+Unfortunately.
+
+[Charles Carper] 17:27:48
+Okay. So let me pull up the questions. So I have a script. I'm gonna try and be as, natural as this can be, but if you see me looking down, it's cause I'm reading from our script so we can get consistent questions and answers.
+
+[kimlupardus] 17:27:52
+Okay.
+
+[Charles Carper] 17:28:04
+So we're going to record this, if you don't mind. The reason we're recording is so we can synthesize some of the data that we get out of it and use the data to inform our design decisions.
+
+[kimlupardus] 17:28:10
+That's fine.
+
+[Charles Carper] 17:28:17
+It's not going to be shown anywhere. We're not saving it and storing it on a cloud anywhere, we're saving it anywhere specific.
+
+[kimlupardus] 17:28:20
+Okay, that's fine.
+
+[Charles Carper] 17:28:23
+So, all the data and information that we need, if, with your permission, We may take a snapshot or screenshot and use it for our portfolio.
+
+[kimlupardus] 17:28:33
+That's fine.
+
+[Charles Carper] 17:28:33
+So if you're okay with that, okay, great. Okay, so then let's get it started.
+
+[Charles Carper] 17:28:39
+Let's see, I have a set of questions for us. Just tell us anything that comes to mind.
+
+[Charles Carper] 17:28:44
+So there are no wrong answers. We're just asking for your experience and we're just gonna learn from it.
+
+[kimlupardus] 17:28:46
+Okay.
+
+[Charles Carper] 17:28:48
+So, any as honest as you want to be is that you need to be is that you need to go if you need to or whatnot and it would actually be helpful you know and so if you feel the need go ahead.
+
+[kimlupardus] 17:28:53
+Okay.
+
+[kimlupardus] 17:28:59
+Okay. Okay, awesome.
+
+[Charles Carper] 17:29:01
+Let's see. So what the topic is we're trying to figure out learning more about the booking process for medical care.
+
+[Charles Carper] 17:29:10
+We're trying to specifically figure out the flow for a particular product we're trying to make.
+
+[Charles Carper] 17:29:17
+We're trying to make it better for them and we're trying to see generally. How the other people use, booking.
+
+[Charles Carper] 17:29:22
+Systems online. So the question can be generic in a sense, but towards medical field. Us booking appointments.
+
+[kimlupardus] 17:29:24
+Okay.
+
+[kimlupardus] 17:29:31
+Got it.
+
+[Charles Carper] 17:29:32
+Okay, so here's our first question. This is gonna be your background questions.
+
+[Charles Carper] 17:29:42
+So, where are you located?
+
+[kimlupardus] 17:29:42
+Northwest Arkansas.
+
+[Charles Carper] 17:29:45
+Thank you. Do you typically prefer in-person consultations or do you prefer online consultations for anything medical?
+
+[kimlupardus] 17:29:53
+It depends on the situation, but I would say typically online. Yeah, because it is faster. So much faster. It's more convenient.
+
+[Charles Carper] 17:30:02
+Gotcha. What makes it faster? Like how much faster does it make it?
+
+[kimlupardus] 17:30:09
+Well, considering my regular General practitioner is in Missouri. So it's like a 45 min drive from me.
+
+[Charles Carper] 17:30:17
+Oh wow, okay.
+
+[kimlupardus] 17:30:18
+So for me to be able to use telehealth, that's more convenient than driving all that way.
+
+[kimlupardus] 17:30:24
+Like today I used it and it took a total of 10 minutes from the time I started the process to when my appointment was accepted and they called me. I talked to a doctor, and he had my prescription done all within a 10-minute window.
+
+
+[Charles Carper] 17:30:37
+That's amazing. Okay, what is your age?
+
+[kimlupardus] 17:30:45
+46.
+
+[Charles Carper] 17:30:47
+Thank you. And what is your current occupation?
+
+[kimlupardus] 17:30:51
+I'm an operations manager for RevUnit. We build custom software for people.
+
+[Charles Carper] 17:31:23
+Okay, so can you share an experience booking a doctor's appointment online with us?
+
+[kimlupardus] 17:31:32
+Right, yeah, so we because of our insurance. We have what they call MDLive, and it's super cool.
+
+[kimlupardus] 17:31:40
+We have an app and of course the first time you use the app you've got a put all your details in there. All our medical history and everything. Which doesn't take that long. But once it's set up, you save a lot of time in the future.  
+
+[kimlupardus] 17:31:54
+You just touch the button and you tell them which person on your insurance are you wanting to book an appointment for
+
+[kimlupardus] 17:32:01
+And then you touch it and then it says what are your symptoms and it has a bunch of things to choose from or you can type in your symptoms. You have both options.
+
+[kimlupardus] 17:32:06
+And so today I was just able to go sore throat and tap it. And then the app asked me, okay, are you still taking these medications from the last time? I had to change a couple. 
+
+[kimlupardus] 17:32:18
+Then it told me a doctor will call you within the next 10 minutes. Oh my goodness, I have the emails here.
+
+[kimlupardus] 17:32:30
+So I booked the appointment at 3:12. At 3:17 they sent me an email confirmation. By 3:22 the visit was done.
+
+[kimlupardus] 17:32:39
+And I have a prescription. Yeah, so it's super fast.
+
+[Charles Carper] 17:32:39
+Wow. That's awesome. Now, has that typically been the case?
+
+[kimlupardus] 17:32:47
+I have always had that same experience with MD life. Yes.
+
+[Shelby Matthews] 17:32:54
+What did you have to fill out when you first started using the app? Like, what information did you have to provide for onboarding?
+
+[kimlupardus] 17:33:02
+So we have Blue Cross Blue Cross Blue Shield of Arkansas and they sent us a link and said hey We offer MD Live with your insurance plan.
+
+[kimlupardus] 17:33:16
+And so I was able to go on there and download the app. And then it automatically connected to my insurance.
+
+[kimlupardus] 17:33:23
+So it already had that information and then it was just verify your address, your name, address, and date of birth. I verified who's on my insurance and you just click. Yes, yes. And then from there it says, would you mind adding kind of your history or medical history?
+
+[kimlupardus] 17:33:37
+So you go in and let it know what types of illnesses you may or may not have had or currently have.
+
+[kimlupardus] 17:33:42
+It asks, do you have these ailments? Do you have allergies? It's very similar to paperwork you fill out at the doctor's office.
+
+[kimlupardus] 17:33:48
+And then you can add your prescriptions, any that you take, you put your primary care physician in there.
+
+[kimlupardus] 17:33:53
+And literally like it is Arkansas insurance but when I remember specifically typing in my doctor's name who's in Missouri because they're never gonna find this guy because he's you know and it popped up.
+
+[Charles Carper] 17:34:07
+Hmm.
+
+[kimlupardus] 17:34:07
+And so I selected it and then. That's just, it's always saved in there.
+
+[kimlupardus] 17:34:13
+You have the option to alter it or change it at any time. But it's always just saved in there.
+
+[kimlupardus] 17:34:17
+So once it is I was trying to look back through to I've used it 6 times. That actual service.
+
+[kimlupardus] 17:34:25
+So over the course of 2 years. And that's just like if you feel sick, you know, I go on there and I'm like, okay, I know I've been around someone with, and that's what I said to him today.
+
+[kimlupardus] 17:34:37
+And he's like, okay, cool. Here's our, you know. Send you the medicine because that's pretty cut and try.
+
+[Charles Carper] 17:34:41
+Yeah.
+
+[kimlupardus] 17:34:43
+But yeah, so I've used it 6 times and Super simple.
+
+[Charles Carper] 17:34:46
+That's awesome. Okay, so let me move on. Yeah, more follow ups.
+
+[kimlupardus] 17:34:52
+Yeah.
+
+[Charles Carper] 17:34:53
+Okay. Alright, so let's see.
+
+[Shelby Matthews] 17:34:56
+No, sorry.
+
+[Charles Carper] 17:34:57
+Shelby, did you feel like you got a good flow from that? From start to finish.
+
+[Shelby Matthews] 17:35:03
+I did. Do you? Yeah.
+
+[Charles Carper] 17:35:05
+I think so. I think I was a little, fuzzy on the very intro, the beginning.
+
+[Charles Carper] 17:35:10
+So you do you did know that. You felt some symptoms and you had, how did you find the number?
+
+[Shelby Matthews] 17:35:11
+Yeah.
+
+[Charles Carper] 17:35:21
+How did you know where to call or how to get to the involved?
+
+[kimlupardus] 17:35:21
+I want the MD live. Oh, okay. So our insurance. Like I said, send us the link.
+
+[Shelby Matthews] 17:35:22
+Okay.
+
+[kimlupardus] 17:35:29
+And then when I went to sign in, it's my same user ID I use for Blue Cross Blue Shield.
+
+[kimlupardus] 17:35:35
+So I was able to log in to that and then it immediately asked my name, Berte, to verify it.
+
+[Charles Carper] 17:35:35
+Okay. Okay.
+
+[kimlupardus] 17:35:41
+And once you do that, it connected your insurance and everything to it. And then. Went from there.
+
+[Charles Carper] 17:35:44
+That's awesome. Okay, that's cool.
+
+[kimlupardus] 17:35:46
+Yeah.
+
+[Shelby Matthews] 17:35:46
+I'm like whenever she was this trying to book today. Is that what you're refunding on?
+
+[Shelby Matthews] 17:35:54
+Like how she went about contacting the doctor today?
+
+[Charles Carper] 17:35:57
+No, more so the focus was kinda like if this was our first time, how we should go about finding.
+
+[Shelby Matthews] 17:36:04
+Gotcha.
+
+[Charles Carper] 17:36:04
+That and she it sounds like she went through her insurance insurance gave her some kind of contact information she reached out and Figured out.
+
+[Shelby Matthews] 17:36:09
+Okay.
+
+[kimlupardus] 17:36:11
+Right. That's correct.
+
+[Charles Carper] 17:36:12
+Yeah, okay.
+
+[Shelby Matthews] 17:36:12
+So yeah, it narrows down the list of your options. Based on who you're in network with automatically or something.
+
+[Shelby Matthews] 17:36:20
+Yeah, okay.
+
+[Charles Carper] 17:36:20
+Yup.
+
+[kimlupardus] 17:36:21
+Well, so I what I think MD live does is I honestly think they have a slew of doctors that they keep.
+
+[kimlupardus] 17:36:28
+On for this actual service. They'll send surveys out from time to time and they'll send one I'm sure later today and say how was your experience with MD Live?
+
+[kimlupardus] 17:36:39
+Did you have any issues? How long was your wait time? You know, that kind of thing because it helps them get better.
+
+[kimlupardus] 17:36:44
+But it does have mice. I mean, I can show this to you if you want. Can I show it to you?
+
+[kimlupardus] 17:36:49
+So I don't know if you can see this. But like it has, I mean, it says Arkansas up at the top.
+
+[Charles Carper] 17:36:50
+Yeah.
+
+[kimlupardus] 17:36:57
+And then has me and then I can add other people on here and it says when you first log in, current wait time to speak with a doctor 10 min.
+
+[Charles Carper] 17:37:07
+Oh, nice. Gives you a time.
+
+[kimlupardus] 17:37:07
+Or less. Yeah. Yeah, so and it shows your pharmacy and so you can like edit your pharmacy or whatever.
+
+[Shelby Matthews] 17:37:08
+Cool. Cool.
+
+[kimlupardus] 17:37:16
+So of course, you know, he verified that today, but you can, it has my health records on here.
+
+[kimlupardus] 17:37:21
+Has anything I wanna add on here. It's, yeah, it's very cool. So all I have to do literally if I want to make an appointment, I say get started and I touch that and then it walks me through the whole entire process.
+
+[Charles Carper] 17:37:25
+It's interesting.
+
+[Shelby Matthews] 17:37:27
+Sure.
+
+[Charles Carper] 17:37:36
+Okay, very nice.
+
+[kimlupardus] 17:37:36
+Yeah. So there is also a desktop version as well. I've just never used it. Literally never used it because I like I have a app I use the desktop one.
+
+[Shelby Matthews] 17:37:41
+Hmm. Okay.
+
+[Charles Carper] 17:37:42
+Okay.
+
+[Charles Carper] 17:37:46
+Cause the mobile so, convenient. Yeah. Okay. Alright, so, what factors influence your decisions to book a doctor's appointment online, especially when immediate.
+
+[kimlupardus] 17:37:49
+Yeah.
+
+[Charles Carper] 17:37:59
+Medical attention on the same day care. So what factors influence your decisions to book a doctor?
+
+[kimlupardus] 17:38:03
+So honestly. Honestly, for me, when I call my doctor and I say I'm sick, they tell you to go to urgent care.
+
+[Charles Carper] 17:38:11
+Oh yeah.
+
+[kimlupardus] 17:38:12
+And I mean, because they're so booked. Like if you were to call my doctor today, he's book 6 or 8 weeks out.
+
+[Charles Carper] 17:38:18
+Right.
+
+[kimlupardus] 17:38:18
+So like I have a standing like 6 month appointment with him for that reason just to like. Check everything, medication and all that.
+
+[kimlupardus] 17:38:26
+But if you're sick and you call in, they're just gonna tell you to go to the ER or go to urgent care because they're booked.
+
+[Charles Carper] 17:38:31
+Right.
+
+[kimlupardus] 17:38:32
+Oh, so. When I do have something like this instead of going to urgent care because I don't want to get more germs on top of the germs I've clearly already got.
+
+[Charles Carper] 17:38:41
+Yeah. Right.
+
+[kimlupardus] 17:38:41
+I'd rather just Do it this way. Yeah. And you have the option to. To talk to them on the phone or you can do like a zoom like a video conference call with them as well.
+
+[Shelby Matthews] 17:38:47
+Thank you.
+
+[Charles Carper] 17:38:52
+Nice.
+
+[kimlupardus] 17:38:52
+So, if they require, you know, like say your child has like chicken pox or something.
+
+[kimlupardus] 17:38:59
+And you suspect that that's what it is. Then they you can they can see you and they can visually you know look at you as well so that's helpful I'm sure for certain things.
+
+[kimlupardus] 17:39:10
+Yeah. Yeah.
+
+[Charles Carper] 17:39:10
+Alright, okay. So. The things that influence your decisions is that because your general doctor is.
+
+[kimlupardus] 17:39:18
+Hi.
+
+[Charles Carper] 17:39:20
+So far booked out, this is why you're. Going this route. Okay, very nice.
+
+[kimlupardus] 17:39:23
+Yeah. Yeah.
+
+[Charles Carper] 17:39:26
+Thank you. Okay, based on your ideal online booking experience. Look, features or services do you wish online platforms offered to better meet your needs for medical care?
+
+[Charles Carper] 17:39:37
+Is that a good question?
+
+[kimlupardus] 17:39:39
+Yeah, I think that's a good question. So I think it would be and there may be something else like that out there, but I think it would be cool if like your actual doctor's office offered something similar to it.
+
+[Charles Carper] 17:39:52
+Okay.
+
+[kimlupardus] 17:39:53
+Just so that if you needed to follow up with them, they could see that urgency of the situation.
+
+[kimlupardus] 17:39:58
+So like say you have something and it's recurring and it's like doesn't go away and you need to see a specialist or you need to.
+
+[kimlupardus] 17:40:05
+Be referred to a specialist or you have something that's like, okay, this is not going away, I need further testing.
+
+[kimlupardus] 17:40:11
+It would be nice to be able to have that be expedited so you don't have to wait 8 weeks to be seen if you have something seriously.
+
+[kimlupardus] 17:40:19
+Going on that you need to be tested for. So.
+
+[Charles Carper] 17:40:19
+Right. So you wish like these doctors would be like on the same network of some sort. So they can hand off the information easier.
+
+[kimlupardus] 17:40:26
+Yeah.
+
+[kimlupardus] 17:40:29
+Correct. And they could see it. I mean, if they had some kind of systems that integrated with each other that was like, okay, this patient uses MD live.
+
+[Charles Carper] 17:40:30
+Gotcha.
+
+[kimlupardus] 17:40:38
+So if they've seen an MD live that they get some sort of alert that goes in your file.
+
+[Charles Carper] 17:40:42
+Alright, right.
+
+[kimlupardus] 17:40:42
+That would be really cool. And I know there's all kinds of HIPAA things there, but they should be able to tap into stuff like this, right?
+
+[Charles Carper] 17:40:48
+Yeah. Yeah. How do you feel about security? In that sense.
+
+[kimlupardus] 17:40:49
+If you allow it. Yeah.
+
+[Charles Carper] 17:40:54
+If you were to do a third party.
+
+[kimlupardus] 17:40:54
+So. Personally, I don't have an issue with it. I know that other people might, but I allow my doctor to view my records on it.
+
+[kimlupardus] 17:41:06
+I think that's acceptable. Yeah.
+
+[Charles Carper] 17:41:07
+Yeah. And if your personal doctor couldn't and you needed to reach out to some other doctor, you would.
+
+[Charles Carper] 17:41:13
+Want your information out there for them to see so they can give you an answer quickly. Okay. Thank you.
+
+[kimlupardus] 17:41:17
+Yes. Yes. Yep. Welcome.
+
+[Charles Carper] 17:41:23
+Okay, so when choosing from a list of doctors for your appointment, what factors influence your decisions?
+
+[kimlupardus] 17:41:31
+Honestly, I mean, on this one, it just gets you the soonest doctor that they have.
+
+[Charles Carper] 17:41:37
+Okay
+
+[kimlupardus] 17:41:37
+So you don't actually on this particular one, the one I use, you don't actually get a choice.
+
+[kimlupardus] 17:41:43
+It just gets you the soonest doctor that can get to you. So
+
+[Charles Carper] 17:41:44
+Okay.
+
+[kimlupardus] 17:41:49
+Yeah, you just kind of get a mind and take what you get, right? So I will say this.
+
+[Charles Carper] 17:41:52
+Okay. So canvenience is more important.
+
+[kimlupardus] 17:41:56
+Yeah, I can. It's more important. And I think too that I mean, I've never had a bad experience with any of them.
+
+[kimlupardus] 17:42:03
+So it's been great. Of course, I'm only gone for like, you know, cold bike symptoms and mild things or something, but yeah.
+
+[Charles Carper] 17:42:04
+Yeah. That's good.
+
+[Charles Carper] 17:42:10
+Yeah, yeah, definitely. Okay, so, next question is How can we make it easier for you to find an appointment that suits your schedule?
+
+[kimlupardus] 17:42:22
+Honestly, this is about as simple as it comes, right? You log into the app and you say, that's me, I get started.
+
+[Charles Carper] 17:42:25
+Okay.
+
+[kimlupardus] 17:42:31
+You know, get the appointment down. Yeah. It just says, you know, are you, know, do you wanna book your appointment now and you say yes and it says do you want a video conference or a telephone call and I just click the phone one.
+
+[Charles Carper] 17:42:34
+And it just shows you the earliest. Yeah.
+
+[kimlupardus] 17:42:46
+And it just says, okay, a doctor will call you within 10 min, you know, this is your phone number and you hit yes and that's it.
+
+[Charles Carper] 17:42:53
+What's your experience if you said you didn't want to do it right the second?
+
+[kimlupardus] 17:42:58
+You can schedule it as well. So you could schedule it out for like 2 h or 3 h or whatever.
+
+[Charles Carper] 17:43:01
+Okay.
+
+[kimlupardus] 17:43:06
+It offers you the option and it'll it'll give you a breakdown. You know of different times that they're they have availability or whatever and you can choose it that way as well.
+
+[Charles Carper] 17:43:14
+Gotcha. And then when have you done that? And then if you did, does it tell you where you're at in the queue or is it pretty much you are slotted for that timeframe?
+
+[Charles Carper] 17:43:23
+Yeah.
+
+[kimlupardus] 17:43:23
+It does. It tells you where you are in the Q. So you're slotted for like a 30 min window and what they do first is they send you a X message.
+
+[kimlupardus] 17:43:31
+And it says, you know, your consultation summary is, you know, or your consultation is about to happen.
+
+[kimlupardus] 17:43:38
+With your physician. And then. We are and then it'll say your consultation has been accepted by Jonathan James Campbell, which was my doctor today who will call you shortly.
+
+[kimlupardus] 17:43:50
+If you do not receive a call with in 5 min, please call this number. And so then they call, you know, obviously he called and then literally.
+
+[kimlupardus] 17:44:00
+2 min later. You're prescription. Has been sent to your pharmacy.
+
+[Charles Carper] 17:44:07
+Do you mind? Can you hold that up to like I don't know if there's confidential information.
+
+[kimlupardus] 17:44:11
+Yeah. Yep.
+
+[Charles Carper] 17:44:13
+Can you, so you can see the whole thing. And then we'll take a screenshot of it later.
+
+[Charles Carper] 17:44:17
+Or maybe you can send it, yeah, send it to Shelby.
+
+[kimlupardus] 17:44:17
+Yeah, I can actually. I can send it to Shelby. Yeah, I'll screenshot it and send it to Shelby.
+
+[Shelby Matthews] 17:44:21
+You sent me.
+
+[kimlupardus] 17:44:23
+No, there's no confidential information on here at all. Yeah, I can send it to her.
+
+[Charles Carper] 17:44:25
+Okay, good.
+
+[Shelby Matthews] 17:44:25
+Okay, if there is I'll blur it out or whatever.
+
+[Charles Carper] 17:44:29
+Gotcha.
+
+[kimlupardus] 17:44:29
+Yeah, no, there's not. It just has the address to my pharmacy.
+
+[Charles Carper] 17:44:33
+Okay, okay. Alright, let's get to the next one. What about a website makes you feel comfortable sharing your medical information up?
+
+[kimlupardus] 17:44:34
+Yeah.
+
+[Charles Carper] 17:44:42
+Online.
+
+[kimlupardus] 17:44:45
+I mean, I think at this point. You know, if somebody wants to get it bad enough, they're gonna find it.
+
+[Charles Carper] 17:44:52
+Yeah.
+
+[kimlupardus] 17:44:53
+So I mean, I just I feel pretty confident. About this as well. Like, I'm the one and putting the information they have it and they're.
+
+[kimlupardus] 17:45:05
+I'm just not too worried about it. I mean, It doesn't personally, it doesn't bother me.
+
+[Shelby Matthews] 17:45:06
+Yeah.
+
+[Charles Carper] 17:45:07
+Right. So.
+
+[kimlupardus] 17:45:10
+So.
+
+[Charles Carper] 17:45:10
+Sure. Let me play Devil's Appricate and say Let's say you want to go get a.
+
+[Charles Carper] 17:45:16
+Hey, COVID test, but there was not available around you, but there is a one that somebody just offhanded recommended and then you go to their website but their website looks sketchy or weird.
+
+[Charles Carper] 17:45:28
+Now, is there any red flags in you that would be like? I don't think I'm gonna put my information on here.
+
+[kimlupardus] 17:45:34
+Probably.
+
+[Charles Carper] 17:45:36
+And what would that look, what would it look like that would throw you off and be like, I'm not gonna do that.
+
+[kimlupardus] 17:45:40
+I, if it just doesn't seem reputable, or if the website doesn't look like it's an act there's actual physicians or doctors or you know, if it doesn't seem really well put together and.
+
+[Charles Carper] 17:45:44
+Okay.
+
+[Charles Carper] 17:45:51
+Right.
+
+[kimlupardus] 17:45:54
+I would say to just, Maybe if I didn't recognize it. So like this one my insurance sent to me right so we know that this is part of our insurance and our whole team.
+
+[Charles Carper] 17:46:05
+Right.
+
+[kimlupardus] 17:46:05
+At work uses this. So you feel pretty confident about it. But for me to just go on and just use some random one unless it's affiliated with a hospital or a doctor's office that I would know I would probably be sceptical.
+
+[kimlupardus] 17:46:15
+Yes.
+
+[Charles Carper] 17:46:15
+Right, okay. So if this Skeptical website had. Like the website look sketchy, but they have doctors that had good reviews on their website.
+
+[Charles Carper] 17:46:28
+Would you trust that?
+
+[kimlupardus] 17:46:31
+It depends. I would probably look at the reviews to see if I could tell if they were real or.
+
+[Charles Carper] 17:46:37
+Good, good reviews or not, right? Okay.
+
+[kimlupardus] 17:46:37
+. Just right, right. And if they were real people, I think it would just depend on the circumstances.
+
+[kimlupardus] 17:46:44
+Like if it was like so around here in Northwest Arkansas, we have Mercy Hospital. So if it's a Mercy site, I'm probably gonna be fine, right?
+
+[Charles Carper] 17:46:51
+Right, so PC, Mercy Branding. It's gonna make you feel comfortable. Okay, gotcha.
+
+[kimlupardus] 17:46:53
+If it's something. Right. Right. Yeah.
+
+[Charles Carper] 17:46:58
+Okay, let's move on to the next one after booking your appointment. Is there any? Anything else that would be helpful to know.
+
+[kimlupardus] 17:47:09
+Hey, really do a very such a great job of it. So I could say what I like about it.
+
+[kimlupardus] 17:47:15
+I mean, clearly they text you. Here's your appointment, right? Here's your appointment.
+
+[Charles Carper] 17:47:17
+You like to text?
+
+[kimlupardus] 17:47:21
+You know, here's your prescription has been called in and then of course our CVS pharmacy texts me and says we have a prescription from your provider.
+
+[kimlupardus] 17:47:29
+You know, it'll be ready in such and such time. So getting those text messages just simplifies it.
+
+[kimlupardus] 17:47:34
+And then I will say what they do well. As well is they not only tell you about your prescription.
+
+[kimlupardus] 17:47:42
+But they say your consultation summary from your visit today is here to be viewed. And so you just click the link and then it gives you a rundown of the doctor, what you talked about, what he prescribed.
+
+[Charles Carper] 17:47:48
+Hmm.
+
+[kimlupardus] 17:47:55
+All of that. So it's like a, you know, overview of your visit and then they send back and Right, they send you a really nice summary and then they tell you, you know.
+
+[Charles Carper] 17:47:59
+Good summer.
+
+[kimlupardus] 17:48:05
+They send you a receipt and ours is free. So it costs. No money, no copay, no nothing.
+
+[kimlupardus] 17:48:11
+So they send you, you know, you've not been billed for this. The charge for this today was $0.
+
+[kimlupardus] 17:48:17
+Yeah. That's good. Right.
+
+[Charles Carper] 17:48:17
+And that feels good. Feels good to know that, you know, yeah, you got everything squared away and it didn't cost anything.
+
+[kimlupardus] 17:48:23
+Correct. Yeah, everything's squared away. Didn't cost anything. Your prescriptions at the pharmacy, you know, I mean, it was just super simple.
+
+[Charles Carper] 17:48:24
+Gotcha.
+
+[Charles Carper] 17:48:31
+And the communication was cleared the whole time.
+
+[kimlupardus] 17:48:31
+Yeah. Yeah, that was the, that's the key, I think, is that the communication is clear.
+
+[Charles Carper] 17:48:38
+Right.
+
+[kimlupardus] 17:48:38
+I did have one time. I did have it. Where they called me and I had my phone set to where it was blocking numbers that were not recognized.
+
+[Charles Carper] 17:48:51
+Right, right.
+
+[kimlupardus] 17:48:53
+And so I had to go in and unblock it and I had to send them a message and it took me to like a chat and I was like.
+
+[kimlupardus] 17:48:59
+I didn't I didn't get to the phone in time. I'm so sorry. And they're like, no problem.
+
+[kimlupardus] 17:49:06
+Give us, you know, 5 to 10 min and we'll have another physician call you back. So the fix with the fix was super simple.
+
+[Charles Carper] 17:49:08
+Okay, that's nice.
+
+[kimlupardus] 17:49:11
+Yeah.
+
+[Charles Carper] 17:49:12
+Right. Okay, I'm going to take a quick screenshot of us. So whatever smile you want to put on.
+
+[kimlupardus] 17:49:16
+Okay.
+
+[Charles Carper] 17:49:18
+We will capture that okay 3 2 1
+
+[kimlupardus] 17:49:21
+Okay.
+
+[Charles Carper] 17:49:24
+Okay, that'll be perfect. And let me have, let me see, one more question.
+
+[kimlupardus] 17:49:30
+Okay.
+
+[Shelby Matthews] 17:49:30
+Yeah, I don't know if we need this one or not. Cause it's kinda just like so quick.
+
+[Charles Carper] 17:49:34
+Yeah.
+
+[Shelby Matthews] 17:49:36
+But we can ask just in case.
+
+[Charles Carper] 17:49:39
+I think it's kind of like a follow up to the other one. And it's actually gonna be a little redundant.
+
+[Shelby Matthews] 17:49:44
+Yeah.
+
+[kimlupardus] 17:49:44
+Okay. Okay.
+
+[Charles Carper] 17:49:44
+I think we can, we can wrap this up. So thank you. Thank you for doing this.
+
+[kimlupardus] 17:49:50
+Welcome. You're welcome.
+
+[Charles Carper] 17:49:50
+We really appreciate it. I feel like this is really good information. in the future, we're gonna do the test and we're gonna make the design.
+
+[kimlupardus] 17:49:55
+Yeah.
+
+[Shelby Matthews] 17:49:55
+Okay.
+
+[Charles Carper] 17:50:01
+Do you want to be part of the testing? Like just to see what we come up with? Okay.
+
+[kimlupardus] 17:50:02
+Sure. Absolutely. Yep.
+
+[Charles Carper] 17:50:05
+Shelby has your info I'm sure so we can schedule that and see how that works out.
+
+[Shelby Matthews] 17:50:09
+Yeah.
+
+[Charles Carper] 17:50:11
+Well, I appreciate.
+
+[kimlupardus] 17:50:12
+I'd be, I don't know if it's against the rules or anything, but Shelby, I'd be happy to walk you through.
+
+[kimlupardus] 17:50:18
+I could share my screen with you or whatever and walk you through what it looks like when I go to make an appointment so you can see.
+
+[Shelby Matthews] 17:50:22
+Yeah, that's not against the rules because yeah, we have to do we have to look at the competitors to know how we can improve so yeah
+
+[Charles Carper] 17:50:24
+Yeah.
+
+[kimlupardus] 17:50:29
+Okay, cool. Yeah, I'd be happy to do that.
+
+[Charles Carper] 17:50:29
+Yeah. And it sounds like they're really good. Solid, user experience. So we're trying to find all the good players out there and, you know, it sounds like that's a good one we can use for an example.
+
+[kimlupardus] 17:50:42
+Yeah, yeah, that'd be good. I don't mind sharing that with you once I'm not contagious anymore.
+
+[Charles Carper] 17:50:43
+Okay. Thank you.
+
+[kimlupardus] 17:50:48
+I could show you on the phone or I can share screen share. Okay, awesome. Yeah. Appreciate it.
+
+[Charles Carper] 17:50:50
+Okay. Alright, thank you, you can drop off and I think Shelby and I will wrap up here.
+
+[Shelby Matthews] 17:50:51
+Sounds good.
+
+[kimlupardus] 17:50:58
+Thank you guys.
+
+[Shelby Matthews] 17:50:58
+Thank you. Bye. Okay
+
+[Charles Carper] 17:50:58
+Thank you. Bye bye. Alright
+

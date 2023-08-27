@@ -1,0 +1,897 @@
+[Charles Carper] 10:30:12
+Alright.
+
+[Charles Carper] 10:30:15
+Can you have a
+
+[Shelby Matthews] 10:30:17
+Yep, I can hear you. Can you hear me?
+
+[Charles Carper] 10:30:19
+Yep, yep, there was a slight delay, but it's good now.
+
+[Shelby Matthews] 10:30:23
+Okay.
+
+[Charles Carper] 10:30:27
+Got a cookout party today.
+
+[Shelby Matthews] 10:30:30
+That sounds fun. What are you making?
+
+[Charles Carper] 10:30:31
+I'm gonna be the master griller. I am making chicken. Chicken, breast.
+
+[Shelby Matthews] 10:30:35
+Right.
+
+[Charles Carper] 10:30:40
+And some cooked vegetables.
+
+[Shelby Matthews] 10:30:42
+Nice.
+
+[Marius] 10:30:42
+Really? Hello?
+
+[Charles Carper] 10:30:44
+Hey, Marius, how are you doing? Am I saying your name right?
+
+[Marius] 10:30:47
+Say again. Yeah, that's correct. Jasmine, how are you doing?
+
+[Charles Carper] 10:30:48
+Am I seeing your name right? Marius?
+
+[Charles Carper] 10:30:53
+Perfect. I'm doing good. How are you?
+
+[Marius] 10:30:56
+Yeah, I'm pretty good just after. Like of just like my my design criticism session.
+
+[Marius] 10:31:05
+So yeah, Good.
+
+[Charles Carper] 10:31:05
+Yeah. Very nice. Shelby, well, Marius, this is Shelby and Shelby, this is Marius.
+
+[Shelby Matthews] 10:31:13
+Hi, nice to meet you.
+
+[Marius] 10:31:15
+Meet.
+
+[Charles Carper] 10:31:16
+I met Marius on LinkedIn and so, he's on his UX design journey as well, right?
+
+[Marius] 10:31:21
+Yeah.
+
+[Charles Carper] 10:31:21
+And, so he's a let, let me, get to introduction into this, this.
+
+[Shelby Matthews] 10:31:22
+Awesome.
+
+[Charles Carper] 10:31:28
+Questionnaire, okay? Let me see, okay.
+
+[Marius] 10:31:30
+Hmm.
+
+[Shelby Matthews] 10:31:30
+Okay.
+
+[Charles Carper] 10:31:34
+Thank you. Thank you. Okay. And do we have the transcripts go on right now?
+
+[Shelby Matthews] 10:31:39
+Yeah, I've got it going.
+
+[Charles Carper] 10:31:41
+Okay, good. Alright, Mari, Shelby, I'm gonna take lead on this one and then you could take lead on the next one, okay?
+
+[Shelby Matthews] 10:31:48
+Perfect.
+
+[Charles Carper] 10:31:49
+Okay, so, is the purpose of this interview is we're gonna be talking about, the booking online for like doctor appointments.
+
+[Charles Carper] 10:32:01
+That's the goal for us and we're trying to get insights from you, basically on how You booked online in general.
+
+[Charles Carper] 10:32:09
+So it doesn't have to be directed towards doctors or whatnot, but just, your experience on how you would typically go and do it and we can try and pull insights from that.
+
+[Charles Carper] 10:32:19
+And apply it to our doctors appointment app. Okay, so that's where we're going with that.
+
+[Charles Carper] 10:32:25
+And there's no pressure here. So you could say whatever you want if you want to go in further detail you feel like it's something that you want to maybe might be helpful.
+
+[Marius] 10:32:27
+Hmm.
+
+[Charles Carper] 10:32:37
+You feel like it's something that you want to maybe might be helpful. Just go ahead and say, don't worry about time.
+
+[Charles Carper] 10:32:39
+Don't worry about, you know, maybe might be helpful. Just go ahead and say, don't, worry about time.
+
+[Charles Carper] 10:32:40
+Don't worry about, you know, Tell us what's on your mind and and we'll Use it or not use it, you know, but, there's nothing wrong with it.
+
+[Charles Carper] 10:32:47
+Let's see. Okay, so the questions we have are a designated specific type of question.
+
+[Charles Carper] 10:32:55
+So I might be looking down because I'm reading from the script, but this will be a conversational flow.
+
+[Charles Carper] 10:33:01
+If you have anything you want to talk about, we can go into it further. But I'll just keep going down and reading from, this little script that we have.
+
+[Charles Carper] 10:33:08
+Privacy. It's important to us and we're gonna make sure, you know, we're all the data that we're collecting here is just between us.
+
+[Charles Carper] 10:33:16
+It's not going, we're not posting it anywhere. We're not doing anything.
+
+[Charles Carper] 10:33:21
+With that said, we're not doing anything. With that said, we will take a screenshot if you're okay with it and use it on our portfolio.
+
+[Marius] 10:33:25
+Yes.
+
+[Charles Carper] 10:33:28
+And that's about as far as we'll take a screenshot if you're okay with it and use it on our portfolio.
+
+[Charles Carper] 10:33:31
+And that's about as far as we're okay with it and use it on our portfolio.
+
+[Charles Carper] 10:33:32
+And that's about as far as we're going to
+
+[Marius] 10:33:32
+Yeah, that's fine. No worries.
+
+[Charles Carper] 10:33:33
+Great, okay. All right, so let's move on to the background questions. Okay, so, where, about are you located?
+
+[Marius] 10:33:42
+I'm located in the United Kingdom. And the cities, so yeah.
+
+[Charles Carper] 10:33:48
+Perfect, thank you. Do you typically prefer like an in person consultation or online consultations if you're doing medical stuff.
+
+[Marius] 10:33:57
+Of course I would prefer direct, physical life, consultations about my health. Because it's very important to me just like yeah.
+
+[Charles Carper] 10:34:04
+Okay.
+
+[Charles Carper] 10:34:07
+Yeah, is there a reason why you like? The in person versus just doing it online.
+
+[Marius] 10:34:14
+Because I don't know because some doctors actually if they want to take good care and good just like.
+
+[Marius] 10:34:23
+To find out what is going on, they have to touch. They have to see my face, my body, my to hear my voice because you know through just like those internet connection voiced sometimes not just going just like properly cut here those and especially because doctors should touch you just like for example, and I got, yeah, there is the world identity.
+
+[Marius] 10:34:52
+Yeah, and doctors were touching my belly just like. Pushing and all you feeling here, of course it's different circumstance, but anyway in any circumstances, if I'm concerned about something about pains, about I mean, issues, my health, I would prefer to go.
+
+[Marius] 10:35:07
+To the doctor's office.
+
+[Charles Carper] 10:35:08
+Sure, sure. Okay, sounds good. Okay, well can you tell me what your age is?
+
+[Marius] 10:35:13
+52.
+
+[Charles Carper] 10:35:15
+32. Okay. And what is your current occupation?
+
+[Marius] 10:35:19
+Hey, current occupation is Yeah.
+
+[Charles Carper] 10:35:22
+Coffee, okay. Alright, so we're gonna get more into the general questions here. Here we go.
+
+[Charles Carper] 10:35:28
+Can you share a recent experience of booking a doctor's appointment online?
+
+[Marius] 10:35:33
+No, because, Are you?
+
+[Charles Carper] 10:35:34
+Okay. Alright, then share share an experience of like just going through. Like if you want to go sign up for a massage.
+
+[Charles Carper] 10:35:44
+Or sign up for something else. Can you give me, your flow of how you would, go ahead and sign up for something like that.
+
+[Marius] 10:35:51
+If massage, it depends again on the. The shop who's doing massage some shops they have online booking and some shops they just asking to call and to book.
+
+[Charles Carper] 10:36:02
+Right.
+
+[Marius] 10:36:02
+And most of Just like I was a couple of start shops and they use it. Pretty much using the Google.
+
+[Marius] 10:36:11
+As you know, just like Google have just like the booking option. And yeah.
+
+[Charles Carper] 10:36:15
+Okay, so you would go if you wanted to go do a massage you would go and like Look on Google and then you would see what contact information they have and then you would reach out that order.
+
+[Marius] 10:36:24
+Yeah. Yes. Alright.
+
+[Charles Carper] 10:36:28
+Okay. So in these experiences, of.
+
+[Charles Carper] 10:36:35
+Reaching out through Google, thing like that. Was there any challenges or did you find anything that was difficult with that flow or that system?
+
+[Charles Carper] 10:36:44
+Have you had any issues with that?
+
+[Marius] 10:36:46
+Because most of the time It's pretty new and just like, oh, I used to do just like couple of times booking with a barbershop.
+
+[Charles Carper] 10:36:56
+No.
+
+[Marius] 10:36:57
+And once they do just like booking and oncoming on time and still the barber is not available.
+
+[Marius] 10:37:04
+He's still working on some friend or something like that. And that's really annoying. Yeah.
+
+[Charles Carper] 10:37:08
+Right, right.
+
+[Marius] 10:37:09
+And for example, business, they still prefer to do. Call booking rather than just like this online booking because they're not they don't know themselves what they're doing.
+
+[Charles Carper] 10:37:21
+Okay, so they're not technically savvy, so it's not really Yeah.
+
+[Marius] 10:37:21
+So, yeah. Yeah, and usually just like if you're coming on time and I just booked my time, usually it's not available.
+
+[Marius] 10:37:31
+And It's I need to wait another half an hour or 1 h just like yeah Share.
+
+[Charles Carper] 10:37:36
+Right. I know from, experience when I go to a barber, sometimes I'm sitting there for 2 h waiting for a real good barber.
+
+[Marius] 10:37:44
+Yeah.
+
+[Charles Carper] 10:37:44
+And II was thinking like, hey, it's opening up at 80'clock. I'm gonna show up at 80'clock and then.
+
+[Charles Carper] 10:37:49
+Get maybe first or second care, but there's like a line everyone's waiting and I'm sitting there waiting 2 h.
+
+[Marius] 10:37:54
+Yeah.
+
+[Charles Carper] 10:37:54
+I'm like, oh my goodness. So what factors influence your decisions to book a doctor's appointment online, especially when seeking immediate medical testing.
+
+[Charles Carper] 10:38:06
+Okay, so the gist of this question is,
+
+[Charles Carper] 10:38:08
+When you're, when you're looking in the book online with a doctor, but it's the same day appointment.
+
+[Charles Carper] 10:38:16
+Like you, let's say you got something that you know that you might need to get. It's a book for a doctor or any type of scenario like this.
+
+[Charles Carper] 10:38:25
+What are some considerations that you might be thinking in your mind before or how to go about doing this?
+
+[Marius] 10:38:32
+Doing booking or just like going to doctor
+
+[Charles Carper] 10:38:36
+Going. Hmm. So let's see. Yeah, no, that's okay.
+
+[Marius] 10:38:39
+I didn't get that question, sorry.
+
+[Charles Carper] 10:38:43
+It's probably a poorly written question. Let, let me think about it.
+
+[Shelby Matthews] 10:38:45
+Yeah, you just kind of need to rephrase it. Your situation too. Trying to think.
+
+[Charles Carper] 10:38:52
+Yeah, I think the gist of what we're trying to ask is, what is your experience with same day booking online?
+
+[Marius] 10:38:58
+Oh, I would be glad it would be just like because mostly from my experience there is not possible to do same day in booking If just like it's not.
+
+[Shelby Matthews] 10:38:59
+Yeah.
+
+[Marius] 10:39:12
+I mean, if it's not deadly thing. They say just like they're not doing the same day in booking.
+
+[Charles Carper] 10:39:19
+Right.
+
+[Marius] 10:39:19
+If you just like feel somewhere paying and you still can't function and it's not just like, yeah, deadly thing.
+
+[Marius] 10:39:27
+And I'm gonna do the same day. If you start to say, oh, I'm dying, I'm just gonna breathe.
+
+[Marius] 10:39:32
+I need the emergency, then they do it. It's actually live, especially in UK. If you want to get same day.
+
+[Charles Carper] 10:39:34
+Okay.
+
+[Marius] 10:39:39
+Just like appointment, you have to lie. You would die. I can't, I can't walk, it's something like that.
+
+[Charles Carper] 10:39:42
+Okay.
+
+[Charles Carper] 10:39:46
+Yeah.
+
+[Marius] 10:39:46
+Because as now in United States it's it's not for free for example here in UK is free as just like Pretty much in whole Europe.
+
+[Marius] 10:39:55
+In my country as well as free and just like usually all people they're coming from any issues just like they just don't have what to do on just like concern they want to go to have a conversation with somebody and there is just like queues.
+
+[Marius] 10:40:08
+Hey, queues, long queues, so I have to work. But about same day, you have to bit to lie and say, oh, I can walk.
+
+[Charles Carper] 10:40:10
+Right.
+
+[Marius] 10:40:17
+Just like I can't eat, I can't breathe properly. And then just like getting same day appointment.
+
+[Charles Carper] 10:40:23
+Right, so you get bumped up in the queue because you're You're set up differently.
+
+[Marius] 10:40:25
+Yeah. Yeah. And it's the thing is because here in UK is not business. It's just like taking care of people.
+
+[Charles Carper] 10:40:28
+Okay. That was good. Thank you.
+
+[Marius] 10:40:35
+That's a bit different. Yeah.
+
+[Charles Carper] 10:40:37
+Yeah, yeah. Okay, so let me see. Especially in seeking anything, okay. Alright, here's the next one.
+
+[Charles Carper] 10:40:47
+Based on your ideal booking experience. What features are services? Do you wish to online platforms offered for?
+
+[Charles Carper] 10:40:56
+To better meet your needs for medical care. So. Let's see, how's this question asking?
+
+[Charles Carper] 10:41:02
+So.
+
+[Charles Carper] 10:41:04
+Is, is there things about online? Scheduling, that could be better.
+
+[Charles Carper] 10:41:15
+In the medical space if you can.
+
+[Marius] 10:41:15
+Of course it would be better. Yeah, the medical states just like. Because then I did the booking, Back then, not online, I got messages.
+
+[Marius] 10:41:26
+Or tomorrow you'll go just like, your booking, booking appointment with your GP and yeah that's fine just like it could be even just like week before.
+
+[Marius] 10:41:36
+They sending you a message. So week before one day before and in general about booking. As much I had experience it's it's pretty good system you just picking your days available space just like spaces where you can book in.
+
+[Marius] 10:41:53
+And of course, would be nice just like to get some notifications if just like there is available space.
+
+[Marius] 10:41:59
+But you should as understand it would be complicated because people not showing up on time and it's just like it's impossible to get to know people to come on that time if it's just like this right time just like you get what I want to say just like Yeah.
+
+[Charles Carper] 10:42:14
+Gotcha. So it could be hard on both sides, but the doctors, if, someone shows up late.
+
+[Marius] 10:42:20
+Hmm.
+
+[Charles Carper] 10:42:20
+And then that's gonna push the queue back and make other people late. Yeah.
+
+[Marius] 10:42:25
+Yeah, I mean, they should maybe try to do some. Those bookings to do with those people who didn't show up And just, I don't know, got to get the give them some penalties.
+
+[Marius] 10:42:40
+I just like to pay 50 pounds once they're showing up. They are funding that. So yeah, so what's this one?
+
+[Charles Carper] 10:42:46
+Right. Yeah, sounds good.
+
+[Marius] 10:42:50
+I don't know how it's going to work, but it's one of the ideas.
+
+[Marius] 10:42:53
+Yeah.
+
+[Charles Carper] 10:42:53
+Yeah, no, it's great. Okay, so, when choosing from a list of doctors, okay, so what, factors influence your decisions?
+
+[Charles Carper] 10:43:04
+If you see a list of doctors out there and you're like, okay, I need to pick one.
+
+[Charles Carper] 10:43:07
+Well, how do you do.
+
+[Marius] 10:43:14
+That's because, yeah, usually as I mean, bias that would look. How they look as well just like the first impression.
+
+[Marius] 10:43:23
+It's I mean we can't say I can't say I'm not biased I'm looking just like on all deeper but I would lie.
+
+[Charles Carper] 10:43:29
+Yeah.
+
+[Marius] 10:43:29
+And the thing is, I would like. To see First, just like how they look and then maybe just try to read some.
+
+[Marius] 10:43:38
+What they their backgrounds integrate educations but it's really one that to me because I don't understand what those grades mean.
+
+[Charles Carper] 10:43:47
+Right.
+
+[Marius] 10:43:47
+So yeah. Of course, I must see just like doctor. As a DR and just like because it's actually everyone has that thing yeah just like Yeah, actually, I don't know.
+
+[Charles Carper] 10:43:55
+Alright.
+
+[Marius] 10:44:00
+I was like, maybe the first one or just like the most available. It just like if I would need just like next week and those doctors just like who has the gap, the space.
+
+[Marius] 10:44:13
+For me to next week, I will pay close. Just like that, the ability I think would be.
+
+[Charles Carper] 10:44:18
+Alright, okay, sounds good. Alright, so let me ask another question here. How? Can we make it easier for you to find the appointment that suits your schedule?
+
+[Charles Carper] 10:44:29
+So I think the just of the question here is. Around scheduling. What do you think would be best?
+
+[Charles Carper] 10:44:39
+To fit your schedule. How do you get from the booking to your schedule?
+
+[Charles Carper] 10:44:45
+Together.
+
+[Marius] 10:44:47
+I mean, because while I'm using, I'm using Google. Google calendar and something like if somebody using Apple calendar so just somehow just like sync together and just like to tune in to each other and just like work together and just.
+
+[Charles Carper] 10:44:52
+Okay.
+
+[Marius] 10:45:06
+As this Zoom Meeting, I got 30 min reminder and I just can't see just like, you know, my phone, it show just like, I got a meeting at 4 30.
+
+[Marius] 10:45:19
+Pm and that's what makes me to remember I need to come
+
+[Charles Carper] 10:45:25
+Sure, so if somebody set up a an appointment like if you chose one of the Yeah, it would just get set right to your calendar.
+
+[Marius] 10:45:28
+Yeah.
+
+[Charles Carper] 10:45:34
+Okay. Do you like that some places when it says, do you want to add this to your calendar?
+
+[Charles Carper] 10:45:43
+They automatically add a predefined time. So like let's say this will remind you in 1 h or do you like to select that yourself?
+
+[Charles Carper] 10:45:51
+When to be reminded.
+
+[Marius] 10:45:51
+Well, I would prefer when somebody is selecting for me, just like. Of course, just like I could.
+
+[Marius] 10:46:00
+I mean somebody could select me for me the just like that the full time I mean just like it's 1 h before and then if I want I could just pick for myself day before, week before and 1 HI mean half an hour before just like myself I'm picking but the the standard would be just like better just like that 1 h one day before because sometimes I'm just I'm
+
+[Charles Carper] 10:46:16
+Right.
+
+[Shelby Matthews] 10:46:25
+Yeah. Yeah.
+
+[Marius] 10:46:27
+KAY, I'm just, I don't, don't try to think if I'm rushing it's like paying attention when is going to be when I want to be reminded.
+
+[Charles Carper] 10:46:32
+Yeah. Sounds good. Yeah, okay. Okay, here's another question.
+
+[Marius] 10:46:33
+So yeah, if I'm on, yeah.
+
+[Shelby Matthews] 10:46:33
+Don't have to think about it if there's a default.
+
+[Marius] 10:46:37
+Yeah.
+
+[Charles Carper] 10:46:42
+What about a website makes you feel comfortable? Sharing your medical information.
+
+[Marius] 10:46:50
+Hmm. Yeah. No. Now just like because I know about those infra data leaks just like them just some hackers going taking their data because my Email is a couple of emails, I mean, just like it's taken and I didn't, I didn't concern before, but now I started to concern about my health because if just like I got some cancer or something like that and some just like post sale
+
+[Shelby Matthews] 10:46:52
+Or are you even comfortable sharing your information? Online.
+
+[Marius] 10:47:26
+things would try to get to me or just like scanners would like to get to me and to take my money from me just like even now they call me and offering just like saying I put some money in some investment and they want to refund me.
+
+[Charles Carper] 10:47:40
+Yeah.
+
+[Marius] 10:47:40
+That's, I mean, it can just, and they would do just like with the cancer. If I got a cancel, it would be at the weak point.
+
+[Marius] 10:47:46
+So. It depends. What the condition is of my health. I mean, just like a fillness.
+
+[Marius] 10:47:54
+If for example about some coughing or something like that, it's just like a similar a simple thing.
+
+[Marius] 10:48:01
+I won't mind, but if about cancer, I would I mean, concern about just like to get that thing on paper rather than online just like.
+
+[Marius] 10:48:11
+Yeah.
+
+[Charles Carper] 10:48:13
+So the severity of your. Appointment of what you're trying to get accomplished. Determines how much detail you're gonna spend.
+
+[Marius] 10:48:16
+Yeah.
+
+[Charles Carper] 10:48:21
+Paying attention to security on the website. Okay.
+
+[Marius] 10:48:22
+Yeah. Hmm. And of course, if you just like is some research, research thing, so I would say, okay, I want to help future people just like, I mean, it depends on situation at the moment.
+
+[Marius] 10:48:37
+I mean, because I didn't have any Serious illness, so I can't say actually.
+
+[Charles Carper] 10:48:43
+Okay
+
+[Marius] 10:48:43
+But if I have a cancer, something like that. I don't know what I would think. I could say that one thing and after that I would prefer just like to just like some Just like severe illness to stay on just like on paper as an online.
+
+[Charles Carper] 10:48:48
+Yeah.
+
+[Charles Carper] 10:49:01
+Right. Okay, so here's a scenario. So let's say when COVID just popped off, right?
+
+[Marius] 10:49:06
+Hmm.
+
+[Charles Carper] 10:49:06
+And there was all these shots coming up saying we could do COVID tests. And you wanted to get yourself checked or things like that, but you had to do a same day testing.
+
+[Charles Carper] 10:49:17
+But you went to a website that said that they do COVID tests.
+
+[Charles Carper] 10:49:22
+How do you feel safe? Providing your information there. When you see a website that looks kind of new.
+
+[Marius] 10:49:29
+Hmm.
+
+[Charles Carper] 10:49:30
+Is there certain things about the website that must? Definitely have that makes it feel secure.
+
+[Marius] 10:49:38
+Oh, because Yeah. In UK, there was a COVID and we needed to do a test. It was all NHS government.
+
+[Marius] 10:49:51
+Control. So it's actually wasn't. If any other just like without G was website, I didn't trust that.
+
+[Marius] 10:50:00
+I didn't. And here in you can it's just like more central thing. I mean just like NHS is, I mean just like governments control and just like a funded organization and actually everything just like any chess bookings and everything is under just NHS and government.
+
+[Marius] 10:50:18
+I mean, just like go and. Yeah. And it's a bit of trust. If would be just like some random say oh you can do it copy test and we'll fill everything for you.
+
+[Marius] 10:50:29
+I want to do this.
+
+[Charles Carper] 10:50:30
+Okay, so when it came to government things you needed to see government branding on the website. To feel like you were safe, okay.
+
+[Marius] 10:50:34
+Yeah. Yeah. Yeah.
+
+[Marius] 10:50:42
+And of course, government saying we're not calling you, we're always sending your email. It's just like you can recognize everything.
+
+[Marius] 10:50:49
+Because usually now as you know, scammers is sending even messages like a government send in, even emails they're doing, but they can't just like copy exactly email, just like you can see to some details, more details if you're just like.
+
+[Marius] 10:51:02
+Yeah, and yeah, about of course in United States it's different. It's just like, you's business from health.
+
+[Marius] 10:51:08
+Here in UK, just like in Europe. I mean, again, about a difference. So. I don't know if you make, I will make you value about this because if you're doing for, United States.
+
+[Charles Carper] 10:51:14
+Gotcha.
+
+[Marius] 10:51:20
+Markets about this. Booking GP just like GP booking. It will be a different again, so yeah.
+
+[Charles Carper] 10:51:28
+Gotcha. It is it is a target for the UK. So it is very, yeah, down here, like you're saying about government branding is important.
+
+[Marius] 10:51:32
+Oh, okay.
+
+[Marius] 10:51:37
+Hmm.
+
+[Charles Carper] 10:51:39
+Yeah. Okay, so let's see. Okay, so let's say you make an appointment, same day appointment for something.
+
+[Charles Carper] 10:51:47
+Is there anything else? After the after the fact of applying and you got you find out what you gotta do.
+
+[Charles Carper] 10:51:54
+What would you like to know afterwards? Is there anything that The steps up until you get there, is there anything that that's helpful to know?
+
+[Marius] 10:52:03
+To get to the GP.
+
+[Charles Carper] 10:52:06
+Yeah. Yeah, so yeah, so like even if it's online or even if it's a in person But you went to let's say you went to Google you logged in you went to the whole process and you booked your appointment.
+
+[Shelby Matthews] 10:52:07
+Hmm.
+
+[Marius] 10:52:17
+Yeah.
+
+[Charles Carper] 10:52:21
+Okay good. From the time you finished booking your appointment to the actual appointment. Would you like to get specific information or how would you like to get it or?
+
+[Charles Carper] 10:52:32
+Or is it just fine? Just leave it alone if you get to that meeting.
+
+[Marius] 10:52:36
+Yeah, it would be nice to get some guidance how to do because Actually, now I remember it's, I got one.
+
+[Marius] 10:52:45
+Because I wanted to just like I was to GP because I hope I got on my shin song just like water bump.
+
+[Marius] 10:52:54
+And I want to just to get off to cut it off just like kinda it was before the COVID-19 and I said all you can do now because of COVID.
+
+[Marius] 10:53:06
+19 just like we can do take you into hospital and do surgery and during that college just like after one year I say oh you can do but first to have to do just like that.
+
+[Marius] 10:53:14
+Online with. Meeting with Not, surger, but, nurse, nurse, I think, I think, yeah.
+
+[Marius] 10:53:24
+And they got some guidance. They send me kind of how I have to connect and they're using their own.
+
+[Marius] 10:53:30
+Provider who do just like online meetings so yeah So that's what I want to say. It's nice to have some guidance.
+
+[Marius] 10:53:40
+How to use the system. To connect to. GP doctor or. To nurse or something like that.
+
+[Charles Carper] 10:53:49
+Okay, so like next steps. And maybe even some guidance about what your element is that you registered for.
+
+[Marius] 10:53:51
+Yeah. Yeah, Yeah, even like godless notice. 30 min, it just make sure just like just try to do connect.
+
+[Marius] 10:54:04
+30 min before to figure out how to connect and if it's everything working. So yeah. It's
+
+[Charles Carper] 10:54:09
+Okay, and to configure your settings. Okay. That's good to know. Let me see.
+
+[Charles Carper] 10:54:17
+After you're making the point, huh, do you remember it? Okay. Is there a Yeah, do you is there anything about The notifications.
+
+[Shelby Matthews] 10:54:21
+Kind of did that.
+
+[Charles Carper] 10:54:29
+I know we talked about, the text. And maybe some, Google alerts that kind of reminds you, or is that enough?
+
+[Charles Carper] 10:54:38
+Do you like more? Would you like to go like actually get emails or do you like text only?
+
+[Shelby Matthews] 10:54:46
+For appointment reminders.
+
+[Marius] 10:54:46
+Hmm. Hmm, I mean just like It's again, you can I would like to at this point I would like to pick.
+
+[Marius] 10:54:55
+I mean to choose if I would like to get Just like once I do a Booking appointment on that looking system.
+
+[Marius] 10:55:06
+I would have opportunity to choose. I mean, just like already default. Yeah, email. Message, just like Google calendar and then I just like unpick someone what I don't want, but it's just like, and just like I would like to choose, or maybe I don't want, and messages, so I don't want email because my email is just like full of junk and messages.
+
+[Charles Carper] 10:55:19
+Right.
+
+[Marius] 10:55:29
+So I don't want email because my email is just like full of junk and I would miss something like that.
+
+[Charles Carper] 10:55:30
+Yeah, yeah, right. Okay, well that wraps up all of our questions. I really appreciate you taking the time and doing this and being flexible with our scheduling.
+
+[Charles Carper] 10:55:40
+I know the time difference is little off. So I mean, hey, Shelby and I were definitely, open to help you out.
+
+[Marius] 10:55:41
+Hmm.
+
+[Charles Carper] 10:55:47
+If you need any research or any questions like that, we'll do that. We'll do the same thing for you.
+
+[Charles Carper] 10:55:51
+Okay, lastly. We're gonna do a usability test thing afterwards. Would you like to be part of that still?
+
+[Marius] 10:55:59
+Yeah, okay, just send me email. I mean, just like the link because to go into online, yeah, so just like.
+
+[Charles Carper] 10:56:05
+Sure. Yeah. Okay, thank you very much for your time and Shelby and I will wrap up.
+
+[Marius] 10:56:06
+Disability.
+
+[Marius] 10:56:10
+Good morning, guys.
+
+[Charles Carper] 10:56:12
+You can go ahead and pop off and then we'll reach back out to you once we get to the usability testing.
+
+[Marius] 10:56:16
+Okay, and so what is that you working as a a few answers or something like that.
+
+[Charles Carper] 10:56:23
+We're doing it for a boot camp. It's, we're, UX UI design of and we're working on Doc, it's a startup in the UK and, that's our objective, our project is to try to give the better experience for their login or for their web flow.
+
+[Marius] 10:56:25
+Oh.
+
+[Charles Carper] 10:56:43
+Form. So that's what we're working on and we're gonna. I think it would probably come out pretty good.
+
+[Marius] 10:56:44
+Hmm.
+
+[Charles Carper] 10:56:51
+And I think, with your health and your insights, it'll be. You know, yeah, you gave us a lot of good stuff, so.
+
+[Shelby Matthews] 10:56:56
+You did.
+
+[Marius] 10:56:56
+Okay.
+
+[Charles Carper] 10:56:56
+It'll it'll be fun to see once it comes together. What it looks like.
+
+[Marius] 10:56:59
+Yeah. Oh, well, so last thing in the United States.
+
+[Shelby Matthews] 10:57:02
+Yeah. And the headquarters for our boot camp. My classes is in the UK as well. So that's pretty cool.
+
+[Charles Carper] 10:57:08
+Yeah.
+
+[Shelby Matthews] 10:57:09
+Yeah.
+
+[Charles Carper] 10:57:12
+Yeah, we're both in the United States.
+
+[Marius] 10:57:13
+Yeah, but I mean just like know, courses just like in United States. I mean just like who providing good courses because I'm doing a memorize it many from the United States.
+
+[Shelby Matthews] 10:57:23
+Hmm.
+
+[Marius] 10:57:25
+I mean just slightly I mean, they got just like, PST. I mean, just like the London time, the East time in United States and best time.
+
+[Shelby Matthews] 10:57:33
+Yeah.
+
+[Charles Carper] 10:57:34
+Yeah.
+
+[Marius] 10:57:34
+So bunch of Americans. Nothing in the United States, no courses or something, or just that quality.
+
+[Charles Carper] 10:57:41
+Oh, there is. I think for everyone for different reasons chose their different boot camps, but I chose, memorizedly because of, Xander's, positive vibes that he has.
+
+[Marius] 10:57:51
+Oh, super fast, yeah. Huh?
+
+[Shelby Matthews] 10:57:53
+Yeah.
+
+[Charles Carper] 10:57:53
+Yeah, super fast and he's super nice and so is everybody else and I think that's the culture that I'm looking for is everybody just so pleasant, you know, and So, and it's good, it's good education, good, information that you've got and, Yeah, it was a good balance between value and money.
+
+[Marius] 10:57:59
+Yeah.
+
+[Marius] 10:58:02
+Yes, Yeah.
+
+[Marius] 10:58:13
+And in professional without informality just like because some courses is too formal I mean just like it like that in for a moment it's It's just relaxing and just enjoying the flow.
+
+[Shelby Matthews] 10:58:19
+Yeah. Right.
+
+[Charles Carper] 10:58:20
+Yeah.
+
+[Marius] 10:58:24
+Yeah, I agree with that.
+
+[Charles Carper] 10:58:25
+Yeah, just like you said about the US stuff some of it is kind of like very business oriented so it's kinda like They turn you through. They don't care about you.
+
+[Shelby Matthews] 10:58:26
+Definitely.
+
+[Marius] 10:58:30
+Oh yeah, yeah, yeah. Yeah, yeah, yeah. Yeah, this is what's different just like, in Europe, just trying to give some just like value and make fun and just care people.
+
+[Charles Carper] 10:58:34
+You're a number. So this field.
+
+[Shelby Matthews] 10:58:35
+Hmm. Hmm
+
+[Marius] 10:58:44
+And it's different mood, just like, you know, it's a dreamland, even in Europe, you say, just like, they'll dream land, this business, everything of business.
+
+[Charles Carper] 10:58:53
+Yeah, yeah. Alright
+
+[Marius] 10:58:54
+So yeah
+

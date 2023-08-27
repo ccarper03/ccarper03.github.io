@@ -1,0 +1,64 @@
+﻿Demographic Questions:
+Do you typically prefer in-person consultations or online consultations for your medical needs?
+* In person
+What is your age range?
+* 26
+What is your current occupation or industry?
+* Education / Technology
+How frequently do you seek GP consultations for non-emergency issues?
+* monthly
+Regular Questions:
+
+
+Can you describe your recent experience of booking a GP appointment online? If so, were there any challenges or difficulties you encountered during the process?
+* It was challenging because I needed a very specific type of service that a lot of doctor offices didn’t understand and required me to bring paperwork in person for them to understand.
+
+
+What factors influence your decision to book a GP appointment online, especially when seeking immediate medical attention?
+* Proximity and ease of being able to transfer my information to them
+
+
+How would you rate the level of trust and reliability you associate with the Doctap platform? What aspects contribute to this rating?
+* I would rate my trust and reliability 10/10. I say that the branding makes me feel confident that its a platform that I can trust, and having my doctor tell me to use it also builds that trust.
+
+
+In your opinion, how user-friendly is the Doctap platform? Are there any areas of the interface that you find confusing or difficult to navigate?
+* Fairly user-friendly, It was only really difficult if I were near-sighted.
+
+
+Have you ever needed immediate medical attention and sought same-day GP appointments through the Doctap platform? If so, could you share your experience?
+* It was when my wife was experiencing tooth-pains. It was a mildly stressful experience because of the uncertainty of when my wife would receive aid.
+
+
+Chuck: followed up on this question on what does he think would have been helpful in this position, from an apps perspective to make him feel calm. 
+
+He suggested just knowing when he filled out the information to know where he was in the Que. More information that would be helpful was how many people are on staff, to know if the line will move faster or not. 
+
+
+On a scale of 1 to 10, how satisfied are you with the booking speed and convenience offered by the Doctap platform? What factors contribute to your rating?
+* It is fairly quick and easy! I find it straight forward.
+
+
+Based on your ideal online booking experience, what features or services do you wish Doctap offered to better meet your needs?
+* Offering alt locations that offer the services or times that I want.
+
+
+After considering your experiences and feedback, are there any specific areas of the Doctap platform that you believe could be improved to better serve busy professionals?
+* It would be neat to see how many people are waiting in front of me!
+
+
+How do you envision the perfect online doctor booking experience for busy professionals, and what changes would make it a reality?
+* The ability to send questions or documents in advance!
+
+
+Are there any concerns or doubts you have regarding the data privacy, security, or credibility of doctors listed on the platform?
+* None!
+
+
+Chuck: When I followed up with how he could feel so certain about feeling secure, he said when he comes to the website he could just tell how it looks that he felt safe. 
+
+
+
+
+Closing
+Thank you for your valuable insights today. Your feedback will help us improve the booking experience for Doctap users. If you have any additional thoughts, feel free to reach out.
