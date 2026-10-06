@@ -1,8 +1,9 @@
-// Floor plan finder. Eight short questions, one per screen, then one recommended
-// Collins Ridge floor plan with a direct link to D.R. Horton's plan image.
+// Floor plan finder. Seven short questions, one per screen, then one recommended
+// Collins Ridge floor plan with a direct link to D.R. Horton's plan image. The visitor confirms
+// the plan (or sees the next best), then chooses to be contacted. Lead fields go to HubSpot.
 // Plan data: Collins Ridge plan list (June 2026). payFrom = lowest est. monthly payment
 // on Collins Ridge inventory (Oct 2026 pull); used only to judge budget fit, never shown as a number.
-// Answers leave the browser only if the visitor sends the email form; it posts to HubSpot.
+// Answers leave the browser only when the visitor sends the form; it posts to HubSpot.
 (function () {
   var root = document.getElementById('matcher');
   if (!root) return;
@@ -22,78 +23,79 @@
     { name: "Linville", kind: "Townhome", beds: 4, bedsMax: null, baths: 3, stories: 2, sqft: "2,439", f: {loft: 1, bedDown: 1, dining: 1, tub: 1, townhome: 1}, payFrom: null, note: "A large primary suite upstairs", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49727-collins-ridge/497280000-collins-ridge-26-th/t203/linville_-_tradition_series_collins_ridge.jpg?rev=7273d2fe51114dedad392ac41007f977&hash=09FA7A0E212851A5E0604F48A21E210A" }
   ];
 
+  var CITIES = ['Aberdeen', 'Angier', 'Apex', 'Clayton', 'Durham', 'Fuquay-Varina', 'Hillsborough', 'Knightdale', 'Lillington', 'Pinehurst', 'Raeford', 'Raleigh', 'Sanford', 'Spring Lake', 'Stem', 'Vass', 'Wake Forest', 'Wendell', 'West End', 'Willow Spring', "Wilson's Mills", 'Youngsville'];
+
   var STEPS = [
-    { id: 'why', type: 'multi', title: "What's behind the move?",
-      why: "Pick as many as fit. I'll build your answer around this.",
-      options: [['room', 'More room'], ['rent', "I'm tired of paying rent"], ['commute', 'A shorter commute'], ['change', 'A life change, like a new job or a new chapter'], ['newer', 'Something newer, with less to fix'], ['other', 'Something else']] },
-    { id: 'now', type: 'single', title: "What's your housing situation right now?",
-      why: 'Own or rent changes how we time things. It has nothing to do with which city you are in.',
-      options: [['rent', 'I rent'], ['sell', "I own, and I'd need to sell first"], ['own', "I own, and I don't need to sell first"], ['family', "I'm staying with family or friends"], ['moving', "I'm relocating to the area"]] },
-    { id: 'when', type: 'single', title: 'When do you want to be in?',
-      why: 'A rough guess is fine. It tells me whether to start with homes that are already built.',
-      options: [['soon', 'In the next 3 months'], ['mid', 'In 3 to 6 months'], ['later', 'In 6 to 12 months'], ['open', 'No date yet']] },
+    { id: 'why', type: 'multi', title: "What's making you think about moving?",
+      why: "Pick all that fit.",
+      options: [['room', 'I need more room'], ['rent', "I'm tired of paying rent"], ['commute', 'I want a shorter drive to work'], ['change', 'Something is changing in my life'], ['newer', 'I want a newer home with less to fix'], ['other', 'Something else']] },
+    { id: 'now', type: 'single', title: 'Where do you live now?',
+      why: 'This helps me plan the timing.',
+      options: [['rent', 'I rent'], ['sell', 'I own a home I need to sell'], ['own', "I own a home and don't need to sell it"], ['family', 'I live with family or friends']] },
+    { id: 'when', type: 'single', title: 'When do you want to move in?',
+      why: 'A guess is fine. It tells me if I should start with homes that are already built.',
+      options: [['soon', 'In the next 3 months'], ['mid', 'In 3 to 6 months'], ['later', 'In 6 to 12 months'], ['open', 'Not sure yet']] },
     { id: 'beds', type: 'single', title: 'How many bedrooms do you need?',
-      why: 'Count the rooms that need a bed. Offices and flex space come next.',
-      options: [['3', 'Three or fewer'], ['4', 'Four'], ['5', 'Five or more'], ['unsure', "I'm not sure yet"]] },
-    { id: 'needs', type: 'multi', title: 'What has to be in the home?',
-      why: 'Pick what matters most. Skip the rest. Every choice here is something these floor plans really have.',
+      why: "Count the rooms that need a bed. We'll talk about offices next.",
+      options: [['3', '3 or fewer'], ['4', '4'], ['5', '5 or more'], ['unsure', 'Not sure yet']] },
+    { id: 'needs', type: 'multi', title: 'What does the home need to have?',
+      why: 'Pick what matters. Skip the rest. Every choice here is something these floor plans really have.',
       options: [
-        ['flex', 'A flex room for an office, study, gym or hobby'],
+        ['flex', 'A flex room for an office, gym or hobby'],
         ['loft', 'A loft or second living area upstairs'],
         ['bedDown', 'A bedroom on the main floor'],
-        ['primaryDown', 'The primary suite on the main floor'],
-        ['dual', 'Two primary suites, one up and one down'],
+        ['primaryDown', 'The main bedroom on the main floor'],
+        ['dual', 'Two main bedrooms, one up and one down'],
         ['one', 'One story only'],
         ['laundry1', 'Laundry on the main floor'],
         ['covered', 'A covered patio'],
         ['dining', 'A separate dining room'],
         ['butler', "A butler's pantry"],
-        ['tub', 'A garden tub with a separate shower'],
+        ['tub', 'A garden tub and a separate shower'],
         ['rearLoad', 'A garage in the back, not facing the street'],
-        ['lowmaint', 'Low maintenance, less yard'],
+        ['lowmaint', 'Less yard to take care of'],
         ['none', 'None of these']] },
-    { id: 'pay', type: 'single', title: 'What monthly payment feels comfortable?',
-      why: "Count taxes and insurance. This isn't a quote, and no rate is attached.",
-      options: [['2500', 'Under $2,500'], ['3000', '$2,500 to $3,000'], ['3500', '$3,000 to $3,500'], ['4000', '$3,500 or more'], ['unsure', "I'm not sure yet"]] },
-    { id: 'where', type: 'where', title: 'Where do you need to be close to?',
-      why: "A work address, a town, or an area. I use it to see which communities make sense. It stays between us." },
-    { id: 'lender', type: 'single', title: 'Have you talked to a lender?',
-      why: 'No wrong answer. It tells me what to line up first.',
-      options: [['pre', "Yes, I'm pre-approved"], ['talked', "I've talked to one, but I'm not pre-approved"], ['not', 'Not yet'], ['cash', "I'm paying cash"]] }
+    { id: 'pay', type: 'single', title: 'About how much a month can you spend?',
+      why: "Include taxes and insurance. This isn't a quote.",
+      options: [['2500', '$2,500 or less'], ['3000', 'About $3,000'], ['3500', 'About $3,500'], ['4000', '$4,000 or more'], ['unsure', 'Not sure yet']] },
+    { id: 'cities', type: 'cities', title: 'Which cities do you like?',
+      why: "Tap every city that works for you. I'll look for homes near them." }
   ];
 
   var LABELS = {
     why: { room: 'more room', rent: 'to stop paying rent', commute: 'a shorter commute', change: 'a fit for what is changing in your life', newer: 'something newer with less to fix' },
-    now: { rent: 'You rent today', sell: "You own a home you'd need to sell first", own: 'You own, and selling is not a hurdle', family: "You're living with family or friends", moving: "You're moving to the area" },
-    when: { soon: "you'd like to be in within 3 months", mid: "you're aiming for 3 to 6 months out", later: "you're looking 6 to 12 months out", open: "you don't have a date yet" }
+    now: { rent: 'You rent today', sell: 'You own a home you need to sell', own: "You own a home and don't need to sell it", family: 'You live with family or friends' },
+    when: { soon: "you'd like to be in within 3 months", mid: "you're aiming for 3 to 6 months out", later: "you're looking 6 to 12 months out", open: "you're not sure of the date yet" }
   };
 
-  var answers = { why: [], other: '', now: '', when: '', beds: '', needs: [], extra: '', pay: '', where: '', commute: '30', lender: '' };
-  var i = 0, firstRender = true, lastRec = null, stage = 'q';
-  var lead = { first: '', last: '', email: '', phone: '', notes: '', news: false };
-  var LEAD_ENDPOINT = ''; // Google Apps Script /exec URL. Empty until deployed.
+  var answers = { why: [], other: '', now: '', when: '', beds: '', needs: [], extra: '', pay: '', cities: [] };
+  var i = 0, firstRender = true, stage = 'q';
+  var lead = { first: '', last: '', email: '', phone: '', role: '' };
+  var ri = 0, seen = [];
   var BOOK_SRC = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3cw7jvoA1zLMv16S7_4RMyfNGmYtW2w39wFeBwaVV0Msfd9rnRX8cDYqhESc7mQjj3Eqa9gGZm?gv=true';
   var KEY = 'ccFinderV1';
-  function persist() { try { sessionStorage.setItem(KEY, JSON.stringify({ a: answers, i: i, st: stage, l: lead })); } catch (e) {} }
+  function persist() { try { sessionStorage.setItem(KEY, JSON.stringify({ a: answers, i: i, st: stage, l: lead, ri: ri, seen: seen })); } catch (e) {} }
   function restore() {
     try {
       var d = JSON.parse(sessionStorage.getItem(KEY) || 'null');
       if (!d || !d.a) return;
       Object.keys(answers).forEach(function (k) { if (d.a[k] !== undefined) answers[k] = d.a[k]; });
       if (d.l) Object.keys(lead).forEach(function (k) { if (d.l[k] !== undefined) lead[k] = d.l[k]; });
-      i = Math.min(Math.max(+d.i || 0, 0), STEPS.length - 1); stage = d.st || 'q';
+      i = Math.min(Math.max(+d.i || 0, 0), STEPS.length - 1); stage = d.st || 'q'; ri = +d.ri || 0; seen = d.seen || [];
     } catch (e) {}
   }
   function nav(st, n, replace) {
     stage = st; if (n !== undefined) i = n;
     persist();
-    try { history[replace ? 'replaceState' : 'pushState']({ cf: 1, st: st, i: i }, ''); } catch (e) {}
+    try { history[replace ? 'replaceState' : 'pushState']({ cf: 1, st: st, i: i, ri: ri }, ''); } catch (e) {}
     show();
   }
-  function show() { if (stage === 'done') { done(); } else if (stage === 'r') { results(); } else { render(); } }
+  function show() {
+    if (stage === 'done') done(); else if (stage === 'r') results(); else if (stage === 'c') confirm(); else if (stage === 'f') leadForm(false); else if (stage === 'n') leadForm(true); else render();
+  }
   window.addEventListener('popstate', function (e) {
     var d = e.state;
-    if (d && d.cf) { stage = d.st; i = d.i; persist(); show(); }
+    if (d && d.cf) { stage = d.st; i = d.i; if (d.ri !== undefined) ri = d.ri; persist(); show(); }
   });
 
   function el(tag, attrs, kids) {
@@ -149,14 +151,10 @@
         fs.appendChild(other);
       }
     }
-    if (s.type === 'where') {
-      var w = el('label', { 'class': 'field' }, [el('span', { text: 'Work address, town or area' }), el('input', { type: 'text', name: 'where', autocomplete: 'off', placeholder: 'For example: RTP, or downtown Durham' })]);
-      w.querySelector('input').value = answers.where;
-      fs.appendChild(w);
-      fs.appendChild(el('p', { 'class': 'm-sub', text: "What's the longest commute you'd put up with?" }));
-      var c = el('div', { 'class': 'chips' });
-      [['15', '15 min'], ['30', '30 min'], ['45', '45 min'], ['60', 'An hour']].forEach(function (o) { c.appendChild(choice('radio', 'commute', o[0], o[1], answers.commute === o[0])); });
-      fs.appendChild(c);
+    if (s.type === 'cities') {
+      var cb = el('div', { 'class': 'chips' });
+      CITIES.concat(['Not sure yet']).forEach(function (c) { cb.appendChild(choice('checkbox', 'cities', c, c, has(answers.cities, c))); });
+      fs.appendChild(cb);
     }
 
     var err = el('p', { 'class': 'm-error', role: 'alert' });
@@ -173,7 +171,7 @@
       save(form);
       var problem = check(s);
       if (problem) { err.textContent = problem; return; }
-      if (i < STEPS.length - 1) { nav('q', i + 1); } else { nav('r'); }
+      if (i < STEPS.length - 1) { nav('q', i + 1); } else { ri = 0; seen = []; nav('r'); }
     });
     root.appendChild(form);
     if (!firstRender) {
@@ -193,16 +191,13 @@
     if (s.type === 'single') answers[s.id] = fd.get(s.id) || '';
     if (s.id === 'why') answers.other = (fd.get('other') || '').trim();
     if (s.id === 'needs') answers.extra = (fd.get('extra') || '').trim();
-    if (s.type === 'where') { answers.where = (fd.get('where') || '').trim(); answers.commute = fd.get('commute') || answers.commute; }
+    if (s.type === 'cities') { var cv = fd.getAll('cities'); if (has(cv, 'Not sure yet') && cv.length > 1) cv = cv.filter(function (x) { return x !== 'Not sure yet'; }); answers.cities = cv; }
   }
   function check(s) {
     if (s.type === 'single' && !answers[s.id]) return 'Pick the one that fits best.';
     if (s.id === 'why' && !answers.why.length && !answers.other) return 'Pick at least one, or tell me in your own words.';
     if (s.id === 'needs' && !answers.needs.length) return 'Pick what matters, or "None of these."';
-    if (s.type === 'where') {
-      if (!answers.where) return 'Tell me a town or an area so I can check the commute.';
-      if (!answers.commute) return 'Pick a commute.';
-    }
+    if (s.type === 'cities' && !answers.cities.length) return 'Tap at least one city, or "Not sure yet."';
     return '';
   }
 
@@ -212,8 +207,8 @@
     flex: { w: 22, ok: 'You wanted a flex room. This one has it.', no: 'You wanted a flex room. This plan does not have one.' },
     loft: { w: 14, ok: 'You wanted a second living area. This plan has a loft or upstairs living space.', no: 'You wanted a loft or second living area. This plan does not have one.' },
     bedDown: { w: 24, ok: 'You wanted a bedroom on the main floor. This plan has one, with a full bath.', no: 'You wanted a bedroom on the main floor. This plan does not have one, so we should talk about that first.' },
-    primaryDown: { w: 26, ok: 'You wanted the primary suite on the main floor. This plan puts it there.', no: 'You wanted the primary suite on the main floor. This plan puts it upstairs.' },
-    dual: { w: 24, ok: 'You wanted two primary suites. This plan has one up and one down.', no: 'You wanted two primary suites. This plan has one.' },
+    primaryDown: { w: 26, ok: 'You wanted the main bedroom on the main floor. This plan puts it there.', no: 'You wanted the main bedroom on the main floor. This plan puts it upstairs.' },
+    dual: { w: 24, ok: 'You wanted two main bedrooms. This plan has one up and one down.', no: 'You wanted two main bedrooms. This plan has one.' },
     one: { w: 60, ok: 'You asked for one story. This is the only one-story plan at Collins Ridge.', no: 'You asked for one story. This plan has two.' },
     laundry1: { w: 16, ok: 'You wanted laundry on the main floor. This plan has it.', no: 'You wanted laundry on the main floor. This plan has it upstairs.' },
     covered: { w: 14, ok: 'You wanted a covered patio. This plan has one. Size and cover depend on the homesite.', no: 'You wanted a covered patio. This plan has a patio, and cover depends on the homesite.' },
@@ -248,9 +243,11 @@
     if (!p.payFrom && answers.pay === '2500') s += 6;
     return s;
   }
-  function pick() {
-    var r = PLANS.map(function (p) { return { plan: p, s: score(p) }; }).sort(function (a, b) { return b.s - a.s; });
-    return { top: r[0].plan, next: r[1].plan };
+  function ranked() {
+    return PLANS.map(function (p) { return { plan: p, s: score(p) }; }).sort(function (a, b) { return b.s - a.s; }).map(function (x) { return x.plan; });
+  }
+  function citiesText() {
+    return !answers.cities.length || has(answers.cities, 'Not sure yet') ? 'the Triangle area' : listJoin(answers.cities);
   }
   function reasons(p) {
     var out = [];
@@ -272,179 +269,191 @@
 
   // ---- Lead capture ----
   var HS = { portal: '247617862', form: '0b4dc486-9d8e-4e91-a9a2-37f231108f90' };
-  function track() {
-    if (answers.now === 'sell') return 'Home to sell';
-    if (answers.when === 'soon') return 'Move-in ready';
-    if (answers.when === 'open') return 'Just looking';
-    return 'Nurture';
+  function group() {
+    if (answers.now === 'sell') return 'sell';
+    if (answers.when === 'soon') return 'ready';
+    if (answers.when === 'open') return 'looking';
+    return 'planning';
   }
-  function summary() {
-    var parts = ['Floor plan finder', 'Track: ' + track(),
-      'Why: ' + answers.why.concat(answers.other ? ['"' + answers.other + '"'] : []).join(', '),
-      'Living: ' + answers.now, 'Move: ' + answers.when, 'Bedrooms: ' + answers.beds,
-      'Needs: ' + answers.needs.join(', ') + (answers.extra ? ' | Also wants: ' + answers.extra : ''), 'Payment: ' + answers.pay,
-      'Near: ' + answers.where + ' (' + answers.commute + ' min)', 'Lender: ' + answers.lender];
-    return parts.join(' | ');
-  }
-  function submitLead(form, onDone) {
+  function current() { var rk = ranked(); return rk[Math.min(ri, rk.length - 1)]; }
+  function submitLead(form, soft, onDone) {
     var fd = new FormData(form);
     var v = function (k) { return (fd.get(k) || '').toString().trim(); };
-    lead = { first: v('first'), last: v('last'), email: v('email'), phone: v('phone'), notes: v('notes'), news: !!fd.get('newsletter') };
+    lead = { first: v('first'), last: v('last'), email: v('email'), phone: v('phone'), role: v('role') };
     persist();
     if (!lead.first) { onDone(false, 'Please add your first name.'); return; }
-    if (!lead.last) { onDone(false, 'Please add your last name.'); return; }
+    if (!soft && !lead.last) { onDone(false, 'Please add your last name.'); return; }
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(lead.email)) { onDone(false, 'Please enter a valid email address.'); return; }
+    if (!soft && !lead.role) { onDone(false, 'Please tell me if you are the buyer or a realtor.'); return; }
     if (v('website')) { onDone(true, ''); return; } // honeypot
-    var rec = lastRec || pick(), p = rec.top, alt = rec.next;
-    var fail = 'That did not go through. Please try again, or call or text me.';
-    var fields = [{ name: 'email', value: lead.email }, { name: 'firstname', value: lead.first }, { name: 'lastname', value: lead.last }];
+    var p = current();
+    var fields = [
+      { name: 'email', value: lead.email }, { name: 'firstname', value: lead.first },
+      { name: 'cc_finder_plan', value: p.name }, { name: 'cc_finder_cities', value: answers.cities.join(', ') },
+      { name: 'cc_wants_contact', value: soft ? 'false' : 'true' }, { name: 'cc_followup_group', value: group() }
+    ];
+    if (lead.last) fields.push({ name: 'lastname', value: lead.last });
     if (lead.phone) fields.push({ name: 'phone', value: lead.phone });
-    // HubSpot drops fields the form does not define, so the plan rides in the page URL it records.
-    var q = '?plan=' + encodeURIComponent(p.name) + '&alt=' + encodeURIComponent(alt.name) + '&track=' + encodeURIComponent(track()) +
-      '&beds=' + encodeURIComponent(answers.beds) + '&pay=' + encodeURIComponent(answers.pay) + '&near=' + encodeURIComponent(answers.where) + '&news=' + (lead.news ? 'yes' : 'no');
-    var hs = fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + HS.portal + '/' + HS.form, {
+    if (!soft) fields.push({ name: 'cc_lead_type', value: lead.role });
+    if (answers.when) fields.push({ name: 'cc_move_timeline', value: answers.when });
+    if (answers.now) fields.push({ name: 'cc_housing_situation', value: answers.now });
+    if (answers.pay) fields.push({ name: 'cc_payment_range', value: answers.pay });
+    fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + HS.portal + '/' + HS.form, {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ fields: fields, context: { pageUri: location.origin + location.pathname + q, pageName: document.title } })
-    }).then(function (r) { return r.ok; }).catch(function () { return false; });
-    var mail = !LEAD_ENDPOINT ? Promise.resolve(null) : fetch(LEAD_ENDPOINT, {
-      method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-      body: JSON.stringify({
-        first: lead.first, last: lead.last, email: lead.email, phone: lead.phone, notes: lead.notes, news: lead.news,
-        plan: { name: p.name, kind: p.kind, url: p.url, beds: p.beds, bedsMax: p.bedsMax || '', baths: p.baths, sqft: p.sqft, stories: p.stories },
-        alt: { name: alt.name, url: alt.url }, track: track(), budget: fit(p), summary: summary(),
-        reasons: reasons(p).hits, page: location.origin + location.pathname
-      })
-    }).then(function (r) { return r.json(); }).then(function (j) { return !!(j && j.ok); }).catch(function () { return false; });
-    Promise.all([hs, mail]).then(function (r) {
-      var ok = LEAD_ENDPOINT ? (r[0] || r[1]) : r[0];
-      onDone(ok, ok ? '' : fail, { mailed: r[1] === true });
-    });
+      body: JSON.stringify({ fields: fields, context: { pageUri: location.origin + location.pathname, pageName: document.title } })
+    }).then(function (r) { onDone(r.ok, r.ok ? '' : 'That did not go through. Please try again, or call or text me.'); })
+      .catch(function () { onDone(false, 'That did not go through. Please try again, or call or text me.'); });
   }
 
-  // ---- Results ----
-  function planCard(p, alt) {
+  // ---- Screens ----
+  function planCard(p) {
     var card = el('div', { 'class': 'card-plain ballpark' });
     card.appendChild(el('h3', { text: 'The ' + p.name + ' · ' + p.kind }));
     card.appendChild(el('p', { 'class': 'quiet', text: (p.bedsMax ? p.beds + ' to ' + p.bedsMax : p.beds) + ' bed · ' + p.baths + ' bath · ' + p.sqft + ' sq ft · ' + (p.stories === 1 ? '1 story' : '2 story') }));
-    var ul = el('ul');
-    var rs = reasons(p);
+    var ul = el('ul'), rs = reasons(p);
     rs.hits.forEach(function (t) { ul.appendChild(el('li', { text: t })); });
     card.appendChild(ul);
     if (rs.misses.length) card.appendChild(el('p', { 'class': 'quiet small', text: 'Worth knowing: ' + rs.misses.join(' ') }));
     var bl = budgetLine(p);
     if (bl) card.appendChild(el('p', { 'class': 'measure', text: bl }));
     card.appendChild(el('div', { 'class': 'actions' }, [el('a', { 'class': 'btn btn-ink', href: p.url, target: '_blank', rel: 'noopener noreferrer', text: 'See the ' + p.name + ' floor plan' })]));
-    card.appendChild(el('p', { 'class': 'quiet small', text: 'Opens the floor plan image in a new tab. Close the tab to come back here.' }));
-    card.appendChild(el('p', { 'class': 'quiet small', text: 'If you want a second look: the ' + alt.name + '. ' + alt.note + '.' }));
+    card.appendChild(el('p', { 'class': 'quiet small', text: 'Opens the floor plan picture in a new tab. Close the tab to come back here.' }));
     return card;
   }
-  function wireEdit(btn) { btn.addEventListener('click', function () { nav('q', STEPS.length - 1); }); }
   function wireRestart(btn) {
     btn.addEventListener('click', function () {
-      answers = { why: [], other: '', now: '', when: '', beds: '', needs: [], extra: '', pay: '', where: '', commute: '30', lender: '' };
+      answers = { why: [], other: '', now: '', when: '', beds: '', needs: [], extra: '', pay: '', cities: [] };
+      ri = 0; seen = [];
       try { sessionStorage.removeItem(KEY); } catch (e) {}
       nav('q', 0);
     });
   }
+  function finish(h2) {
+    root.querySelector('h2').focus({ preventScroll: true });
+    root.scrollIntoView({ block: 'start' });
+  }
+  function btn(cls, text, fn) { var b = el('button', { type: 'button', 'class': 'btn ' + cls, text: text }); b.addEventListener('click', fn); return b; }
 
   function results() {
     root.innerHTML = '';
-    var rec = pick(); lastRec = rec;
-    var p = rec.top, alt = rec.next;
+    var rk = ranked(), p = rk[Math.min(ri, rk.length - 1)];
+    if (!has(seen, p.name)) { seen.push(p.name); persist(); }
     var why = answers.why.filter(function (r) { return r !== 'other'; }).map(function (r) { return LABELS.why[r]; });
     if (answers.other) why.push('“' + answers.other + '”');
-
     var heard = el('div', { 'class': 'result-block', style: 'margin-top:0' });
-    heard.appendChild(el('h2', { text: 'Start with the ' + p.name + '.', tabindex: '-1' }));
-    heard.appendChild(el('p', { 'class': 'heard', text: (LABELS.now[answers.now] || 'You') + (why.length ? ', and you want ' + listJoin(why) : '') + '. ' + 'And ' + LABELS.when[answers.when] + '. Here is why this is the plan I would put in front of you first.' }));
+    heard.appendChild(el('h2', { text: ri === 0 ? 'Start with the ' + p.name + '.' : 'Here is another one: the ' + p.name + '.', tabindex: '-1' }));
+    heard.appendChild(el('p', { 'class': 'heard', text: (LABELS.now[answers.now] || 'You') + (why.length ? ', and you want ' + listJoin(why) : '') + '. And ' + LABELS.when[answers.when] + '. ' + (ri === 0 ? 'This is the plan I would put in front of you first, and here is why.' : 'It is the next best fit for what you told me.') }));
     root.appendChild(heard);
-    root.appendChild(planCard(p, alt));
+    root.appendChild(planCard(p));
 
-    var next = el('div', { 'class': 'result-block' });
-    next.appendChild(el('h2', { text: 'What I can’t tell you from here' }));
-    next.appendChild(el('p', { 'class': 'measure', text: 'Which homes with this layout are open, and in which community, depends on where you need to be (' + answers.where + ') and what fits your payment. A floor plan doesn’t answer that. We work it out together, and then I set up the visit.' }));
-    var step = answers.now === 'sell' ? 'You would need to sell first, so the order matters. We will map that before you fall for a house.'
-      : answers.when === 'soon' ? 'You want to be in soon, so I start with the homes closest to done.'
-      : 'Come see this layout in person. A plan on a screen never shows how a room feels.';
-    if (answers.lender === 'not') step += ' I will also point you to a lender so your numbers are real before you tour.';
-    next.appendChild(el('p', { 'class': 'measure lead', style: 'max-width:52ch', text: step }));
-    next.appendChild(el('p', { 'class': 'quiet small', text: 'Homes sell and new ones release as they are built, so what is open changes week to week. I will confirm what is current. No obligation.' }));
-    root.appendChild(next);
-    root.appendChild(leadForm(p));
-
-    var acts = el('div', { 'class': 'actions', style: 'margin-top:18px' }, [
-      el('button', { type: 'button', 'class': 'btn btn-ink', text: 'Change my answers' }),
-      el('a', { 'class': 'btn btn-ink', href: 'sms:+19843282788', text: 'Text me instead' }),
-      el('button', { type: 'button', 'class': 'btn btn-ink', text: 'Start over' })
-    ]);
-    wireEdit(acts.children[0]); wireRestart(acts.children[2]);
-    root.appendChild(acts);
-    root.querySelector('h2').focus({ preventScroll: true });
-    root.scrollIntoView({ block: 'start' });
+    var q = el('div', { 'class': 'result-block card-plain' });
+    q.appendChild(el('h3', { text: 'Is this the one?' }));
+    q.appendChild(el('p', { 'class': 'measure', text: 'Look at the floor plan. Then tell me. If it is not right, we will keep going until it is.' }));
+    var acts = el('div', { 'class': 'actions' });
+    acts.appendChild(btn('btn-amber', 'Yes, this is the one', function () { nav('c'); }));
+    if (ri < Math.min(4, rk.length - 1)) acts.appendChild(btn('btn-ink', 'Show me another', function () { ri++; nav('r'); }));
+    acts.appendChild(btn('btn-ink', 'Change my answers', function () { nav('q', STEPS.length - 1); }));
+    q.appendChild(acts);
+    if (ri >= Math.min(4, rk.length - 1)) q.appendChild(el('p', { 'class': 'quiet small', text: 'Those are my best matches. Change your answers, or we can talk it through together.' }));
+    root.appendChild(q);
+    finish();
   }
 
-  function leadForm(p) {
-    var wrap = el('div', { 'class': 'result-block card-plain', id: 'report' });
-    wrap.innerHTML =
-      '<h3>Want me to set up the visit?</h3>' +
-      '<p class="measure">Tell me who you are. I’ll send you the ' + p.name + ' floor plan and what I would check next, and you can pick a time right after. Whatever you chose here comes with you, so I’m not starting from zero.</p>' +
-      '<form novalidate><div class="form-grid">' +
+  function confirm() {
+    root.innerHTML = '';
+    var p = current();
+    var soon = answers.when === 'soon';
+    var h = el('div', { 'class': 'result-block', style: 'margin-top:0' });
+    h.appendChild(el('h2', { text: 'Want to see the ' + p.name + ' in person?', tabindex: '-1' }));
+    h.appendChild(el('p', { 'class': 'heard', text: 'You like ' + citiesText() + ', you want to spend about ' + ({ '2500': '$2,500 or less', '3000': '$3,000', '3500': '$3,500', '4000': '$4,000 or more', unsure: 'what feels right' }[answers.pay] || 'what feels right') + ' a month, and you picked the ' + p.name + '.' }));
+    h.appendChild(el('p', { 'class': 'measure', text: 'A floor plan alone does not tell you which homes with this layout are open, or where. I can check that for you and set up a time to walk one.' }));
+    h.appendChild(el('p', { 'class': 'measure lead', style: 'max-width:52ch', text: soon ? 'You want to be in soon, so I start with the homes closest to done.' : answers.now === 'sell' ? 'You have a home to sell, so we will map the order first. No rush.' : 'There is no pressure. It is just a look.' }));
+    h.appendChild(el('p', { 'class': 'quiet small', text: 'What is open changes week to week. I will confirm what is current. No obligation.' }));
+    var acts = el('div', { 'class': 'actions' });
+    acts.appendChild(btn('btn-amber', 'Yes, help me set up a visit', function () { nav('f'); }));
+    acts.appendChild(btn('btn-ink', 'Not yet', function () { nav('n'); }));
+    h.appendChild(acts);
+    h.appendChild(el('div', { 'class': 'actions', style: 'margin-top:8px' }, [btn('btn-ink', 'Back to the floor plan', function () { nav('r'); })]));
+    root.appendChild(h);
+    finish();
+  }
+
+  function leadForm(soft) {
+    root.innerHTML = '';
+    var p = current();
+    var wrap = el('div', { 'class': 'result-block', style: 'margin-top:0' });
+    wrap.appendChild(el('h2', { text: soft ? 'No problem. Want me to check back later?' : 'Where should I send you?', tabindex: '-1' }));
+    wrap.appendChild(el('p', { 'class': 'measure', text: soft ? 'Leave your first name and email and I will check in when you are closer. Your ' + p.name + ' pick comes with you.' : 'Your ' + p.name + ' pick, your cities and your answers come with you. I am not starting from zero.' }));
+    var fm = el('form', { novalidate: '' });
+    fm.innerHTML =
+      '<div class="form-grid">' +
       '<label class="field"><span>First name</span><input type="text" name="first" autocomplete="given-name" required></label>' +
-      '<label class="field"><span>Last name</span><input type="text" name="last" autocomplete="family-name" required></label>' +
+      (soft ? '' : '<label class="field"><span>Last name</span><input type="text" name="last" autocomplete="family-name" required></label>') +
       '<label class="field full"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>' +
-      '<label class="field"><span>Phone <span class="hint">optional</span></span><input type="tel" name="phone" autocomplete="tel"></label>' +
-      '<label class="field full"><span>Anything I should know? <span class="hint">optional</span></span><textarea name="notes" maxlength="600" placeholder="A deal-breaker, a deadline, a question."></textarea></label>' +
-      '<label class="check full"><input type="checkbox" name="newsletter"><span>Also send me Charles’s newsletter. Unsubscribe anytime.</span></label>' +
+      (soft ? '' : '<fieldset class="full"><legend class="hint" style="margin-bottom:6px">I am</legend><div class="chips">' +
+        '<label class="choice"><input type="radio" name="role" value="buyer"><span>The buyer</span></label>' +
+        '<label class="choice"><input type="radio" name="role" value="realtor"><span>A realtor with a buyer</span></label></div></fieldset>' +
+        '<label class="field"><span>Phone <span class="hint">optional</span></span><input type="tel" name="phone" autocomplete="tel"></label>') +
       '<div style="position:absolute;left:-9999px" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>' +
       '</div>' +
-      '<p class="quiet small">If you add a phone number, I may call or text about your plans and a visit. Message and data rates may apply. Reply STOP to opt out.</p>' +
-      '<div class="actions"><button class="btn btn-amber" type="submit">Send it and show me times</button></div>' +
-      '<p class="form-note" role="alert" hidden></p></form>';
-    var form = wrap.querySelector('form'), note = form.querySelector('.form-note');
-    ['first', 'last', 'email', 'phone', 'notes'].forEach(function (k) { form.elements[k].value = lead[k] || ''; });
-    form.elements.newsletter.checked = !!lead.news;
-    form.addEventListener('input', function () {
-      ['first', 'last', 'email', 'phone', 'notes'].forEach(function (k) { lead[k] = form.elements[k].value; });
-      lead.news = form.elements.newsletter.checked; persist();
+      '<p class="quiet small">' + (soft ? 'By sending this, you agree I may email you about your plans. Reply stop and I will.' : 'By sending this, you agree I may contact you about this plan and homes that fit it. If you add a phone number, I may call or text. Message and data rates may apply. Reply STOP to opt out.') + '</p>' +
+      '<div class="actions"><button class="btn btn-amber" type="submit">' + (soft ? 'Check back with me' : 'Send it to Charles') + '</button></div>' +
+      '<p class="form-note" role="alert" hidden></p>';
+    wrap.appendChild(fm);
+    wrap.appendChild(el('div', { 'class': 'actions', style: 'margin-top:12px' }, [btn('btn-ink', 'Back', function () { nav('c'); })]));
+    root.appendChild(wrap);
+    var note = fm.querySelector('.form-note');
+    ['first', 'last', 'email', 'phone'].forEach(function (k) { if (fm.elements[k]) fm.elements[k].value = lead[k] || ''; });
+    if (fm.elements.role && lead.role) { var rr = fm.querySelector('input[name=role][value=' + lead.role + ']'); if (rr) rr.checked = true; }
+    fm.addEventListener('input', function () {
+      ['first', 'last', 'email', 'phone'].forEach(function (k) { if (fm.elements[k]) lead[k] = fm.elements[k].value; });
+      var r = fm.querySelector('input[name=role]:checked'); if (r) lead.role = r.value; persist();
     });
-    form.addEventListener('submit', function (e) {
+    fm.addEventListener('submit', function (e) {
       e.preventDefault();
-      var btn = form.querySelector('button[type=submit]');
-      btn.disabled = true; btn.textContent = 'Sending…'; note.hidden = true;
-      submitLead(form, function (ok, msg, info) {
-        if (!ok) { btn.disabled = false; btn.textContent = 'Send it and show me times'; note.hidden = false; note.textContent = msg; return; }
-        mailed = !!(info && info.mailed);
+      var b = fm.querySelector('button[type=submit]'), label = b.textContent;
+      b.disabled = true; b.textContent = 'Sending…'; note.hidden = true;
+      submitLead(fm, soft, function (ok, msg) {
+        if (!ok) { b.disabled = false; b.textContent = label; note.hidden = false; note.textContent = msg; return; }
+        softDone = soft; try { sessionStorage.setItem(KEY + 's', soft ? '1' : '0'); } catch (x) {}
         nav('done');
       });
     });
-    return wrap;
+    finish();
   }
-  var mailed = false;
-  try { mailed = sessionStorage.getItem(KEY + 'm') === '1'; } catch (e) {}
+  var softDone = false;
+  try { softDone = sessionStorage.getItem(KEY + 's') === '1'; } catch (e) {}
 
+  function calendar() {
+    var box = el('div');
+    box.appendChild(el('iframe', { 'class': 'booking-frame', src: BOOK_SRC, title: 'Book a time with Charles', loading: 'lazy' }));
+    box.appendChild(el('p', { 'class': 'quiet small', html: 'No times that work? Call or text <a href="tel:+19843282788">984-328-2788</a>.' }));
+    return box;
+  }
   function done() {
-    try { sessionStorage.setItem(KEY + 'm', mailed ? '1' : '0'); } catch (e) {}
     root.innerHTML = '';
-    var rec = lastRec || pick(); lastRec = rec;
-    var p = rec.top;
+    var p = current(), first = lead.first || 'thank you';
+    var soon = answers.when === 'soon', realtor = lead.role === 'realtor';
     var h = el('div', { 'class': 'result-block', style: 'margin-top:0' });
-    h.appendChild(el('h2', { text: 'Got it, ' + (lead.first || 'thank you') + '. Now pick a time.', tabindex: '-1' }));
-    h.appendChild(el('p', { 'class': 'measure', text: mailed
-      ? 'I’m sending the ' + p.name + ' floor plan to ' + lead.email + ' now. Check your spam folder if you don’t see it in a few minutes. Pick a time below and I’ll have the ' + p.name + ' and what’s open ready for you.'
-      : 'I have your answers and the ' + p.name + '. Pick a time below and I’ll have it and what’s open ready for you.' }));
+    var title, body;
+    if (softDone) { title = 'Got it, ' + first + '. I will check back.'; body = 'No pressure. Your ' + p.name + ' pick is saved with your answers. You can come back any time, or pick a time if you change your mind.'; }
+    else if (realtor) { title = 'Thanks, ' + first + '.'; body = 'I will reach out about the ' + p.name + ' and which homes fit your buyer. If you would rather pick a time now, my calendar is below.'; }
+    else if (soon) { title = 'Got it, ' + first + '. Now pick a time.'; body = 'You want to be in soon, so let’s get you in front of the ' + p.name + ' this week. Pick a time and I will have the open homes ready.'; }
+    else { title = 'Got it, ' + first + '.'; body = 'I will reach out in the next few days to go over the ' + p.name + ' and which homes fit. If you want to lock in a time now, you can.'; }
+    h.appendChild(el('h2', { text: title, tabindex: '-1' }));
+    h.appendChild(el('p', { 'class': 'measure', text: body }));
     h.appendChild(el('div', { 'class': 'actions' }, [el('a', { 'class': 'btn btn-ink', href: p.url, target: '_blank', rel: 'noopener noreferrer', text: 'See the ' + p.name + ' floor plan' })]));
     root.appendChild(h);
-    root.appendChild(el('iframe', { 'class': 'booking-frame', src: BOOK_SRC, title: 'Book a time with Charles', loading: 'lazy' }));
-    root.appendChild(el('p', { 'class': 'quiet small', html: 'No times that work? Call or text <a href="tel:+19843282788">984-328-2788</a>, or <a href="/book">open the full booking page</a>.' }));
-    var acts = el('div', { 'class': 'actions', style: 'margin-top:18px' }, [
-      el('button', { type: 'button', 'class': 'btn btn-ink', text: 'Back to my plan' }),
-      el('button', { type: 'button', 'class': 'btn btn-ink', text: 'Start over' })
-    ]);
-    acts.children[0].addEventListener('click', function () { nav('r'); });
-    wireRestart(acts.children[1]);
+    var cal = el('div', { id: 'cal' });
+    var showNow = !softDone && (soon || realtor);
+    if (showNow) cal.appendChild(calendar());
+    root.appendChild(cal);
+    var acts = el('div', { 'class': 'actions', style: 'margin-top:18px' });
+    if (!showNow) acts.appendChild(btn('btn-amber', 'Pick a time now', function () { cal.appendChild(calendar()); this.remove(); }));
+    acts.appendChild(btn('btn-ink', 'Back to my plan', function () { nav('r'); }));
+    var rs = btn('btn-ink', 'Start over', function () {}); wireRestart(rs); acts.appendChild(rs);
     root.appendChild(acts);
-    root.querySelector('h2').focus({ preventScroll: true });
-    root.scrollIntoView({ block: 'start' });
+    finish();
   }
 
   restore();
