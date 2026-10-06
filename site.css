@@ -396,3 +396,6 @@ label.field { display: grid; gap: 6px; font-weight: 500; font-size: 15.5px; }
 .ask-close { position: absolute; right: 8px; top: 6px; background: none; border: 0; font-size: 24px; line-height: 1; color: var(--ink-2); cursor: pointer; padding: 6px; }
 @media (max-width: 560px) { .ask-btn { right: 12px; bottom: 12px; min-height: 46px; padding: 8px 14px 8px 12px; font-size: 14.5px; } .ask-panel { right: 12px; bottom: 70px; } }
 @media print { .ask-btn, .ask-panel { display: none !important; } }
+
+.newsletter { max-width: 640px; }
+.newsletter .hs-form-frame { margin-top: 20px; }
