@@ -399,3 +399,5 @@ label.field { display: grid; gap: 6px; font-weight: 500; font-size: 15.5px; }
 
 .newsletter { max-width: 640px; }
 .newsletter .hs-form-frame { margin-top: 20px; }
+
+.area-list{list-style:none;padding:0;margin:8px 0 0}.area-list li{display:flex;justify-content:space-between;gap:16px;padding:8px 0;border-bottom:1px solid rgba(128,128,128,.25)}.area-list li span:last-child{white-space:nowrap}
