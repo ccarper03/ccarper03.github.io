@@ -193,12 +193,11 @@ h3 { font-size: clamp(24px, 2.6vw, 30px); font-weight: 700; line-height: 1.05; }
 }
 
 .photo-print {
-  position: absolute; left: -22px; bottom: -150px; width: clamp(118px, 12vw, 148px); aspect-ratio: 4 / 5;
+  position: absolute; left: -26px; bottom: -170px; width: clamp(130px, 14vw, 178px); aspect-ratio: 4 / 5;
   background: #E3EAF1; border: 7px solid #fff; transform: rotate(-3.5deg);
   box-shadow: 0 14px 28px rgba(4, 16, 32, .45);
-  display: grid; place-items: center; text-align: center; padding: 10px;
-  color: var(--ink-2); font-size: 12.5px; line-height: 1.3;
 }
+.photo-print img { width: 100%; height: 100%; object-fit: cover; }
 .photo-print::before, .photo-print::after {
   content: ""; position: absolute; width: 54px; height: 18px; background: rgba(255, 246, 214, .78);
   top: -14px; box-shadow: 0 1px 2px rgba(0,0,0,.12);
@@ -347,6 +346,19 @@ label.field { display: grid; gap: 6px; font-weight: 500; font-size: 15.5px; }
 .heard { font-size: clamp(19px, 1.7vw, 22px); line-height: 1.55; max-width: 60ch; }
 .ballpark { margin-top: 28px; }
 .result-block { margin-top: clamp(40px, 5vw, 64px); }
+
+/* ---------- Photos ---------- */
+.photo { margin: 0; }
+.photo img { width: 100%; height: auto; border-radius: 6px; background: #E3EAF1; }
+.photo figcaption { font-size: 14px; color: var(--ink-2); margin-top: 8px; }
+.then-now { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-self: center; }
+.then-now .photo img { aspect-ratio: 4 / 5; object-fit: cover; }
+.gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
+.gallery .photo img { aspect-ratio: 4 / 3; object-fit: cover; }
+.strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 24px; }
+.strip .photo img { aspect-ratio: 1; object-fit: cover; }
+@media (max-width: 860px) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .strip { grid-template-columns: 1fr 1fr; } .strip .photo:last-child { display: none; } }
 
 /* ---------- Booking ---------- */
 .booking-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
