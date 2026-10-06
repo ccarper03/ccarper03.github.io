@@ -401,3 +401,8 @@ label.field { display: grid; gap: 6px; font-weight: 500; font-size: 15.5px; }
 .newsletter .hs-form-frame { margin-top: 20px; }
 
 .area-list{list-style:none;padding:0;margin:8px 0 0}.area-list li{display:flex;justify-content:space-between;gap:16px;padding:8px 0;border-bottom:1px solid rgba(128,128,128,.25)}.area-list li span:last-child{white-space:nowrap}
+
+.lead-overlay{position:fixed;inset:0;background:rgba(15,43,76,.55);display:flex;align-items:center;justify-content:center;padding:16px;z-index:1000}
+.lead-modal{position:relative;background:var(--paper);color:var(--ink);max-width:520px;width:100%;max-height:92vh;overflow:auto;padding:28px 24px;border-radius:6px;box-shadow:0 20px 50px rgba(0,0,0,.3)}
+.lead-modal h2{margin-top:0}
+.lead-close{position:absolute;top:8px;right:12px;background:none;border:0;font-size:28px;line-height:1;color:var(--ink);cursor:pointer;padding:6px}

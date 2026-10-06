@@ -1,7 +1,7 @@
 // Floor plan matcher — Phase 1 shell.
 // Asks eight questions, one per screen, then shows a free answer on screen.
 // Plan data: Collins Ridge reference sheet (June 2026). Other division communities get added later.
-// Nothing typed here leaves the browser until a backend is connected.
+// Answers leave the browser only if the visitor sends the report form; it posts to HubSpot.
 (function () {
   var root = document.getElementById('matcher');
   if (!root) return;
@@ -47,6 +47,7 @@
   var answers = { reasons: [], uses: [], pay: 2400, baths: '', beds: '', stairs: 'fine', commute: '30', where: '', other: '', no: '', followup: '' };
   var i = 0;
   var firstRender = true;
+  var lastPlans = [];
 
   function el(tag, attrs, kids) {
     var n = document.createElement(tag);
@@ -273,6 +274,7 @@
     root.appendChild(heard);
 
     var ranked = pickPlans();
+    lastPlans = ranked.map(function (r) { return r.plan.name; });
     var plans = el('div', { 'class': 'result-block' });
     plans.appendChild(el('h2', { text: 'Three Collins Ridge plans to look at first' }));
     plans.appendChild(el('p', { 'class': 'quiet measure', text: 'From the Collins Ridge plan list as of June 2026. Plans and availability change, so I’ll confirm what’s current when we talk.' }));
@@ -315,7 +317,8 @@
     root.appendChild(next);
 
     root.appendChild(reportForm());
-    document.getElementById('restart').addEventListener('click', function () { i = 0; answers = { reasons: [], uses: [], pay: 2400, baths: '', beds: '', stairs: 'fine', commute: '30', where: '', other: '', no: '', followup: '' }; render(); });
+    schedulePopup();
+    document.getElementById('restart').addEventListener('click', function () { i = 0; answers = { reasons: [], uses: [], pay: 2400, baths: '', beds: '', stairs: 'fine', commute: '30', where: '', other: '', no: '', followup: '' }; clearTimeout(popupTimer); render(); });
     root.querySelector('h2').focus({ preventScroll: true });
     root.scrollIntoView({ block: 'start' });
   }
@@ -325,24 +328,110 @@
     wrap.innerHTML =
       '<h3>Want the full report?</h3>' +
       '<p class="measure">I’ll email you the whole picture: your reasons for moving, in your words, the plans that fit and why, a timeline built around where you live now, and the next steps I’d take in your shoes.</p>' +
-      '<form data-placeholder novalidate>' +
-        '<div class="form-grid">' +
-          '<label class="field">Email<input type="email" name="email" autocomplete="email" required></label>' +
-          '<label class="field"><span>First name <span class="hint">optional</span></span><input type="text" name="first" autocomplete="given-name"></label>' +
-          '<label class="check full"><input type="checkbox" name="newsletter" checked><span>Also add me to Charles’s newsletter. Unsubscribe anytime.</span></label>' +
-          '<label class="field"><span>Phone <span class="hint">optional</span></span><input type="tel" name="phone" autocomplete="tel"></label>' +
-          '<label class="check full"><input type="checkbox" name="sms"><span>It’s OK to text me about my report and a visit. Message and data rates may apply. Reply STOP to opt out.</span></label>' +
-        '</div>' +
+      '<form novalidate>' + leadFields() +
+        '<p class="quiet small">Phone is optional. If you add it, I may call or text about your plans and a visit. Message and data rates may apply. Reply STOP to opt out.</p>' +
         '<div class="actions"><button class="btn btn-amber" type="submit">Send my full report</button></div>' +
-        '<p class="form-note" hidden>The emailed report isn’t switched on yet, so nothing was sent. For now, book a visit and I’ll walk you through all of it in person.</p>' +
+        '<p class="form-note" role="status" hidden></p>' +
       '</form>';
     var form = wrap.querySelector('form');
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var note = form.querySelector('.form-note');
-      note.hidden = false; note.setAttribute('tabindex', '-1'); note.focus();
+      submitLead(form, function (ok, msg) {
+        note.hidden = false;
+        note.textContent = ok ? 'Got it. Thank you. I’ll email your plans and the details soon. To see them in person, book a visit.' : msg;
+        note.setAttribute('tabindex', '-1'); note.focus();
+        if (ok) { form.querySelector('button[type=submit]').disabled = true; try { sessionStorage.setItem('ccMatchPopup', '1'); } catch (er) {} clearTimeout(popupTimer); }
+      });
     });
     return wrap;
+  }
+
+  // ---- Lead capture (HubSpot Forms API) ----
+  var HS = { portal: '247617862', form: '0b4dc486-9d8e-4e91-a9a2-37f231108f90' };
+
+  function track() {
+    if (answers.now === 'own') return 'Home to sell';
+    if (answers.when === 'soon') return 'Move-in ready';
+    if (answers.when === 'looking') return 'Just looking';
+    return 'Nurture';
+  }
+
+  function summary(planNames, wantsNews) {
+    var parts = ['Floor plan finder', 'Track: ' + track(),
+      'Living: ' + (LABELS.now[answers.now] || answers.now || ''),
+      'Move: ' + (LABELS.when[answers.when] || answers.when || ''),
+      'Payment: ' + money(answers.pay) + '/mo',
+      'Beds/baths: ' + (answers.beds || '?') + '/' + (answers.baths || '?'),
+      'Near: ' + (answers.where || 'not given') + ' (' + answers.commute + ' min)',
+      'Plans shown: ' + planNames.join(', '),
+      'Newsletter: ' + (wantsNews ? 'yes' : 'no')];
+    if (answers.no) parts.push('Deal-breaker: ' + answers.no);
+    return parts.join(' | ');
+  }
+
+  function submitLead(form, onDone) {
+    var fd = new FormData(form);
+    var email = (fd.get('email') || '').toString().trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { onDone(false, 'Please enter a valid email address.'); return; }
+    var names = lastPlans.slice();
+    var fields = [{ name: 'email', value: email }, { name: 'message', value: summary(names, !!fd.get('newsletter')) }];
+    if (fd.get('first')) fields.push({ name: 'firstname', value: fd.get('first').toString().trim() });
+    if (fd.get('phone')) fields.push({ name: 'phone', value: fd.get('phone').toString().trim() });
+    var body = { fields: fields, context: { pageUri: location.href, pageName: document.title } };
+    fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + HS.portal + '/' + HS.form, {
+      method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body)
+    }).then(function (r) { onDone(r.ok, r.ok ? '' : 'That did not go through. Please try again, or call or text me.'); })
+      .catch(function () { onDone(false, 'That did not go through. Please try again, or call or text me.'); });
+  }
+
+  function leadFields(idp) {
+    return '<div class="form-grid">' +
+      '<label class="field">Email<input type="email" name="email" autocomplete="email" required></label>' +
+      '<label class="field"><span>First name <span class="hint">optional</span></span><input type="text" name="first" autocomplete="given-name"></label>' +
+      '<label class="field"><span>Phone <span class="hint">optional</span></span><input type="tel" name="phone" autocomplete="tel"></label>' +
+      '<label class="check full"><input type="checkbox" name="newsletter" checked><span>Also add me to Charles’s newsletter. Unsubscribe anytime.</span></label>' +
+      '</div>';
+  }
+
+  var popupShown = false, popupTimer = null;
+  function schedulePopup() {
+    try { if (sessionStorage.getItem('ccMatchPopup')) return; } catch (e) {}
+    clearTimeout(popupTimer);
+    popupTimer = setTimeout(openPopup, 8000);
+  }
+  function openPopup() {
+    if (popupShown || !document.getElementById('report')) return;
+    popupShown = true;
+    try { sessionStorage.setItem('ccMatchPopup', '1'); } catch (e) {}
+    var prev = document.activeElement;
+    var ov = el('div', { 'class': 'lead-overlay' });
+    var box = el('div', { 'class': 'lead-modal', role: 'dialog', 'aria-modal': 'true', 'aria-labelledby': 'lead-h' });
+    box.innerHTML =
+      '<button type="button" class="lead-close" aria-label="Close">&times;</button>' +
+      '<h2 id="lead-h">Want to see these in person?</h2>' +
+      '<p>Pictures don’t show how a room feels. Pick a time and I’ll have your plans open.</p>' +
+      '<div class="actions"><a class="btn btn-amber" href="/book">Book a visit</a></div>' +
+      '<p class="quiet small" style="margin:18px 0 8px">Not ready? I can email you the plans and the details instead.</p>' +
+      '<form novalidate>' + leadFields() +
+      '<div class="actions"><button class="btn btn-ink" type="submit">Email me the details</button></div>' +
+      '<p class="form-note" role="status" hidden></p></form>';
+    ov.appendChild(box); document.body.appendChild(ov);
+    function close() { ov.remove(); document.removeEventListener('keydown', onKey); if (prev && prev.focus) prev.focus(); }
+    function onKey(e) { if (e.key === 'Escape') close(); }
+    document.addEventListener('keydown', onKey);
+    ov.addEventListener('click', function (e) { if (e.target === ov) close(); });
+    box.querySelector('.lead-close').addEventListener('click', close);
+    var form = box.querySelector('form'), note = form.querySelector('.form-note');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      submitLead(form, function (ok, msg) {
+        note.hidden = false;
+        note.textContent = ok ? 'Got it. Thank you. I’ll send the details soon. You can also book a visit any time.' : msg;
+        if (ok) form.querySelector('button[type=submit]').disabled = true;
+      });
+    });
+    box.querySelector('input[name=email]').focus();
   }
 
   render();
