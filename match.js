@@ -69,7 +69,32 @@
   };
 
   var answers = { why: [], other: '', now: '', when: '', beds: '', needs: [], extra: '', pay: '', where: '', commute: '30', lender: '' };
-  var i = 0, firstRender = true, lastRec = null;
+  var i = 0, firstRender = true, lastRec = null, stage = 'q';
+  var lead = { first: '', last: '', email: '', phone: '', notes: '', news: false };
+  var LEAD_ENDPOINT = ''; // Google Apps Script /exec URL. Empty until deployed.
+  var BOOK_SRC = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3cw7jvoA1zLMv16S7_4RMyfNGmYtW2w39wFeBwaVV0Msfd9rnRX8cDYqhESc7mQjj3Eqa9gGZm?gv=true';
+  var KEY = 'ccFinderV1';
+  function persist() { try { sessionStorage.setItem(KEY, JSON.stringify({ a: answers, i: i, st: stage, l: lead })); } catch (e) {} }
+  function restore() {
+    try {
+      var d = JSON.parse(sessionStorage.getItem(KEY) || 'null');
+      if (!d || !d.a) return;
+      Object.keys(answers).forEach(function (k) { if (d.a[k] !== undefined) answers[k] = d.a[k]; });
+      if (d.l) Object.keys(lead).forEach(function (k) { if (d.l[k] !== undefined) lead[k] = d.l[k]; });
+      i = Math.min(Math.max(+d.i || 0, 0), STEPS.length - 1); stage = d.st || 'q';
+    } catch (e) {}
+  }
+  function nav(st, n, replace) {
+    stage = st; if (n !== undefined) i = n;
+    persist();
+    try { history[replace ? 'replaceState' : 'pushState']({ cf: 1, st: st, i: i }, ''); } catch (e) {}
+    show();
+  }
+  function show() { if (stage === 'done') { done(); } else if (stage === 'r') { results(); } else { render(); } }
+  window.addEventListener('popstate', function (e) {
+    var d = e.state;
+    if (d && d.cf) { stage = d.st; i = d.i; persist(); show(); }
+  });
 
   function el(tag, attrs, kids) {
     var n = document.createElement(tag);
@@ -139,14 +164,16 @@
     var form = el('form', { 'class': 'm-step', novalidate: '' }, [fs]);
     var back = el('button', { type: 'button', 'class': 'btn btn-ink', text: 'Back' });
     if (i === 0) back.style.visibility = 'hidden';
-    back.addEventListener('click', function () { save(form); i--; render(); });
+    back.addEventListener('click', function () { save(form); nav('q', i - 1); });
+    form.addEventListener('change', function () { save(form); persist(); });
+    form.addEventListener('input', function () { save(form); persist(); });
     form.appendChild(el('div', { 'class': 'm-nav' }, [back, el('button', { type: 'submit', 'class': 'btn btn-amber', text: i === STEPS.length - 1 ? 'Show me my plan' : 'Next' })]));
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       save(form);
       var problem = check(s);
       if (problem) { err.textContent = problem; return; }
-      if (i < STEPS.length - 1) { i++; render(); } else { results(); }
+      if (i < STEPS.length - 1) { nav('q', i + 1); } else { nav('r'); }
     });
     root.appendChild(form);
     if (!firstRender) {
@@ -243,7 +270,7 @@
     return '';
   }
 
-  // ---- Lead capture (HubSpot Forms API) ----
+  // ---- Lead capture ----
   var HS = { portal: '247617862', form: '0b4dc486-9d8e-4e91-a9a2-37f231108f90' };
   function track() {
     if (answers.now === 'sell') return 'Home to sell';
@@ -251,44 +278,51 @@
     if (answers.when === 'open') return 'Just looking';
     return 'Nurture';
   }
-  function summary(wantsNews, dealbreaker) {
+  function summary() {
     var parts = ['Floor plan finder', 'Track: ' + track(),
       'Why: ' + answers.why.concat(answers.other ? ['"' + answers.other + '"'] : []).join(', '),
       'Living: ' + answers.now, 'Move: ' + answers.when, 'Bedrooms: ' + answers.beds,
       'Needs: ' + answers.needs.join(', ') + (answers.extra ? ' | Also wants: ' + answers.extra : ''), 'Payment: ' + answers.pay,
-      'Near: ' + answers.where + ' (' + answers.commute + ' min)', 'Lender: ' + answers.lender,
-      'Recommended: ' + (lastRec ? lastRec.top.name + ' (alt ' + lastRec.next.name + ', budget ' + fit(lastRec.top) + ')' : ''),
-      'Newsletter: ' + (wantsNews ? 'yes' : 'no')];
-    if (dealbreaker) parts.push('Deal-breaker: ' + dealbreaker);
+      'Near: ' + answers.where + ' (' + answers.commute + ' min)', 'Lender: ' + answers.lender];
     return parts.join(' | ');
   }
   function submitLead(form, onDone) {
     var fd = new FormData(form);
-    var email = (fd.get('email') || '').toString().trim();
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { onDone(false, 'Please enter a valid email address.'); return; }
-    var fields = [{ name: 'email', value: email }, { name: 'message', value: summary(!!fd.get('newsletter'), (fd.get('no') || '').toString().trim()) }];
-    if (fd.get('first')) fields.push({ name: 'firstname', value: fd.get('first').toString().trim() });
-    if (fd.get('phone')) fields.push({ name: 'phone', value: fd.get('phone').toString().trim() });
-    fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + HS.portal + '/' + HS.form, {
+    var v = function (k) { return (fd.get(k) || '').toString().trim(); };
+    lead = { first: v('first'), last: v('last'), email: v('email'), phone: v('phone'), notes: v('notes'), news: !!fd.get('newsletter') };
+    persist();
+    if (!lead.first) { onDone(false, 'Please add your first name.'); return; }
+    if (!lead.last) { onDone(false, 'Please add your last name.'); return; }
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(lead.email)) { onDone(false, 'Please enter a valid email address.'); return; }
+    if (v('website')) { onDone(true, ''); return; } // honeypot
+    var rec = lastRec || pick(), p = rec.top, alt = rec.next;
+    var fail = 'That did not go through. Please try again, or call or text me.';
+    var fields = [{ name: 'email', value: lead.email }, { name: 'firstname', value: lead.first }, { name: 'lastname', value: lead.last }];
+    if (lead.phone) fields.push({ name: 'phone', value: lead.phone });
+    // HubSpot drops fields the form does not define, so the plan rides in the page URL it records.
+    var q = '?plan=' + encodeURIComponent(p.name) + '&alt=' + encodeURIComponent(alt.name) + '&track=' + encodeURIComponent(track()) +
+      '&beds=' + encodeURIComponent(answers.beds) + '&pay=' + encodeURIComponent(answers.pay) + '&near=' + encodeURIComponent(answers.where) + '&news=' + (lead.news ? 'yes' : 'no');
+    var hs = fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + HS.portal + '/' + HS.form, {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ fields: fields, context: { pageUri: location.href, pageName: document.title } })
-    }).then(function (r) { onDone(r.ok, r.ok ? '' : 'That did not go through. Please try again, or call or text me.'); })
-      .catch(function () { onDone(false, 'That did not go through. Please try again, or call or text me.'); });
+      body: JSON.stringify({ fields: fields, context: { pageUri: location.origin + location.pathname + q, pageName: document.title } })
+    }).then(function (r) { return r.ok; }).catch(function () { return false; });
+    var mail = !LEAD_ENDPOINT ? Promise.resolve(null) : fetch(LEAD_ENDPOINT, {
+      method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify({
+        first: lead.first, last: lead.last, email: lead.email, phone: lead.phone, notes: lead.notes, news: lead.news,
+        plan: { name: p.name, kind: p.kind, url: p.url, beds: p.beds, bedsMax: p.bedsMax || '', baths: p.baths, sqft: p.sqft, stories: p.stories },
+        alt: { name: alt.name, url: alt.url }, track: track(), budget: fit(p), summary: summary(),
+        reasons: reasons(p).hits, page: location.origin + location.pathname
+      })
+    }).then(function (r) { return r.json(); }).then(function (j) { return !!(j && j.ok); }).catch(function () { return false; });
+    Promise.all([hs, mail]).then(function (r) {
+      var ok = LEAD_ENDPOINT ? (r[0] || r[1]) : r[0];
+      onDone(ok, ok ? '' : fail, { mailed: r[1] === true });
+    });
   }
 
   // ---- Results ----
-  function results() {
-    root.innerHTML = '';
-    var rec = pick(); lastRec = rec;
-    var p = rec.top, alt = rec.next;
-    var why = answers.why.filter(function (r) { return r !== 'other'; }).map(function (r) { return LABELS.why[r]; });
-    if (answers.other) why.push('“' + answers.other + '”');
-
-    var heard = el('div', { 'class': 'result-block', style: 'margin-top:0' });
-    heard.appendChild(el('h2', { text: 'Start with the ' + p.name + '.', tabindex: '-1' }));
-    heard.appendChild(el('p', { 'class': 'heard', text: (LABELS.now[answers.now] || 'You') + (why.length ? ', and you want ' + listJoin(why) : '') + '. ' + 'And ' + LABELS.when[answers.when] + '. Here is why this is the plan I would put in front of you first.' }));
-    root.appendChild(heard);
-
+  function planCard(p, alt) {
     var card = el('div', { 'class': 'card-plain ballpark' });
     card.appendChild(el('h3', { text: 'The ' + p.name + ' · ' + p.kind }));
     card.appendChild(el('p', { 'class': 'quiet', text: (p.bedsMax ? p.beds + ' to ' + p.bedsMax : p.beds) + ' bed · ' + p.baths + ' bath · ' + p.sqft + ' sq ft · ' + (p.stories === 1 ? '1 story' : '2 story') }));
@@ -302,57 +336,118 @@
     card.appendChild(el('div', { 'class': 'actions' }, [el('a', { 'class': 'btn btn-ink', href: p.url, target: '_blank', rel: 'noopener noreferrer', text: 'See the ' + p.name + ' floor plan' })]));
     card.appendChild(el('p', { 'class': 'quiet small', text: 'Opens the floor plan image in a new tab. Close the tab to come back here.' }));
     card.appendChild(el('p', { 'class': 'quiet small', text: 'If you want a second look: the ' + alt.name + '. ' + alt.note + '.' }));
-    root.appendChild(card);
+    return card;
+  }
+  function wireEdit(btn) { btn.addEventListener('click', function () { nav('q', STEPS.length - 1); }); }
+  function wireRestart(btn) {
+    btn.addEventListener('click', function () {
+      answers = { why: [], other: '', now: '', when: '', beds: '', needs: [], extra: '', pay: '', where: '', commute: '30', lender: '' };
+      try { sessionStorage.removeItem(KEY); } catch (e) {}
+      nav('q', 0);
+    });
+  }
+
+  function results() {
+    root.innerHTML = '';
+    var rec = pick(); lastRec = rec;
+    var p = rec.top, alt = rec.next;
+    var why = answers.why.filter(function (r) { return r !== 'other'; }).map(function (r) { return LABELS.why[r]; });
+    if (answers.other) why.push('“' + answers.other + '”');
+
+    var heard = el('div', { 'class': 'result-block', style: 'margin-top:0' });
+    heard.appendChild(el('h2', { text: 'Start with the ' + p.name + '.', tabindex: '-1' }));
+    heard.appendChild(el('p', { 'class': 'heard', text: (LABELS.now[answers.now] || 'You') + (why.length ? ', and you want ' + listJoin(why) : '') + '. ' + 'And ' + LABELS.when[answers.when] + '. Here is why this is the plan I would put in front of you first.' }));
+    root.appendChild(heard);
+    root.appendChild(planCard(p, alt));
 
     var next = el('div', { 'class': 'result-block' });
     next.appendChild(el('h2', { text: 'What I can’t tell you from here' }));
-    var line = 'Which homes with this layout are open, and in which community, depends on where you need to be (' + answers.where + ') and what fits your payment. A floor plan doesn’t answer that. We work it out together, and then I set up the visit.';
-    next.appendChild(el('p', { 'class': 'measure', text: line }));
+    next.appendChild(el('p', { 'class': 'measure', text: 'Which homes with this layout are open, and in which community, depends on where you need to be (' + answers.where + ') and what fits your payment. A floor plan doesn’t answer that. We work it out together, and then I set up the visit.' }));
     var step = answers.now === 'sell' ? 'You would need to sell first, so the order matters. We will map that before you fall for a house.'
       : answers.when === 'soon' ? 'You want to be in soon, so I start with the homes closest to done.'
       : 'Come see this layout in person. A plan on a screen never shows how a room feels.';
     if (answers.lender === 'not') step += ' I will also point you to a lender so your numbers are real before you tour.';
     next.appendChild(el('p', { 'class': 'measure lead', style: 'max-width:52ch', text: step }));
     next.appendChild(el('p', { 'class': 'quiet small', text: 'Homes sell and new ones release as they are built, so what is open changes week to week. I will confirm what is current. No obligation.' }));
-    next.appendChild(el('div', { 'class': 'actions' }, [
-      el('a', { 'class': 'btn btn-amber', href: '/book', text: 'Pick a time. I’ll have the ' + p.name + ' ready.' }),
-      el('a', { 'class': 'btn btn-ink', href: 'sms:+19843282788', text: 'Text me' }),
-      el('button', { type: 'button', 'class': 'btn btn-ink', id: 'restart', text: 'Start over' })
-    ]));
     root.appendChild(next);
-    root.appendChild(emailForm(p));
-    document.getElementById('restart').addEventListener('click', function () { i = 0; answers = { why: [], other: '', now: '', when: '', beds: '', needs: [], extra: '', pay: '', where: '', commute: '30', lender: '' }; render(); });
+    root.appendChild(leadForm(p));
+
+    var acts = el('div', { 'class': 'actions', style: 'margin-top:18px' }, [
+      el('button', { type: 'button', 'class': 'btn btn-ink', text: 'Change my answers' }),
+      el('a', { 'class': 'btn btn-ink', href: 'sms:+19843282788', text: 'Text me instead' }),
+      el('button', { type: 'button', 'class': 'btn btn-ink', text: 'Start over' })
+    ]);
+    wireEdit(acts.children[0]); wireRestart(acts.children[2]);
+    root.appendChild(acts);
     root.querySelector('h2').focus({ preventScroll: true });
     root.scrollIntoView({ block: 'start' });
   }
 
-  function emailForm(p) {
+  function leadForm(p) {
     var wrap = el('div', { 'class': 'result-block card-plain', id: 'report' });
     wrap.innerHTML =
-      '<h3>Not ready to book? I’ll email this to you.</h3>' +
-      '<p class="measure">You get the ' + p.name + ' recommendation and what I would check next for you.</p>' +
+      '<h3>Want me to set up the visit?</h3>' +
+      '<p class="measure">Tell me who you are. I’ll send you the ' + p.name + ' floor plan and what I would check next, and you can pick a time right after. Whatever you chose here comes with you, so I’m not starting from zero.</p>' +
       '<form novalidate><div class="form-grid">' +
-      '<label class="field">Email<input type="email" name="email" autocomplete="email" required></label>' +
-      '<label class="field"><span>First name <span class="hint">optional</span></span><input type="text" name="first" autocomplete="given-name"></label>' +
+      '<label class="field"><span>First name</span><input type="text" name="first" autocomplete="given-name" required></label>' +
+      '<label class="field"><span>Last name</span><input type="text" name="last" autocomplete="family-name" required></label>' +
+      '<label class="field full"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>' +
       '<label class="field"><span>Phone <span class="hint">optional</span></span><input type="tel" name="phone" autocomplete="tel"></label>' +
-      '<label class="field full"><span>Anything that would make this a no? <span class="hint">optional</span></span><textarea name="no" maxlength="600"></textarea></label>' +
-      '<label class="check full"><input type="checkbox" name="newsletter" checked><span>Also add me to Charles’s newsletter. Unsubscribe anytime.</span></label>' +
+      '<label class="field full"><span>Anything I should know? <span class="hint">optional</span></span><textarea name="notes" maxlength="600" placeholder="A deal-breaker, a deadline, a question."></textarea></label>' +
+      '<label class="check full"><input type="checkbox" name="newsletter"><span>Also send me Charles’s newsletter. Unsubscribe anytime.</span></label>' +
+      '<div style="position:absolute;left:-9999px" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>' +
       '</div>' +
       '<p class="quiet small">If you add a phone number, I may call or text about your plans and a visit. Message and data rates may apply. Reply STOP to opt out.</p>' +
-      '<div class="actions"><button class="btn btn-ink" type="submit">Email me this</button></div>' +
-      '<p class="form-note" role="status" hidden></p></form>';
+      '<div class="actions"><button class="btn btn-amber" type="submit">Send it and show me times</button></div>' +
+      '<p class="form-note" role="alert" hidden></p></form>';
     var form = wrap.querySelector('form'), note = form.querySelector('.form-note');
+    ['first', 'last', 'email', 'phone', 'notes'].forEach(function (k) { form.elements[k].value = lead[k] || ''; });
+    form.elements.newsletter.checked = !!lead.news;
+    form.addEventListener('input', function () {
+      ['first', 'last', 'email', 'phone', 'notes'].forEach(function (k) { lead[k] = form.elements[k].value; });
+      lead.news = form.elements.newsletter.checked; persist();
+    });
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      submitLead(form, function (ok, msg) {
-        note.hidden = false;
-        note.textContent = ok ? 'Got it. Thank you. I’ll send it soon. You can also pick a time any time.' : msg;
-        note.setAttribute('tabindex', '-1'); note.focus();
-        if (ok) form.querySelector('button[type=submit]').disabled = true;
+      var btn = form.querySelector('button[type=submit]');
+      btn.disabled = true; btn.textContent = 'Sending…'; note.hidden = true;
+      submitLead(form, function (ok, msg, info) {
+        if (!ok) { btn.disabled = false; btn.textContent = 'Send it and show me times'; note.hidden = false; note.textContent = msg; return; }
+        mailed = !!(info && info.mailed);
+        nav('done');
       });
     });
     return wrap;
   }
+  var mailed = false;
+  try { mailed = sessionStorage.getItem(KEY + 'm') === '1'; } catch (e) {}
 
-  render();
+  function done() {
+    try { sessionStorage.setItem(KEY + 'm', mailed ? '1' : '0'); } catch (e) {}
+    root.innerHTML = '';
+    var rec = lastRec || pick(); lastRec = rec;
+    var p = rec.top;
+    var h = el('div', { 'class': 'result-block', style: 'margin-top:0' });
+    h.appendChild(el('h2', { text: 'Got it, ' + (lead.first || 'thank you') + '. Now pick a time.', tabindex: '-1' }));
+    h.appendChild(el('p', { 'class': 'measure', text: mailed
+      ? 'I’m sending the ' + p.name + ' floor plan to ' + lead.email + ' now. Check your spam folder if you don’t see it in a few minutes. Pick a time below and I’ll have the ' + p.name + ' and what’s open ready for you.'
+      : 'I have your answers and the ' + p.name + '. Pick a time below and I’ll have it and what’s open ready for you.' }));
+    h.appendChild(el('div', { 'class': 'actions' }, [el('a', { 'class': 'btn btn-ink', href: p.url, target: '_blank', rel: 'noopener noreferrer', text: 'See the ' + p.name + ' floor plan' })]));
+    root.appendChild(h);
+    root.appendChild(el('iframe', { 'class': 'booking-frame', src: BOOK_SRC, title: 'Book a time with Charles', loading: 'lazy' }));
+    root.appendChild(el('p', { 'class': 'quiet small', html: 'No times that work? Call or text <a href="tel:+19843282788">984-328-2788</a>, or <a href="/book">open the full booking page</a>.' }));
+    var acts = el('div', { 'class': 'actions', style: 'margin-top:18px' }, [
+      el('button', { type: 'button', 'class': 'btn btn-ink', text: 'Back to my plan' }),
+      el('button', { type: 'button', 'class': 'btn btn-ink', text: 'Start over' })
+    ]);
+    acts.children[0].addEventListener('click', function () { nav('r'); });
+    wireRestart(acts.children[1]);
+    root.appendChild(acts);
+    root.querySelector('h2').focus({ preventScroll: true });
+    root.scrollIntoView({ block: 'start' });
+  }
+
+  restore();
+  try { history.replaceState({ cf: 1, st: stage, i: i }, ''); } catch (e) {}
+  show();
 })();
