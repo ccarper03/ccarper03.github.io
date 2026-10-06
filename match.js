@@ -8,36 +8,50 @@
   if (!root) return;
 
   var PLANS = [
-    { name: "Cali", kind: "Single-family", beds: 4, bedsMax: null, baths: 2, stories: 1, sqft: "1,764", f: {"mainBed": 1, "oneStory": 1}, payFrom: 2950, note: "The only one-story plan", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497300000-collins-ridge-50/1765/cali_-_4_bd_-_tradition_series_nofp_collins_ridge.jpg?rev=3395e77ddf264f0caa7fc5fa89615a26&hash=5F7AD503560DBEA82806357F5FB06410" },
-    { name: "Galen", kind: "Single-family", beds: 3, bedsMax: 4, baths: 2.5, stories: 2, sqft: "2,340", f: {"flex": 1, "loft": 1}, payFrom: 3050, note: "A flex room and a loft, and the loft can become a 4th bedroom", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497300000-collins-ridge-50/2341/galen_-_3-4bd_-_tradition_series_nofp_collins_ridge.jpg?rev=7abde535a1b2427ba00c2b94a844dc55&hash=C07AAADA4B06BB3B20475C868E6BEFDC" },
-    { name: "Sierra", kind: "Single-family", beds: 4, bedsMax: null, baths: 2.5, stories: 2, sqft: "2,395", f: {"loft": 1, "mainBed": 1}, payFrom: 2850, note: "Primary suite on the main floor, plus an upstairs living area", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497290000-collins-ridge-40/2396/sierra_-_4bd_-_tradition_series_nofp_collins_ridge.jpg?rev=cb93248c85cb4719ba9ebd8c3f208f8d&hash=D9965558919D5D0BF2EBE4C1686BBE56" },
-    { name: "Robie", kind: "Single-family", beds: 5, bedsMax: null, baths: 3, stories: 2, sqft: "2,368", f: {"loft": 1}, payFrom: 2900, note: "Five bedrooms and a large loft", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497290000-collins-ridge-40/2363/robie_-_5bd_-_tradition_series_nofp_collins_ridge.jpg?rev=31b160785fae4069ba46c82d81b30064&hash=AAB5D6C2FDB45AA3DE0B73E23E037B3B" },
-    { name: "Hayden", kind: "Single-family", beds: 5, bedsMax: null, baths: 3, stories: 2, sqft: "2,511", f: {"flex": 1, "mainBed": 1}, payFrom: 3150, note: "A bedroom on the main floor, plus a flex room", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497300000-collins-ridge-50/2512/hayden_-_5bd_-_tradition_series_nofp_collins_ridge.jpg?rev=55032b6e74204d1dab990810424b865b&hash=27C8EAB08A63CEF11616E764843400E5" },
-    { name: "Alec", kind: "Single-family", beds: 4, bedsMax: null, baths: 3, stories: 2, sqft: "2,518", f: {"mainBed": 1, "patio": 1}, payFrom: 3000, note: "A bedroom on the main floor and a covered patio", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497300000-collins-ridge-50/2531/alec_rl_-_tradition_series_nofp_collins_ridge.jpg?rev=294f9cc2e37d45f587e71c29559bca90&hash=9F3389D1950B8BDD446A600CB555EDE8" },
-    { name: "Landon", kind: "Single-family", beds: 4, bedsMax: null, baths: 3, stories: 2, sqft: "2,570", f: {"loft": 1}, payFrom: 2950, note: "An upstairs living area and a large primary suite", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497290000-collins-ridge-40/2585/landon_-_tradition_series_nofp_collins_ridge.jpg?rev=bb0d57c0bc994777816dcccc7c038470&hash=487A56F575101EC5B9A5DAA8BE24823E" },
-    { name: "Jackson", kind: "Single-family", beds: 5, bedsMax: null, baths: 3, stories: 2, sqft: "2,637", f: {"patio": 1, "entertain": 1}, payFrom: 3100, note: "A butler's pantry and a covered patio", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497300000-collins-ridge-50/2638/jackson_rl_-_tradition_series_nofp_collins_ridge.jpg?rev=efd21e7878394185999eef1d9642f2c6&hash=FE7C24B467EE7CB7039E5EF49C7C0597" },
-    { name: "Calhoun", kind: "Single-family", beds: 4, bedsMax: null, baths: 3.5, stories: 2, sqft: "2,628", f: {"mainBed": 1, "entertain": 1}, payFrom: 3200, note: "A bedroom on the main floor and a breakfast nook", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497290000-collins-ridge-40/2628/calhoun_rl_-_tradition_series_nofp_collins_ridge.jpg?rev=a842196fca7443869bd4ffcd9aa1b014&hash=C3B0586C9EDDF08C992321C2F3298269" },
-    { name: "Hanover", kind: "Single-family", beds: 4, bedsMax: 5, baths: 2.5, stories: 2, sqft: "2,804", f: {"flex": 1, "entertain": 1}, payFrom: 3300, note: "The largest single-family plan, with a flex room", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497300000-collins-ridge-50/2804/hanover_-_4-5bd_-_tradition_series_nofp__collins_ridge.jpg?rev=57dd88f1dbf0450ba43f502fb0d3ef55&hash=F026115819D8FEE25EDE7543EE5F1DD4" },
-    { name: "Savannah", kind: "Townhome", beds: 4, bedsMax: null, baths: 2.5, stories: 2, sqft: "2,240", f: {"loft": 1, "mainBed": 1, "lowMaint": 1}, payFrom: null, note: "Primary suite on the main floor and a large loft", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49727-collins-ridge/497280000-collins-ridge-26-th/t202/savannah_-_tradition_series_collins_ridge.jpg?rev=c8b4e38044ee46779a4caad2c526584d&hash=BFDA12966C8CF9C921F68F08607C6D8D" },
-    { name: "Linville", kind: "Townhome", beds: 4, bedsMax: null, baths: 3, stories: 2, sqft: "2,439", f: {"lowMaint": 1}, payFrom: null, note: "A large primary suite upstairs", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49727-collins-ridge/497280000-collins-ridge-26-th/t203/linville_-_tradition_series_collins_ridge.jpg?rev=7273d2fe51114dedad392ac41007f977&hash=09FA7A0E212851A5E0604F48A21E210A" }
+    { name: "Cali", kind: "Single-family", beds: 4, bedsMax: null, baths: 2, stories: 1, sqft: "1,764", f: {bedDown: 1, primaryDown: 1, oneStory: 1, covered: 1, dining: 1, laundry1: 1}, payFrom: 2950, note: "The only one-story plan", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497300000-collins-ridge-50/1765/cali_-_4_bd_-_tradition_series_nofp_collins_ridge.jpg?rev=3395e77ddf264f0caa7fc5fa89615a26&hash=5F7AD503560DBEA82806357F5FB06410" },
+    { name: "Galen", kind: "Single-family", beds: 3, bedsMax: 4, baths: 2.5, stories: 2, sqft: "2,340", f: {flex: 1, loft: 1}, payFrom: 3050, note: "A flex room and a loft, and the loft can become a 4th bedroom", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497300000-collins-ridge-50/2341/galen_-_3-4bd_-_tradition_series_nofp_collins_ridge.jpg?rev=7abde535a1b2427ba00c2b94a844dc55&hash=C07AAADA4B06BB3B20475C868E6BEFDC" },
+    { name: "Sierra", kind: "Single-family", beds: 4, bedsMax: null, baths: 2.5, stories: 2, sqft: "2,395", f: {loft: 1, bedDown: 1, primaryDown: 1, laundry1: 1}, payFrom: 2850, note: "Primary suite on the main floor, plus an upstairs living area", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497290000-collins-ridge-40/2396/sierra_-_4bd_-_tradition_series_nofp_collins_ridge.jpg?rev=cb93248c85cb4719ba9ebd8c3f208f8d&hash=D9965558919D5D0BF2EBE4C1686BBE56" },
+    { name: "Robie", kind: "Single-family", beds: 5, bedsMax: null, baths: 3, stories: 2, sqft: "2,368", f: {flex: 1, loft: 1, bedDown: 1}, payFrom: 2900, note: "Five bedrooms and a large loft", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497290000-collins-ridge-40/2363/robie_-_5bd_-_tradition_series_nofp_collins_ridge.jpg?rev=31b160785fae4069ba46c82d81b30064&hash=AAB5D6C2FDB45AA3DE0B73E23E037B3B" },
+    { name: "Hayden", kind: "Single-family", beds: 5, bedsMax: null, baths: 3, stories: 2, sqft: "2,511", f: {flex: 1, loft: 1, bedDown: 1}, payFrom: 3150, note: "A bedroom on the main floor, plus a flex room", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497300000-collins-ridge-50/2512/hayden_-_5bd_-_tradition_series_nofp_collins_ridge.jpg?rev=55032b6e74204d1dab990810424b865b&hash=27C8EAB08A63CEF11616E764843400E5" },
+    { name: "Alec", kind: "Single-family", beds: 4, bedsMax: null, baths: 3, stories: 2, sqft: "2,518", f: {loft: 1, bedDown: 1, covered: 1, rearLoad: 1}, payFrom: 3000, note: "A bedroom on the main floor and a covered patio", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497300000-collins-ridge-50/2531/alec_rl_-_tradition_series_nofp_collins_ridge.jpg?rev=294f9cc2e37d45f587e71c29559bca90&hash=9F3389D1950B8BDD446A600CB555EDE8" },
+    { name: "Landon", kind: "Single-family", beds: 4, bedsMax: null, baths: 3, stories: 2, sqft: "2,570", f: {loft: 1, bedDown: 1, tub: 1}, payFrom: 2950, note: "An upstairs living area and a large primary suite", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497290000-collins-ridge-40/2585/landon_-_tradition_series_nofp_collins_ridge.jpg?rev=bb0d57c0bc994777816dcccc7c038470&hash=487A56F575101EC5B9A5DAA8BE24823E" },
+    { name: "Jackson", kind: "Single-family", beds: 5, bedsMax: null, baths: 3, stories: 2, sqft: "2,637", f: {bedDown: 1, covered: 1, butler: 1, dining: 1, rearLoad: 1}, payFrom: 3100, note: "A butler's pantry and a covered patio", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497300000-collins-ridge-50/2638/jackson_rl_-_tradition_series_nofp_collins_ridge.jpg?rev=efd21e7878394185999eef1d9642f2c6&hash=FE7C24B467EE7CB7039E5EF49C7C0597" },
+    { name: "Calhoun", kind: "Single-family", beds: 4, bedsMax: null, baths: 3.5, stories: 2, sqft: "2,628", f: {bedDown: 1, primaryDown: 1, covered: 1, dining: 1, tub: 1, dual: 1, rearLoad: 1}, payFrom: 3200, note: "A bedroom on the main floor and a breakfast nook", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497290000-collins-ridge-40/2628/calhoun_rl_-_tradition_series_nofp_collins_ridge.jpg?rev=a842196fca7443869bd4ffcd9aa1b014&hash=C3B0586C9EDDF08C992321C2F3298269" },
+    { name: "Hanover", kind: "Single-family", beds: 4, bedsMax: 5, baths: 2.5, stories: 2, sqft: "2,804", f: {flex: 1, loft: 1}, payFrom: 3300, note: "The largest single-family plan, with a flex room", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497300000-collins-ridge-50/2804/hanover_-_4-5bd_-_tradition_series_nofp__collins_ridge.jpg?rev=57dd88f1dbf0450ba43f502fb0d3ef55&hash=F026115819D8FEE25EDE7543EE5F1DD4" },
+    { name: "Savannah", kind: "Townhome", beds: 4, bedsMax: null, baths: 2.5, stories: 2, sqft: "2,240", f: {loft: 1, bedDown: 1, primaryDown: 1, dining: 1, laundry1: 1, townhome: 1}, payFrom: null, note: "Primary suite on the main floor and a large loft", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49727-collins-ridge/497280000-collins-ridge-26-th/t202/savannah_-_tradition_series_collins_ridge.jpg?rev=c8b4e38044ee46779a4caad2c526584d&hash=BFDA12966C8CF9C921F68F08607C6D8D" },
+    { name: "Linville", kind: "Townhome", beds: 4, bedsMax: null, baths: 3, stories: 2, sqft: "2,439", f: {loft: 1, bedDown: 1, dining: 1, tub: 1, townhome: 1}, payFrom: null, note: "A large primary suite upstairs", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49727-collins-ridge/497280000-collins-ridge-26-th/t203/linville_-_tradition_series_collins_ridge.jpg?rev=7273d2fe51114dedad392ac41007f977&hash=09FA7A0E212851A5E0604F48A21E210A" }
   ];
 
   var STEPS = [
     { id: 'why', type: 'multi', title: "What's behind the move?",
       why: "Pick as many as fit. I'll build your answer around this.",
-      options: [['room', 'More room for the people in my home'], ['rent', "I'm tired of paying rent"], ['commute', 'A shorter commute'], ['change', 'A life change: growing, shrinking, a new job'], ['newer', 'Something newer, with less to fix'], ['other', 'Something else']] },
-    { id: 'now', type: 'single', title: 'Where do you live today?',
-      why: 'This changes the order of things more than anything else.',
-      options: [['rent', 'I rent'], ['sell', "I own, and I'd need to sell first"], ['own', "I own, and I don't need to sell first"], ['family', 'I live with family or friends'], ['moving', "I'm moving to the area"]] },
+      options: [['room', 'More room'], ['rent', "I'm tired of paying rent"], ['commute', 'A shorter commute'], ['change', 'A life change, like a new job or a new chapter'], ['newer', 'Something newer, with less to fix'], ['other', 'Something else']] },
+    { id: 'now', type: 'single', title: "What's your housing situation right now?",
+      why: 'Own or rent changes how we time things. It has nothing to do with which city you are in.',
+      options: [['rent', 'I rent'], ['sell', "I own, and I'd need to sell first"], ['own', "I own, and I don't need to sell first"], ['family', "I'm staying with family or friends"], ['moving', "I'm relocating to the area"]] },
     { id: 'when', type: 'single', title: 'When do you want to be in?',
       why: 'A rough guess is fine. It tells me whether to start with homes that are already built.',
       options: [['soon', 'In the next 3 months'], ['mid', 'In 3 to 6 months'], ['later', 'In 6 to 12 months'], ['open', 'No date yet']] },
-    { id: 'people', type: 'single', title: "Who's living in the home?",
-      why: 'This sets the bedroom count. The rest comes next.',
-      options: [['small', 'Just me, or me and a partner'], ['mid', '3 or 4 of us'], ['big', '5 or more of us'], ['multi', 'Family under one roof, like a parent moving in']] },
-    { id: 'needs', type: 'multi', title: 'What does the home need to do for you?',
-      why: 'Pick what matters. Skip what does not.',
-      options: [['office', 'A home office'], ['guest', 'A guest room'], ['main', 'A bedroom on the main floor'], ['one', 'One story only'], ['patio', 'A covered patio or outdoor space'], ['kitchen', 'A kitchen built for hosting'], ['lowmaint', 'Low maintenance, less yard'], ['none', 'None of these']] },
+    { id: 'beds', type: 'single', title: 'How many bedrooms do you need?',
+      why: 'Count the rooms that need a bed. Offices and flex space come next.',
+      options: [['3', 'Three or fewer'], ['4', 'Four'], ['5', 'Five or more'], ['unsure', "I'm not sure yet"]] },
+    { id: 'needs', type: 'multi', title: 'What has to be in the home?',
+      why: 'Pick what matters most. Skip the rest. Every choice here is something these floor plans really have.',
+      options: [
+        ['flex', 'A flex room for an office, study, gym or hobby'],
+        ['loft', 'A loft or second living area upstairs'],
+        ['bedDown', 'A bedroom on the main floor'],
+        ['primaryDown', 'The primary suite on the main floor'],
+        ['dual', 'Two primary suites, one up and one down'],
+        ['one', 'One story only'],
+        ['laundry1', 'Laundry on the main floor'],
+        ['covered', 'A covered patio'],
+        ['dining', 'A separate dining room'],
+        ['butler', "A butler's pantry"],
+        ['tub', 'A garden tub with a separate shower'],
+        ['rearLoad', 'A garage in the back, not facing the street'],
+        ['lowmaint', 'Low maintenance, less yard'],
+        ['none', 'None of these']] },
     { id: 'pay', type: 'single', title: 'What monthly payment feels comfortable?',
       why: "Count taxes and insurance. This isn't a quote, and no rate is attached.",
       options: [['2500', 'Under $2,500'], ['3000', '$2,500 to $3,000'], ['3500', '$3,000 to $3,500'], ['4000', '$3,500 or more'], ['unsure', "I'm not sure yet"]] },
@@ -49,12 +63,12 @@
   ];
 
   var LABELS = {
-    why: { room: 'more room', rent: 'to stop paying rent', commute: 'a shorter commute', change: 'a fit for a life change', newer: 'something newer with less to fix' },
+    why: { room: 'more room', rent: 'to stop paying rent', commute: 'a shorter commute', change: 'a fit for what is changing in your life', newer: 'something newer with less to fix' },
     now: { rent: 'You rent today', sell: "You own a home you'd need to sell first", own: 'You own, and selling is not a hurdle', family: "You're living with family or friends", moving: "You're moving to the area" },
     when: { soon: "you'd like to be in within 3 months", mid: "you're aiming for 3 to 6 months out", later: "you're looking 6 to 12 months out", open: "you don't have a date yet" }
   };
 
-  var answers = { why: [], other: '', now: '', when: '', people: '', needs: [], pay: '', where: '', commute: '30', lender: '' };
+  var answers = { why: [], other: '', now: '', when: '', beds: '', needs: [], extra: '', pay: '', where: '', commute: '30', lender: '' };
   var i = 0, firstRender = true, lastRec = null;
 
   function el(tag, attrs, kids) {
@@ -93,6 +107,14 @@
         box.appendChild(choice(s.type === 'single' ? 'radio' : 'checkbox', s.id, o[0], o[1], checked));
       });
       fs.appendChild(box);
+      if (s.id === 'needs') {
+        var ex = el('label', { 'class': 'field', style: 'margin-top:14px' }, [
+          el('span', { 'class': 'hint', text: 'Something not on the list? Tell me. Optional.' }),
+          el('input', { type: 'text', name: 'extra', maxlength: '160', autocomplete: 'off' })
+        ]);
+        ex.querySelector('input').value = answers.extra;
+        fs.appendChild(ex);
+      }
       if (s.id === 'why') {
         var other = el('label', { 'class': 'field', style: 'margin-top:14px' }, [
           el('span', { 'class': 'hint', text: 'Something else? Say it in your own words.' }),
@@ -143,6 +165,7 @@
     }
     if (s.type === 'single') answers[s.id] = fd.get(s.id) || '';
     if (s.id === 'why') answers.other = (fd.get('other') || '').trim();
+    if (s.id === 'needs') answers.extra = (fd.get('extra') || '').trim();
     if (s.type === 'where') { answers.where = (fd.get('where') || '').trim(); answers.commute = fd.get('commute') || answers.commute; }
   }
   function check(s) {
@@ -157,8 +180,23 @@
   }
 
   // ---- Matching ----
-  function bedNeed() { return { small: 3, mid: 4, big: 5, multi: 4 }[answers.people] || 3; }
-  function wantMain() { return has(answers.needs, 'main') || answers.people === 'multi'; }
+  // Each need maps to a feature the Collins Ridge plans really have (plan sheets). w = weight.
+  var NEEDS = {
+    flex: { w: 22, ok: 'You wanted a flex room. This one has it.', no: 'You wanted a flex room. This plan does not have one.' },
+    loft: { w: 14, ok: 'You wanted a second living area. This plan has a loft or upstairs living space.', no: 'You wanted a loft or second living area. This plan does not have one.' },
+    bedDown: { w: 24, ok: 'You wanted a bedroom on the main floor. This plan has one, with a full bath.', no: 'You wanted a bedroom on the main floor. This plan does not have one, so we should talk about that first.' },
+    primaryDown: { w: 26, ok: 'You wanted the primary suite on the main floor. This plan puts it there.', no: 'You wanted the primary suite on the main floor. This plan puts it upstairs.' },
+    dual: { w: 24, ok: 'You wanted two primary suites. This plan has one up and one down.', no: 'You wanted two primary suites. This plan has one.' },
+    one: { w: 60, ok: 'You asked for one story. This is the only one-story plan at Collins Ridge.', no: 'You asked for one story. This plan has two.' },
+    laundry1: { w: 16, ok: 'You wanted laundry on the main floor. This plan has it.', no: 'You wanted laundry on the main floor. This plan has it upstairs.' },
+    covered: { w: 14, ok: 'You wanted a covered patio. This plan has one. Size and cover depend on the homesite.', no: 'You wanted a covered patio. This plan has a patio, and cover depends on the homesite.' },
+    dining: { w: 14, ok: 'You wanted a separate dining room. This plan has one.', no: 'You wanted a separate dining room. This plan has an open dining area.' },
+    butler: { w: 16, ok: "You wanted a butler's pantry. This is the plan that has one.", no: "You wanted a butler's pantry. Only the Jackson has one." },
+    tub: { w: 12, ok: 'You wanted a garden tub and separate shower. This primary bath has both.', no: 'You wanted a garden tub and separate shower. This plan does not have that pairing.' },
+    rearLoad: { w: 10, ok: 'You wanted the garage out of the street view. This plan has a rear-load garage.', no: 'You wanted a rear garage. This plan has a front-load garage.' },
+    lowmaint: { w: 14, ok: 'You wanted less to maintain. This is a townhome, so there is less yard.', no: 'You wanted low maintenance. This is a single-family home with a yard.' }
+  };
+  var FLAG = { flex: 'flex', loft: 'loft', bedDown: 'bedDown', primaryDown: 'primaryDown', dual: 'dual', one: 'oneStory', laundry1: 'laundry1', covered: 'covered', dining: 'dining', butler: 'butler', tub: 'tub', rearLoad: 'rearLoad', lowmaint: 'townhome' };
   function fit(p) {
     var up = { '2500': 2500, '3000': 3000, '3500': 3500, '4000': 4000 }[answers.pay];
     if (!up || !p.payFrom) return 'unknown';
@@ -167,16 +205,17 @@
     return 'stretch';
   }
   function score(p) {
-    var s = 0, f = p.f;
-    var rooms = (p.bedsMax || p.beds) + (f.flex ? 1 : 0);
-    var need = bedNeed() + ((has(answers.needs, 'office') || has(answers.needs, 'guest')) ? 1 : 0);
-    s += rooms >= need ? 30 : -40 * (need - rooms);
-    if (p.beds > need + 1) s -= 8 * (p.beds - need - 1);
-    if (wantMain()) s += f.mainBed ? 25 : -50;
-    if (has(answers.needs, 'one')) s += f.oneStory ? 40 : -100;
-    if (has(answers.needs, 'patio') && f.patio) s += 15;
-    if (has(answers.needs, 'kitchen') && f.entertain) s += 15;
-    if (has(answers.needs, 'lowmaint') && f.lowMaint) s += 15;
+    var s = 0;
+    var n = parseInt(answers.beds, 10);
+    if (n) {
+      var most = p.bedsMax || p.beds;
+      s += most >= n ? 30 : -40 * (n - most);
+      if (p.beds > n + 1 && answers.beds !== '5') s -= 8 * (p.beds - n - 1);
+    }
+    answers.needs.forEach(function (k) {
+      if (!NEEDS[k]) return;
+      s += p.f[FLAG[k]] ? NEEDS[k].w : -Math.round(NEEDS[k].w * 0.8);
+    });
     var ft = fit(p);
     s += ft === 'in' ? 10 : ft === 'stretch' ? -12 : 0;
     if (!p.payFrom && answers.pay === '2500') s += 6;
@@ -187,17 +226,14 @@
     return { top: r[0].plan, next: r[1].plan };
   }
   function reasons(p) {
-    var f = p.f, out = [];
+    var out = [];
+    var n = parseInt(answers.beds, 10);
     var bedTxt = p.bedsMax ? p.beds + ' to ' + p.bedsMax + ' bedrooms' : p.beds + ' bedrooms';
-    var ppl = { small: 'one or two of you', mid: 'three or four of you', big: 'five or more of you', multi: 'family under one roof' }[answers.people];
-    out.push('You need room for ' + ppl + '. The ' + p.name + ' has ' + bedTxt + (f.flex ? ' and a flex room' : (f.loft ? ' and a loft' : '')) + '.');
-    if (has(answers.needs, 'office') || has(answers.needs, 'guest')) out.push(f.flex || f.loft ? 'You want ' + listJoin([has(answers.needs, 'office') ? 'an office' : '', has(answers.needs, 'guest') ? 'a guest room' : ''].filter(Boolean)) + '. The ' + (f.flex ? 'flex room' : 'loft') + ' covers that without adding a bedroom.' : 'You want extra space for ' + listJoin([has(answers.needs, 'office') ? 'an office' : '', has(answers.needs, 'guest') ? 'a guest' : ''].filter(Boolean)) + '. The extra bedroom does that job.');
-    if (wantMain()) out.push(f.mainBed ? 'You want a bedroom on the main floor. This plan has one, so stairs are not an everyday thing.' : 'You wanted a main-floor bedroom. This one does not have it, so we should talk about that first.');
-    if (has(answers.needs, 'one') && f.oneStory) out.push('You asked for one story. This is the only one-story plan at Collins Ridge.');
-    if (has(answers.needs, 'patio') && f.patio) out.push('You wanted outdoor space. It has a covered patio.');
-    if (has(answers.needs, 'kitchen') && f.entertain) out.push('You like to host. The kitchen is built for it.');
-    if (has(answers.needs, 'lowmaint') && f.lowMaint) out.push('You want less to maintain. This is a townhome, so there is less yard.');
-    return out.slice(0, 4);
+    if (n) out.push('You need ' + (answers.beds === '5' ? 'five or more' : answers.beds === '3' ? 'three' : 'four') + ' bedrooms. The ' + p.name + ' has ' + bedTxt + '.');
+    answers.needs.forEach(function (k) { if (NEEDS[k] && p.f[FLAG[k]]) out.push(NEEDS[k].ok); });
+    var misses = answers.needs.filter(function (k) { return NEEDS[k] && !p.f[FLAG[k]]; }).map(function (k) { return NEEDS[k].no; });
+    if (!out.length) out.push('It is the best all-around fit for what you told me. The details come when we talk.');
+    return { hits: out.slice(0, 4), misses: misses.slice(0, 2) };
   }
   function budgetLine(p) {
     var ft = fit(p);
@@ -218,8 +254,8 @@
   function summary(wantsNews, dealbreaker) {
     var parts = ['Floor plan finder', 'Track: ' + track(),
       'Why: ' + answers.why.concat(answers.other ? ['"' + answers.other + '"'] : []).join(', '),
-      'Living: ' + answers.now, 'Move: ' + answers.when, 'People: ' + answers.people,
-      'Needs: ' + answers.needs.join(', '), 'Payment: ' + answers.pay,
+      'Living: ' + answers.now, 'Move: ' + answers.when, 'Bedrooms: ' + answers.beds,
+      'Needs: ' + answers.needs.join(', ') + (answers.extra ? ' | Also wants: ' + answers.extra : ''), 'Payment: ' + answers.pay,
       'Near: ' + answers.where + ' (' + answers.commute + ' min)', 'Lender: ' + answers.lender,
       'Recommended: ' + (lastRec ? lastRec.top.name + ' (alt ' + lastRec.next.name + ', budget ' + fit(lastRec.top) + ')' : ''),
       'Newsletter: ' + (wantsNews ? 'yes' : 'no')];
@@ -257,8 +293,10 @@
     card.appendChild(el('h3', { text: 'The ' + p.name + ' · ' + p.kind }));
     card.appendChild(el('p', { 'class': 'quiet', text: (p.bedsMax ? p.beds + ' to ' + p.bedsMax : p.beds) + ' bed · ' + p.baths + ' bath · ' + p.sqft + ' sq ft · ' + (p.stories === 1 ? '1 story' : '2 story') }));
     var ul = el('ul');
-    reasons(p).forEach(function (t) { ul.appendChild(el('li', { text: t })); });
+    var rs = reasons(p);
+    rs.hits.forEach(function (t) { ul.appendChild(el('li', { text: t })); });
     card.appendChild(ul);
+    if (rs.misses.length) card.appendChild(el('p', { 'class': 'quiet small', text: 'Worth knowing: ' + rs.misses.join(' ') }));
     var bl = budgetLine(p);
     if (bl) card.appendChild(el('p', { 'class': 'measure', text: bl }));
     card.appendChild(el('div', { 'class': 'actions' }, [el('a', { 'class': 'btn btn-ink', href: p.url, target: '_blank', rel: 'noopener noreferrer', text: 'See the ' + p.name + ' floor plan' })]));
@@ -283,7 +321,7 @@
     ]));
     root.appendChild(next);
     root.appendChild(emailForm(p));
-    document.getElementById('restart').addEventListener('click', function () { i = 0; answers = { why: [], other: '', now: '', when: '', people: '', needs: [], pay: '', where: '', commute: '30', lender: '' }; render(); });
+    document.getElementById('restart').addEventListener('click', function () { i = 0; answers = { why: [], other: '', now: '', when: '', beds: '', needs: [], extra: '', pay: '', where: '', commute: '30', lender: '' }; render(); });
     root.querySelector('h2').focus({ preventScroll: true });
     root.scrollIntoView({ block: 'start' });
   }
