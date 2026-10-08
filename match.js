@@ -396,7 +396,7 @@
         '<label class="field"><span>Phone <span class="hint">optional</span></span><input type="tel" name="phone" autocomplete="tel"></label>') +
       '<div style="position:absolute;left:-9999px" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>' +
       '</div>' +
-      '<p class="quiet small">' + (soft ? 'By sending this, you agree I may email you about your plans. Reply stop and I will.' : 'By sending this, you agree I may contact you about this plan and homes that fit it. If you add a phone number, I may call or text. Message and data rates may apply. Reply STOP to opt out.') + '</p>' +
+      '<p class="quiet small">' + (soft ? 'By sending this, you agree I may email you about your plans. Unsubscribe anytime.' : 'By sending this, you agree I may contact you about this plan and homes that fit it. If you add a phone number, you agree I may call or text you, including automated texts. Consent isn\'t required to buy a home. Message and data rates may apply. Reply STOP to opt out.') + '</p>' +
       '<div class="actions"><button class="btn btn-amber" type="submit">' + (soft ? 'Check back with me' : 'Send it to Charles') + '</button></div>' +
       '<p class="form-note" role="alert" hidden></p>';
     wrap.appendChild(fm);
