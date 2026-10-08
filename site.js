@@ -42,6 +42,13 @@
     });
   }
 
+  // "Ask a question" links open the LiveChat window when it's on the page (the link texts Charles otherwise).
+  document.querySelectorAll('[data-open-assistant]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      if (window.LiveChatWidget && !panel) { e.preventDefault(); window.LiveChatWidget.call('maximize'); }
+    });
+  });
+
   // Placeholder forms: nothing is sent until a backend is connected.
   document.querySelectorAll('form[data-placeholder]').forEach(function (form) {
     form.addEventListener('submit', function (e) {
