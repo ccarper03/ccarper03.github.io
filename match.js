@@ -4,6 +4,9 @@
 // Plan data: Collins Ridge plan list (June 2026). payFrom = lowest est. monthly payment
 // on Collins Ridge inventory (Oct 2026 pull); used only to judge budget fit, never shown as a number.
 // Answers leave the browser only when the visitor sends the form; it posts to HubSpot.
+// Out-of-area fork: if none of the picked cities is a Collins Ridge city (CR_CITIES), the visitor
+// skips the plan result and gets a summary + short form instead. Those leads go to HubSpot with
+// cc_finder_plan = "Other community" and the full answer summary in the Message field.
 (function () {
   var root = document.getElementById('matcher');
   if (!root) return;
@@ -23,7 +26,10 @@
     { name: "Linville", kind: "Townhome", beds: 4, bedsMax: null, baths: 3, stories: 2, sqft: "2,439", f: {loft: 1, bedDown: 1, dining: 1, tub: 1, townhome: 1}, payFrom: null, note: "A large primary suite upstairs", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49727-collins-ridge/497280000-collins-ridge-26-th/t203/linville_-_tradition_series_collins_ridge.jpg?rev=7273d2fe51114dedad392ac41007f977&hash=09FA7A0E212851A5E0604F48A21E210A" }
   ];
 
-  var CITIES = ['Aberdeen', 'Angier', 'Apex', 'Clayton', 'Durham', 'Fuquay-Varina', 'Hillsborough', 'Knightdale', 'Lillington', 'Pinehurst', 'Raeford', 'Raleigh', 'Sanford', 'Spring Lake', 'Stem', 'Vass', 'Wake Forest', 'Wendell', 'West End', 'Willow Spring', "Wilson's Mills", 'Youngsville'];
+  var CITIES = ['Aberdeen', 'Angier', 'Apex', 'Chapel Hill', 'Clayton', 'Durham', 'Fuquay-Varina', 'Hillsborough', 'Knightdale', 'Lillington', 'Pinehurst', 'Raeford', 'Raleigh', 'Sanford', 'Spring Lake', 'Stem', 'Vass', 'Wake Forest', 'Wendell', 'West End', 'Willow Spring', "Wilson's Mills", 'Youngsville'];
+  // Picking any of these keeps the visitor on the Collins Ridge path. "Not sure yet" does too.
+  var CR_CITIES = ['Hillsborough', 'Durham', 'Chapel Hill', 'Stem'];
+  var PHONE = '+19843282788';
 
   var STEPS = [
     { id: 'why', type: 'multi', title: "What's making you think about moving?",
@@ -71,17 +77,17 @@
   var answers = { why: [], other: '', now: '', when: '', beds: '', needs: [], extra: '', pay: '', cities: [] };
   var i = 0, firstRender = true, stage = 'q';
   var lead = { first: '', last: '', email: '', phone: '', role: '' };
-  var ri = 0, seen = [];
+  var ri = 0, seen = [], editing = false;
   var BOOK_SRC = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3cw7jvoA1zLMv16S7_4RMyfNGmYtW2w39wFeBwaVV0Msfd9rnRX8cDYqhESc7mQjj3Eqa9gGZm?gv=true';
   var KEY = 'ccFinderV1';
-  function persist() { try { sessionStorage.setItem(KEY, JSON.stringify({ a: answers, i: i, st: stage, l: lead, ri: ri, seen: seen })); } catch (e) {} }
+  function persist() { try { sessionStorage.setItem(KEY, JSON.stringify({ a: answers, i: i, st: stage, l: lead, ri: ri, seen: seen, ed: editing })); } catch (e) {} }
   function restore() {
     try {
       var d = JSON.parse(sessionStorage.getItem(KEY) || 'null');
       if (!d || !d.a) return;
       Object.keys(answers).forEach(function (k) { if (d.a[k] !== undefined) answers[k] = d.a[k]; });
       if (d.l) Object.keys(lead).forEach(function (k) { if (d.l[k] !== undefined) lead[k] = d.l[k]; });
-      i = Math.min(Math.max(+d.i || 0, 0), STEPS.length - 1); stage = d.st || 'q'; ri = +d.ri || 0; seen = d.seen || [];
+      i = Math.min(Math.max(+d.i || 0, 0), STEPS.length - 1); stage = d.st || 'q'; ri = +d.ri || 0; seen = d.seen || []; editing = !!d.ed;
     } catch (e) {}
   }
   function nav(st, n, replace) {
@@ -91,7 +97,7 @@
     show();
   }
   function show() {
-    if (stage === 'done') done(); else if (stage === 'r') results(); else if (stage === 'c') confirm(); else if (stage === 'f') leadForm(false); else if (stage === 'n') leadForm(true); else render();
+    if (stage === 'done') done(); else if (stage === 'o') away(); else if (stage === 'od') awayDone(); else if (stage === 'r') results(); else if (stage === 'c') confirm(); else if (stage === 'f') leadForm(false); else if (stage === 'n') leadForm(true); else render();
   }
   window.addEventListener('popstate', function (e) {
     var d = e.state;
@@ -161,17 +167,18 @@
     fs.appendChild(err);
     var form = el('form', { 'class': 'm-step', novalidate: '' }, [fs]);
     var back = el('button', { type: 'button', 'class': 'btn btn-ink', text: 'Back' });
-    if (i === 0) back.style.visibility = 'hidden';
+    if (i === 0 || editing) back.style.visibility = 'hidden';
     back.addEventListener('click', function () { save(form); nav('q', i - 1); });
     form.addEventListener('change', function () { save(form); persist(); });
     form.addEventListener('input', function () { save(form); persist(); });
-    form.appendChild(el('div', { 'class': 'm-nav' }, [back, el('button', { type: 'submit', 'class': 'btn btn-amber', text: i === STEPS.length - 1 ? 'Show me my plan' : 'Next' })]));
+    form.appendChild(el('div', { 'class': 'm-nav' }, [back, el('button', { type: 'submit', 'class': 'btn btn-amber', text: editing ? 'Save and go back' : i === STEPS.length - 1 ? 'See what fits' : 'Next' })]));
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       save(form);
       var problem = check(s);
       if (problem) { err.textContent = problem; return; }
-      if (i < STEPS.length - 1) { nav('q', i + 1); } else { ri = 0; seen = []; nav('r'); }
+      if (editing) { editing = false; toEnd(); }
+      else if (i < STEPS.length - 1) { nav('q', i + 1); } else { toEnd(); }
     });
     root.appendChild(form);
     if (!firstRender) {
@@ -246,6 +253,34 @@
   function ranked() {
     return PLANS.map(function (p) { return { plan: p, s: score(p) }; }).sort(function (a, b) { return b.s - a.s; }).map(function (x) { return x.plan; });
   }
+  // ---- Out-of-area fork ----
+  function isAway() {
+    var c = answers.cities;
+    if (!c.length || has(c, 'Not sure yet')) return false;
+    return !c.some(function (x) { return has(CR_CITIES, x); });
+  }
+  function toEnd() { if (isAway()) nav('o'); else { ri = 0; seen = []; nav('r'); } }
+  function optLabel(id, v) {
+    var s = STEPS.filter(function (x) { return x.id === id; })[0], o = s && s.options.filter(function (x) { return x[0] === v; })[0];
+    return o ? o[1] : '';
+  }
+  // The rows on the summary card: [label, answer, question index].
+  function summaryRows() {
+    var needs = answers.needs.filter(function (k) { return k !== 'none'; }).map(function (k) { return optLabel('needs', k); });
+    if (answers.extra) needs.push('“' + answers.extra + '”');
+    var idx = function (id) { for (var n = 0; n < STEPS.length; n++) if (STEPS[n].id === id) return n; return 0; };
+    return [
+      ['Near', listJoin(answers.cities), idx('cities')],
+      ['Monthly budget', { '2500': '$2,500 or less', '3000': 'About $3,000', '3500': 'About $3,500', '4000': '$4,000 or more', unsure: 'Not sure yet' }[answers.pay] || 'Not sure yet', idx('pay')],
+      ['Bedrooms', { '3': '3 or fewer', '4': '4', '5': '5 or more', unsure: 'Not sure yet' }[answers.beds] || 'Not sure yet', idx('beds')],
+      ['Must-haves', needs.length ? needs.join(' · ') : 'Nothing specific', idx('needs')],
+      ['Move-in', optLabel('when', answers.when) || 'Not sure yet', idx('when')],
+      ['Right now', optLabel('now', answers.now) || 'Not sure', idx('now')]
+    ];
+  }
+  function summaryText() {
+    return summaryRows().map(function (r) { return r[0] + ': ' + r[1]; }).join('\n');
+  }
   function citiesText() {
     return !answers.cities.length || has(answers.cities, 'Not sure yet') ? 'the Triangle area' : listJoin(answers.cities);
   }
@@ -276,21 +311,22 @@
     return 'planning';
   }
   function current() { var rk = ranked(); return rk[Math.min(ri, rk.length - 1)]; }
-  function submitLead(form, soft, onDone) {
+  // away = the out-of-area path: no plan, no last name required, tagged "Other community".
+  function submitLead(form, soft, onDone, away) {
     var fd = new FormData(form);
     var v = function (k) { return (fd.get(k) || '').toString().trim(); };
     lead = { first: v('first'), last: v('last'), email: v('email'), phone: v('phone'), role: v('role') };
     persist();
     if (!lead.first) { onDone(false, 'Please add your first name.'); return; }
-    if (!soft && !lead.last) { onDone(false, 'Please add your last name.'); return; }
+    if (!soft && !away && !lead.last) { onDone(false, 'Please add your last name.'); return; }
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(lead.email)) { onDone(false, 'Please enter a valid email address.'); return; }
     if (!soft && !lead.role) { onDone(false, 'Please tell me if you are the buyer or a realtor.'); return; }
     if (v('website')) { onDone(true, ''); return; } // honeypot
-    var p = current();
     var fields = [
       { name: 'email', value: lead.email }, { name: 'firstname', value: lead.first },
-      { name: 'cc_finder_plan', value: p.name }, { name: 'cc_finder_cities', value: answers.cities.join(', ') },
-      { name: 'cc_wants_contact', value: soft ? 'false' : 'true' }, { name: 'cc_followup_group', value: group() }
+      { name: 'cc_finder_plan', value: away ? 'Other community' : current().name }, { name: 'cc_finder_cities', value: answers.cities.join(', ') },
+      { name: 'cc_wants_contact', value: soft ? 'false' : 'true' }, { name: 'cc_followup_group', value: group() },
+      { name: 'message', value: (away ? 'Wants options outside Hillsborough. Promised a reply within three days.\n' : 'Floor plan finder answers.\n') + summaryText() }
     ];
     if (lead.last) fields.push({ name: 'lastname', value: lead.last });
     if (lead.phone) fields.push({ name: 'phone', value: lead.phone });
@@ -323,7 +359,7 @@
   function wireRestart(btn) {
     btn.addEventListener('click', function () {
       answers = { why: [], other: '', now: '', when: '', beds: '', needs: [], extra: '', pay: '', cities: [] };
-      ri = 0; seen = [];
+      ri = 0; seen = []; editing = false;
       try { sessionStorage.removeItem(KEY); } catch (e) {}
       nav('q', 0);
     });
@@ -390,7 +426,7 @@
       '<label class="field"><span>First name</span><input type="text" name="first" autocomplete="given-name" required></label>' +
       (soft ? '' : '<label class="field"><span>Last name</span><input type="text" name="last" autocomplete="family-name" required></label>') +
       '<label class="field full"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>' +
-      (soft ? '' : '<fieldset class="full"><legend class="hint" style="margin-bottom:6px">I am</legend><div class="chips">' +
+      (soft ? '' : '<fieldset class="full" style="border:0;padding:0;margin:0;min-width:0"><legend class="hint" style="margin-bottom:6px">I am</legend><div class="chips">' +
         '<label class="choice"><input type="radio" name="role" value="buyer"><span>The buyer</span></label>' +
         '<label class="choice"><input type="radio" name="role" value="realtor"><span>A realtor with a buyer</span></label></div></fieldset>' +
         '<label class="field"><span>Phone <span class="hint">optional</span></span><input type="tel" name="phone" autocomplete="tel"></label>') +
@@ -453,6 +489,91 @@
     acts.appendChild(btn('btn-ink', 'Back to my plan', function () { nav('r'); }));
     var rs = btn('btn-ink', 'Start over', function () {}); wireRestart(rs); acts.appendChild(rs);
     root.appendChild(acts);
+    finish();
+  }
+
+  // ---- Out-of-area screens ----
+  function smsHref() {
+    var body = 'Hi Charles, it’s ' + (lead.first || 'me') + '. I sent my answers on your site.\n' + summaryText();
+    return 'sms:' + PHONE + '?&body=' + encodeURIComponent(body);
+  }
+  function away() {
+    root.innerHTML = '';
+    var h = el('div', { 'class': 'result-block', style: 'margin-top:0' });
+    h.appendChild(el('h2', { text: 'Hillsborough may not be your spot.', tabindex: '-1' }));
+    h.appendChild(el('p', { 'class': 'heard', text: 'Collins Ridge is in Hillsborough, and you’re looking near ' + listJoin(answers.cities) + '. So I’ll do the digging. Send me your answers and I’ll email you your best two or three options within three days.' }));
+    root.appendChild(h);
+
+    var card = el('div', { 'class': 'card-plain ballpark' });
+    card.appendChild(el('h3', { text: 'Here’s what I’ll look for' }));
+    var ul = el('ul', { 'class': 'facts', style: 'margin-top:12px' });
+    summaryRows().forEach(function (r) {
+      var change = el('button', { type: 'button', 'class': 'textlink', style: 'background:none;border:0;padding:0;margin-left:8px;font:inherit;font-size:14px;color:inherit;text-decoration:underline;cursor:pointer', text: 'Change', 'aria-label': 'Change ' + r[0].toLowerCase() });
+      change.addEventListener('click', function () { editing = true; nav('q', r[2]); });
+      ul.appendChild(el('li', null, [el('b', { text: r[0] }), el('span', null, [document.createTextNode(r[1]), change])]));
+    });
+    card.appendChild(ul);
+    root.appendChild(card);
+
+    var wrap = el('div', { 'class': 'result-block' });
+    wrap.appendChild(el('h3', { text: 'Where should I send your options?' }));
+    var fm = el('form', { novalidate: '' });
+    fm.innerHTML =
+      '<div class="form-grid">' +
+      '<label class="field"><span>First name</span><input type="text" name="first" autocomplete="given-name" required></label>' +
+      '<label class="field"><span>Email</span><input type="email" name="email" autocomplete="email" required></label>' +
+      '<fieldset class="full" style="border:0;padding:0;margin:0;min-width:0"><legend class="hint" style="margin-bottom:6px">I am</legend><div class="chips">' +
+        '<label class="choice"><input type="radio" name="role" value="buyer"><span>The buyer</span></label>' +
+        '<label class="choice"><input type="radio" name="role" value="realtor"><span>A realtor with a buyer</span></label></div></fieldset>' +
+      '<label class="field"><span>Phone <span class="hint">optional</span></span><input type="tel" name="phone" autocomplete="tel"></label>' +
+      '<div style="position:absolute;left:-9999px" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>' +
+      '</div>' +
+      '<p class="quiet small">By sending this, you agree I may email you about homes that fit what you told me. If you add a phone number, you agree I may call or text you, including automated texts. Consent isn\'t required to buy a home. Message and data rates may apply. Reply STOP to opt out.</p>' +
+      '<div class="actions"><button class="btn btn-amber" type="submit">Send it to Charles</button></div>' +
+      '<p class="form-note" role="alert" hidden></p>';
+    wrap.appendChild(fm);
+    root.appendChild(wrap);
+
+    var still = el('div', { 'class': 'result-block' });
+    still.appendChild(el('p', { 'class': 'quiet', text: 'Still open to Hillsborough? Collins Ridge is about 20 to 25 minutes from Durham and Chapel Hill, off-peak.' }));
+    still.appendChild(el('div', { 'class': 'actions' }, [
+      btn('btn-ink', 'Show me a Collins Ridge plan anyway', function () { ri = 0; seen = []; nav('r'); }),
+      btn('btn-ink', 'Back', function () { nav('q', STEPS.length - 1); })
+    ]));
+    root.appendChild(still);
+
+    var note = fm.querySelector('.form-note');
+    ['first', 'email', 'phone'].forEach(function (k) { fm.elements[k].value = lead[k] || ''; });
+    if (lead.role) { var rr = fm.querySelector('input[name=role][value=' + lead.role + ']'); if (rr) rr.checked = true; }
+    fm.addEventListener('input', function () {
+      ['first', 'email', 'phone'].forEach(function (k) { lead[k] = fm.elements[k].value; });
+      var r = fm.querySelector('input[name=role]:checked'); if (r) lead.role = r.value; persist();
+    });
+    fm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var b = fm.querySelector('button[type=submit]'), label = b.textContent;
+      b.disabled = true; b.textContent = 'Sending…'; note.hidden = true;
+      submitLead(fm, false, function (ok, msg) {
+        if (!ok) { b.disabled = false; b.textContent = label; note.hidden = false; note.textContent = msg; return; }
+        nav('od');
+      }, true);
+    });
+    finish();
+  }
+  function awayDone() {
+    root.innerHTML = '';
+    var h = el('div', { 'class': 'result-block', style: 'margin-top:0' });
+    h.appendChild(el('h2', { text: lead.first ? 'Got it, ' + lead.first + '.' : 'Got it.', tabindex: '-1' }));
+    h.appendChild(el('p', { 'class': 'heard', text: 'I’ll email you your best two or three options within three days.' }));
+    h.appendChild(el('p', { 'class': 'measure', text: 'Want a faster answer? Text me your answers, or use the chat on this site.' }));
+    var chat = btn('btn-ink', 'Open the chat', function () {
+      var w = window.HubSpotConversations && window.HubSpotConversations.widget;
+      if (w) w.open(); else location.href = smsHref();
+    });
+    h.appendChild(el('div', { 'class': 'actions' }, [el('a', { 'class': 'btn btn-amber', href: smsHref(), text: 'Text my answers to Charles' }), chat]));
+    root.appendChild(h);
+    var rs = btn('btn-ink', 'Start over', function () {}); wireRestart(rs);
+    root.appendChild(el('div', { 'class': 'actions', style: 'margin-top:18px' }, [rs]));
     finish();
   }
 
