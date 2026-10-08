@@ -42,10 +42,11 @@
     });
   }
 
-  // "Ask a question" links open the LiveChat window when it's on the page (the link texts Charles otherwise).
+  // "Ask a question" links open the HubSpot chat when it's on the page (the link texts Charles otherwise).
   document.querySelectorAll('[data-open-assistant]').forEach(function (el) {
     el.addEventListener('click', function (e) {
-      if (window.LiveChatWidget && !panel) { e.preventDefault(); window.LiveChatWidget.call('maximize'); }
+      if (panel) return;
+      if (window.HubSpotConversations && window.HubSpotConversations.widget) { e.preventDefault(); window.HubSpotConversations.widget.open(); }
     });
   });
 
