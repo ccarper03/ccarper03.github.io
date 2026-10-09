@@ -120,4 +120,12 @@
     else if (/^\/match\b/.test(href)) track('click_finder', { where: where, label: label });
     else if (/^\/collins-ridge-plans\//.test(href)) track('click_plans', { where: where, label: label });
   });
+  // Email links assembled on click, so the address isn't in the page source
+  document.querySelectorAll('[data-mail-u]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      track('click_email', { where: a.closest('main') ? 'page' : 'other' });
+      window.location.href = 'mailto:' + a.getAttribute('data-mail-u') + '@' + a.getAttribute('data-mail-d');
+    });
+  });
 })();
