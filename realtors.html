@@ -3,36 +3,39 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>For realtors | Charles Carper</title>
-<meta name="description" content="Bringing a buyer to Collins Ridge? Register your client.">
+<title>Collins Ridge Realtor Registration | Charles Carper</title>
+<meta name="description" content="Bringing a buyer to Collins Ridge in Hillsborough, NC? Register your client before the first visit and get an update from me at every step to closing.">
 <meta name="robots" content="noindex">
-<meta property="og:title" content="For realtors | Charles Carper">
-<meta property="og:description" content="Bringing a buyer to Collins Ridge? Register your client.">
+<meta property="og:title" content="Collins Ridge Realtor Registration | Charles Carper">
+<meta property="og:description" content="Bringing a buyer to Collins Ridge in Hillsborough, NC? Register your client before the first visit and get an update from me at every step to closing.">
+<meta property="og:url" content="https://charlescarper.com/realtors">
 <meta property="og:type" content="website">
+<link rel="canonical" href="https://charlescarper.com/realtors">
+<meta property="og:image" content="https://charlescarper.com/assets/images/cc-share.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0F2B4C">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,600..800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@500&display=swap">
-<link rel="stylesheet" href="/site.css?v=202610081310">
+<link rel="stylesheet" href="/site.css?v=202610082200">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Y130WZZEZ"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4Y130WZZEZ');</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<div class="disclose-bar"><div class="wrap">Charles Carper · New home sales with D.R. Horton · My personal site, not an official D.R. Horton website</div></div>
+<aside class="disclose-bar" aria-label="Disclosure"><div class="wrap">Charles Carper · New home sales with D.R. Horton · My personal site, not an official D.R. Horton website</div></aside>
 <header class="site-header">
   <div class="wrap header-row">
     <a class="wordmark" href="/" aria-label="Charles Carper, home">
       <span class="wm-name">Charles Carper</span>
-      <span class="wm-tag">New Construction Chuck</span>
     </a>
     <nav class="nav" aria-label="Main">
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">Menu</button>
       <ul class="nav-list" id="nav-list">
-        <li><a href="/collins-ridge">Collins Ridge</a></li><li><a href="/collins-ridge-plans/">Find a floor plan</a></li><li><a href="/guides">Guides</a></li><li><a href="/realtors" aria-current="page">For realtors</a></li><li><a href="/about">About</a></li>
+        <li><a href="/collins-ridge">Collins Ridge</a></li><li><a href="/collins-ridge-plans/">Find a floor plan</a></li><li><a href="/guides/">Guides</a></li><li><a href="/realtors" aria-current="page">For realtors</a></li><li><a href="/about">About</a></li>
       </ul>
-      <a class="btn btn-amber btn-sm" href="/book">Book a visit</a>
+      <a class="btn btn-amber btn-sm nav-book" href="/book">Book<span class="nb-more">&nbsp;a visit</span></a>
     </nav>
   </div>
 </header>
@@ -61,21 +64,24 @@
       <h3>Register a client</h3>
       <p class="quiet small">I work for D.R. Horton and represent the seller. Your client stays yours.</p>
       <p class="quiet">Send this before your first visit and I'll have homes ready that fit what your buyer needs.</p>
-      <form data-placeholder novalidate>
+      <form data-realtor-register novalidate>
         <div class="form-grid">
-          <label class="field">Your name<input type="text" name="agent" autocomplete="name"></label>
+          <label class="field">Your name<input type="text" name="agent" autocomplete="name" required></label>
           <label class="field">Brokerage<input type="text" name="brokerage" autocomplete="organization"></label>
-          <label class="field">Your phone<input type="tel" name="agent_phone" autocomplete="tel"></label>
-          <label class="field">Your email<input type="email" name="agent_email" autocomplete="email"></label>
-          <label class="field">Buyer's name<input type="text" name="buyer"></label>
+          <label class="field"><span>Your phone <span class="hint">optional</span></span><input type="tel" name="agent_phone" autocomplete="tel"></label>
+          <label class="field">Your email<input type="email" name="agent_email" autocomplete="email" required></label>
+          <label class="field">Buyer's name<input type="text" name="buyer" required></label>
+          <div style="position:absolute;left:-9999px" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
           <label class="field">When they'd like to move
             <select name="timing"><option value="">Choose one</option><option>In the next 3 months</option><option>In 3 to 6 months</option><option>In 6 to 12 months</option><option>Just looking</option></select>
           </label>
           <label class="field full"><span>What they're looking for <span class="hint">beds, baths, budget range, must-haves</span></span><textarea name="notes"></textarea></label>
           <label class="field full">Preferred visit day<input type="text" name="visit_day" placeholder="For example: Saturday morning"></label>
         </div>
-        <div class="actions"><button class="btn btn-amber" type="submit">Register my client</button></div>
-        <p class="form-note" hidden>Registration isn't switched on yet, so nothing was sent. Call or text 984-328-2788 and I'll register your client by hand.</p>
+        <label class="check" style="margin-top:16px"><input type="checkbox" name="textok" value="yes"><span>Text me about this registration. Message and data rates may apply. Reply STOP to opt out.</span></label>
+        <p class="quiet small" style="margin-top:10px">By sending this, you agree I may email or call you about this registration. I only text you if you check the box.</p>
+        <div class="actions" style="margin-top:14px"><button class="btn btn-amber" type="submit">Register my client</button></div>
+        <p class="form-note" role="status" hidden></p>
       </form>
     </div>
   </div>
@@ -100,7 +106,6 @@
       <div>
         <a class="wordmark" href="/" aria-label="Charles Carper, home">
           <span class="wm-name">Charles Carper</span>
-          <span class="wm-tag">New Construction Chuck</span>
         </a>
         <p class="small" style="margin-top:16px;max-width:34ch">New home sales at Collins Ridge in Hillsborough, NC, with D.R. Horton.</p>
       </div>
@@ -118,7 +123,7 @@
         <ul>
           <li><a href="/collins-ridge">Collins Ridge</a></li>
           <li><a href="/collins-ridge-plans/">Find a floor plan</a></li>
-          <li><a href="/guides">Guides</a></li>
+          <li><a href="/guides/">Guides</a></li>
           <li><a href="/faq">FAQ</a></li>
           <li><a href="/realtors">For realtors</a></li>
           <li><a href="/about">About Charles</a></li>
@@ -132,7 +137,7 @@
     </div>
   </div>
 </footer>
-<script src="/site.js?v=202610081711" defer></script>
+<script src="/site.js?v=202610082200" defer></script>
 <!-- Start of HubSpot Embed Code (chat) -->
 <script type="text/javascript" id="hs-script-loader" async defer src="https://js-na2.hs-scripts.com/247617862.js"></script>
 <!-- End of HubSpot Embed Code -->

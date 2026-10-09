@@ -330,6 +330,8 @@
     ];
     if (lead.last) fields.push({ name: 'lastname', value: lead.last });
     if (lead.phone) fields.push({ name: 'phone', value: lead.phone });
+    var textOk = fd.get('textok') === 'yes';
+    fields.forEach(function (f) { if (f.name === 'message') f.value += '\nText messages OK: ' + (textOk ? 'yes' : 'no'); });
     if (!soft) fields.push({ name: 'cc_lead_type', value: lead.role });
     if (answers.when) fields.push({ name: 'cc_move_timeline', value: answers.when });
     if (answers.now) fields.push({ name: 'cc_housing_situation', value: answers.now });
@@ -429,10 +431,11 @@
       (soft ? '' : '<fieldset class="full" style="border:0;padding:0;margin:0;min-width:0"><legend class="hint" style="margin-bottom:6px">I am</legend><div class="chips">' +
         '<label class="choice"><input type="radio" name="role" value="buyer"><span>The buyer</span></label>' +
         '<label class="choice"><input type="radio" name="role" value="realtor"><span>A realtor with a buyer</span></label></div></fieldset>' +
-        '<label class="field"><span>Phone <span class="hint">optional</span></span><input type="tel" name="phone" autocomplete="tel"></label>') +
+        '<label class="field"><span>Phone <span class="hint">optional</span></span><input type="tel" name="phone" autocomplete="tel"></label>' +
+        '<label class="check full"><input type="checkbox" name="textok" value="yes"><span>Text me about this. Message and data rates may apply. Reply STOP to opt out. Consent isn\'t required to buy a home.</span></label>') +
       '<div style="position:absolute;left:-9999px" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>' +
       '</div>' +
-      '<p class="quiet small">' + (soft ? 'By sending this, you agree I may email you about your plans. Unsubscribe anytime.' : 'By sending this, you agree I may contact you about this plan and homes that fit it. If you add a phone number, you agree I may call or text you, including automated texts. Consent isn\'t required to buy a home. Message and data rates may apply. Reply STOP to opt out.') + '</p>' +
+      '<p class="quiet small">' + (soft ? 'By sending this, you agree I may email you about your plans. Unsubscribe anytime.' : 'By sending this, you agree I may email or call you about this plan and homes that fit it. I only text you if you check the box.') + '</p>' +
       '<div class="actions"><button class="btn btn-amber" type="submit">' + (soft ? 'Check back with me' : 'Send it to Charles') + '</button></div>' +
       '<p class="form-note" role="alert" hidden></p>';
     wrap.appendChild(fm);
@@ -526,9 +529,10 @@
         '<label class="choice"><input type="radio" name="role" value="buyer"><span>The buyer</span></label>' +
         '<label class="choice"><input type="radio" name="role" value="realtor"><span>A realtor with a buyer</span></label></div></fieldset>' +
       '<label class="field"><span>Phone <span class="hint">optional</span></span><input type="tel" name="phone" autocomplete="tel"></label>' +
+      '<label class="check full"><input type="checkbox" name="textok" value="yes"><span>Text me about this. Message and data rates may apply. Reply STOP to opt out. Consent isn\'t required to buy a home.</span></label>' +
       '<div style="position:absolute;left:-9999px" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>' +
       '</div>' +
-      '<p class="quiet small">By sending this, you agree I may email you about homes that fit what you told me. If you add a phone number, you agree I may call or text you, including automated texts. Consent isn\'t required to buy a home. Message and data rates may apply. Reply STOP to opt out.</p>' +
+      '<p class="quiet small">By sending this, you agree I may email or call you about homes that fit what you told me. I only text you if you check the box.</p>' +
       '<div class="actions"><button class="btn btn-amber" type="submit">Send it to Charles</button></div>' +
       '<p class="form-note" role="alert" hidden></p>';
     wrap.appendChild(fm);
