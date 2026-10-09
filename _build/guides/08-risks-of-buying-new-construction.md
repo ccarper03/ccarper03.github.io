@@ -3,7 +3,7 @@ n: 8
 slug: risks-of-buying-new-construction
 title: Risks of Buying New Construction, and How to Handle Them
 seo_title: Risks of Buying New Construction and How to Handle Them
-description: Delays, build quality, a half-built neighborhood, HOA control and smaller lots. The real downsides of buying new construction and what you can do about each one.
+description: Delays, build quality, a half-built neighborhood, HOA control and smaller lots. The real downsides of buying new construction and what to do about each.
 stage: top
 pillar: psych
 keyword: downsides of buying new construction

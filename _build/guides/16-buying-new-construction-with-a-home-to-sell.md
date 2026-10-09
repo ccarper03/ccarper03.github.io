@@ -3,7 +3,7 @@ n: 16
 slug: buying-new-construction-with-a-home-to-sell
 title: Buying New Construction When You Have a Home to Sell
 seo_title: Buying New Construction When You Have a Home to Sell
-description: Sell first, buy first, a contingency or a bridge program. How to line up selling your current home with buying new construction, and the capital gains rules to know.
+description: Sell first, buy first, a contingency or a bridge program. How to line up selling your home with buying new construction, plus the capital gains rules.
 stage: mid
 pillar: psych
 keyword: buy new construction before selling

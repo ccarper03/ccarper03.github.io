@@ -3,7 +3,7 @@ n: 11
 slug: first-time-buyer-new-construction
 title: First-Time Buyer? What to Know Before You Buy New
 seo_title: First-Time Buyer? What to Know Before Buying New Construction
-description: Five things a first-time buyer should know before walking into a model home, from lender timing and loan options to what's included and why you don't need a construction loan.
+description: Five things to know before you walk into a model home: lender timing, loan options, what's included, and why you don't need a construction loan.
 stage: top
 pillar: psych
 keyword: first time home buyer new construction

@@ -3,7 +3,7 @@ n: 33
 slug: slab-vs-crawl-space
 title: Slab vs. Crawl Space: Which Foundation Is Better?
 seo_title: Slab vs. Crawl Space Foundation: Pros, Cons and Cost
-description: How slab and crawl space foundations work, what's common in North Carolina, the downsides of each, which costs less, and what to ask about the one under your home.
+description: How slab and crawl space foundations work, what's common in North Carolina, the downsides of each, which costs less, and what to ask about yours.
 stage: top
 pillar: build
 keyword: slab vs crawl space

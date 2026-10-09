@@ -3,7 +3,7 @@ n: 42
 slug: pre-drywall-walkthrough
 title: What Is a Pre-Drywall Walkthrough?
 seo_title: What Is a Pre-Drywall Walkthrough or Inspection?
-description: Plumbing, electrical and low-voltage wiring roughed in. The one chance to see inside your walls, whether a pre-drywall inspection is worth it, and what to check.
+description: Plumbing, wiring and ducts roughed in: your one chance to see inside the walls. Whether a pre-drywall inspection is worth it, and what to check.
 stage: top
 pillar: build
 keyword: pre-drywall inspection

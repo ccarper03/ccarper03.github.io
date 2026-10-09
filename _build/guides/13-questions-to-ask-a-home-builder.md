@@ -3,7 +3,7 @@ n: 13
 slug: questions-to-ask-a-home-builder
 title: Questions to Ask a Home Builder Before You Sign
 seo_title: Questions to Ask a Home Builder Before You Sign
-description: The questions that turn a model home visit into real answers, at any builder, including mine. Contract, timeline, inclusions, inspections, HOA and warranty.
+description: The questions that turn a model home visit into real answers, at any builder, mine included: contract, timeline, inclusions, inspections, HOA and warranty.
 stage: mid
 pillar: psych
 keyword: questions to ask a home builder

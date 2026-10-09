@@ -10,6 +10,7 @@
 (function () {
   var root = document.getElementById('matcher');
   if (!root) return;
+  var track = function (name, params) { try { if (window.gtag) window.gtag('event', name, params || {}); } catch (e) {} };
 
   var PLANS = [
     { name: "Cali", kind: "Single-family", beds: 4, bedsMax: null, baths: 2, stories: 1, sqft: "1,764", f: {bedDown: 1, primaryDown: 1, oneStory: 1, covered: 1, dining: 1, laundry1: 1}, payFrom: 2950, note: "The only one-story plan", url: "https://www.drhorton.com/-/media/drhorton/productcatalog/495-raleigh/49730-collins-ridge/497300000-collins-ridge-50/1765/cali_-_4_bd_-_tradition_series_nofp_collins_ridge.jpg?rev=3395e77ddf264f0caa7fc5fa89615a26&hash=5F7AD503560DBEA82806357F5FB06410" },
@@ -259,7 +260,7 @@
     if (!c.length || has(c, 'Not sure yet')) return false;
     return !c.some(function (x) { return has(CR_CITIES, x); });
   }
-  function toEnd() { if (isAway()) nav('o'); else { ri = 0; seen = []; nav('r'); } }
+  function toEnd() { track('finder_complete', { path: isAway() ? 'other_community' : 'collins_ridge' }); if (isAway()) nav('o'); else { ri = 0; seen = []; nav('r'); } }
   function optLabel(id, v) {
     var s = STEPS.filter(function (x) { return x.id === id; })[0], o = s && s.options.filter(function (x) { return x[0] === v; })[0];
     return o ? o[1] : '';
@@ -339,7 +340,7 @@
     fetch('https://api.hsforms.com/submissions/v3/integration/submit/' + HS.portal + '/' + HS.form, {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ fields: fields, context: { pageUri: location.origin + location.pathname, pageName: document.title } })
-    }).then(function (r) { onDone(r.ok, r.ok ? '' : 'That did not go through. Please try again, or call or text me.'); })
+    }).then(function (r) { if (r.ok) track('generate_lead', { form: away ? 'finder_other_community' : (soft ? 'finder_check_back' : 'finder_plan') }); onDone(r.ok, r.ok ? '' : 'That did not go through. Please try again, or call or text me.'); })
       .catch(function () { onDone(false, 'That did not go through. Please try again, or call or text me.'); });
   }
 

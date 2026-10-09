@@ -3,7 +3,7 @@ n: 12
 slug: whats-in-a-monthly-mortgage-payment
 title: What's Really in a Monthly Mortgage Payment
 seo_title: What's in a Monthly Mortgage Payment (PITI, HOA, PMI)
-description: Principal, interest, taxes, insurance, HOA dues and mortgage insurance. What each piece of a mortgage payment is, where to find it, and how to judge what you can carry.
+description: Principal, interest, taxes, insurance, HOA dues and mortgage insurance. What's in a mortgage payment, where to find it, and how to judge what you can carry.
 stage: top
 pillar: money
 keyword: monthly mortgage payment breakdown

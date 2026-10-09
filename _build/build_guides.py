@@ -82,6 +82,8 @@ def render_md(text):
     out = md.convert(text)
     # external links open in a new tab and are marked
     out = re.sub(r'<a href="(https?://[^"]+)"', r'<a href="\1" target="_blank" rel="noopener"', out)
+    # wide tables scroll inside their own box on phones
+    out = re.sub(r'<table>(.*?)</table>', lambda m: '<div class="table-scroll" role="region" aria-label="Table" tabindex="0"><table>' + m.group(1) + '</table></div>', out, flags=re.S)
     return out, md.toc_tokens
 
 

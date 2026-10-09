@@ -3,7 +3,7 @@ n: 38
 slug: framing-a-house
 title: Framing a House: What to Look For
 seo_title: Framing a House: What Inspectors and Buyers Look For
-description: The stage where a house becomes real, from someone who framed walls for a living. What framing inspectors check, what framing costs, and what to look at yourself.
+description: The stage where a house becomes real, from someone who framed walls for a living: what framing inspectors check, what it costs, and what to look for.
 stage: top
 pillar: build
 keyword: house framing inspection

@@ -3,7 +3,7 @@ n: 22
 slug: rate-buydowns-explained
 title: What Is a Rate Buydown? 2-1 vs. Permanent
 seo_title: What Is a Rate Buydown? 2-1 vs. Permanent, Explained
-description: How temporary 2-1 buydowns and permanent buydowns work, who can pay for them, whether you need extra cash at closing, and how to compare one against a price cut.
+description: How temporary 2-1 and permanent buydowns work, who can pay for them, whether you need extra cash at closing, and how one compares to a price cut.
 stage: mid
 pillar: money
 keyword: 2-1 buydown
@@ -18,7 +18,7 @@ The common version is a 2-1 buydown: the rate is lower in year one, a bit less l
 
 **A permanent buydown** lowers the rate for the life of the loan. You, or a seller, pay discount points at closing. The CFPB explains that one point equals 1% of the loan amount, and paying points lowers your rate in exchange for more cost up front.
 
-| | Temporary (like a 2-1) | Permanent (discount points) |
+| Feature | Temporary (like a 2-1) | Permanent (discount points) |
 | --- | --- | --- |
 | How long the lower rate lasts | A set period, often 1 to 3 years | The life of the loan |
 | What it costs | The payment difference for those years | Points, each 1% of the loan |

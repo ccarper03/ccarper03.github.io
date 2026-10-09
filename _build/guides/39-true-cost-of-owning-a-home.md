@@ -3,7 +3,7 @@ n: 39
 slug: true-cost-of-owning-a-home
 title: The Real Cost of Owning a Home, Beyond the Mortgage
 seo_title: The Real Cost of Owning a Home, Beyond the Mortgage
-description: Property taxes, insurance, HOA dues, utilities and upkeep. The full monthly cost of owning a home in North Carolina, and how a new home and an older one compare.
+description: Property taxes, insurance, HOA dues, utilities and upkeep. The full monthly cost of owning a home in North Carolina, new versus older.
 stage: top
 pillar: money
 keyword: cost of owning a home

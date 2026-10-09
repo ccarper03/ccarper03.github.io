@@ -3,7 +3,7 @@ n: 27
 slug: why-buyers-say-no-to-new-construction
 title: Why Some Buyers Say No to New Construction
 seo_title: Why Some Buyers Say No to New Construction (For Agents)
-description: Smaller lots, build quality, no trees, the wait and the HOA. The honest answers to the objections clients bring up about new construction, written for agents.
+description: Smaller lots, build quality, no trees, the wait and the HOA. Honest answers to the objections clients raise about new construction, written for agents.
 stage: mid
 pillar: agents
 keyword: new construction objections

@@ -3,7 +3,7 @@ n: 9
 slug: hidden-costs-of-new-construction
 title: Budgeting for a New Construction Home: The Hidden Costs
 seo_title: Hidden Costs of Buying a New Construction Home
-description: Blinds, appliances, landscaping, HOA fees, deposits and a tax bill that jumps in year two. The new construction costs that never make the price sheet, and how to plan for them.
+description: Blinds, appliances, HOA fees, deposits and a tax bill that jumps in year two. The new construction costs that never make the price sheet, and how to plan.
 stage: top
 pillar: money
 keyword: hidden costs of new construction

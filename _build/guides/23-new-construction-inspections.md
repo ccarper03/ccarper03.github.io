@@ -3,7 +3,7 @@ n: 23
 slug: new-construction-inspections
 title: Inspections on New Construction: Who Checks What
 seo_title: Do You Need a Home Inspection on New Construction?
-description: City inspections, the builder's own checks, and where a third-party inspector fits. Whether an inspection on a new build is worth it, and what inspectors look for.
+description: City inspections, the builder's checks and where your own inspector fits. Whether an inspection on a new build is worth it, and what inspectors look for.
 stage: top
 pillar: build
 keyword: home inspection new construction

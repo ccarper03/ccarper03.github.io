@@ -3,7 +3,7 @@ n: 30
 slug: final-walkthrough-checklist
 title: New Construction Final Walkthrough: What to Check
 seo_title: New Construction Final Walkthrough Checklist
-description: A room-by-room punch list for your new home's final walkthrough, what gets fixed before closing, what goes on the warranty list, and when the walkthrough happens.
+description: A room-by-room punch list for your final walkthrough, what gets fixed before closing, what goes on the warranty list, and when the walkthrough happens.
 stage: mid
 pillar: build
 keyword: new construction final walkthrough checklist

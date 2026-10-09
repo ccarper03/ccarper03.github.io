@@ -53,5 +53,5 @@ A builder's community is usually covered under a larger plan. You'll see the sil
 ## Sources
 
 1. [Cost of Constructing a Home in 2024](https://eyeonhousing.org/2025/01/cost-of-constructing-a-home-in-2024/), NAHB Eye on Housing
-2. [The 811 Process](https://nc811.org/safe-digging-process/), NC811
+2. [NC811](https://nc811.org/), North Carolina 811
 3. [Erosion and Sediment Control FAQs](https://deq.nc.gov/about/divisions/energy-mineral-and-land-resources/erosion-and-sediment-control/erosion-and-sediment-faqs), NC Department of Environmental Quality

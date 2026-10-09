@@ -3,7 +3,7 @@ n: 3
 slug: how-a-new-home-gets-built
 title: How a New Construction Home Gets Built: Every Stage
 seo_title: How a New Construction Home Gets Built, Stage by Stage
-description: Dirt to keys in plain English, from someone who framed walls and set trusses. The seven stages of building a home, the inspections along the way, and how long it lasts.
+description: Dirt to keys in plain English, from someone who framed walls and set trusses: the seven stages of building a home, the inspections, and how long it takes.
 stage: top
 pillar: build
 keyword: stages of building a house

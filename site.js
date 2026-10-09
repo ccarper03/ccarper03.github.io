@@ -97,7 +97,7 @@
       }).then(function (r) {
         btn.disabled = false; btn.textContent = label;
         if (!r.ok) throw new Error('send');
-        track('realtor_register', {});
+        track('generate_lead', { form: 'realtor_registration' });
         reg.reset();
         say('Got it, ' + first + '. ' + buyer + ' is registered with me. I\'ll text or email you to confirm. Bring your buyer whenever you\'re ready.', true);
       }).catch(function () {

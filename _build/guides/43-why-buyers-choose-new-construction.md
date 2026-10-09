@@ -3,7 +3,7 @@ n: 43
 slug: why-buyers-choose-new-construction
 title: Why Buyers Choose New Construction
 seo_title: Why Buyers Choose New Construction: The Real Reasons
-description: What really pulls people toward a new build, what to weigh before you buy one, and what Warren Buffett said about buying a home. For buyers and the agents who work with them.
+description: What really pulls people toward a new build, what to weigh first, and what Warren Buffett said about buying a home. For buyers and their agents.
 stage: top
 pillar: psych
 keyword: benefits of buying new construction

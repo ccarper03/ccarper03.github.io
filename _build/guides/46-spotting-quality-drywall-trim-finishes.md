@@ -3,7 +3,7 @@ n: 46
 slug: spotting-quality-drywall-trim-finishes
 title: Drywall, Trim and Finishes: How to Spot Quality
 seo_title: Nail Pops, Drywall and Trim: How to Spot Quality Finishes
-description: Nail pops, seams, caulk and paint. What's cosmetic, what's normal settling in a new home, what to flag on your punch list, and whether nail pops mean foundation problems.
+description: Nail pops, seams, caulk and paint. What's cosmetic, what's normal settling, what to flag on your punch list, and whether nail pops mean foundation trouble.
 stage: top
 pillar: build
 keyword: nail pops drywall new construction

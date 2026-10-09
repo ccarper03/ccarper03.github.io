@@ -3,7 +3,7 @@ n: 5
 slug: builder-incentives-explained
 title: Builder Incentives Explained: What They're Really Worth
 seo_title: Builder Incentives Explained: What They're Really Worth
-description: Closing cost help, rate buydowns, price cuts and design credits aren't equal. How builder incentives work, how to value one, and the questions to ask first.
+description: Closing cost help, buydowns, price cuts and design credits aren't equal. How builder incentives work, how to value one, and what to ask before you sign.
 stage: mid
 pillar: money
 keyword: builder incentives
