@@ -501,3 +501,19 @@ label.field { display: grid; gap: 6px; font-weight: 500; font-size: 15.5px; }
 /* Funnel strip used on Collins Ridge and the plans page */
 .funnel-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 28px; }
 @media (max-width: 760px) { .funnel-strip { grid-template-columns: 1fr; } }
+
+/* ---------- Photos on inner pages ---------- */
+.photo-print { transform: rotate(var(--tilt, -3.5deg)); }
+.page-head-photo .wrap { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: clamp(28px, 5vw, 72px); align-items: center; }
+.ph-print { position: relative; left: auto; bottom: auto; width: clamp(150px, 15vw, 200px); margin: 14px 6px 0 0; }
+@media (max-width: 720px) {
+  .page-head-photo .wrap { grid-template-columns: 1fr; }
+  .ph-print { width: 132px; margin: 4px 0 0 4px; }
+}
+.guide-photo { margin: 1.6em 0; max-width: 420px; }
+.guide-photo img { width: 100%; height: auto; border-radius: 6px; display: block; }
+.guide-photo figcaption { font-size: 15px; color: var(--ink-2); margin-top: 8px; line-height: 1.5; }
+.guide-meta { align-items: center; }
+.byline { display: inline-flex; align-items: center; }
+.byline a { margin-left: .3em; }
+.byline-face { width: 36px; height: 36px; margin-right: 10px; border-radius: 50%; border: 2px solid rgba(255, 255, 255, .85); object-fit: cover; }

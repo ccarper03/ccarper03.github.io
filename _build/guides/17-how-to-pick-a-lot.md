@@ -22,6 +22,8 @@ Size gets the attention, but these matter as much:
 - **Flood risk.** Look up the address on FEMA's Flood Map Service Center, which lets you search by address.
 - **What's planned nearby.** Ask for the community plan. Empty land won't stay empty.
 
+<figure class="guide-photo"><img src="/assets/images/cc-lot-walk.jpg?v=20261009b" width="640" height="800" alt="Charles in a hard hat walking a sloped grassy lot past a survey stake" loading="lazy"><figcaption>Walk the lot itself. Slope and drainage are easier to judge on foot than on a plat.</figcaption></figure>
+
 ## What is considered a good lot size?
 
 A good lot is one that fits how you'll use it. A big yard is great if you'll garden or have a dog. It's work if you won't.

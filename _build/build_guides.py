@@ -255,7 +255,7 @@ def build_page(g, by_slug):
     page += ('<section class="page-head blueprint"><div class="wrap">'
              '<p class="crumb"><a href="/guides/">Guides</a> / %s</p>'
              '<h1>%s</h1>'
-             '<p class="guide-meta"><span>By <a href="/about" style="color:inherit">Charles Carper</a></span><span>Updated %s</span><span>%d min read</span></p>'
+             '<p class="guide-meta"><span class="byline"><img class="byline-face" src="/assets/images/cc-headshot.jpg?v=20261009b" width="36" height="36" alt="">By <a href="/about" style="color:inherit">Charles Carper</a></span><span>Updated %s</span><span>%d min read</span></p>'
              '</div></section>\n' % (esc(PILLARS[g['pillar']]), esc(g['title']), updated, mins))
     page += '<section class="section"><div class="wrap guide-body"><article class="prose">\n'
     page += '<p class="answer-first">%s</p>\n' % g['answer']
