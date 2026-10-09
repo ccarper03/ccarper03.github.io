@@ -237,7 +237,7 @@ def build_page(g, by_slug):
         'mainEntityOfPage': url, 'datePublished': g.get('published', TODAY), 'dateModified': g.get('updated', TODAY),
         'image': SITE + '/assets/images/cc-share.jpg',
         'author': {'@type': 'Person', 'name': 'Charles Carper', 'url': SITE + '/about',
-                   'jobTitle': 'New home sales consultant', 'worksFor': {'@type': 'Organization', 'name': 'D.R. Horton'}},
+                   'jobTitle': 'New home sales consultant'},
         'publisher': {'@type': 'Person', 'name': 'Charles Carper', 'url': SITE},
         'about': g.get('keyword', ''),
     }, {
