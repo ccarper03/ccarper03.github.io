@@ -109,7 +109,6 @@ HEAD = '''<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title}</title>
 <meta name="description" content="{desc}">
-<meta name="robots" content="noindex">
 <link rel="canonical" href="{url}">
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
@@ -314,8 +313,8 @@ def build_hub(guides):
     return page.replace('<li><a href="/guides/" aria-current="page">Guides</a></li>', '<li><a href="/guides/" aria-current="page">Guides</a></li>')
 
 
-CORE = ['/', '/collins-ridge', '/collins-ridge-plans/', '/match', '/book', '/realtors', '/about', '/faq', '/guides/',
-        '/guide-is-new-construction-worth-it', '/privacy']
+# Pages still noindexed (realtors, privacy, old draft guide, tools, 404) stay out of the sitemap.
+CORE = ['/', '/collins-ridge', '/collins-ridge-plans/', '/match', '/book', '/about', '/faq', '/guides/']
 
 
 def build_sitemap(guides):
