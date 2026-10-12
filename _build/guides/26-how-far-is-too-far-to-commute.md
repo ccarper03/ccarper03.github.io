@@ -3,34 +3,34 @@ n: 26
 slug: how-far-is-too-far-to-commute
 title: How Far Is Too Far to Commute?
 seo_title: How Far Is Too Far to Commute? How to Decide Before You Buy
-description: Drive the commute at rush hour before you fall for a house, then weigh time against space and price. Plus how far Hillsborough really is from Raleigh.
+description: Drive the commute at rush hour before you fall for a house, then weigh the time against space and price. Plus how far Hillsborough really is from Raleigh.
 stage: top
 pillar: place
 keyword: how far is too far to commute
-answer: Too far is the point where the drive eats time you'd rather spend elsewhere, and only you can set it. The Census Bureau's average one-way commute was 27.6 minutes in 2019. Drive your real route at your real time before you buy, and weigh those minutes against the extra space or savings.
+answer: Too far is when the drive takes time you'd rather spend on other things, and only you can decide where that is. The Census Bureau's average one-way commute was 27.6 minutes in 2019. Drive your real route at your real time before you buy. Then weigh those minutes against the extra space or savings.
 next: how-to-choose-a-new-construction-community
 related: living-in-hillsborough-nc, what-to-look-for-near-a-new-home, true-cost-of-owning-a-home, how-to-choose-a-new-construction-community
 ---
 ## What is an unreasonable distance to travel to work?
 
-There's no official line. A reasonable commute for one person feels unbearable to another.
+There's no official line. A drive that's fine for one person feels awful to another.
 
-Here's a benchmark: the Census Bureau reported the average one-way commute in the U.S. hit 27.6 minutes in 2019. Many people treat 30 minutes each way as a comfortable ceiling. Others happily drive an hour for more space or a lower price.
+Here's a starting point. The Census Bureau found the average one-way commute in the U.S. was 27.6 minutes in 2019. Many people treat 30 minutes each way as their limit. Others are happy to drive an hour for more space or a lower price.
 
-A better test than any number: multiply your one-way time by two, then by the days you go in each week. That's the time you'll spend in the car. Is that trade worth what you're getting?
+A better test than any number: take your one-way time, double it, and multiply by the days you go in each week. That's your time in the car. Is it worth what you're getting?
 
 ## How long of a commute is unhealthy?
 
-I'm not a doctor, and research on this varies. What most people notice is simpler: long commutes take time away from sleep, exercise, cooking and family. If a commute leaves you consistently stressed or short on sleep, it's too long for you.
+I'm not a doctor, and studies on this don't all agree. What most people notice is simpler. A long drive takes time away from sleep, exercise, cooking and family. If the drive leaves you stressed or short on sleep most days, it's too long for you.
 
 Two things help:
 
-- **Fewer commuting days.** If you work from home part of the week, a longer drive on the other days may be fine.
-- **A predictable route.** A steady 35 minutes can feel better than a 20-minute drive that sometimes takes an hour.
+- **Fewer days in the car.** If you work from home part of the week, a longer drive on the other days may be fine.
+- **A drive you can count on.** A steady 35 minutes can feel better than a 20-minute drive that sometimes takes an hour.
 
 ## Is a 20 mile commute to work too much?
 
-It depends on the road and the time of day. Twenty miles of open highway can take 20 minutes. Twenty miles through stop-and-go traffic can take an hour.
+It depends on the road and the time of day. Twenty miles of open highway can take 20 minutes. Twenty miles of stop-and-go traffic can take an hour.
 
 Think in minutes, not miles. Then drive it.
 
@@ -38,18 +38,18 @@ Think in minutes, not miles. Then drive it.
 
 Before you sign on any home:
 
-1. Drive from the home to work at the time you'd actually leave.
-2. Drive home at the time you'd actually leave work.
+1. Drive from the home to work at the time you'd really leave.
+2. Drive back at the time you'd really leave work.
 3. Do it on a Tuesday or Wednesday, not a Friday or a holiday week.
-4. Try the backup route too.
+4. Try your backup route, too.
 
-Map apps estimate. Your own drive tells you the truth.
+Map apps guess. Your own drive tells you the truth.
 
 ## Is Hillsborough, NC close to Raleigh, NC?
 
-It's closer to Durham and Chapel Hill than to Raleigh. From the Collins Ridge sales office, where I work, I measured these off-peak drives:
+It's closer to Durham and Chapel Hill than to Raleigh. I timed these drives from the Collins Ridge sales office, where I work, when traffic was light:
 
-| Destination | Distance | Off-peak time |
+| Destination | Distance | Light-traffic time |
 | --- | --- | --- |
 | Duke University Hospital | 11.7 mi | About 18 min |
 | Franklin Street, Chapel Hill | 11.9 mi | About 23 min |
@@ -57,11 +57,13 @@ It's closer to Durham and Chapel Hill than to Raleigh. From the Collins Ridge sa
 | Raleigh-Durham Airport | 27.2 mi | About 40 min |
 | Downtown Raleigh | 37.3 mi | About 53 min |
 
-Add time at rush hour. If your work is in Raleigh, test the drive before you decide. If it's in Durham, Chapel Hill or at Duke or UNC, Hillsborough works well for many people.
+Add time at rush hour. If you work in Raleigh, test the drive before you decide. If you work in Durham, Chapel Hill, or at Duke or UNC, Hillsborough works well for a lot of people.
+
+If the drive doesn't work, let me know. D.R. Horton builds all over the area, and I'll connect you with a community closer to work.
 
 ## Weighing the trade
 
-Write down what the longer drive gets you: more space, a lower price, a newer home, a quieter street. Then write down what it costs you each week in time. If the list on the left still wins, the commute is reasonable for you.
+Write down what the longer drive gets you: more space, a lower price, a newer home, a quieter street. Then write down what it costs you each week in time. If the first list still wins, the drive is fine for you.
 
 ## Sources
 

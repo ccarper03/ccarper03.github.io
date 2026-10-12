@@ -7,50 +7,50 @@ description: How slab and crawl space foundations work, what's common in North C
 stage: top
 pillar: build
 keyword: slab vs crawl space
-answer: Neither is better everywhere. A slab costs less, has nowhere for moisture or pests to hide underneath, and is now the most common foundation. A crawl space gives access to plumbing and ducts and lifts the floor off the ground, but needs moisture control. In the South Atlantic region, about 86% of new homes started in 2024 used a slab.
+answer: Neither one is better everywhere. A slab costs less, leaves no space under the house for damp or pests, and is now the most common kind. A crawl space makes it easy to reach the pipes and ducts and lifts the floor off the ground, but it has to be kept dry. In the South Atlantic states, about 86% of new homes started in 2024 used a slab.
 next: how-to-choose-a-floor-plan
 related: site-prep-before-building, how-a-new-home-gets-built, framing-a-house, energy-efficient-features-new-homes
 ---
 ## How each one works
 
-**A slab** is a layer of concrete poured on prepared ground, with footings around the edge. The floor of the house sits right on it. Plumbing lines run through or under the concrete.
+**A slab** is a layer of concrete poured on ground that's been prepared, with thicker footings around the edge. The floor of the house sits right on it. Pipes run through or under the concrete.
 
-**A crawl space** raises the house on foundation walls or piers, leaving a short space between the ground and the floor framing. Plumbing, ducts and wiring often run through that space.
+**A crawl space** raises the house on short walls or posts. That leaves a low space between the ground and the floor. Pipes, ducts and wires often run through that space.
 
 ## What's common now
 
-Slabs have taken over. NAHB's analysis of Census data shows 73% of new single-family homes started in 2024 used a slab, 17% had a basement, and just over 9% had a crawl space. In the South Atlantic region, which includes North Carolina, slabs were about 86%.
+Slabs have taken over. NAHB's look at Census data shows 73% of new houses started in 2024 used a slab. 17% had a basement, and just over 9% had a crawl space. In the South Atlantic states, which include North Carolina, slabs were about 86%.
 
 ## What are the disadvantages of using a crawl space foundation?
 
-- **Moisture.** In a humid climate like ours, a traditional vented crawl space can get damp. Damp crawl spaces invite mold, wood rot and pests.
-- **Cost.** More foundation work and framing usually means more cost than a slab.
-- **Upkeep.** Someone should look in there now and then.
+- **Damp.** Where it's humid, like here, an old-style crawl space with vents can get damp. Damp brings mold, rot and bugs.
+- **Cost.** More foundation work and framing usually costs more than a slab.
+- **Upkeep.** Someone should look under there now and then.
 
-Moisture is the big one, and it has a known fix. A study by Advanced Energy, a North Carolina nonprofit, with the U.S. Department of Energy, found closed crawl spaces stayed substantially drier than traditional vented ones in humid conditions, and the homes saved 15% or more on heating and cooling energy on average.
+Damp is the big one, and there's a known fix. Advanced Energy, a North Carolina nonprofit, did a study with the U.S. Department of Energy. It found that sealed crawl spaces stayed much drier than vented ones in humid weather. The homes also used 15% or more less energy for heating and cooling, on average.
 
 ## What are the downsides of a slab house?
 
-- **Plumbing under concrete.** If a line under the slab leaks, reaching it means cutting into the concrete.
-- **Lower to the ground.** On a lot that drains poorly, that matters more. Grading has to be right.
-- **A firmer floor.** Some people feel a slab floor is harder on their feet than a framed floor.
+- **Pipes under concrete.** If a pipe under the slab leaks, the concrete has to be cut to reach it.
+- **Closer to the ground.** On a homesite that drains poorly, that matters more. The grading has to be right.
+- **A harder floor.** Some people feel a slab floor is harder on their feet than a framed floor.
 
 ## Is it cheaper to pour a slab or crawl space?
 
-A slab is usually cheaper. It takes less excavation, less concrete block work and less framing. That's a big part of why builders use it so widely. The exception is a sloped lot, where a crawl space can make more sense than bringing in a lot of fill.
+A slab is usually cheaper. It takes less digging, less block work and less framing. That's a big reason builders use it so much. The exception is a sloped homesite. There, a crawl space can make more sense than hauling in a lot of dirt.
 
 ## What is the typical lifespan of a slab foundation?
 
-With good soil prep, proper drainage and normal care, a slab is meant to last for the life of the house. The things that shorten it are almost always water and soil problems: poor grading, downspouts dumping water at the foundation, or soil that wasn't compacted well.
+With good soil prep, good drainage and normal care, a slab is meant to last as long as the house. What shortens it is almost always water or soil. Poor grading, downspouts dumping water at the foundation, or soil that wasn't packed down well.
 
-The same is true of a crawl space. Keep water away from the foundation and both last.
+The same goes for a crawl space. Keep water away from the foundation, and both last.
 
 ## What to ask about the foundation under your home
 
-- Is it a slab or a crawl space, and why for this lot?
-- How was the soil prepared, and was it tested or compacted?
-- How does the lot drain, and where do the downspouts empty?
-- For a crawl space: is it vented or closed, and how is moisture controlled?
+- Is it a slab or a crawl space, and why for this homesite?
+- How was the soil prepared? Was it tested or packed down?
+- How does the homesite drain, and where do the downspouts empty?
+- For a crawl space: is it vented or sealed, and how is it kept dry?
 - What does the warranty cover for the foundation?
 
 ## Sources
