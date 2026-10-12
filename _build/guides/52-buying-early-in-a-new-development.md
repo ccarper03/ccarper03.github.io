@@ -14,9 +14,9 @@ related: how-to-pick-a-lot, living-in-a-new-development, how-to-choose-a-new-con
 ## The upside of buying early
 
 - **First pick.** The best homesites, like those backing up to open space, often go first.
-- **More choices.** More plans and options are available before a phase fills up.
+- **More choices.** More homesites and plans are open before a phase fills up.
 - **Pricing.** Builders sometimes raise prices as a community fills. That isn't guaranteed, so don't count on it.
-- **Time to plan.** A to-be-built home gives you months to sell, save or finish a lease.
+- **Time to plan.** A home that's starting soon gives you months to sell, save or finish a lease.
 
 ## The downside
 
@@ -40,8 +40,7 @@ For any community you're considering, ask the builder for the community plan and
 In stages, usually:
 
 1. **Earnest money** when you sign the contract. Freddie Mac estimates 1% to 2% of the price as a general guide. It's typically credited toward your costs at closing.
-2. **Option or upgrade deposits**, if the builder requires them for your selections.
-3. **Closing.** Your down payment and closing costs, with your mortgage covering the rest. Federal rules require your lender to give you the Closing Disclosure at least three business days before closing.
+2. **Closing.** Your down payment and closing costs, with your mortgage covering the rest. Federal rules require your lender to give you the Closing Disclosure at least three business days before closing.
 
 Ask the builder which deposits are refundable and when.
 

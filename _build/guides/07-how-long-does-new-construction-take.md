@@ -3,11 +3,11 @@ n: 7
 slug: how-long-does-new-construction-take
 title: How Long Does New Construction Take?
 seo_title: How Long Does New Construction Take? Real Timelines
-description: To-be-built vs. move-in ready, how long a new home takes from permit to keys, which stages take longest, and what really causes delays.
+description: Ready now, being built or starting soon: how long a new home takes from permit to keys, which stages take longest, and what causes delays.
 stage: top
 pillar: build
 keyword: how long does new construction take
-answer: Single-family homes built for sale took about 7.4 months from permit to completion in 2025, per Census Bureau data. Custom homes took longer, 11.7 to 14.3 months. A home that's already started or finished can close much sooner.
+answer: Single-family homes built for sale took about 7.4 months from permit to completion in 2025, per Census Bureau data. Custom homes took longer, 11.7 to 14.3 months. A home that's already started or finished can close much sooner. At D.R. Horton, the homes are built first, so some are ready now.
 next: buying-new-construction-with-a-home-to-sell
 related: how-a-new-home-gets-built, mortgage-rate-lock-new-construction, buying-new-construction-with-a-home-to-sell, risks-of-buying-new-construction
 ---
@@ -31,15 +31,15 @@ For a home built for sale, plan on several months from permit to completion. The
 
 The newest Census figures put the median new home at about 2,142 square feet, so a 2,000 square foot home is close to typical.
 
-## To-be-built vs. move-in ready
+## Ready now, being built or starting soon
 
-You don't always have to wait the full build.
+D.R. Horton builds the homes first, so you don't always have to wait for the full build. At Collins Ridge, you pick from three kinds of homes:
 
-- **To-be-built:** You pick a homesite and plan, and the clock starts. You get the most choices.
-- **Under construction:** The home is already started. Fewer choices, sooner closing.
-- **Move-in ready:** Finished or nearly finished. The fastest path, with the finishes already picked.
+- **Ready now:** The home is done. You can close once your loan is ready.
+- **Being built:** The home is started. Your move-in date depends on how far along it is.
+- **Starting soon:** The plan is set for that homesite, but work hasn't started. Plan on about seven months.
 
-Ask the builder for all three. A home that's halfway done might fit your timeline and your taste.
+A home that's halfway done might fit your timeline. Ask me what's at each stage right now.
 
 ## Which stages take longest
 
@@ -73,3 +73,4 @@ For a buyer, what matters more is what's happening in the community you're looki
 1. [Single-Family Home Construction Time Declines in 2025](https://eyeonhousing.org/2026/09/single-family-home-construction-time-declines-in-2025/), NAHB Eye on Housing, using Census Survey of Construction data
 2. [Characteristics of New Housing: Highlights](https://www.census.gov/construction/chars/highlights.html), U.S. Census Bureau
 3. [What is a rate lock and should I ask for it?](https://www.consumerfinance.gov/ask-cfpb/what-is-a-rate-lock-and-should-i-ask-for-it-en-143/), Consumer Financial Protection Bureau
+4. [D.R. Horton Form 10-K, fiscal 2025](https://fortune.com/company-assets/1810/quartr/annual-report-10-k-398a7-2025-11-19-07-12-31.pdf), D.R. Horton

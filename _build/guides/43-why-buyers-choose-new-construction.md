@@ -7,7 +7,7 @@ description: What really pulls people toward a new build, what to weigh first, a
 stage: top
 pillar: psych
 keyword: benefits of buying new construction
-answer: People choose new construction for the condition, the layout, the efficiency, the warranty, and the chance to pick their own plan and finishes. The trade-offs are time, lot size and a neighborhood still filling in. It's a good choice when those benefits matter more to you than the trade-offs.
+answer: People choose new construction for the condition, the layout, the efficiency, the warranty, and the chance to walk the real home before they buy. The trade-offs are time, lot size and a neighborhood still filling in. It's a good choice when those benefits matter more to you than the trade-offs.
 next: questions-to-ask-a-home-builder
 related: new-construction-vs-resale-cost, why-buyers-say-no-to-new-construction, how-buying-new-construction-works, first-time-buyer-new-construction
 ---
@@ -19,7 +19,7 @@ The ones buyers mention to me most:
 - **A layout built for now.** Open kitchens, more bathrooms, flex rooms and storage that older plans often lack.
 - **Efficiency.** New homes are built to current energy codes.
 - **A warranty.** Builders provide a written warranty on certain items for set periods.
-- **Choice.** You pick the plan, often the homesite, and some of the finishes.
+- **Simple choices.** At D.R. Horton, you pick a home that's built or underway. If it's early, you may pick one of three interior color schemes. Fewer decisions, faster move.
 - **Timing you can plan around.** A home being built can line up with a lease ending or a sale.
 
 ## What are some good reasons to buy a new home?
@@ -38,7 +38,7 @@ NAR's 2025 profile found the typical seller had lived in their home 11 years bef
 
 The trade-offs, honestly:
 
-- **Time.** A home started from scratch takes months.
+- **Time.** A home that's starting soon takes about seven months. D.R. Horton builds first, so some homes are ready sooner.
 - **Lot size.** Many new homes sit on smaller lots than older homes.
 - **The neighborhood is still forming.** Construction, young trees and amenities in progress.
 - **The HOA.** Most new communities have one, often run by the developer at first.
@@ -56,7 +56,7 @@ Before a first builder visit, it helps to know which reason is driving your clie
 
 - **Life event** (new job, new baby, downsizing): timeline matters most. Look at homes already underway.
 - **Tired of repairs:** condition and warranty matter most. Show the standard features and the warranty.
-- **Wants to choose:** plan and selections matter most. Look at homesites and to-be-built options.
+- **Wants to choose:** look at homes starting soon, where there's still time to pick the interior color scheme.
 - **Just curious:** a first visit to learn. No pressure, and a lender conversation before the second.
 
 ## Sources

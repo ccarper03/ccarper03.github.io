@@ -3,13 +3,17 @@ n: 17
 slug: how-to-pick-a-lot
 title: How to Pick the Right Lot in a New Community
 seo_title: How to Pick the Right Lot in a New Community
-description: Size, slope, drainage, easements, what's planned next door and when a lot premium is worth it. How to choose a homesite, and what a typical lot is today.
+description: Drainage, slope, easements, what's planned next door and when a lot premium is worth it. How to choose a homesite when the home is already set for it.
 stage: mid
 pillar: select
 keyword: how to pick a lot new construction
-answer: Look past size. Check how the lot drains, which way it faces, what's behind it, any easements, and what's planned for the land next door. In 2025, the median new single-family home sold sat on about 8,500 square feet, a little under a fifth of an acre.
+answer: At D.R. Horton, you pick a home and its homesite together. Look past size. Check how the lot drains, which way it faces, what's behind it, any easements, and what's planned for the land next door. In 2025, the median new single-family home sold sat on about 8,500 square feet, a little under a fifth of an acre.
 related: which-direction-should-a-house-face, site-prep-before-building, buying-early-in-a-new-development, home-elevation-and-exterior-colors
 ---
+## How it works at D.R. Horton
+
+Each homesite already has its floor plan and outside look set. So you're picking a home and its homesite together, not a lot and then a plan. Walk the homes that are ready now or being built, and use the checks below on each one.
+
 ## What to check on every homesite
 
 Size gets the attention, but these matter as much:
@@ -59,7 +63,7 @@ It's less worth it for size you won't use, or a view that could change when the 
 - Are there easements, and where?
 - What's planned for the land behind and beside it?
 - Is it in a flood zone?
-- Which plans fit this lot, and does it allow a patio or porch option?
+- Which home and plan are set for this homesite?
 - Is there a premium, and why?
 
 ## Sources

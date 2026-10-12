@@ -8,7 +8,7 @@ stage: mid
 pillar: select
 keyword: how to choose a floor plan
 answer: Pick a floor plan for how you live on an ordinary weekday, not how the model is staged. Count the bedrooms you need now and in five years, decide how you feel about stairs, and look hard at storage, laundry and a main-floor bedroom. Those choices are hard to change later.
-related: how-to-choose-a-floor-plan, design-center-upgrades-worth-it, how-to-pick-a-lot
+related: design-center-upgrades-worth-it, how-to-pick-a-lot, kitchen-upgrades-new-build
 ---
 ## Start with an ordinary Tuesday
 
@@ -61,15 +61,21 @@ Most agents use the builder's published plan sheets for new construction. For re
 
 For your own decision, print the plan sheets and draw on them. Mark where your furniture goes, where you'll work and where the TV goes. It shows problems a walkthrough can miss.
 
+## Why D.R. Horton plans are tested
+
+D.R. Horton has built more than a million homes since 1978, and it uses the same floor plans over and over. These plans have been built and lived in many times, so they're tested, not experiments.
+
 ## Use the plan, then walk the plan
 
 1. Narrow it to two or three plans on paper.
 2. Walk the model, and any finished homes in those plans.
 3. Measure rooms against your furniture.
-4. Then pick, and choose your options while they're still easy to add.
+4. Then pick the home. At D.R. Horton, each homesite already has its plan set, so you're choosing from homes that are ready now, being built or starting soon.
 
 ## Sources
 
 1. [Outdoor Features and a Laundry Room Among Most Wanted Features](https://eyeonhousing.org/2024/04/outdoor-features-a-laundry-room-among-most-wanted-features/), NAHB Eye on Housing
 2. [Home Buyers Are Looking for Amenity-Loaded Kitchens and Bathrooms](https://eyeonhousing.org/2024/09/home-buyers-are-looking-for-amenity-loaded-kitchens-and-bathrooms/), NAHB Eye on Housing
 3. [Characteristics of New Housing: Highlights](https://www.census.gov/construction/chars/highlights.html), U.S. Census Bureau
+4. [D.R. Horton investor story](https://investor.drhorton.com/overview/investor-story), D.R. Horton
+5. [D.R. Horton Form 10-K, fiscal 2025](https://fortune.com/company-assets/1810/quartr/annual-report-10-k-398a7-2025-11-19-07-12-31.pdf), D.R. Horton

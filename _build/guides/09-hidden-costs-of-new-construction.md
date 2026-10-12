@@ -17,7 +17,7 @@ The costs most people miss fall into four buckets.
 
 **Up front, before closing**
 
-- **Earnest money.** Freddie Mac puts it at roughly 1% to 2% of the purchase price. It's usually credited back to you at closing. New construction contracts often add a separate deposit for options or upgrades.
+- **Earnest money.** Freddie Mac puts it at roughly 1% to 2% of the purchase price. It's usually credited back to you at closing.
 - **Inspection.** Freddie Mac estimates $300 to $500 for a standard home inspection. On new construction, some buyers do two: one before drywall and one before closing.
 
 **At closing**
@@ -47,10 +47,10 @@ It varies by builder, plan and community, so ask for the standard features list 
 - Fencing
 - Landscaping beyond the builder's basic package
 - Gutters on every side (on some homes)
-- Upgraded lighting, ceiling fans or outlets you assumed would be there
+- Light fixtures, ceiling fans or outlets you assumed would be there
 - A finished patio size or covered porch you saw in the model
 
-Model homes are decorated to sell. The model often shows upgrades and furniture that aren't standard. Ask "Is this included?" about anything you like.
+Model homes are decorated to sell. At Collins Ridge, the furniture, decor, fridge, washer, dryer and blinds in the model aren't standard. Ask what comes with the home.
 
 ## The property tax step-up
 
@@ -82,7 +82,7 @@ Use those as ceilings. Then build your budget on the full monthly cost, includin
 
 Make two lists before you sign:
 
-1. **One-time costs:** earnest money, option deposits, inspections, closing costs, HOA fees at closing, blinds, appliances, moving.
+1. **One-time costs:** earnest money, inspections, closing costs, HOA fees at closing, blinds, appliances, moving.
 2. **Monthly costs:** your full payment, utilities, HOA dues, and a set-aside for upkeep and that year-two tax change.
 
 If both lists still work with savings left over, you're in good shape.

@@ -7,7 +7,7 @@ description: Closing cost help, buydowns, price cuts and design credits aren't e
 stage: mid
 pillar: money
 keyword: builder incentives
-answer: A builder incentive is money or value the builder puts toward your purchase, like closing cost help, a rate buydown, a price reduction or design credits. They aren't equal. Judge each one by what it does to your cash to close and your monthly payment, and get it in writing.
+answer: A builder incentive is money or value the builder puts toward your purchase, like closing cost help, a rate buydown or a price reduction. They aren't equal. Judge each one by what it does to your cash to close and your monthly payment, and get it in writing.
 related: rate-buydowns-explained, closing-costs-new-construction, negotiating-with-a-home-builder, new-construction-vs-resale-cost
 ---
 ## What are builder incentives and how do they work?
@@ -17,7 +17,6 @@ A builder incentive is a contribution the builder makes to your purchase. It usu
 - **Closing cost help.** A credit at closing that lowers the cash you bring.
 - **A rate buydown.** Money paid up front to lower your mortgage rate, for a few years or for the life of the loan.
 - **A price reduction.** A lower contract price.
-- **Design or option credits.** Money toward upgrades or options in the home.
 
 Builders use incentives because the base price is the number every buyer and appraiser sees. An incentive can move with the market without changing that number. That's normal across the industry. It isn't a trick, but it does mean you have to read the details.
 
@@ -35,15 +34,16 @@ The same dollar amount can be worth very different things:
 | Temporary buydown | Lower payment for the first year or two | Buyers who expect income to rise, or want breathing room early |
 | Permanent buydown | Lower rate for the life of the loan | Buyers planning to keep the loan a long time |
 | Price reduction | Smaller loan, and the price the home is valued at | Buyers focused on the long-term number |
-| Design credit | Finishes in the home | Buyers who would have paid for those options anyway |
 
-Ask your lender to run your numbers each way. A credit you can't fully use, or an upgrade you didn't want, is worth less than it sounds.
+Ask your lender to run your numbers each way. A credit you can't fully use is worth less than it sounds.
+
+At Collins Ridge, incentives change week to week. Ask me what's available on the home you like.
 
 ## What is a $10,000 builder incentive?
 
 It's $10,000 the builder agrees to contribute toward your purchase, but the label alone doesn't tell you where it goes. Ask these four questions:
 
-1. **What can it be used for?** Closing costs, a buydown, the price, options, or a mix?
+1. **What can it be used for?** Closing costs, a buydown, the price, or a mix?
 2. **What is it tied to?** A specific lender, a closing date, a specific home?
 3. **Can I use all of it?** Seller contributions toward closing costs can't exceed your actual closing costs.
 4. **Where will it show up?** It should appear on your Closing Disclosure at the end.

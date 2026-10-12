@@ -1,69 +1,81 @@
 ---
 n: 1
 slug: how-buying-new-construction-works
-title: How Buying a New Construction Home Works, Step by Step
+title: How Buying a New D.R. Horton Home Works, Step by Step
 seo_title: How Buying a New Construction Home Works, Step by Step
-description: The whole path from first visit to keys, who represents whom, whether you need a realtor for a new build, and who pays the agent, explained in plain words.
+description: The steps to buying a new D.R. Horton home, from talking to a lender to getting your keys. Who represents whom, how long it takes, and why there are fewer choices.
 stage: top
 pillar: psych
 keyword: buying new construction process
-answer: Buying new construction runs in seven steps: talk to a lender, visit and narrow plans, pick a home and homesite, sign the contract, make selections, watch the build, then do the final walkthrough and close. The builder's sales consultant represents the builder. You can bring your own agent, and it's smart to decide that before your first visit.
+answer: Buying a new home from D.R. Horton takes seven steps. You talk to a lender, see the homes, pick one, pick your colors if it's early, sign, get updates, and close. I represent D.R. Horton as the seller. You can always bring your own agent.
 next: questions-to-ask-a-home-builder
 related: questions-to-ask-a-home-builder, prequalified-vs-preapproved, how-long-does-new-construction-take, buying-new-construction-with-a-home-to-sell
 ---
-## How does the process of buying a new build house work?
+## How does buying a new D.R. Horton home work?
 
-Here's the path I walk people through. The order matters more than the speed.
+Here's the path I walk people through.
 
-1. **Talk to a lender first.** Know your comfortable payment before you fall for a plan. A verified preapproval also tells the builder you're ready.
-2. **Decide on representation.** If you want your own agent, bring them or register them before your first visit. More on that below.
-3. **Visit and narrow it down.** Walk the model and any homes under construction or ready now. Narrow it to two or three plans.
-4. **Pick a home and a homesite.** Either a home that's already started, or a homesite and a plan to build. Ask what's included and what's an upgrade.
-5. **Sign the contract.** It's the builder's contract. Read it, ask questions, and have your agent or an attorney review it. You'll usually put down earnest money.
-6. **Make your selections.** Finishes, options and design choices, if the home isn't too far along. Get every choice and price in writing.
-7. **Watch the build, then close.** Construction, inspections, a final walkthrough, and closing with an attorney. Then keys.
+1. **Talk to a lender first.** Know what monthly payment feels right before you fall for a home. You can use any lender you want.
+2. **Bring your agent, if you want one.** Bring them to your first visit, or have them register you before you come.
+3. **Come see the homes.** Walk the model. Then walk real homes that are ready now or being built. D.R. Horton builds first, so you see the real thing, not just a drawing.
+4. **Pick your home.** Each home already has its floor plan and outside look set for its homesite. You're picking a home, not designing one.
+5. **Pick your colors, if it's early.** There's no design center. If the home is early in the build, you may get to pick one of three interior color schemes. Designers put each one together, so everything goes together.
+6. **Sign and get updates.** You sign D.R. Horton's contract and put down earnest money. I keep you posted while your home gets finished. You can also hire your own licensed inspector before drywall and again before closing.
+7. **Walk through it and close.** We do a final walkthrough together. Then you close with an attorney and get your keys.
 
-A home being built takes time. The Census Bureau's data shows homes built for sale took about 7.4 months from permit to completion in 2025. A home that's already finished can close much sooner.
+## Why are there fewer choices?
 
-## Can you look at new builds without a realtor?
+D.R. Horton has built more than a million homes since 1978. It uses the same floor plans over and over, so the plans are tested. The finishes are already picked by designers.
 
-Yes. Model homes are open to the public, and you can walk in on your own.
+That means fewer decisions and fewer delays. You won't spend weeks choosing tile and cabinets.
 
-Just know two things before you do. First, the sales consultant works for the builder. In North Carolina, agents have to review the *Working With Real Estate Agents* disclosure with you at the first substantial contact, so you know who represents whom. Second, many builders have a registration rule: if you want an agent to represent you, they may need to come with you or register you before your first visit. Ask the builder's policy before you go.
+## How long does it take?
+
+It depends on which home you pick.
+
+- **Ready now.** The home is done. You can close once your loan is ready.
+- **Being built.** The home is started. Your move-in date depends on how far along it is.
+- **Starting soon.** The plan is set for that homesite, but work hasn't started. Plan on about seven months. That gives you time to sell your home or finish your lease.
+
+For context, the Census Bureau found homes built for sale took about 7.4 months from permit to completion in 2025.
+
+## Can you look at new homes without a realtor?
+
+Yes. The model is open to the public, and you can walk in on your own.
+
+Just know two things. First, I work for D.R. Horton and represent the seller. In North Carolina, agents review the *Working With Real Estate Agents* disclosure with you at the first real conversation, so you know who represents whom. Second, if you want an agent to represent you, bring them to your first visit or have them register you before you come.
 
 ## Should I get a realtor if I'm buying a new build?
 
-It's your call, and it's a fair question. I represent the builder, so here's the honest version.
+It's your call, and it's a fair question. I represent D.R. Horton, so here's the honest version.
 
-A good agent can help you compare builders and resale homes, read the builder's contract, think through options and lot choices, and push on timelines. They're also a second set of eyes on something big.
+A good agent can read the contract with you, help you compare homes, and be a second set of eyes on something big.
 
-If you don't use an agent, you can still protect yourself. Hire a closing attorney, get your own licensed inspection, and read every page before you sign. At Collins Ridge, your inspector can come before drywall and again before closing.
+If you don't use an agent, you can still protect yourself. Hire a closing attorney, get your own licensed inspection, and read every page before you sign.
 
 What I'd avoid is deciding halfway. If you want an agent, bring them in at the start.
 
 ## Who pays the realtor when buying a new build house?
 
-It depends on your written agreement with your agent and what the builder offers.
+It depends on your written agreement with your agent. Since August 2024, buyers working with a REALTOR sign a written buyer agreement before touring homes. NAR says it has to state what the agent will be paid, and that the amount is negotiable.
 
-Since August 2024, buyers working with a REALTOR sign a written buyer agreement before touring homes. NAR says it has to state clearly what the agent will be paid, and that the amount is negotiable. You can also ask the seller to cover your agent's compensation.
+D.R. Horton works with buyers' agents. If you have one, ask me how we take care of agents, and make sure your buyer agreement matches.
 
-On new construction, many builders have a policy of paying a buyer's agent, often tied to registering the buyer on the first visit. Ask the builder what its policy is, and make sure your buyer agreement matches.
+## What happens if I don't have an agent?
 
-## What happens if a buyer does not have an agent?
+You buy on your own. I still help you through every step, but I represent D.R. Horton.
 
-You buy unrepresented. The builder's sales consultant still helps you through the process, but represents the builder.
+That's a normal way to buy a new home. Just cover the gaps yourself:
 
-That's a normal way to buy new construction. Just fill the gaps yourself:
-
-- Read the contract carefully, and consider having an attorney review it.
-- Ask what's standard and what's an upgrade, and get it in writing.
-- Ask about inspections, timelines and the warranty up front.
+- Read the contract carefully, and think about having an attorney review it.
+- Ask what comes with the home, and get the features list in writing.
+- Ask about inspections, timing and the warranty up front.
 - Compare Loan Estimates from more than one lender.
 
 ## Sources
 
-1. [Single-Family Home Construction Time Declines in 2025](https://eyeonhousing.org/2026/09/single-family-home-construction-time-declines-in-2025/), NAHB Eye on Housing, using Census Survey of Construction data
-2. [Do Not Fail to Review Agency With All Sellers and Buyers](https://bulletins.ncrec.gov/do-not-fail-to-review-agency-with-all-sellers-and-buyers/), NC Real Estate Commission Bulletin
-3. [Consumer Guide: Written Buyer Agreements](https://www.nar.realtor/the-facts/consumer-guide-written-buyer-agreements), National Association of REALTORS
-4. [What if a buyer refuses to sign a written buyer agreement before a home tour?](https://www.ncrealtors.org/question/what-if-a-buyer-refuses-to-sign-a-written-buyer-agreement-before-a-home-tour/), NC REALTORS
-5. [Buying a House](https://www.consumerfinance.gov/owning-a-home/), Consumer Financial Protection Bureau
+1. [D.R. Horton investor story](https://investor.drhorton.com/overview/investor-story), D.R. Horton
+2. [D.R. Horton Form 10-K, fiscal 2025](https://fortune.com/company-assets/1810/quartr/annual-report-10-k-398a7-2025-11-19-07-12-31.pdf), D.R. Horton
+3. [Single-Family Home Construction Time Declines in 2025](https://eyeonhousing.org/2026/09/single-family-home-construction-time-declines-in-2025/), NAHB Eye on Housing, using Census Survey of Construction data
+4. [Do Not Fail to Review Agency With All Sellers and Buyers](https://bulletins.ncrec.gov/do-not-fail-to-review-agency-with-all-sellers-and-buyers/), NC Real Estate Commission Bulletin
+5. [Consumer Guide: Written Buyer Agreements](https://www.nar.realtor/the-facts/consumer-guide-written-buyer-agreements), National Association of REALTORS

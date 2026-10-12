@@ -7,7 +7,7 @@ description: How to price and position a resale home when a builder is selling n
 stage: mid
 pillar: agents
 keyword: selling home near new construction
-answer: Compete on what new construction can't offer: a faster move-in, a finished yard, mature trees, upgrades already included and a price without lot premiums or design-center extras. Price against the new homes' total cost, not their base price, and show buyers the comparison.
+answer: Compete on what new construction can't offer: a faster move-in, a finished yard, mature trees and extras the seller already added, like a fence or blinds. Price against the new homes' total cost, not their base price, and show buyers the comparison.
 related: why-buyers-say-no-to-new-construction, new-construction-vs-resale-cost, why-buyers-choose-new-construction, negotiating-with-a-home-builder
 ---
 ## Where a resale home wins
@@ -25,7 +25,6 @@ I sell for a builder, so here's an honest list of where your listing has the edg
 Buyers compare your list price to a builder's base price. That's not a fair fight, so reframe it. A new home's real cost often includes:
 
 - A lot premium on some homesites
-- Design center options
 - Blinds, appliances and fencing
 - Landscaping beyond the basics
 

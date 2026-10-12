@@ -7,7 +7,7 @@ description: What usually moves with a builder and what usually doesn't, why bui
 stage: mid
 pillar: psych
 keyword: negotiate with home builder
-answer: Sometimes, but usually not on the base price. Builders tend to protect it because it affects every home that sells after yours. What moves more often is closing cost help, rate buydowns, options and upgrades, and pricing on homes that are already built or nearly finished.
+answer: Sometimes, but usually not on the base price. Builders tend to protect it because it affects every home that sells after yours. What moves more often is closing cost help, rate buydowns, and pricing on homes that are already built or nearly finished.
 related: builder-incentives-explained, rate-buydowns-explained, closing-costs-new-construction, questions-to-ask-a-home-builder
 ---
 ## Will a builder negotiate a lower price?
@@ -24,12 +24,13 @@ These tend to have more room than the base price:
 
 - **Closing cost help.** A credit toward your side of closing.
 - **A rate buydown.** Temporary or permanent, often tied to the builder's lender.
-- **Options and upgrades.** Design credits or included options.
 - **Homes that are already built or nearly finished.** A builder may have more flexibility on a home that's ready, because it costs them to carry it.
 - **Lot premiums.** On some homesites, in some communities.
 - **Timing.** Closing date flexibility can be worth something on both sides.
 
 Loan programs also limit how much a seller can contribute toward your costs. Fannie Mae caps those contributions on a primary residence at 3%, 6% or 9% of the price or appraised value, depending on how much you're borrowing. That's one reason incentives come in the sizes they do.
+
+At Collins Ridge, incentives change week to week. Ask me what's available on the home you like.
 
 ## How much can you realistically negotiate off a house?
 
@@ -53,7 +54,7 @@ On a resale home, a big gap can make sense if the house needs major work or has 
 
 ## For agents
 
-Builders' rules on incentives and agent compensation vary, so ask each builder for its current terms in writing. The approach above works for your client at any builder.
+Builders' rules on incentives and agent compensation vary, so ask each builder for its current terms in writing. The approach above works for your client at any builder. At Collins Ridge, ask me how we take care of agents.
 
 ## Sources
 

@@ -83,6 +83,15 @@ The best one is the one you actually use. Here's how I'd organize it:
 5. **At the walkthrough:** a room-by-room punch list.
 6. **After move-in:** warranty dates and a maintenance calendar.
 
+## How I'd answer these at Collins Ridge
+
+- **What's standard?** Every home comes with the same included features. There's no design center and no upgrade list. See [how picking finishes works](/guides/design-center-upgrades-worth-it).
+- **What in the model isn't standard?** The furniture and decor, plus the fridge, washer, dryer and blinds.
+- **Can I bring my own inspector?** Yes, a licensed home inspector before drywall and again before closing, on our build schedule.
+- **What's the warranty?** A 10-year structural warranty through RWC. See [what a new home warranty covers](/guides/new-home-warranty-coverage).
+- **What does the HOA cover?** Common areas like the entrances, landscaping and stormwater ponds. The [Collins Ridge FAQ](/faq#hoa) has the details.
+- **Who do you represent?** I represent D.R. Horton as the seller. You're always welcome to bring your own agent.
+
 ## Get it in writing
 
 A promise in a model home isn't a promise until it's in your contract or an addendum. That's true at every builder. Ask, then ask where it's written down.

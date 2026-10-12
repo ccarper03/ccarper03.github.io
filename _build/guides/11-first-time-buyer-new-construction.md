@@ -7,7 +7,7 @@ description: Five things to know before you walk into a model home: lender timin
 stage: top
 pillar: psych
 keyword: first time home buyer new construction
-answer: Talk to a lender before you shop, know who represents you, ask what's included versus upgraded, budget for costs beyond the down payment, and plan around the build timeline. Most people buying from a builder use a regular mortgage at closing, not a construction loan.
+answer: Talk to a lender before you shop, know who represents you, ask what's included, budget for costs beyond the down payment, and plan around the build timeline. Most people buying from a builder use a regular mortgage at closing, not a construction loan.
 next: questions-to-ask-a-home-builder
 related: prequalified-vs-preapproved, down-payment-options-new-construction, hidden-costs-of-new-construction, how-buying-new-construction-works
 ---
@@ -27,7 +27,7 @@ The builder's sales consultant represents the builder. You can bring your own ag
 
 ### 3. The model home isn't the standard home
 
-Models show upgrades and furniture. Ask "Is this included?" about anything you like, and get the standard features list in writing.
+The model has furniture and decor, and at Collins Ridge the fridge, washer, dryer and blinds aren't standard either. Ask what comes with the home, and get the standard features list in writing.
 
 ### 4. Budget beyond the down payment
 
