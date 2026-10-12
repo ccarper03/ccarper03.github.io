@@ -3,72 +3,65 @@ n: 47
 slug: what-to-look-for-near-a-new-home
 title: What to Look For Near a New Home
 seo_title: What to Look For Near a New Home: Map Your Real Week
-description: Groceries, parks, healthcare and the coffee shop you'll use. How to map your real week before choosing a home, plus amenities and getting around.
+description: Groceries, parks, doctors and the places you go most. How to map your real week before you choose a home, plus amenities and getting around.
 stage: top
 pillar: place
 keyword: what to look for near a new home
-answer: Map your real week before you choose: work, groceries, healthcare, the gym, parks and the places you go most. Time each drive. Judge an area by its places and drive times, and look at what's planned nearby, not just what's there today.
+answer: Before you pick a home, map your real week. Work, groceries, doctors, the gym, parks and the places you go most. Time each drive. Then look at what's planned nearby, not just what's there today.
 next: how-to-choose-a-new-construction-community
 related: how-far-is-too-far-to-commute, living-in-hillsborough-nc, how-to-choose-a-new-construction-community, buying-early-in-a-new-development
 ---
 ## Map your real week
 
-List the places you go in a normal week and how often:
+Write down the places you go in a normal week:
 
-- Work, at the times you'd drive
-- Groceries and pharmacy
-- Doctors and the hospital you use
-- Gym, church, activities and the kids' practices
+- Work, at the times you'd really drive
+- Groceries and the pharmacy
+- Your doctors and hospital
+- The gym, church and your activities
 - Parks, trails and where you walk the dog
-- Friends and family you see often
+- Friends and family you see a lot
 - The airport, if you travel for work
 
-Then time each drive from the home you're considering. The total tells you more than any listing.
+Then time each drive from the home you like. That tells you more than any listing.
 
-For example, from the Collins Ridge sales office where I work, I measured off-peak drives of about 3.5 minutes to downtown Hillsborough, 7 minutes to Aldi, 9 minutes to UNC Hospitals Hillsborough, and 40 minutes to Raleigh-Durham Airport.
+For example, from the Collins Ridge sales office where I work, I timed these drives off-peak: about 3.5 minutes to downtown Hillsborough, 7 minutes to Aldi, 9 minutes to UNC Hospitals Hillsborough, and 40 minutes to the Raleigh-Durham Airport.
 
 ## What are some examples of community amenities?
 
-Inside a new community, common amenities include:
+Inside a new community, you'll often find a pool and clubhouse, walking trails, parks, playgrounds, a dog park, open space, and a gym or sports courts. At Collins Ridge, that's a saltwater pool, a clubhouse with a gym, tennis and pickleball courts, a dog park, trails and playgrounds.
 
-- A pool and clubhouse
-- Walking trails and sidewalks
-- Parks, playgrounds and a dog park
-- Open space and ponds
-- A fitness room or sports courts
-
-Nearby, in the wider area:
+Nearby, look for:
 
 - Grocery stores and a pharmacy
-- Healthcare and urgent care
-- Parks, greenways and natural areas
+- Doctors and urgent care
+- Parks, greenways and nature areas
 - Restaurants and a downtown
 - Libraries and community centers
 
-Ask which in-community amenities are finished and when the rest will open.
+Ask which amenities are done and when the rest will open.
 
 ## Can I get around Raleigh, NC without a car?
 
-In parts of Raleigh, a car-light life is possible, especially downtown, with GoRaleigh buses and walkable neighborhoods. For most of the Triangle, though, a car is the practical choice.
+In parts of Raleigh, yes, especially downtown, with GoRaleigh buses and walkable streets. In most of the Triangle, you'll want a car.
 
-Smaller towns have options too. Hillsborough, for example, lists GoTriangle's Orange-Durham Express to Durham, Route 420 to Chapel Hill and UNC Hospitals, and a local circulator. Check the transit agency's trip planner for the trips you'd actually make.
+Smaller towns have some options. Hillsborough lists GoTriangle's Orange-Durham Express to Durham, Route 420 to Chapel Hill and UNC Hospitals, and a local circulator bus. Check the trip planner for the trips you'd really take.
 
 ## What city is 30 minutes away from Raleigh, NC?
 
-It depends on where in Raleigh you start and what time you drive. Several Triangle towns fall within about half an hour of Raleigh off-peak, and much farther at rush hour. Durham is the big one many people consider.
+It depends on where in Raleigh you start and when you drive. Several Triangle towns are about half an hour from Raleigh off-peak. At rush hour, it's much longer. Durham is the one many people look at.
 
 Hillsborough is farther. From the Collins Ridge sales office, downtown Raleigh is about 53 minutes off-peak.
 
 ## Look at what's coming, too
 
-Today's map isn't tomorrow's. Before you buy, check:
+What's there today can change. Before you buy, check:
 
-- The town's planning department for approved projects nearby
-- What's planned for empty land around the community
+- The town's planning department for approved projects
+- What's planned for empty land near the community
 - Road projects that could change your drive
 
 ## Sources
 
 1. [Parking and Transportation](https://hillsboroughnc.gov/community/parking-transportation/), Town of Hillsborough
 2. [Travel Time to Work in the United States: 2019](https://census.gov/library/publications/2021/acs/acs-47.html), U.S. Census Bureau
-3. [Collins Ridge area drive times](/collins-ridge), measured from the Collins Ridge sales office, off-peak

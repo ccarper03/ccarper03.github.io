@@ -3,68 +3,69 @@ n: 51
 slug: new-home-warranty-coverage
 title: What Does a New Home Warranty Cover?
 seo_title: What Does a New Home Builder Warranty Cover? 1-2-10 Explained
-description: The common 1-2-10 builder warranty, what each period covers, how it differs from a home warranty, how to file a claim, and FHA's 10-year rule.
+description: The 1-2-10 builder warranty, what each part covers, how it's different from a home warranty, and how warranty requests work at D.R. Horton.
 stage: mid
 pillar: after
 keyword: new home warranty coverage
-answer: Many builder warranties follow a 1-2-10 pattern: about one year on workmanship and materials, two years on plumbing, electrical and HVAC systems, and up to ten years on major structural defects. A home warranty is a different product, an optional service contract. Read your builder's warranty for exact terms.
+answer: Many builder warranties follow a 1-2-10 pattern. About one year on workmanship and materials. Two years on plumbing, electrical, and heating and cooling. Up to ten years on major structural problems. At Collins Ridge, the 10-year structural warranty is through RWC.
 related: first-year-in-a-new-home, new-home-maintenance-checklist, final-walkthrough-checklist, questions-to-ask-a-home-builder
 ---
-## The common 1-2-10 structure
+## The 1-2-10 pattern
 
-Every builder's warranty is different, and this is general, not any one company's terms. The FTC describes the typical pattern:
+Every builder's warranty is a little different. The FTC describes the usual pattern:
 
-| Period | What's usually covered |
+| How long | What's usually covered |
 | --- | --- |
-| About 1 year | Workmanship and materials on most components, like siding, doors, trim, drywall and paint |
-| 2 years | Plumbing, electrical and HVAC systems |
-| Up to 10 years | Major structural defects, which the FTC describes as problems that make a home unsafe |
+| About 1 year | Workmanship and materials, like siding, doors, trim, drywall and paint |
+| 2 years | Plumbing, electrical, and heating and cooling |
+| Up to 10 years | Major structural problems that make a home unsafe |
+
+At Collins Ridge, the 10-year structural warranty is through RWC. Your warranty book has the exact terms.
 
 ## What does a 10-year building warranty cover?
 
-Major structural defects. That generally means failures of load-bearing parts of the home, like the foundation, framing or roof structure, serious enough to make the home unsafe. It doesn't usually cover cosmetic issues like small cracks.
+Major structural problems. That usually means a failure in the parts that hold the house up, like the foundation, framing or roof structure, bad enough to make the home unsafe. It doesn't usually cover small cosmetic cracks.
 
-The details, including definitions and limits, are in the warranty document itself. Read it before closing.
+The exact terms are in the warranty book. Read it before closing.
 
 ## What builder warranties usually don't cover
 
 The FTC lists common exclusions:
 
-- Out-of-pocket costs, like temporary housing during repairs
-- Household appliances, which usually carry manufacturer warranties instead
-- Small cracks in brick, tile, cement or drywall
-- Components covered by a manufacturer's warranty
+- Costs like a hotel stay while repairs happen
+- Appliances, which usually have their own maker's warranty
+- Small cracks in brick, tile, concrete or drywall
+- Parts covered by a maker's warranty
 
-## Is a builder's warranty the same as a homeowners warranty?
+## Is a builder's warranty the same as a home warranty?
 
-No. A builder's warranty comes with your new home and covers defects in how it was built. A "home warranty" is actually a service contract, an optional product you buy, usually for existing homes, that covers repair or replacement of things like appliances and air conditioning. The FTC says it plainly: service contracts are not warranties.
+No. A builder's warranty comes with your new home. It covers problems with how the home was built. A "home warranty" is a service contract you can choose to buy, usually for older homes. It covers repairs to things like appliances and air conditioning. The FTC says it plainly: service contracts are not warranties.
 
-On a new home, a service contract may duplicate coverage you already have. Compare before you buy one.
+On a new home, a service contract may cover things that are already covered. Compare before you buy one.
 
 ## Does FHA require a 10 year warranty on new construction?
 
-Not in every case. Under HUD's FHA handbook, a home that's under construction or completed less than a year ago is generally limited to a 90% loan-to-value unless it meets HUD's pre-approval requirements or is covered by a HUD-accepted insured ten-year protection plan. A ten-year plan with a final inspection is also one of the ways a lender can document a newly built home.
+Not always. Under HUD's FHA handbook, a home that's being built, or was finished less than a year ago, is usually limited to a 90% loan-to-value. The exceptions are homes that meet HUD's pre-approval rules or have a HUD-accepted 10-year protection plan. A 10-year plan with a final inspection is also one way a lender can document a new home.
 
-Your lender will know which applies to your loan.
+Your lender will know which one applies to your loan.
 
-## How to file a claim the right way
+## How warranty requests work at D.R. Horton
 
-The FTC recommends:
+At Collins Ridge, you send warranty requests through drhorton.com/warranty.
 
-1. Confirm the item is covered and still within its coverage period.
-2. Follow the warranty's claim steps. Even if there's a phone line, put the request in writing.
-3. Consider certified mail with a return receipt for important claims.
-4. Keep records of every message and call.
+1. About 30 days after closing, send in your first list.
+2. Around 10 months, schedule your warranty visit for things like nail pops.
+3. Anything urgent or about safety, send in right away.
 
-If there's a dispute, many warranties require mediation or arbitration. The FTC notes that arbitration decisions are usually final.
+The FTC also suggests putting every request in writing and keeping a record of every message and call. If there's a dispute, many warranties require mediation or arbitration, and the FTC notes arbitration is usually final.
 
 ## Questions to ask before you sign
 
 - What does the warranty cover, and for how long?
-- Who handles claims, the builder or a third-party company?
-- Is there a walkthrough near the end of the first year?
-- How do I submit a request, and how fast is the response?
-- Can I see the full warranty document now?
+- Who handles requests, the builder or another company?
+- Is there a visit near the end of the first year?
+- How do I send a request, and how fast is the reply?
+- Can I see the full warranty book now?
 
 ## Sources
 
