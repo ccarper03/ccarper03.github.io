@@ -20,7 +20,7 @@ Once insulation and drywall go up, the framing, wiring, pipes and ducts disappea
 There are two versions:
 
 - **A builder walkthrough.** Many builders walk buyers through the home at this stage to review the layout and what's been installed.
-- **A private inspection.** Your own inspector looks at the work on your behalf. Ask your builder if outside inspectors are allowed at this stage and how to schedule one.
+- **A private inspection.** Your own licensed home inspector looks at the work for you. At Collins Ridge, you can do this. We can't stop work for it, so tell me early and I'll help you line it up with our superintendent.
 
 ## What happens during a pre-drywall inspection?
 

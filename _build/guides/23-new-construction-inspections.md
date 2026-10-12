@@ -52,6 +52,14 @@ Ask before you sign:
 
 Get the answers in writing.
 
+## Can I bring my own inspector at Collins Ridge?
+
+Yes. You can hire your own licensed home inspector to check the home before the drywall goes up, and again before closing. A friend or family member who knows some construction doesn't count. We can't stop work for an inspection, so it has to fit our build schedule. Tell me early, and I'll help you line it up with our superintendent.
+
+### What happens with what my inspector finds?
+
+Send me the report, and I'll get it to our superintendent. Reports often list a lot of items, and that's normal. We build every home to the local building code. If something doesn't meet code, we'll take care of it. Some items are suggestions or preferences rather than code issues. For those, our superintendent looks at each one and decides what we can do. You'll hear back on each item, usually from our superintendent, sometimes from me.
+
 ## What is the biggest red flag in a home inspection?
 
 Anything involving water or structure. That means signs of leaks, poor drainage or grading that sends water toward the house, missing or poor flashing around windows and doors, and framing that's been cut or notched in ways that weaken it.

@@ -28,7 +28,7 @@ In North Carolina, building framing is one of the routine inspections the local 
 - **Notches and holes** cut for pipes, wires and ducts, which can weaken framing if they're too big or in the wrong place
 - **Stairs**, including rise, run and headroom
 
-A private inspector looking at the same stage, before drywall, adds a workmanship eye. InterNACHI's pre-drywall guidance lists things like stud and joist condition, notching, firestop material and missing metal clips.
+A private inspector looking at the same stage, before drywall, adds a workmanship eye. InterNACHI's pre-drywall guidance lists things like stud and joist condition, notching, firestop material and missing metal clips. At Collins Ridge, you can hire a licensed home inspector for this stage. Tell me early so it fits our build schedule.
 
 ## How much would it cost to frame a 2000 sq ft house?
 

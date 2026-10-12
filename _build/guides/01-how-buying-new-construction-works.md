@@ -37,7 +37,7 @@ It's your call, and it's a fair question. I represent the builder, so here's the
 
 A good agent can help you compare builders and resale homes, read the builder's contract, think through options and lot choices, and push on timelines. They're also a second set of eyes on something big.
 
-If you don't use an agent, you can still protect yourself. Hire a closing attorney, get an independent inspection if the builder allows it, and read every page before you sign.
+If you don't use an agent, you can still protect yourself. Hire a closing attorney, get your own licensed inspection, and read every page before you sign. At Collins Ridge, your inspector can come before drywall and again before closing.
 
 What I'd avoid is deciding halfway. If you want an agent, bring them in at the start.
 

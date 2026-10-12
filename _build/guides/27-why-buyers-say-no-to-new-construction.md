@@ -24,7 +24,7 @@ Sometimes that's true. In 2025, 41% of new homes built for sale sat on lots unde
 
 Some are built better than others, at every age and price.
 
-**Honest answer:** New homes are built to current codes and inspected by local building officials at set stages. Your client can also hire an independent inspector, often once before drywall and once before closing, if the builder allows it. And a new home comes with a builder warranty.
+**Honest answer:** New homes are built to current codes and inspected by local building officials at set stages. At Collins Ridge, your client can also hire a licensed inspector before drywall and again before closing, on our build schedule. And a new home comes with a builder warranty.
 
 ### "There are no trees, and it's a construction zone."
 

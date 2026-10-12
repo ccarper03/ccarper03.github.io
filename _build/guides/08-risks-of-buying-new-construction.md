@@ -25,7 +25,7 @@ Build dates move. Weather, inspections, materials and labor can all push a closi
 
 When you buy before the home is finished, you're trusting work that hasn't happened. Every home is built by many trade crews, and mistakes happen.
 
-**What to do:** Ask what inspections happen and when. Local building inspectors check the work at set stages. You can also hire your own inspector, often once before drywall and once before closing, if the builder allows it. Then read the warranty so you know how fixes get handled after you move in.
+**What to do:** Ask what inspections happen and when. Local building inspectors check the work at set stages. You can also hire your own licensed inspector. At Collins Ridge, that can be once before drywall and once before closing, on our build schedule. Then read the warranty so you know how fixes get handled after you move in.
 
 ### A neighborhood still under construction
 

@@ -64,7 +64,7 @@ Bring painter's tape, a phone charger to test outlets, and this list.
 
 It varies. On a resale home, it's often within a day or two of closing. On new construction, builders often schedule the orientation several days to a week or more ahead, so there's time to fix punch list items. Ask your builder for the date as early as possible.
 
-If you hired your own inspector, schedule the inspection before the walkthrough so you can add their findings to the punch list.
+If you hired your own licensed inspector, schedule that inspection before the walkthrough so you can add their findings to the punch list. At Collins Ridge, I'll help you line it up with our superintendent. Anything that doesn't meet code gets taken care of. For other notes, our superintendent decides what we can do.
 
 ## Can a seller deny a final walk-through?
 

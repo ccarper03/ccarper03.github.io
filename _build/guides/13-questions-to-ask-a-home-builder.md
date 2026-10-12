@@ -43,6 +43,8 @@ I work for one builder, so I won't rank builders. Here's how to judge any of the
 - Will I get a walkthrough before drywall?
 - How does the final walkthrough and punch list work?
 
+**At Collins Ridge:** yes, you can bring a licensed home inspector before drywall and again before closing, on our build schedule. [How inspections work here](/faq#inspections)
+
 ### The community
 
 - What are the HOA dues, and what do they cover?

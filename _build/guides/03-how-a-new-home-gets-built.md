@@ -41,7 +41,7 @@ North Carolina's building code lists the routine inspections a local building de
 
 Fire protection inspections apply to non-residential work. A recent state interpretation also notes that local departments can't add other routine inspections without approval.
 
-Those inspections check code compliance. Many buyers also hire their own inspector at key stages, especially before drywall and before closing. Ask your builder what's allowed and when.
+Those inspections check code compliance. Many buyers also hire their own inspector, especially before drywall and before closing. At Collins Ridge, you can do both with a licensed home inspector, on our build schedule.
 
 ## How many man hours does it take to build a 1500 sq ft house?
 
