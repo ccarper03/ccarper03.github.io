@@ -3,11 +3,11 @@ n: 23
 slug: new-construction-inspections
 title: Inspections on New Construction: Who Checks What
 seo_title: Do You Need a Home Inspection on New Construction?
-description: City inspections, the builder's checks and where your own inspector fits. Whether an inspection on a new build is worth it, and what inspectors look for.
+description: City inspections, the builder's checks and where your own inspector fits. Whether an inspection on a new home is worth it, what inspectors look for, and how it works at Collins Ridge.
 stage: top
 pillar: build
 keyword: home inspection new construction
-answer: Yes, an independent inspection on a new build is usually worth it. Local building inspectors check code compliance at set stages, but they aren't working for you. A private inspector before drywall and again before closing can catch workmanship issues while they're easy to fix.
+answer: Yes, your own inspection on a new home is usually worth it. Local building inspectors check that the work meets code, but they don't work for you. A licensed inspector before drywall and again before closing can catch problems while they're easy to fix.
 next: final-walkthrough-checklist
 related: pre-drywall-walkthrough, final-walkthrough-checklist, framing-a-house, how-a-new-home-gets-built
 ---
@@ -17,40 +17,32 @@ Three different people look at a new home, for three different reasons.
 
 | Who | What they check | Who they work for |
 | --- | --- | --- |
-| Local building inspector | Code compliance at required stages | The town or county |
-| The builder's construction team | Quality and schedule on their own homes | The builder |
-| Your private inspector | Workmanship and condition, on your behalf | You |
+| Local building inspector | That the work meets code, at set stages | The town or county |
+| The builder's construction team | Quality and schedule | The builder |
+| Your licensed inspector | How well the work was done, for you | You |
 
-North Carolina's building code lists the routine inspections a local department performs: footing, under slab where it applies, foundation, rough-in, building framing, insulation, and final. Those are code checks, not a full review of how well everything was done.
+North Carolina's building code lists the routine inspections the local department does: footing, under slab where it applies, foundation, rough-in, framing, insulation and final. Those are code checks, not a full review of how well everything was done.
 
 ## Is it worth getting a home inspection on a new build?
 
-I think so, and I sell new homes. A new house is built by many separate crews. Most do good work. Mistakes still happen, and the best time to catch them is before closing, while the builder's crews are still on site.
+I think so, and I sell new homes. A new house is built by many separate crews. Most do good work. Mistakes still happen, and the best time to catch them is before closing.
 
-The two most useful moments:
+The two most useful times:
 
-- **Before drywall.** After framing and rough-ins, before insulation and drywall cover them. InterNACHI notes that fixing problems after a home is finished is difficult and expensive, which is the whole point of looking first.
-- **Before closing.** A full inspection of the finished home, timed before your final walkthrough so you can add findings to the punch list.
+- **Before drywall.** After framing, plumbing, electrical, and heating and cooling are in, but before insulation and drywall cover them. InterNACHI notes that fixing problems after a home is finished is hard and expensive. That's the whole point of looking first.
+- **Before closing.** A full inspection of the finished home, before your final walkthrough, so you can add what they find to your list.
 
 ## What does a home inspector look for on new construction?
 
-At the pre-drywall stage, InterNACHI's guidance lists things like framing, joist notching, firestop material, window and door flashing, pipe placement, wiring and junction box placement, missing metal clips, and duct and register placement. Inspectors also look at practical questions, like whether each room has enough outlets.
+Before drywall, InterNACHI's guidance lists things like framing, notches cut in the floor joists, fire-blocking, flashing around windows and doors, where pipes and wires run, box locations, missing metal clips, and duct and vent locations. Inspectors also check practical things, like whether each room has enough outlets.
 
-At the final inspection, they look at the finished systems: roofing, exterior, plumbing fixtures and drains, electrical panels and outlets, the HVAC, doors and windows, attic and insulation, and grading around the house.
+At the final inspection, they look at the finished home: the roof, the outside, plumbing fixtures and drains, the electrical panel and outlets, heating and cooling, doors and windows, the attic and insulation, and how the ground slopes around the house.
 
-Inspections are visual. They don't check code compliance the way a building official does, and they won't find what they can't see.
+Inspections are visual. They don't check code the way a building official does, and they won't find what they can't see.
 
 ## Can a builder deny a home inspection?
 
-It depends on the builder's contract and policies. Some builders welcome outside inspections at set stages. Others limit when and how they happen, usually for safety on an active job site.
-
-Ask before you sign:
-
-- Can I bring my own inspector, and at which stages?
-- Do inspectors need to schedule ahead or be accompanied?
-- How do you handle items an inspector flags?
-
-Get the answers in writing.
+It depends on the builder's contract and rules. Some builders welcome outside inspections at set stages. Others limit when and how, usually for safety on a busy job site. If you're looking at another builder, ask before you sign, and get the answer in writing.
 
 ## Can I bring my own inspector at Collins Ridge?
 
@@ -62,16 +54,15 @@ You or your inspector can send the report straight to our superintendent. Report
 
 ## What is the biggest red flag in a home inspection?
 
-Anything involving water or structure. That means signs of leaks, poor drainage or grading that sends water toward the house, missing or poor flashing around windows and doors, and framing that's been cut or notched in ways that weaken it.
+Anything about water or structure. That means signs of leaks, ground that slopes water toward the house, missing or poor flashing around windows and doors, and framing that's been cut in ways that weaken it.
 
-Cosmetic items like paint touch-ups and small drywall marks are normal punch list work. Water and structure are the ones to slow down for.
+Small things like paint touch-ups and drywall marks are normal punch list items. Water and structure are the ones to slow down for.
 
-## How to use an inspection report
+## After the inspection
 
-1. Share it with the builder right away.
-2. Ask which items will be fixed before closing and which go on the warranty list.
-3. Get that answer in writing.
-4. Re-check the fixes at your final walkthrough.
+1. Send the report to our superintendent right away.
+2. Keep a copy, and note what you hear back.
+3. Check the fixes at your final walkthrough.
 
 ## Sources
 

@@ -13,59 +13,59 @@ related: true-cost-of-owning-a-home, prequalified-vs-preapproved, down-payment-o
 ---
 ## The pieces of a mortgage payment
 
-People call it PITI. Then there are two more pieces that catch people off guard.
+People call it PITI. Then there are two more pieces that surprise people.
 
 | Piece | What it is | How it changes |
 | --- | --- | --- |
-| **P**rincipal | The part that pays down your loan balance | Grows a little each month on a fixed-rate loan |
+| **P**rincipal | The part that pays down your loan | Grows a little each month on a fixed-rate loan |
 | **I**nterest | What the lender charges to lend you the money | Shrinks a little each month on a fixed-rate loan |
-| **T**axes | Property taxes, usually collected monthly into escrow | Changes when the tax rate or your assessed value changes |
-| **I**nsurance | Homeowners insurance, usually collected into escrow | Changes when your premium renews |
-| HOA dues | Homeowners association fees, if the community has one | Set by the association; often paid separately |
+| **T**axes | Property taxes, usually collected each month into escrow | Changes when the tax rate or your home's value changes |
+| **I**nsurance | Homeowners insurance, usually collected into escrow | Changes when your policy renews |
+| HOA dues | Fees for the homeowners association, if there is one | Set by the association, often paid on their own |
 | Mortgage insurance | Protects the lender when your down payment is smaller | Can be removed later on many conventional loans |
 
-Your Loan Estimate shows the estimated total monthly payment on page 1, under Projected Payments. It also shows which pieces are escrowed and which you pay on your own.
+Your Loan Estimate shows the total monthly payment on page 1, under Projected Payments. It also shows which pieces go into escrow and which you pay yourself.
 
 ## How much is the monthly payment on a $300,000 mortgage?
 
-It depends on your rate, your loan term, your taxes, your insurance and whether you'll pay mortgage insurance. Two buyers with the same loan amount can have very different payments.
+It depends on your rate, your loan length, your taxes, your insurance and whether you'll pay mortgage insurance. Two buyers with the same loan can have very different payments.
 
-I don't quote payments, and you shouldn't trust anyone who does without your full picture. Here's how to get a real number:
+I don't quote payments, and you shouldn't trust anyone who does without your full picture. To get a real number:
 
-1. Talk to a lender and get a Loan Estimate for the loan type you want.
+1. Talk to a lender and get a Loan Estimate for the loan you want.
 2. Look at page 1, Projected Payments, for the total.
-3. Ask what tax amount they used. On new construction this matters more than people expect. More on that below.
+3. Ask what tax amount they used. On a new home, this matters more than people expect. More on that below.
 
 ## How much of a mortgage can I afford if I make $70,000 a year?
 
-Lenders answer this with your debt-to-income ratio. That's all of your monthly debt payments, including the new housing payment, divided by your gross monthly income.
+Lenders answer this with your debt-to-income ratio. That's all your monthly debt payments, including the new house payment, divided by your monthly income before taxes.
 
-The CFPB notes that different loans and lenders set different limits. Fannie Mae's guidelines, for example, cap it at 36% on manually underwritten loans, up to 45% with strong credit and reserves, and up to 50% through its automated system.
+The CFPB notes that different loans and lenders set different limits. Fannie Mae's guidelines, for example, cap it at 36% on loans reviewed by hand, up to 45% with strong credit and savings, and up to 50% through its automated system.
 
-A lender's maximum isn't the same as comfortable. I'd look at the payment against your take-home pay, your savings goals and the other costs of owning. Then pick a number you'd be fine with in a tight month.
+The most a lender will allow isn't the same as comfortable. I'd look at the payment next to your take-home pay, your savings goals and the other costs of owning. Then pick a number you'd be fine with in a tight month.
 
-## The new construction tax catch
+## The new home tax catch
 
-North Carolina lists and values property as of January 1 each year. If your new home is finished partway through the year, that year's tax bill reflects the property as it stood on January 1, often just the lot or a partly built house. The next year's bill covers the finished home.
+North Carolina values property as of January 1 each year. If your new home is finished partway through the year, that year's tax bill covers what was there on January 1, often just the lot or a half-built house. The next year's bill covers the finished home.
 
-If your lender set up escrow based on that smaller bill, your payment can jump at the first escrow review. Ask your lender which tax figure they used. You want it based on the finished home.
+If your lender set up escrow on that smaller bill, your payment can jump at the first escrow review. Ask your lender which tax number they used. You want it based on the finished home.
 
-For reference, Orange County lists its own property tax rate per $100 of assessed value, plus a separate town rate if you're inside a town like Hillsborough. Your total is both added together.
+Orange County lists its property tax rate per $100 of assessed value. If you're inside a town like Hillsborough, there's a town rate too. Your total is both added together.
 
 ## What happens if I pay an extra $100 a month on my 30-year mortgage?
 
-Extra money toward principal pays the loan down faster. That shortens the loan and lowers the total interest you pay over time. The earlier you start, the bigger the effect.
+Extra money toward principal pays the loan down faster. That shortens the loan and lowers the total interest you pay. The earlier you start, the bigger the effect.
 
-Two things to check first:
+Check two things first:
 
-- **Prepayment penalty.** Your Loan Estimate shows whether the loan has one.
-- **How it's applied.** Tell your servicer to apply the extra to principal, not to next month's payment.
+- **Prepayment penalty.** Your Loan Estimate shows if the loan has one.
+- **How it's applied.** Tell your loan servicer to put the extra toward principal, not next month's payment.
 
 ## Is $3,000 a month mortgage a lot?
 
-It depends on your income and your other debts. The same payment can be comfortable for one household and a stretch for another.
+It depends on your income and your other debts. The same payment can be easy for one household and a stretch for another.
 
-The better question is how the full monthly cost fits your budget. That includes the payment, plus utilities, upkeep and savings. Run the number with a lender, then sit with it for a day before you commit.
+The better question is how the full monthly cost fits your budget. That's the payment, plus utilities, upkeep and savings. Run the number with a lender, then sleep on it before you commit.
 
 ## Sources
 

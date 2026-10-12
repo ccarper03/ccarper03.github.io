@@ -3,68 +3,68 @@ n: 10
 slug: prequalified-vs-preapproved
 title: Prequalified vs. Preapproved: What's the Difference?
 seo_title: Prequalified vs. Preapproved: What's the Difference?
-description: What prequalification and preapproval letters mean, why neither guarantees a loan, what lenders check, and which one to have before you tour new homes.
+description: What prequalification and preapproval letters mean, why neither one guarantees a loan, what lenders check, and which one to have before you tour new homes.
 stage: top
 pillar: money
 keyword: prequalified vs preapproved
-answer: Both letters estimate how much a lender is willing to lend you. Neither is a guaranteed loan. Lenders use the two words differently, so ask what was verified. A letter based on checked income, assets and credit carries more weight than one based on what you told them.
+answer: Both letters estimate how much a lender may lend you. Neither one is a guaranteed loan. Lenders use the two words differently, so ask what they checked. A letter based on checked income, savings and credit counts for more than one based on what you told them.
 next: rate-buydowns-explained
 related: whats-in-a-monthly-mortgage-payment, down-payment-options-new-construction, mortgage-rate-lock-new-construction, how-buying-new-construction-works
 ---
 ## What's the actual difference?
 
-Less than people think. The Consumer Financial Protection Bureau says both letters state how much a lender is generally willing to lend you, "up to a certain amount and based on certain assumptions."
+Less than people think. The Consumer Financial Protection Bureau says both letters state how much a lender is generally willing to lend you, based on certain assumptions.
 
-The CFPB also points out that lenders use the terms inconsistently. Some lenders prequalify you based on what you report, without checking it, and only issue a preapproval after they verify your information. Others use the words the other way around.
+The CFPB also points out that lenders use the words in different ways. Some lenders prequalify you based on what you tell them, without checking it, and only preapprove you after they check. Others use the words the other way around.
 
-So don't stop at the label. Ask the lender one question: **"What did you verify?"** A letter backed by checked pay stubs, bank statements and a credit report means a lot more than a quick estimate.
+So don't stop at the label. Ask the lender one question: **"What did you check?"** A letter backed by your pay stubs, bank statements and credit report means a lot more than a quick estimate.
 
 ## Can I make an offer on a house with a prequalification letter?
 
 Usually, yes. Whether it's enough depends on the seller.
 
-Sellers take these letters seriously because they suggest you can likely get financing. But a verified letter gives a seller, or a builder, more confidence. On a home that's already built and has interest, a stronger letter can matter.
+Sellers take these letters seriously, because they show you can probably get a loan. But a checked letter gives a seller, or a builder, more confidence. On a home that's ready now and has interest, a stronger letter can matter.
 
-The CFPB suggests asking a local real estate agent or a housing counselor whether the letter you have will do what you need.
+The CFPB suggests asking a local agent or a housing counselor if the letter you have will do what you need.
 
 ## Does pre-qualification guarantee approval?
 
-No. The CFPB is direct about it: these letters "are not guaranteed loan offers."
+No. The CFPB is clear about it: these letters are not guaranteed loan offers.
 
-Final approval comes later, after the lender reviews your full application, verifies everything, appraises the home and underwrites the loan.
+Final approval comes later. The lender reviews your full application, checks everything, appraises the home and underwrites the loan.
 
 ## Can you be denied after prequalification?
 
 Yes. Common reasons:
 
-- Your income or assets didn't verify the way you described them.
+- Your income or savings didn't check out the way you described them.
 - Your credit changed. New debt, a missed payment or a big purchase can do it.
 - The appraisal came in lower than the price.
 - Your job changed.
 
 If a lender reviews your credit and you don't qualify, it has to send you an adverse action notice, even if you never filed a formal application. That notice tells you why.
 
-New construction adds one wrinkle. A home being built can take months. Your finances need to hold steady the whole time, not just the week you signed. Don't open new credit or finance furniture until after closing.
+New construction adds one thing to watch. A home that's starting soon takes months. Your finances need to stay steady the whole time, not just the week you sign. Don't open new credit or finance furniture until after closing.
 
 ## How much do you need to make to get pre-approved for a $300,000 mortgage?
 
 There isn't one income number. It depends on your rate, your taxes and insurance, any HOA dues, and your other monthly debts.
 
-Lenders look at your debt-to-income ratio, or DTI: your total monthly debt payments, including the new housing payment, divided by your gross monthly income. The CFPB notes that different loans and lenders set different DTI limits.
+Lenders look at your debt-to-income ratio, or DTI. That's your total monthly debt payments, including the new house payment, divided by your monthly income before taxes. The CFPB notes that different loans and lenders set different DTI limits.
 
-For reference, Fannie Mae's guidelines cap DTI at 36% of stable monthly income on manually underwritten loans, up to 45% with strong credit and reserves, and up to 50% through its automated underwriting system. Those are ceilings, not targets. A payment you can comfortably carry is usually lower.
+For reference, Fannie Mae's guidelines cap DTI at 36% of steady monthly income on loans reviewed by hand, up to 45% with strong credit and savings, and up to 50% through its automated system. Those are ceilings, not targets. A payment you can comfortably carry is usually lower.
 
-The fastest way to an honest answer is a conversation with a lender who runs your actual numbers.
+The fastest way to a real answer is a talk with a lender who runs your actual numbers.
 
 ## Which one should you have before you tour?
 
-I'd want a verified letter before you get serious about a specific home, and a basic conversation with a lender before your first visit. Here's why:
+I'd talk with a lender before your first visit, and get a checked letter before you get serious about a home. That way:
 
-- You'll know the price range to focus on, so you don't fall for a plan you can't carry.
+- You'll know the price range to focus on, so you don't fall for a home you can't carry.
 - You'll find credit report problems early. The CFPB notes that getting preapproved sooner gives you time to fix errors.
-- On new construction, the builder will ask early. It helps everyone plan the timeline.
+- On a new home, the timing matters. Knowing your numbers early helps you pick a home that's ready now, being built or starting soon.
 
-It's normal for a builder to suggest its own lender. You can also talk to others. Get a Loan Estimate from each and compare.
+D.R. Horton has its own lender, DHI Mortgage. You can use them or anyone else. Get a Loan Estimate from each lender you talk to, and compare.
 
 ## Sources
 
