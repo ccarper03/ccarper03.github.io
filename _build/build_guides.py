@@ -280,10 +280,10 @@ def build_hub(guides):
                        url=url, ogtype='website', site=SITE, ver=VER,
                        ld='<script type="application/ld+json">%s</script>' % json.dumps(ld, ensure_ascii=False))
     page += ('<section class="page-head blueprint"><div class="wrap"><h1>New construction guides</h1>'
-             '<p class="lead">Straight answers to the questions people type into Google before they buy a new home. '
+             '<p class="lead">Plain answers to what people ask before they buy a new home. '
              'Start wherever you are.</p></div></section>\n<section class="section"><div class="wrap">')
     page += ('<p class="agency-note">I sell new homes for D.R. Horton at Collins Ridge in Hillsborough, so I represent the builder. '
-             'These guides are general education, with sources linked on every page.</p>')
+             'These guides explain how buying a new home works, and how D.R. Horton does it. Sources are linked on every page.</p>')
     page += '<nav class="hub-jump" aria-label="Guide topics">' + ''.join(
         '<a href="#%s">%s</a>' % (k, PILLARS[k]) for k in order if any(g['pillar'] == k for g in guides)) + '<a href="#ready">Ready to look</a></nav>'
     for k in order:
