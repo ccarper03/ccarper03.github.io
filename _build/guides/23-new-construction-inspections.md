@@ -58,7 +58,7 @@ Yes. You can hire your own licensed home inspector to check the home before the 
 
 ### What happens with what my inspector finds?
 
-Send me the report, and I'll get it to our superintendent. Reports often list a lot of items, and that's normal. We build every home to the local building code. If something doesn't meet code, we'll take care of it. Some items are suggestions or preferences rather than code issues. For those, our superintendent looks at each one and decides what we can do. You'll hear back on each item, usually from our superintendent, sometimes from me.
+You or your inspector can send the report straight to our superintendent. Reports often list a lot of items, and that's normal. We build every home to the local building code. If something doesn't meet code, we'll take care of it. Some items are suggestions or preferences rather than code issues. For those, our superintendent looks at each one and decides what we can do. Our superintendent will get back to you on the items.
 
 ## What is the biggest red flag in a home inspection?
 
