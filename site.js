@@ -69,6 +69,18 @@
     });
   });
 
+  // On a computer, text links in the page open the chat instead (sms: links do nothing on most desktops).
+  var fineMouse = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (fineMouse) {
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('main a[href^="sms:"]');
+      if (!a || a.hasAttribute('data-open-assistant')) return;
+      if (window.HubSpotConversations && window.HubSpotConversations.widget) {
+        e.preventDefault(); window.HubSpotConversations.widget.open(); track('open_chat', { from: 'text_link' });
+      }
+    });
+  }
+
   // Realtor registration: sends to HubSpot (same portal and form as the floor plan finder).
   var reg = document.querySelector('form[data-realtor-register]');
   if (reg) {

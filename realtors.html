@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Collins Ridge Realtor Registration | Charles Carper</title>
-<meta name="description" content="Bringing a buyer to Collins Ridge in Hillsborough, NC? Register your client before the first visit and get an update from me at every step to closing.">
+<meta name="description" content="Bringing a buyer to Collins Ridge in Hillsborough, NC? Register your client before the first visit. Your client stays yours, and you hear from me at every step.">
 <meta name="robots" content="noindex">
 <meta property="og:title" content="Collins Ridge Realtor Registration | Charles Carper">
-<meta property="og:description" content="Bringing a buyer to Collins Ridge in Hillsborough, NC? Register your client before the first visit and get an update from me at every step to closing.">
+<meta property="og:description" content="Bringing a buyer to Collins Ridge in Hillsborough, NC? Register your client before the first visit. Your client stays yours, and you hear from me at every step.">
 <meta property="og:url" content="https://charlescarper.com/realtors">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://charlescarper.com/realtors">
@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,600..800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@500&display=swap">
-<link rel="stylesheet" href="/site.css?v=202610112100">
+<link rel="stylesheet" href="/site.css?v=202610120400">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Y130WZZEZ"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4Y130WZZEZ');</script>
 </head>
@@ -43,9 +43,14 @@
 <section class="page-head blueprint page-head-photo">
   <div class="wrap">
     <div class="ph-copy">
-    
-    <h1>Your buyer, taken care of</h1>
-    <p class="lead">If you're bringing a client to Collins Ridge, here's what you can count on from me, and how to register them before your visit.</p>
+
+    <h1>Your client stays your client.</h1>
+    <p class="lead">Register before the first visit. I'll have homes ready that fit your buyer. You'll hear from me after every visit and at each step to closing.</p>
+    <div class="actions">
+      <a class="btn btn-amber" href="#register">Register a client</a>
+      <a class="btn btn-line" href="sms:+19843282788">Text me for the move-in ready list</a>
+    </div>
+    <p class="hero-note">I work for D.R. Horton and represent the seller. Your client stays yours.</p>
     </div>
     <div class="photo-print ph-print" style="--tilt:-2deg"><img src="/assets/images/cc-realtors.jpg?v=20261009b" width="600" height="750" alt="Charles giving a thumbs up"></div>
   </div>
@@ -56,17 +61,18 @@
     <div>
       <h2>What you can count on</h2>
       <ul class="facts">
-        <li><b>Your client</b><span>stays your client. I'll never go around you.</span></li>
-        <li><b>Updates</b><span>You hear from me after every visit, and at each step from contract to closing.</span></li>
-        <li><b>Straight answers</b><span>on homes, timelines and paperwork. If I don't know, I'll say so and find out.</span></li>
+        <li><b>Your client stays yours</b><span>I'll never go around you.</span></li>
+        <li><b>You hear from me</b><span>After every visit, and at each step to closing.</span></li>
+        <li><b>Straight answers</b><span>If I don't know, I'll find out and let you know.</span></li>
+        <li><b>Real homes to show</b><span>D.R. Horton builds first, so your buyer sees real homes, not just plans.</span></li>
         <li><b>Agent terms</b><span>Ask me how we take care of agents.</span></li>
       </ul>
       <!-- TODO: DRH agent registration rules -->
     </div>
-    <div class="card-plain">
+    <div class="card-plain" id="register">
       <h3>Register a client</h3>
       <p class="quiet small">I work for D.R. Horton and represent the seller. Your client stays yours.</p>
-      <p class="quiet">Send this before your first visit and I'll have homes ready that fit what your buyer needs.</p>
+      <p class="quiet">Takes about a minute. I'll confirm by text or email.</p>
       <form data-realtor-register novalidate>
         <div class="form-grid">
           <label class="field">Your name<input type="text" name="agent" autocomplete="name" required></label>
@@ -75,11 +81,11 @@
           <label class="field">Your email<input type="email" name="agent_email" autocomplete="email" required></label>
           <label class="field">Buyer's name<input type="text" name="buyer" required></label>
           <div style="position:absolute;left:-9999px" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
-          <label class="field">When they'd like to move
+          <label class="field"><span>When they'd like to move <span class="hint">optional</span></span>
             <select name="timing"><option value="">Choose one</option><option>In the next 3 months</option><option>In 3 to 6 months</option><option>In 6 to 12 months</option><option>Just looking</option></select>
           </label>
-          <label class="field full"><span>What they're looking for <span class="hint">beds, baths, budget range, must-haves</span></span><textarea name="notes"></textarea></label>
-          <label class="field full">Preferred visit day<input type="text" name="visit_day" placeholder="For example: Saturday morning"></label>
+          <label class="field full"><span>What they're looking for <span class="hint">optional: beds, baths, budget range, must-haves</span></span><textarea name="notes"></textarea></label>
+          <label class="field full"><span>Preferred visit day <span class="hint">optional</span></span><input type="text" name="visit_day" placeholder="For example: Saturday morning"></label>
         </div>
         <label class="check" style="margin-top:16px"><input type="checkbox" name="textok" value="yes"><span>Text me about this registration. Message and data rates may apply. Reply STOP to opt out.</span></label>
         <p class="quiet small" style="margin-top:10px">By sending this, you agree I may email or call you about this registration. I only text you if you check the box.</p>
@@ -91,29 +97,17 @@
 </section>
 <section class="section" style="padding-top:0">
   <div class="wrap">
-    <h2>Guides to send your clients</h2>
-    <p class="lead quiet" style="max-width:52ch">Plain-English explainers with sources on every page. Forward them before a first builder visit.</p>
+    <h2>Guides to send your buyers</h2>
+    <p class="lead quiet" style="max-width:52ch">Plain-English guides with sources on every page. Send them before a first visit.</p>
     <ul class="hub-list">
-      <li><a href="/guides/how-buying-new-construction-works"><b>How buying a new construction home works</b><span>The whole path, and who represents whom</span></a></li>
-      <li><a href="/guides/questions-to-ask-a-home-builder"><b>Questions to ask a home builder before you sign</b><span>Works at any builder</span></a></li>
+      <li><a href="/guides/how-buying-new-construction-works"><b>How buying a D.R. Horton home works</b><span>Every step, and who represents whom</span></a></li>
+      <li><a href="/guides/questions-to-ask-a-home-builder"><b>Questions to ask a home builder before you sign</b><span>Good questions for any builder</span></a></li>
       <li><a href="/guides/buying-new-construction-with-a-home-to-sell"><b>Buying new construction with a home to sell</b><span>Sell first, buy first, contingency or bridge</span></a></li>
       <li><a href="/guides/why-buyers-say-no-to-new-construction"><b>Why some buyers say no to new construction</b><span>Honest answers to client objections</span></a></li>
       <li><a href="/guides/selling-a-resale-near-new-construction"><b>Selling a resale home near new construction</b><span>For your listings near a builder</span></a></li>
       <li><a href="/guides/new-home-warranty-coverage"><b>What a new home warranty covers</b><span>The 1-2-10 structure, explained</span></a></li>
     </ul>
-    <p style="margin-top:20px"><a class="textlink" href="/guides/">All 52 guides</a></p>
-  </div>
-</section>
-<section class="band">
-  <div class="wrap section band-inner">
-    <div>
-      <h2>Need a home that's ready soon?</h2>
-      <p class="lead">Ask me for the current move-in ready list. I'll send what fits your buyer, not the whole inventory.</p>
-    </div>
-    <div class="actions" style="margin-top:0">
-      <a class="btn btn-amber" href="sms:+19843282788">Text Charles</a>
-      <a class="btn btn-ink" href="mailto:Clcarper@DRHorton.com">Email Charles</a>
-    </div>
+    <p style="margin-top:20px"><a class="textlink" href="/guides/">See all the guides</a></p>
   </div>
 </section>
 
@@ -154,7 +148,7 @@
     </div>
   </div>
 </footer>
-<script src="/site.js?v=202610091820" defer></script>
+<script src="/site.js?v=202610120400" defer></script>
 <!-- Start of HubSpot Embed Code (chat) -->
 <script type="text/javascript" id="hs-script-loader" async defer src="https://js-na2.hs-scripts.com/247617862.js"></script>
 <!-- End of HubSpot Embed Code -->

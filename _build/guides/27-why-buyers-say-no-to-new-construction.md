@@ -64,7 +64,7 @@ Good reasons not to buy right now: the payment would be a stretch, savings would
 
 ## How I work with agents
 
-Your client stays your client. I'll give you straight answers on homes, timelines and paperwork, and update you at every step. If a client is better off with resale or another community, I'll say so.
+Your client stays your client. I'll give you straight answers on homes, timelines and paperwork, and update you at every step. If a client is better off with resale or another community, I'll let you know.
 
 ## Sources
 

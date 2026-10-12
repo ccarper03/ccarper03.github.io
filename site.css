@@ -515,3 +515,20 @@ label.field { display: grid; gap: 6px; font-weight: 500; font-size: 15.5px; }
 .byline { display: inline-flex; align-items: center; }
 .byline a { margin-left: .3em; }
 .byline-face { width: 36px; height: 36px; margin-right: 10px; border-radius: 50%; border: 2px solid rgba(255, 255, 255, .85); object-fit: cover; }
+
+/* ---------- Copy pass, Oct 12 2026 ---------- */
+.eyebrow { font-size: 15px; font-weight: 600; color: var(--line); margin: 0 0 14px; letter-spacing: .01em; }
+.hero { padding-top: clamp(32px, 4.5vw, 56px); }
+.hero h1 { font-size: clamp(42px, 5.6vw, 68px); max-width: 12ch; }
+.hero .hero-question { font-size: clamp(17px, 1.4vw, 19px); }
+.hero-note a { color: inherit; text-underline-offset: 3px; }
+.points h3 { font-size: 24px; }
+.steps-row { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 28px; margin: 0 0 24px; }
+.steps-row li { grid-template-columns: 40px 1fr; }
+@media (max-width: 760px) { .steps-row { grid-template-columns: 1fr; } .steps-row li { padding: 12px 0; } }
+.more-times { margin-top: 20px; }
+.more-times summary { cursor: pointer; font-weight: 600; text-decoration: underline; text-decoration-color: var(--amber); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+@media (max-width: 860px) {
+  .drawing-stack { display: flex; flex-direction: column-reverse; }
+  .drawing-stack .photo-print { margin: 6px 0 22px 4px; width: 150px; }
+}
