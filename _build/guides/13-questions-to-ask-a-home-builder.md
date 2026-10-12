@@ -78,8 +78,8 @@ The best one is the one you actually use. Here's how I'd organize it:
 
 1. **Before you visit:** a lender conversation and a price range.
 2. **At the visit:** the builder questions above, plus photos and notes on each plan.
-3. **Before you sign:** the contract, HOA documents and features list, read in full.
-4. **During the build:** inspection dates, selection deadlines and updates.
+3. **Before you sign:** pick your home and, if it's early, your interior color scheme. Read the contract, HOA documents and features list in full.
+4. **During the build:** your pre-drywall inspection and updates.
 5. **At the walkthrough:** a room-by-room punch list.
 6. **After move-in:** warranty dates and a maintenance calendar.
 

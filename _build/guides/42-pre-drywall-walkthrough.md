@@ -46,7 +46,7 @@ Even if you hire an inspector, walk the house with your own list:
 - **TV and cable locations**, and blocking in the wall if you'll mount a TV.
 - **Blocking for grab bars, shelves or heavy mirrors.**
 - **Ceiling fan locations** with the right support.
-- **Your selections.** Make sure what's roughed in matches what you picked.
+- **The plan.** Make sure what's framed and roughed in matches the floor plan.
 
 Take photos of every wall in every room. Years from now, when you want to hang something heavy or run a wire, you'll know exactly where the studs and pipes are.
 
