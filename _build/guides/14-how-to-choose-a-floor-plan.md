@@ -8,7 +8,7 @@ stage: mid
 pillar: select
 keyword: how to choose a floor plan
 answer: Pick a floor plan for how you live on an ordinary weekday, not how the model is staged. Count the bedrooms you need now and in five years, decide how you feel about stairs, and look hard at storage, laundry and a main-floor bedroom. Those choices are hard to change later.
-related: structural-options-before-you-build, two-car-vs-three-car-garage, design-center-upgrades-worth-it, how-to-pick-a-lot
+related: how-to-choose-a-floor-plan, design-center-upgrades-worth-it, how-to-pick-a-lot
 ---
 ## Start with an ordinary Tuesday
 

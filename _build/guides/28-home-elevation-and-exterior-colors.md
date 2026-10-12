@@ -1,59 +1,41 @@
 ---
 n: 28
 slug: home-elevation-and-exterior-colors
-title: Choosing a Home Elevation and Exterior Colors
-seo_title: What Is a Home Elevation? Choosing Style and Exterior Colors
-description: Elevation means two things: the front style of the house and how high the lot sits. How to choose both, how exterior colors work, and curb appeal that lasts.
+title: Elevations and Exterior Colors: How It Works at D.R. Horton
+seo_title: Exterior Colors and Elevations at D.R. Horton
+description: At Collins Ridge, each homesite already has its elevation and outside colors set. What an elevation is, how colors are chosen, and how to get the look you like.
 stage: mid
 pillar: select
-keyword: home elevation meaning
-answer: In a builder's brochure, an elevation is the front style of a house: the same floor plan with a different roofline, porch and materials. In site terms, elevation is how high the home sits compared with the street, neighbors and flood level. Choose the style you'll love from the curb, and check the lot's height and drainage.
-related: how-to-pick-a-lot, design-center-upgrades-worth-it, which-direction-should-a-house-face, how-to-choose-a-floor-plan
+keyword: home elevation and exterior colors
+answer: At D.R. Horton, each homesite already has its floor plan, its front design and its outside colors set. You don't pick them. You pick a home whose look you like, and the whole street looks good together.
+related: design-center-upgrades-worth-it, how-to-pick-a-lot, which-direction-should-a-house-face, how-to-choose-a-floor-plan
 ---
-## What does elevation mean in a house building?
+## What's an elevation?
 
-It means two different things, and buyers mix them up all the time.
+The elevation is the front design of the house: the roofline, the porch, the windows and the siding. One floor plan can come in a few elevations, often called A, B and C.
 
-1. **The architectural elevation.** A drawing of one side of the house. In new construction, "Elevation A, B or C" usually means different front designs for the same floor plan: different rooflines, porches, window shapes and siding or stone.
-2. **The site elevation.** How high the ground and the house sit, compared with the street, the lots around them and nearby water.
+## Can I choose my exterior colors?
 
-Both matter. The first is about how the home looks. The second is about how it handles water.
+No. At Collins Ridge, outside colors come from a set of exterior packages, and each homesite has its own. That's how the whole street looks good together, instead of the same house twice in a row.
 
-## Which elevation is best for a home?
+## How do I get the look I want?
 
-The architectural one you'll be happy pulling up to every day, that also fits the street.
+Walk the homes that are ready now or being built, and pick one whose front and colors you like. If a home is starting soon, I can show you its elevation and its color package before it's built.
 
-A few things to weigh:
+## What's on the outside of every home?
 
-- **The porch.** A front porch was rated essential or desirable by 81% of buyers in NAHB's 2024 survey. If one elevation adds a usable porch, that's real value.
-- **Upkeep.** More trim, gables and mixed materials can mean more caulk and paint over time.
-- **Variety on the street.** Many communities limit how often the same elevation and color can repeat side by side.
-- **Cost.** Stone, extra roof lines and porches add to the price. Remodeling data suggests exterior curb appeal holds value well. In the 2025 Cost vs. Value report for the South Atlantic region, manufactured stone veneer recouped well over its cost.
+- James Hardie siding
+- An architectural shingle roof
+- A professionally designed landscape package
+- A concrete patio (size depends on the homesite)
+- A front porch on single-family homes
 
-## What is a good elevation for a house?
+Features can change, so ask me for the latest.
 
-On the site side, a good elevation means the house sits high enough that water drains away from it on every side, and it isn't in a low spot that collects runoff from its neighbors.
+## Can I change the outside later?
 
-Check three things:
-
-- **The grade around the house.** The ground should slope away from the foundation.
-- **The lot compared with its neighbors.** Is it lower than the lots around it? Where will their water go?
-- **Flood risk.** FEMA's Flood Map Service Center lets you look up an address on the official flood maps.
-
-## How exterior colors usually work
-
-In many new communities, exterior color packages are assigned or limited by homesite so the street has variety. Sometimes you choose from a set. Sometimes the builder or the HOA decides.
-
-Ask:
-
-- Do I choose the exterior colors, or are they assigned?
-- What are the HOA's rules for repainting later?
-- Can I see the colors on a finished home, in daylight?
-
-Colors look different on a sample chip than on a whole house in full sun. If you can, look at a finished home in the same package.
+Repainting in the same approved colors doesn't need approval. A new color scheme needs approval from the HOA's Architectural Review Committee. The [Collins Ridge FAQ](/faq#hoa) has more on what the HOA allows.
 
 ## Sources
 
-1. [Outdoor Features and a Laundry Room Among Most Wanted Features](https://eyeonhousing.org/2024/04/outdoor-features-a-laundry-room-among-most-wanted-features/), NAHB Eye on Housing
-2. [Cost vs. Value 2025: South Atlantic](https://www.jlconline.com/cost-vs-value/2025/south-atlantic/), Journal of Light Construction
-3. [Flood Map Service Center](https://msc.fema.gov/portal/home), FEMA
+1. [Collins Ridge](https://www.drhorton.com/north-carolina/raleigh-durham/hillsborough/collins-ridge), D.R. Horton

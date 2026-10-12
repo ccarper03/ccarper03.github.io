@@ -8,7 +8,7 @@ stage: top
 pillar: build
 keyword: slab vs crawl space
 answer: Neither is better everywhere. A slab costs less, has nowhere for moisture or pests to hide underneath, and is now the most common foundation. A crawl space gives access to plumbing and ducts and lifts the floor off the ground, but needs moisture control. In the South Atlantic region, about 86% of new homes started in 2024 used a slab.
-next: structural-options-before-you-build
+next: how-to-choose-a-floor-plan
 related: site-prep-before-building, how-a-new-home-gets-built, framing-a-house, energy-efficient-features-new-homes
 ---
 ## How each one works

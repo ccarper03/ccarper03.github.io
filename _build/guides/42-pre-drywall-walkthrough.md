@@ -9,7 +9,7 @@ pillar: build
 keyword: pre-drywall inspection
 answer: A pre-drywall walkthrough happens after framing and the plumbing, electrical and HVAC rough-ins, before insulation and drywall cover them. It's your one chance to see inside the walls, so it's worth doing, ideally with your own inspector.
 next: final-walkthrough-checklist
-related: new-construction-inspections, framing-a-house, structural-options-before-you-build, final-walkthrough-checklist
+related: new-construction-inspections, framing-a-house, how-to-choose-a-floor-plan, final-walkthrough-checklist
 ---
 ## Is a pre-drywall inspection worth it?
 

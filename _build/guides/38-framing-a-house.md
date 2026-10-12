@@ -8,8 +8,8 @@ stage: top
 pillar: build
 keyword: house framing inspection
 answer: Framing is the skeleton of the house: walls, floors, roof trusses and sheathing. Inspectors check that it's built to code, with proper headers, connectors, bracing and fire blocking, and that pipes and wires haven't weakened it. It's about 17% of a typical home's construction cost.
-next: structural-options-before-you-build
-related: pre-drywall-walkthrough, how-a-new-home-gets-built, new-construction-inspections, structural-options-before-you-build
+next: how-to-choose-a-floor-plan
+related: pre-drywall-walkthrough, how-a-new-home-gets-built, new-construction-inspections, how-to-choose-a-floor-plan
 ---
 ## Why framing is the stage I love
 
