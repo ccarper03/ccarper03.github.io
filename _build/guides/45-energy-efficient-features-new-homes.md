@@ -3,54 +3,54 @@ n: 45
 slug: energy-efficient-features-new-homes
 title: Energy-Efficient Features in New Homes, Explained
 seo_title: Energy-Efficient Features in New Homes, Explained
-description: HERS scores, insulation, air sealing, windows, heat pumps and water heaters. What actually moves the power bill, and whether a .27 U-factor is good.
+description: HERS scores, insulation, air sealing, windows, heat pumps and water heaters. What really moves the power bill, and whether a .27 U-factor is good.
 stage: mid
 pillar: select
 keyword: energy efficient features new home
-answer: The features that move the power bill most are air sealing, insulation, good windows, a right-sized heat pump, tight ductwork and an efficient water heater. A HERS score sums it up: lower is better, and a standard new home usually scores well below a typical older home.
+answer: The things that move the power bill most are sealed air leaks, insulation, good windows, a heat pump that's the right size, tight ducts and an efficient water heater. A HERS score sums it all up. Lower is better, and a standard new home usually scores well below a typical older home.
 related: hvac-sizing-new-home, which-direction-should-a-house-face, true-cost-of-owning-a-home, new-construction-vs-resale-cost
 ---
 ## What are energy efficient features in a home?
 
-The ones that matter most, roughly in order of impact:
+The ones that matter most, from biggest to smallest:
 
-- **Air sealing.** Closing the gaps around pipes, wires, windows and the attic. Leaks waste heated and cooled air.
-- **Insulation.** In the attic, walls and floors or crawl space.
-- **Windows.** Low U-factor and the right solar heat gain for the climate.
-- **A right-sized heat pump.** Sized with a load calculation, not by square footage.
-- **Tight ductwork.** Ducts sealed and inside or well insulated.
-- **An efficient water heater.** The DOE says heat pump water heaters can be two to three times more efficient than conventional electric ones, if installed in the right space.
-- **ENERGY STAR appliances and lighting.**
+- **Air sealing.** Closing the gaps around pipes, wires, windows and the attic. Leaks waste the air you paid to heat or cool.
+- **Insulation.** In the attic, the walls, and the floors or crawl space.
+- **Windows.** A low U-factor, and the right amount of sun blocking for the weather.
+- **A heat pump that's the right size.** Sized with a load calculation, not by square feet.
+- **Tight ducts.** Sealed, and inside the home or well insulated.
+- **An efficient water heater.** The Department of Energy says heat pump water heaters can be two to three times more efficient than regular electric ones, when they're put in the right spot.
+- **ENERGY STAR appliances and lights.**
 
-Buyers want these. In NAHB's 2024 survey, ENERGY STAR windows were rated essential or desirable by 83% of buyers, and ENERGY STAR appliances by 80%.
+Buyers want these. In a 2024 survey by the National Association of Home Builders, 83% of buyers rated ENERGY STAR windows as a must-have or nice-to-have. 80% said the same about ENERGY STAR appliances.
 
 ## Are newer houses more energy efficient?
 
-Generally, yes. The clearest measure is the HERS Index from RESNET, the nonprofit that created it. A home built to the 2004/2006 energy code scores 100. Lower scores mean a more efficient home.
+Usually, yes. The clearest way to measure it is the HERS Index, made by a nonprofit called RESNET. A home built to the 2004/2006 energy code scores 100. A lower score means the home uses less energy.
 
-RESNET's consumer guide puts standard new homes at roughly 85 to 100, and typical existing homes above 100. A home scoring about 55 is about 45% more efficient than the 100 reference home. Certified HERS raters inspect and test homes during and after construction to produce the score.
+RESNET's guide says standard new homes score about 85 to 100. Typical older homes score above 100. A home that scores about 55 is about 45% more efficient than the home that scores 100. Trained HERS raters check and test the home during and after building to get the score.
 
-Ask the builder whether the home has a HERS score, and what it is.
+Ask the builder if the home has a HERS score, and what it is.
 
 ## Is .27 a good U factor for windows?
 
-For North Carolina's climate, it's good. U-factor measures how well a window keeps heat from passing through it, and lower is better.
+For North Carolina, yes. U-factor tells you how well a window keeps heat from passing through it. Lower is better.
 
-ENERGY STAR's version 7 criteria set maximum U-factors by climate zone: 0.22 in the Northern zone, 0.25 in North-Central, 0.28 in South-Central and 0.32 in Southern. A 0.27 window meets the South-Central and Southern limits but not the two northern zones. ENERGY STAR's site has a climate zone lookup if you want to check your county.
+ENERGY STAR version 7 sets the highest U-factor allowed in each part of the country: 0.22 in the Northern zone, 0.25 in North-Central, 0.28 in South-Central and 0.32 in Southern. A 0.27 window meets the South-Central and Southern limits, but not the two northern ones. ENERGY STAR's website has a map to check your county.
 
-Look at the solar heat gain coefficient too. In warm zones, ENERGY STAR caps it at 0.23 so windows let in less summer heat.
+Look at the solar heat gain number, too. It tells you how much of the sun's heat gets through. In warm zones, ENERGY STAR caps it at 0.23, so less summer heat comes in.
 
 ## Where the real savings come from
 
-On the job sites I worked, the difference between an efficient house and a leaky one was rarely one big product. It was a lot of small, careful details: sealed penetrations, insulation installed without gaps, ducts that were actually connected and sealed. That's why third-party testing like a HERS rating is useful. It measures the result, not the brochure.
+On the job sites I worked, the gap between a tight house and a leaky one was rarely one big product. It was a lot of small things done with care. Holes sealed where pipes and wires go through. Insulation put in with no gaps. Ducts that were really connected and sealed. That's why outside testing, like a HERS rating, is useful. It measures how the home turned out, not what the brochure says.
 
-## Questions to ask about efficiency
+## Questions to ask about energy use
 
 - Does the home have a HERS score? What is it?
-- What type of heat pump and water heater are included, and how efficient are they?
-- Are the windows ENERGY STAR certified for this climate zone?
+- What kind of heat pump and water heater come with it, and how efficient are they?
+- Are the windows ENERGY STAR certified for this part of the country?
 - Where are the ducts, and are they sealed and tested?
-- Was a load calculation done for the HVAC?
+- Was a load calculation done to size the heating and cooling?
 
 ## Sources
 
