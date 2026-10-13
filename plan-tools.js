@@ -554,6 +554,7 @@
     });
   }
   function showTextPanel(body) {
+    if (root.ccTextPanel) return root.ccTextPanel(body);
     var old = document.querySelector('.lead-overlay'); if (old) old.remove();
     var ov = document.createElement('div'); ov.className = 'lead-overlay';
     ov.innerHTML = '<div class="lead-modal" role="dialog" aria-modal="true" aria-labelledby="tp-h">' +
@@ -609,7 +610,7 @@
           if (!r.ok) throw new Error('send');
           track('generate_lead', { form: formName });
           f.querySelector('.form-grid').remove(); f.querySelector('.actions').remove();
-          say('Got it' + (f.first.value.trim() ? ', ' + f.first.value.trim() : '') + '. I’ll email it to you personally, usually within one business day.');
+          say('Got it' + (f.first.value.trim() ? ', ' + f.first.value.trim() : '') + '. I’ll email it to you personally within three business days.');
         })
         .catch(function () { btn.disabled = false; say('That didn’t go through. Text me at ' + PHONE_SHOW + ' and I’ll send it.'); });
     });
@@ -709,7 +710,7 @@
     }
 
     // Start from a shared link (#living=s,...), or a preset from another page (?start=rent).
-    var hash = (location.hash || '').slice(1);
+    var hash = (location.hash || '').slice(1).replace(/[.,;:!?)\]]+$/, '');
     if (hash) { var pre = decodeAnswers(cfg.steps, decodeURIComponent(hash)); if (complete(cfg.steps, pre)) { a = pre; finish(); return; } }
     var qs = new URLSearchParams(location.search), preset = qs.get('start');
     if (preset && cfg.preset && cfg.preset[preset]) { a = cfg.preset[preset](); idx = 1; }

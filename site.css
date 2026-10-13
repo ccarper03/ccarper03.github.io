@@ -601,3 +601,12 @@ button.next-path { font: inherit; color: inherit; text-align: left; cursor: poin
   .plan-box { break-inside: avoid; }
   .fp-card { break-inside: avoid; }
 }
+
+/* Ask Charles tap-to-text menu */
+.ask-panel { max-height: calc(100vh - 120px); overflow: auto; }
+.ask-opts { display: grid; gap: 8px; }
+.ask-opt { display: block; padding: 11px 14px; border: 1.5px solid #AFC0D1; border-radius: 6px; background: #fff; color: var(--ink); text-decoration: none; font-weight: 600; font-size: 15.5px; line-height: 1.3; }
+.ask-opt:hover, .ask-opt:focus-visible { border-color: var(--ink); background: var(--amber-tint); }
+.ask-tools { font-size: 14.5px; margin: 14px 0 4px; }
+.ask-tools a { font-weight: 600; text-underline-offset: 3px; text-decoration-color: var(--amber); }
+.ask-fine { font-size: 13px; color: var(--ink-2); margin: 6px 0 0; }
