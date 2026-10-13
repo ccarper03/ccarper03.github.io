@@ -37,7 +37,7 @@ Then judge every home against the lists, in that order. If a home misses a must-
 4. **Condition.** On a resale home, how old the roof, heat pump and water heater are. On a new home, what's included and how the build gets inspected.
 5. **How long you'll stay.** Buying and selling cost money. The longer you stay, the more it makes sense.
 
-At D.R. Horton, the homes are built first. So you can walk the real home, not just a model, and check it against your lists.
+At Collins Ridge, homes are built first. So you can walk the real home, not just a model, and check it against your lists.
 
 ## What are the biggest red flags to avoid when buying a house?
 

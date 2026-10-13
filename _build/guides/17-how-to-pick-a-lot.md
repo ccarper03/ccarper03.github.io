@@ -7,10 +7,10 @@ description: Drainage, slope, easements, what's planned next door and when a lot
 stage: mid
 pillar: select
 keyword: how to pick a lot new construction
-answer: At D.R. Horton, you pick a home and its homesite together. Look past size. Check how the lot drains, which way it faces, what's behind it, any easements, and what's planned for the land next door. In 2025, the median new single-family home sold sat on about 8,500 square feet, a little under a fifth of an acre.
+answer: At Collins Ridge, you pick a home and its homesite together. Look past size. Check how the lot drains, which way it faces, what's behind it, any easements, and what's planned for the land next door. In 2025, the median new single-family home sold sat on about 8,500 square feet, a little under a fifth of an acre.
 related: which-direction-should-a-house-face, site-prep-before-building, buying-early-in-a-new-development, home-elevation-and-exterior-colors
 ---
-## How it works at D.R. Horton
+## How it works at Collins Ridge
 
 Each homesite already has its floor plan and outside look set. So you're picking a home and its homesite together, not a lot and then a plan. Walk the homes that are ready now or being built, and use the checks below on each one.
 

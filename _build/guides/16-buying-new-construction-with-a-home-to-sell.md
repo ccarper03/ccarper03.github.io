@@ -3,7 +3,7 @@ n: 16
 slug: buying-new-construction-with-a-home-to-sell
 title: Buying New Construction When You Have a Home to Sell
 seo_title: Buying New Construction When You Have a Home to Sell
-description: Sell first, buy first, a home-sale contingency or a bridge program. How to time selling your home with buying a new D.R. Horton home.
+description: Sell first, buy first, a home-sale contingency or a bridge program. How to time selling your home with buying a new construction home.
 stage: mid
 pillar: psych
 keyword: buy new construction before selling
@@ -27,13 +27,13 @@ That's why the order matters.
 | **Home-sale contingency** | Your purchase depends on selling your home by a deadline | You need the sale to buy | The new home can stay on the market while you sell |
 | **Bridge or buy-before-you-sell program** | A lender or company helps you buy before your home sells | You have equity and want one move | Fees, rules and qualifying requirements |
 
-At D.R. Horton, a home-sale contingency comes with rules. The new home stays on the market while you sell. If another buyer makes an offer, you get a short window to drop the contingency or the deal can end. Ask me how it works before you choose it.
+Builders that accept a home-sale contingency usually attach rules. Often the new home stays on the market while you sell. If another buyer makes an offer, you get a short window to drop the contingency or the deal can end. Ask how it works before you choose it.
 
 ## Can I sell my house and buy a new one at the same time?
 
 You can try to close both on the same day or the same week. It takes teamwork between both closings, both attorneys and both lenders.
 
-New construction helps here. D.R. Horton builds first, so you can pick a home that fits your timing:
+New construction helps here. When homes are started before they're sold, you can pick one that fits your timing:
 
 - **Ready now** if you've already sold, or you're about to.
 - **Being built** if your sale is a few months out.

@@ -25,7 +25,7 @@ Build dates move. Weather, inspections, materials and crews can all push a closi
 
 When you buy before a home is finished, you're trusting work that hasn't happened yet. Every home is built by many crews, and mistakes happen.
 
-**What to do:** D.R. Horton builds first, so you can often buy a home that's done and see the work yourself. Local building inspectors check the work at set stages. You can also hire your own licensed inspector. At Collins Ridge, that can be once before drywall and once before closing, on our build schedule. Then read the warranty so you know how fixes are handled after you move in.
+**What to do:** At Collins Ridge, homes are built first, so you can often buy a home that's done and see the work yourself. Local building inspectors check the work at set stages. You can also hire your own licensed inspector. At Collins Ridge, that can be once before drywall and once before closing, on our build schedule. Then read the warranty so you know how fixes are handled after you move in.
 
 ### A neighborhood still being built
 
@@ -63,7 +63,7 @@ Three things save people the most trouble:
 
 Some homes are built better than others, at every price. "New" doesn't mean cheap, and "old" doesn't mean solid.
 
-Today's homes are built to current codes with engineered materials. They can look different from older homes without being worse. Big builders like D.R. Horton also use the same tested floor plans over and over and buy at scale, which is how they control cost. Where quality slips, it's usually a crew that rushed or a step that got skipped.
+Today's homes are built to current codes with engineered materials. They can look different from older homes without being worse. Big builders also use the same tested floor plans over and over and buy at scale, which is how they control cost. Where quality slips, it's usually a crew that rushed or a step that got skipped.
 
 I spent almost two years on job sites, from grading to final finishes. What I learned: the best protection isn't the builder's name alone. It's inspections at the right times, a punch list you take seriously, and a warranty you understand.
 

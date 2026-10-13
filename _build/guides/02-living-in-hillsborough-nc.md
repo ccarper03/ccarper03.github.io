@@ -66,4 +66,3 @@ Drive your real commute at the time you'd really drive it. Walk downtown on a we
 2. [Travel Time to Work in the United States: 2019](https://census.gov/library/publications/2021/acs/acs-47.html), U.S. Census Bureau
 3. [Parking and Transportation](https://hillsboroughnc.gov/community/parking-transportation/), Town of Hillsborough
 4. [Last Fridays](https://www.hillsboroughartscouncil.org/last-fridays), Hillsborough Arts Council
-5. [Collins Ridge and Hillsborough](https://www.drhorton.com/north-carolina/raleigh-durham/hillsborough/collins-ridge), D.R. Horton

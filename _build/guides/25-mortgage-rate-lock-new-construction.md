@@ -29,7 +29,7 @@ Lenders handle this a few ways:
 - **A longer lock.** Lock early for a longer time, often for a fee.
 - **Builder or lender programs.** Some offer longer locks for homes being built.
 
-Ask your lender which ones they offer and what each costs. D.R. Horton has its own lender, DHI Mortgage. You can use them or anyone else, so compare.
+Ask your lender which ones they offer and what each costs. Many big builders have an affiliated lender. You can use them or anyone else, so compare.
 
 ## At what point is a mortgage rate locked in?
 

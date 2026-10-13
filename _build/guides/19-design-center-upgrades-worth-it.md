@@ -1,16 +1,16 @@
 ---
 n: 19
 slug: design-center-upgrades-worth-it
-title: Design Center Upgrades? How Picking Finishes Works at D.R. Horton
-seo_title: How Picking Finishes Works at D.R. Horton
-description: D.R. Horton doesn't have a design center. Here's what comes with a Collins Ridge home, what you can pick, and why fewer choices makes buying easier.
+title: Design Center Upgrades? How Picking Finishes Works at Collins Ridge
+seo_title: How Picking Finishes Works at Collins Ridge
+description: At Collins Ridge, there's no design center. Here's what comes with a Collins Ridge home, what you can pick, and why fewer choices makes buying easier.
 stage: mid
 pillar: select
 keyword: design center upgrades worth it
-answer: D.R. Horton doesn't have a design center. Designers already picked the finishes for each home. If your home is early in the build, you may get to pick one of three interior color schemes. That keeps it simple.
+answer: At Collins Ridge, there's no design center. Designers already picked the finishes for each home. If your home is early in the build, you may get to pick one of three interior color schemes. That keeps it simple.
 related: kitchen-upgrades-new-build, home-elevation-and-exterior-colors, how-to-choose-a-floor-plan, hidden-costs-of-new-construction
 ---
-## Is there a design center at D.R. Horton?
+## Is there a design center at Collins Ridge?
 
 No. At Collins Ridge, there's no design center and no upgrade appointment. The finishes come with the home.
 
@@ -31,7 +31,7 @@ If the home is further along, the finishes are already in. What you see is what 
 - **It all goes together.** A designer matched the pieces, so nothing clashes.
 - **You can see it.** Walk the model or a finished home and see the real colors.
 
-D.R. Horton uses the same floor plans over and over and designs its homes to be built well and on time. Fewer choices is part of how that works.
+Big production builders reuse the same floor plans and design their homes to be built well and on time. Fewer choices is part of how that works.
 
 ## What comes in every Collins Ridge home?
 
@@ -53,5 +53,3 @@ Yes. Paint, light fixtures, cabinet hardware and faucets are easy to swap later.
 
 ## Sources
 
-1. [D.R. Horton Form 10-K, fiscal 2025](https://fortune.com/company-assets/1810/quartr/annual-report-10-k-398a7-2025-11-19-07-12-31.pdf), D.R. Horton
-2. [Collins Ridge](https://www.drhorton.com/north-carolina/raleigh-durham/hillsborough/collins-ridge), D.R. Horton

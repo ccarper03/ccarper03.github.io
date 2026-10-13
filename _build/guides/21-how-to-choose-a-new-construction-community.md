@@ -22,7 +22,7 @@ The most common ways:
 
 Start with where you need to be. Pick the towns that fit your drive, then look at what's being built there.
 
-If Hillsborough doesn't fit, let me know. D.R. Horton builds all over the area, including Mebane and Durham, and I'll connect you with the right community.
+If Hillsborough doesn't fit, let me know. I'll point you to new communities that fit better, including in Mebane and Durham, and introduce you to the agent there.
 
 ## What are the qualities of a good neighborhood?
 

@@ -39,7 +39,7 @@ A seller or builder, the lender, or you.
 
 Under Fannie Mae's rules, a seller or builder can pay for a temporary buydown, within Fannie Mae's limits. The lender can also pay for it. Other loan programs have their own rules, so ask your lender.
 
-Builders, including D.R. Horton, sometimes offer buydowns as an incentive. At Collins Ridge, offers change week to week, so ask me what's available on the home you like.
+Builders sometimes offer buydowns as an incentive. At Collins Ridge, offers change week to week, so ask me what's available on the home you like.
 
 ## Does a 2-1 buydown require extra funds at closing?
 

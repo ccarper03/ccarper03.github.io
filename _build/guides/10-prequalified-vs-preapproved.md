@@ -64,7 +64,7 @@ I'd talk with a lender before your first visit, and get a checked letter before 
 - You'll find credit report problems early. The CFPB notes that getting preapproved sooner gives you time to fix errors.
 - On a new home, the timing matters. Knowing your numbers early helps you pick a home that's ready now, being built or starting soon.
 
-D.R. Horton has its own lender, DHI Mortgage. You can use them or anyone else. Get a Loan Estimate from each lender you talk to, and compare.
+Many big builders have an affiliated lender. You can use them or anyone else. Get a Loan Estimate from each lender you talk to, and compare.
 
 ## Sources
 

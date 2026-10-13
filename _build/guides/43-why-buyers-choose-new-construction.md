@@ -19,7 +19,7 @@ The ones buyers mention to me most:
 - **A layout built for now.** Open kitchens, more bathrooms, flex rooms and storage that older plans often lack.
 - **Efficiency.** New homes are built to current energy codes.
 - **A warranty.** Builders provide a written warranty on certain items for set periods.
-- **Simple choices.** At D.R. Horton, you pick a home that's built or underway. If it's early, you may pick one of three interior color schemes. Fewer decisions, faster move.
+- **Simple choices.** At Collins Ridge, you pick a home that's built or underway. If it's early, you may pick one of three interior color schemes. Fewer decisions, faster move.
 - **Timing you can plan around.** A home being built can line up with a lease ending or a sale.
 
 ## What are some good reasons to buy a new home?
@@ -38,7 +38,7 @@ NAR's 2025 profile found the typical seller had lived in their home 11 years bef
 
 The trade-offs, honestly:
 
-- **Time.** A home that's starting soon takes about seven months. D.R. Horton builds first, so some homes are ready sooner.
+- **Time.** A home that's starting soon takes about seven months. Here, homes are built first, so some are ready sooner.
 - **Lot size.** Many new homes sit on smaller lots than older homes.
 - **The neighborhood is still forming.** Construction, young trees and amenities in progress.
 - **The HOA.** Most new communities have one, often run by the developer at first.

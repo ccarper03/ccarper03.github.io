@@ -28,7 +28,7 @@ A PUD, or planned unit development, is a community planned as a whole. It usuall
 - Layouts built for how people live now.
 - Built to today's energy codes.
 - A builder warranty on certain items.
-- At D.R. Horton, the homes are built first, so you can see the real home before you buy.
+- When homes are built first, as they are at Collins Ridge, you can see the real home before you buy.
 
 **Disadvantages**
 

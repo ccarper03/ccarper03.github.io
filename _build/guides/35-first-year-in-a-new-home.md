@@ -43,7 +43,7 @@ The FTC notes that builder warranties usually cover major structural problems th
 
 ## Your warranty visit
 
-At D.R. Horton, warranty requests go through drhorton.com/warranty. About 30 days after closing, you can send in a first list. Around 10 months, schedule your warranty visit for things like nail pops. Anything urgent or about safety, send in right away.
+Your builder will tell you how to send warranty requests. At Collins Ridge, you can send in a first list about 30 days after closing. Around 10 months, schedule your warranty visit for things like nail pops. Anything urgent or about safety, send in right away.
 
 Before your visit:
 

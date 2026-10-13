@@ -53,9 +53,9 @@ Waiting just to see what the market does rarely gets you anything you can count 
 - Equity that grows as you pay down the loan
 - With a new home, a home where everything starts new
 
-## A middle path with D.R. Horton
+## A middle path with new construction
 
-At D.R. Horton, the homes are built first. So you can pick a home based on when you need to move:
+At Collins Ridge, homes are started before they're sold. So you can pick a home based on when you need to move:
 
 - **Ready now** if you need to move soon.
 - **Being built** if you have a few months.

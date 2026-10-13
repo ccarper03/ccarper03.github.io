@@ -39,9 +39,9 @@ In the first few days:
 1. **Find the shutoffs.** The main water shutoff, the breaker panel, and the gas shutoff if you have gas. Label them.
 2. **Check the air filter.** ENERGY STAR suggests checking filters about once a month. After construction, the first filter can get dusty fast.
 3. **Test the smoke and carbon monoxide alarms.**
-4. **Set up your smart home.** At D.R. Horton, a provider reaches out after closing to install and show you the system. Get it scheduled within 120 days, or you may have to pay for the install.
+4. **Set up your smart home.** Some builders have a provider reach out after closing to install and show you the system. Ask if there's a deadline to schedule it, so you don't end up paying for the install.
 5. **Register your appliances** and keep the maker's warranties.
-6. **Save your warranty info.** Warranty requests go through drhorton.com/warranty. About 30 days after closing, you can send in a first list.
+6. **Save your warranty info.** Ask your builder how warranty requests work. Many take a first list about 30 days after closing.
 7. **Walk the house.** Start a running list of anything that needs a look, with photos and dates.
 8. **Check drainage after the first rain.** Make sure water flows away from the house and the downspouts are connected.
 

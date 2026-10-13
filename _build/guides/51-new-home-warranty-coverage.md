@@ -3,7 +3,7 @@ n: 51
 slug: new-home-warranty-coverage
 title: What Does a New Home Warranty Cover?
 seo_title: What Does a New Home Builder Warranty Cover? 1-2-10 Explained
-description: The 1-2-10 builder warranty, what each part covers, how it's different from a home warranty, and how warranty requests work at D.R. Horton.
+description: The 1-2-10 builder warranty, what each part covers, how it's different from a home warranty, and how warranty requests work at Collins Ridge.
 stage: mid
 pillar: after
 keyword: new home warranty coverage
@@ -49,9 +49,9 @@ Not always. Under HUD's FHA handbook, a home that's being built, or was finished
 
 Your lender will know which one applies to your loan.
 
-## How warranty requests work at D.R. Horton
+## How warranty requests work at Collins Ridge
 
-At Collins Ridge, you send warranty requests through drhorton.com/warranty.
+At Collins Ridge, you send warranty requests through the builder's online warranty portal. I'll show you where it is before you close.
 
 1. About 30 days after closing, send in your first list.
 2. Around 10 months, schedule your warranty visit for things like nail pops.

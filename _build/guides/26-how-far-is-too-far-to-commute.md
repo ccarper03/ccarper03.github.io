@@ -59,7 +59,7 @@ It's closer to Durham and Chapel Hill than to Raleigh. I timed these drives from
 
 Add time at rush hour. If you work in Raleigh, test the drive before you decide. If you work in Durham, Chapel Hill, or at Duke or UNC, Hillsborough works well for a lot of people.
 
-If the drive doesn't work, let me know. D.R. Horton builds all over the area, and I'll connect you with a community closer to work.
+If the drive doesn't work, let me know. I'll point you to new communities closer to work and introduce you to the right agent there.
 
 ## Weighing the trade
 

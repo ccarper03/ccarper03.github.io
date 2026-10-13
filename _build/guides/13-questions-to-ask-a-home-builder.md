@@ -90,7 +90,7 @@ The best one is the one you actually use. Here's how I'd organize it:
 - **Can I bring my own inspector?** Yes, a licensed home inspector before drywall and again before closing, on our build schedule.
 - **What's the warranty?** A 10-year structural warranty through RWC. See [what a new home warranty covers](/guides/new-home-warranty-coverage).
 - **What does the HOA cover?** Common areas like the entrances, landscaping and stormwater ponds. The [Collins Ridge FAQ](/faq#hoa) has the details.
-- **Who do you represent?** I represent D.R. Horton as the seller. You're always welcome to bring your own agent.
+- **Who do you represent?** I represent the builder as the seller. You're always welcome to bring your own agent.
 
 ## Get it in writing
 

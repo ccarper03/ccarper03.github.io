@@ -48,7 +48,7 @@ A builder's community is usually covered by one big plan. That's why you see sil
 - **Look at drainage.** Where does water go on this homesite, and on the ones around it?
 - **Ask about the grade.** Is the homesite higher or lower than the street and the homes next to it?
 - **Know what's next door.** Homesites that haven't been graded yet will change.
-- **See it finished.** D.R. Horton builds first, so on a home that's ready now, you can see the final grade before you buy.
+- **See it finished.** At Collins Ridge, homes are built first, so on a home that's ready now, you can see the final grade before you buy.
 - **Keep the grade.** After you move in, don't pile mulch or dirt against the foundation, or block the low spots that carry water away.
 
 ## Sources

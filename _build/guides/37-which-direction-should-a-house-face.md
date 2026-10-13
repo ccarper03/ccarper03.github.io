@@ -42,7 +42,7 @@ The ideas are the same anywhere hot. Limit bare glass on the west and east. Shad
 3. Come back late in the afternoon to see the sun and shade.
 4. Ask what will be built to the south and west of you. New homes and trees change the light.
 
-D.R. Horton builds first, so on a home that's ready now, you can stand in the real rooms at the time of day you care about.
+At Collins Ridge, homes are built first, so on a home that's ready now, you can stand in the real rooms at the time of day you care about.
 
 ## Sources
 

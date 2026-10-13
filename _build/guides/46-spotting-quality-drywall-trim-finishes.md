@@ -22,7 +22,7 @@ Finish work is what you see every day, so it's worth a close look. In good light
 - **Paint.** Even coverage, clean lines where colors meet, no drips.
 - **Doors.** Even gaps around the edges, and they latch without a push.
 
-Most of these are normal punch list items, and builders expect to fix them. D.R. Horton builds first, so on a home that's ready now, you can check all of this before you buy.
+Most of these are normal punch list items, and builders expect to fix them. At Collins Ridge, homes are built first, so on a home that's ready now, you can check all of this before you buy.
 
 ## How many nail pops are normal in drywall?
 
@@ -34,7 +34,7 @@ A drywall guide from Canada Mortgage and Housing Corporation explains it well. T
 
 Not right away. They're cosmetic. Fixing them too early can mean fixing them twice, since more can show up while the house dries.
 
-That's why many builders do drywall touch-ups once, near the end of the first year. At D.R. Horton, warranty requests go through drhorton.com/warranty. Around 10 months, you can schedule your warranty visit for things like nail pops. Keep a list as you go.
+That's why many builders do drywall touch-ups once, near the end of the first year. At Collins Ridge, you can schedule your warranty visit around 10 months for things like nail pops. Keep a list as you go.
 
 ## Are nail pops in the ceiling normal?
 

@@ -128,7 +128,7 @@ HEAD = '''<!doctype html>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<aside class="disclose-bar" aria-label="Disclosure"><div class="wrap">Charles Carper · New home sales with D.R. Horton · My personal site, not an official D.R. Horton website</div></aside>
+<aside class="disclose-bar" aria-label="Disclosure"><div class="wrap">Charles Carper · New homes in Hillsborough, NC · I represent the builder as the seller · My personal site</div></aside>
 <header class="site-header">
   <div class="wrap header-row">
     <a class="wordmark" href="/" aria-label="Charles Carper, home">
@@ -154,7 +154,7 @@ FOOT = '''</main>
         <a class="wordmark" href="/" aria-label="Charles Carper, home">
           <span class="wm-name">Charles Carper</span>
         </a>
-        <p class="small" style="margin-top:16px;max-width:34ch">New home sales at Collins Ridge in Hillsborough, NC, with D.R. Horton.</p>
+        <p class="small" style="margin-top:16px;max-width:34ch">New homes in Hillsborough, NC. Straight answers, and a plan for your move.</p>
       </div>
       <div>
         <h2>Reach me</h2>
@@ -177,8 +177,8 @@ FOOT = '''</main>
       </div>
     </div>
     <div class="footer-legal">
-      <p>Charles Carper is a new home sales consultant with D.R. Horton. This is my personal website. I built it to keep my guides, notes and tools in one place for the people I work with. It isn't an official D.R. Horton website. I represent D.R. Horton as the seller, and you're always welcome to bring your own agent.</p>
-      <p>Prices, plans, incentives and availability change often, so check <a href="https://www.drhorton.com" target="_blank" rel="noopener">drhorton.com</a> or ask me before you decide anything. Nothing here is an offer or a guarantee. Equal Housing Opportunity.</p>
+      <p>Charles Carper sells new homes in Hillsborough, NC, and represents the builder as the seller. This is my personal website, not a builder's website. I built it to keep my guides, notes and tools in one place for the people I work with. You're always welcome to bring your own agent.</p>
+      <p>Prices, plans, incentives and availability change often, so ask me before you decide anything. Nothing here is an offer or a guarantee. Equal Housing Opportunity.</p>
       <p><a href="/privacy">Privacy</a></p>
     </div>
   </div>
@@ -191,8 +191,8 @@ FOOT = '''</main>
 </html>
 '''
 
-DISCLOSE = ('<p class="disclose-note"><b>Who\'s writing this.</b> I sell new homes for D.R. Horton at Collins Ridge in '
-            'Hillsborough, so I represent the builder, not you. This guide is general education from my years on job sites '
+DISCLOSE = ('<p class="disclose-note"><b>Who\'s writing this.</b> I sell new homes in '
+            'Hillsborough, NC, so I represent the builder, not you. This guide is general education from my years on job sites '
             'and in sales. It isn\'t legal, tax or lending advice, and it doesn\'t describe any specific home, price or '
             'incentive. Check the sources linked below, and talk with your own lender, agent or attorney before you decide.</p>')
 
@@ -282,8 +282,8 @@ def build_hub(guides):
     page += ('<section class="page-head blueprint"><div class="wrap"><h1>New construction guides</h1>'
              '<p class="lead">Plain answers to what people ask before they buy a new home. '
              'Start wherever you are.</p></div></section>\n<section class="section"><div class="wrap">')
-    page += ('<p class="agency-note">I sell new homes for D.R. Horton at Collins Ridge in Hillsborough, so I represent the builder. '
-             'These guides explain how buying a new home works, and how D.R. Horton does it. Sources are linked on every page.</p>')
+    page += ('<p class="agency-note">I sell new homes in Hillsborough, NC, so I represent the builder as the seller. '
+             'These guides explain how buying a new home works, in plain English. Sources are linked on every page.</p>')
     page += '<nav class="hub-jump" aria-label="Guide topics">' + ''.join(
         '<a href="#%s">%s</a>' % (k, PILLARS[k]) for k in order if any(g['pillar'] == k for g in guides)) + '<a href="#ready">Ready to look</a></nav>'
     for k in order:
@@ -305,7 +305,7 @@ def build_hub(guides):
              '<a class="textlink" href="/faq">Collins Ridge FAQ</a></p></section>')
     page += ('<section class="hub-stage band" id="newsletter" style="padding:32px;border-radius:8px;border:1px solid var(--rule)">'
              '<h2>Get new guides by email</h2><p class="quiet">An occasional email from me with new guides and what\'s new at Collins Ridge. '
-             'It\'s my personal newsletter, not an official D.R. Horton email. Unsubscribe anytime.</p>'
+             'It\'s my personal newsletter, not a builder's email. Unsubscribe anytime.</p>'
              '<script src="https://js-na2.hsforms.net/forms/embed/247617862.js" defer></script>'
              '<div class="hs-form-frame" data-region="na2" data-form-id="0b4dc486-9d8e-4e91-a9a2-37f231108f90" data-portal-id="247617862"></div></section>')
     page += '</div></section>\n' + FOOT.format(ver=VER)

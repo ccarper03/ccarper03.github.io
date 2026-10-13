@@ -36,7 +36,7 @@ Early in a community's life, that's real.
 
 A home started from scratch takes time. The Census Bureau's data shows homes built for sale averaged about 7.4 months from permit to completion in 2025.
 
-**Honest answer:** D.R. Horton builds first, so at Collins Ridge there are often homes already underway or finished. Ask me what could close on your client's timeline. For clients with a home to sell, the build time can work in their favor.
+**Honest answer:** At Collins Ridge, homes are built first, so there are often homes already underway or finished. Ask me what could close on your client's timeline. For clients with a home to sell, the build time can work in their favor.
 
 ### "We don't want an HOA."
 

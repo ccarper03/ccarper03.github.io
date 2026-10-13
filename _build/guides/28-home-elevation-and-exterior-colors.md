@@ -1,13 +1,13 @@
 ---
 n: 28
 slug: home-elevation-and-exterior-colors
-title: Elevations and Exterior Colors: How It Works at D.R. Horton
-seo_title: Exterior Colors and Elevations at D.R. Horton
+title: Elevations and Exterior Colors: How It Works at Collins Ridge
+seo_title: Exterior Colors and Elevations at Collins Ridge
 description: At Collins Ridge, each homesite already has its elevation and outside colors set. What an elevation is, how colors are chosen, and how to get the look you like.
 stage: mid
 pillar: select
 keyword: home elevation and exterior colors
-answer: At D.R. Horton, each homesite already has its floor plan, its front design and its outside colors set. You don't pick them. You pick a home whose look you like, and the whole street looks good together.
+answer: At Collins Ridge, each homesite already has its floor plan, its front design and its outside colors set. You don't pick them. You pick a home whose look you like, and the whole street looks good together.
 related: design-center-upgrades-worth-it, how-to-pick-a-lot, which-direction-should-a-house-face, how-to-choose-a-floor-plan
 ---
 ## What's an elevation?
@@ -38,4 +38,3 @@ Repainting in the same approved colors doesn't need approval. A new color scheme
 
 ## Sources
 
-1. [Collins Ridge](https://www.drhorton.com/north-carolina/raleigh-durham/hillsborough/collins-ridge), D.R. Horton

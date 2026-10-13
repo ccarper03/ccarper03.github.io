@@ -15,7 +15,7 @@ related: true-cost-of-owning-a-home, hidden-costs-of-new-construction, why-buyer
 
 It depends on what matters to you and how long you'll stay. Neither one wins on price alone.
 
-A resale home often has a bigger yard, big trees and a street that's all settled in. It can sometimes close fast, too. A new home wins on condition, layout and energy use. At D.R. Horton, the homes are built first, so many are ready now and can close soon as well.
+A resale home often has a bigger yard, big trees and a street that's all settled in. It can sometimes close fast, too. A new home wins on condition, layout and energy use. At Collins Ridge, homes are built first, so many are ready now and can close soon as well.
 
 The mistake I see most is comparing two prices and stopping there. A lower price on a 15-year-old house can hide a to-do list that runs into five figures. A higher price on a new house can leave out things you still have to buy. At Collins Ridge, that's the fridge, washer, dryer and blinds. Line both homes up the same way, and the answer gets clearer.
 
@@ -57,7 +57,7 @@ The Census Bureau tracks how long this takes. For homes finished in 2025, homes 
 
 It also helps to know where a new home's price goes. A 2024 survey by the National Association of Home Builders found that building the house was about 64% of the average price. The finished lot was about 14%. The rest was overhead, loans, marketing, commissions and builder profit. A big builder spreads the cost of plans and land work across a whole community. A one-off custom home pays for all of it alone.
 
-Buying from D.R. Horton isn't a custom build. The homes are built first from tested floor plans. You pick one that's ready now, being built, or starting soon. It's priced more like buying than building.
+Buying from a production builder isn't a custom build. The homes are built first from tested floor plans. You pick one that's ready now, being built, or starting soon. It's priced more like buying than building.
 
 ## What lowers a home's value the most?
 

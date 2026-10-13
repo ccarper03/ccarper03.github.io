@@ -50,4 +50,3 @@ With a new kitchen, you can live in it first. Change paint, hardware or lights l
 ## Sources
 
 1. [Cost vs. Value 2025: South Atlantic](https://www.jlconline.com/cost-vs-value/2025/south-atlantic/), Journal of Light Construction
-2. [Collins Ridge](https://www.drhorton.com/north-carolina/raleigh-durham/hillsborough/collins-ridge), D.R. Horton

@@ -7,7 +7,7 @@ description: Ready now, being built or starting soon: how long a new home takes 
 stage: top
 pillar: build
 keyword: how long does new construction take
-answer: Single-family homes built for sale took about 7.4 months from permit to completion in 2025, per Census Bureau data. Custom homes took longer, 11.7 to 14.3 months. A home that's already started or finished can close much sooner. At D.R. Horton, the homes are built first, so some are ready now.
+answer: Single-family homes built for sale took about 7.4 months from permit to completion in 2025, per Census Bureau data. Custom homes took longer, 11.7 to 14.3 months. A home that's already started or finished can close much sooner. At Collins Ridge, homes are built first, so some are ready now.
 next: buying-new-construction-with-a-home-to-sell
 related: how-a-new-home-gets-built, mortgage-rate-lock-new-construction, buying-new-construction-with-a-home-to-sell, risks-of-buying-new-construction
 ---
@@ -33,7 +33,7 @@ The newest Census figures put the median new home at about 2,142 square feet, so
 
 ## Ready now, being built or starting soon
 
-D.R. Horton builds the homes first, so you don't always have to wait for the full build. At Collins Ridge, you pick from three kinds of homes:
+When the builder starts homes first, you don't always have to wait for the full build. At Collins Ridge, you pick from three kinds of homes:
 
 - **Ready now:** The home is done. You can close once your loan is ready.
 - **Being built:** The home is started. Your move-in date depends on how far along it is.
@@ -73,4 +73,3 @@ For a buyer, what matters more is what's happening in the community you're looki
 1. [Single-Family Home Construction Time Declines in 2025](https://eyeonhousing.org/2026/09/single-family-home-construction-time-declines-in-2025/), NAHB Eye on Housing, using Census Survey of Construction data
 2. [Characteristics of New Housing: Highlights](https://www.census.gov/construction/chars/highlights.html), U.S. Census Bureau
 3. [What is a rate lock and should I ask for it?](https://www.consumerfinance.gov/ask-cfpb/what-is-a-rate-lock-and-should-i-ask-for-it-en-143/), Consumer Financial Protection Bureau
-4. [D.R. Horton Form 10-K, fiscal 2025](https://fortune.com/company-assets/1810/quartr/annual-report-10-k-398a7-2025-11-19-07-12-31.pdf), D.R. Horton
