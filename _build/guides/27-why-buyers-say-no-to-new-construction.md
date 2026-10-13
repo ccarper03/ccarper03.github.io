@@ -8,7 +8,7 @@ stage: mid
 pillar: agents
 keyword: new construction objections
 answer: The common objections are smaller lots, doubts about build quality, a bare neighborhood, the wait, and HOA rules. Each one has an honest answer, and some are real deal-breakers for the right client. Your job, and mine, is to help them see which is which.
-related: risks-of-buying-new-construction, why-buyers-choose-new-construction, new-construction-inspections, selling-a-resale-near-new-construction
+related: risks-of-buying-new-construction, why-buyers-choose-new-construction, new-construction-inspections
 ---
 ## The objections, and the honest answer to each
 
