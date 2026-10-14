@@ -380,6 +380,7 @@ label.field { display: grid; gap: 6px; font-weight: 500; font-size: 15.5px; }
 .booking-card { background: var(--paper); border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
 .booking-frame { display: block; width: 100%; height: 720px; border: 0; }
 @media (max-width: 640px) { .booking-frame { height: 960px; } }
+.booking-h { font-size: clamp(24px, 3vw, 32px); margin: clamp(28px, 4vw, 44px) 0 12px; scroll-margin-top: 96px; }
 
 /* ---------- Footer ---------- */
 .site-footer { margin-top: var(--section); padding: 56px 0 28px; color: #E6EEF6; }

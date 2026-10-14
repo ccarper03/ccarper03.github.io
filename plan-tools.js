@@ -747,7 +747,7 @@
     html += '<section class="plan-next" aria-labelledby="pn-h"><h3 id="pn-h">Your next step</h3><p>I’ll look at your plan, tell you what I’d change, and show you the homes that fit it. No pressure.</p>';
     html += '<div class="next-paths">' +
       '<a class="next-path primary" data-track="plan_text" data-sms-body="' + esc(mpText(a, code)) + '" href="' + esc(smsHref(mpText(a, code))) + '"><span class="who">Fastest</span><b>Text me this plan</b></a>' +
-      '<a class="next-path" data-track="plan_call" data-sms-body="' + esc('Hi Charles, I’d like a 15-minute call about my moving plan (charlescarper.com/moving-plan#' + code + '). Good times for me: ') + '" href="' + esc(smsHref('Hi Charles, I’d like a 15-minute call about my moving plan (charlescarper.com/moving-plan#' + code + '). Good times for me: ')) + '"><span class="who">Talk it through</span><b>Set up a 15-minute call</b></a>' +
+      '<a class="next-path" data-track="plan_call" href="/book#call"><span class="who">Talk it through</span><b>Book a 15-minute call</b></a>' +
       '<button class="next-path" type="button" data-email><span class="who">Keep a copy</span><b>Email me this plan</b></button>' +
       '</div><div data-email-slot></div>';
     html += '<p class="small quiet" style="margin-top:14px">Or call <a href="tel:' + PHONE + '">' + PHONE_SHOW + '</a> · <button class="linkish" type="button" data-print>Print or save it</button> · <button class="linkish" type="button" data-restart>Start over</button></p></section>';
@@ -780,7 +780,7 @@
     html += '<section class="plan-next" aria-labelledby="fn-h"><h3 id="fn-h">See them in person</h3><p>I’ll have the homes that match open when you get there, and tell you which ones are ready now, being built or starting soon.</p>';
     html += '<div class="next-paths">' +
       '<a class="next-path primary" data-track="plans_text" data-sms-body="' + esc(t) + '" href="' + esc(smsHref(t)) + '"><span class="who">Fastest</span><b>Text me to walk these</b></a>' +
-      '<a class="next-path" href="/book"><span class="who">Pick a time</span><b>Book a visit</b></a>' +
+      '<a class="next-path" href="/book#visit"><span class="who">Pick a time</span><b>Book a visit</b></a>' +
       '<a class="next-path" href="/moving-plan"><span class="who">Have a home to sell?</span><b>Get your moving plan</b></a>' +
       '</div>';
     html += '<p class="small quiet" style="margin-top:14px"><button class="linkish" type="button" data-print>Print or save these</button> · <button class="linkish" type="button" data-restart>Start over</button></p></section>';
