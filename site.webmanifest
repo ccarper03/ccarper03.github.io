@@ -1,0 +1,11 @@
+{
+  "name": "Charles Carper",
+  "short_name": "Charles Carper",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#0F2B4C",
+  "background_color": "#0F2B4C",
+  "display": "browser"
+}

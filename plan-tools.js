@@ -111,7 +111,7 @@
   var STAGE = {
     ready: { name: 'Ready now', text: 'a home that’s ready now or close to done' },
     building: { name: 'Being built', text: 'a home that’s already being built' },
-    starting: { name: 'Starting soon', text: 'a home that’s starting soon (plan on about seven months to build)' },
+    starting: { name: 'Starting soon', text: 'a home that’s starting soon (plan on several months to build)' },
     any: { name: 'Any of the three', text: 'whichever home you like best: ready now, being built or starting soon' }
   };
   function stageFromTiming(t, flexDefault) {
@@ -260,7 +260,7 @@
     var q = [];
     if (a.carry !== 'yes' && path !== 'lineup') q.push('Can I qualify with both payments? If not, what changes once my home is under contract?');
     if (path === 'bridge') q.push('Do you offer a bridge loan? How would it count when I qualify, and what does it cost?');
-    if (path === 'together') q.push('How long can I lock my rate on a home that’s about seven months out, and what does that cost?');
+    if (path === 'together') q.push('How long can I lock my rate on a home that’s several months out, and what does that cost?');
     if (path === 'sellfirst') q.push('Can I get preapproved now, based on the money I expect from my sale?');
     if (path === 'buyfirst') q.push('How many months of both payments does my approval assume I can handle?');
     if (path === 'lineup') q.push('Once my buyer’s loan is approved, will you leave my current payment out when I qualify?');
