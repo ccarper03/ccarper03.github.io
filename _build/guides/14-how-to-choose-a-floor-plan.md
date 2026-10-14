@@ -29,7 +29,7 @@ A plan that handles your Tuesday well will handle the holiday fine.
 These are worth the most thought, because you can't swap them out in a weekend:
 
 - **Number of bedrooms.** Count for the next five years, not just now.
-- **Stairs.** A main-floor bedroom or primary suite matters to many downsizers and families with older parents.
+- **Stairs.** A main-floor bedroom or primary suite means everyday life without the stairs, now and later.
 - **A full bath on the main level.** NAHB's 2024 survey found 80% of buyers rated it essential or desirable.
 - **Laundry location.** The most-wanted feature in that survey, rated essential or desirable by 86% of buyers.
 - **Flex space.** A room that can be an office now and a bedroom later.

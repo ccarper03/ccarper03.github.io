@@ -8,7 +8,7 @@ stage: top
 pillar: psych
 keyword: buy a house now or wait
 answer: No one can time the market for you, me included. The better question is whether your life is ready. A steady job, savings left after closing, a payment you're comfortable with, and plans to stay long enough for the cost of buying to pay off.
-next: negotiating-with-a-home-builder
+next: builder-incentives-explained
 related: first-time-buyer-new-construction, how-to-decide-on-a-house, new-construction-vs-resale-cost, buying-new-construction-with-a-home-to-sell
 ---
 ## Is it better to buy a house now or wait?

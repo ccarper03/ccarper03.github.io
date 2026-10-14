@@ -37,13 +37,13 @@ It also helps to ask what else the same money could do. A credit toward the pric
 
 A seller or builder, the lender, or you.
 
-Under Fannie Mae's rules, a seller or builder can pay for a temporary buydown, within Fannie Mae's limits. The lender can also pay for it. Other loan programs have their own rules, so ask your lender.
+A seller or builder can often pay for it, within the loan program's limits. The lender can too. Ask your lender what your loan allows.
 
 Builders sometimes offer buydowns as an incentive. At Collins Ridge, offers change week to week, so ask me what's available on the home you like.
 
 ## Does a 2-1 buydown require extra funds at closing?
 
-Not from you, if the seller or builder is paying for it. The money is set aside at closing in a special account. Each month, part of your payment comes from that account. Fannie Mae requires the account to be fully funded when the loan is delivered.
+Not from you, if the seller or builder is paying for it. The money is set aside at closing in a special account. Each month, part of your payment comes from that account.
 
 If you pay for the buydown yourself, the cost is part of your cash to close.
 
@@ -51,14 +51,7 @@ If you pay for the buydown yourself, the cost is part of your cash to close.
 
 The seller, or builder, pays the cost at closing, and it goes into the buydown account. It shows up on your Closing Disclosure.
 
-Fannie Mae counts a buydown paid by the seller as a seller contribution. On a home you'll live in, those contributions are capped at 3%, 6% or 9% of the price or appraised value, depending on how much you borrow. The buydown has to fit under that cap along with any other credits.
-
-Fannie Mae's other limits on temporary buydowns:
-
-- The rate can go down by no more than 3 percentage points.
-- The buydown can't last longer than 3 years.
-- Your rate can go up no more than 1 percentage point a year.
-- It applies to homes you'll live in and second homes, not investment homes.
+A buydown paid by the seller counts as a seller contribution. Loan programs cap those, so the buydown has to fit under the cap along with any other credits. Your lender knows the limit.
 
 ## Buydown or price cut?
 

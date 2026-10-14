@@ -12,7 +12,7 @@ related: new-construction-inspections, spotting-quality-drywall-trim-finishes, m
 ---
 ## Why this walkthrough matters
 
-NC REALTORS reminds buyers that under North Carolina's standard purchase contract, closing means you accept the home as it is that day. A builder's contract has its own terms, but the idea is the same: find things before you close.
+Once you close, you've generally accepted the home as it is. Your builder's contract sets the exact terms, so read that part. The idea is the same everywhere: find things before you close.
 
 On a new home, the final walkthrough is often called a new home orientation. The builder shows you how the home works, and you make a list of touch-ups together. That list is called a punch list.
 
@@ -64,11 +64,7 @@ Bring painter's tape to mark spots, a phone charger to test outlets, and this li
 
 It depends. On a resale home, it's often a day or two before closing. On a new home, builders often do it several days to a week or more ahead, so there's time to fix the punch list. Ask for the date as early as you can.
 
-If you hire your own licensed inspector, have that inspection done before the walkthrough. At Collins Ridge, tell me early and I'll help you line it up with our superintendent's build schedule. You or your inspector can send the report straight to our superintendent. We build every home to the local building code, and anything that doesn't meet code gets taken care of. For other notes, our superintendent looks at each one and decides what we can do.
-
-## Can a seller deny a final walk-through?
-
-On a resale home in North Carolina, the standard contract lets the buyer get into the home, including for a final walk-through, up to closing or move-in. On a new home, the builder's contract decides. Builders almost always include a walkthrough or orientation, but read the contract so you know the terms.
+If you hire your own licensed inspector, have that inspection done before the walkthrough. At Collins Ridge, tell me early and I'll help you line it up with the build schedule. You or your inspector can send the report straight to the builder's superintendent, who reviews each item and gets back to you.
 
 ## Before closing or under warranty
 

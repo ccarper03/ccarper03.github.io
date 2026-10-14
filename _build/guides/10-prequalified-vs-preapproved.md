@@ -52,7 +52,7 @@ There isn't one income number. It depends on your rate, your taxes and insurance
 
 Lenders look at your debt-to-income ratio, or DTI. That's your total monthly debt payments, including the new house payment, divided by your monthly income before taxes. The CFPB notes that different loans and lenders set different DTI limits.
 
-For reference, Fannie Mae's guidelines cap DTI at 36% of steady monthly income on loans reviewed by hand, up to 45% with strong credit and savings, and up to 50% through its automated system. Those are ceilings, not targets. A payment you can comfortably carry is usually lower.
+The most a lender allows is a ceiling, not a target. A payment you can comfortably carry is usually lower.
 
 The fastest way to a real answer is a talk with a lender who runs your actual numbers.
 

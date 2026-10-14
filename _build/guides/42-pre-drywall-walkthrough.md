@@ -20,7 +20,7 @@ Once insulation and drywall go up, the framing, wiring, pipes and ducts are hidd
 There are two kinds:
 
 - **A builder walkthrough.** Some builders walk buyers through the home at this stage to look at the layout and what's been put in. Ask me if one is planned for your home.
-- **A private inspection.** Your own licensed home inspector looks at the work for you. At Collins Ridge, you can do this. We can't stop work for it, so tell me early and I'll help you line it up with our superintendent.
+- **A private inspection.** Your own licensed home inspector looks at the work for you. At Collins Ridge, you can do this. Work doesn't stop for it, so tell me early and I'll help you line it up with the builder's superintendent.
 
 ## What happens during a pre-drywall inspection?
 
@@ -56,9 +56,9 @@ Usually a few hours, depending on the size of the home and the inspector. Plan e
 
 ## Timing matters
 
-The window before drywall is short. Drywall often follows insulation within days. So tell me early that you want an inspection, and I'll connect you with our superintendent for the timing.
+The window before drywall is short. Drywall often follows insulation within days. So tell me early that you want an inspection, and I'll connect you with the builder's superintendent for the timing.
 
-You or your inspector can send the report straight to our superintendent. If something doesn't meet code, we'll take care of it. For other notes, our superintendent decides what we can do and gets back to you.
+You or your inspector can send the report straight to the builder's superintendent, who reviews each item and gets back to you.
 
 ## Sources
 

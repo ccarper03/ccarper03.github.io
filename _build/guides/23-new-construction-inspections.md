@@ -46,11 +46,11 @@ It depends on the builder's contract and rules. Some builders welcome outside in
 
 ## Can I bring my own inspector at Collins Ridge?
 
-Yes. You can hire your own licensed home inspector to check the home before the drywall goes up, and again before closing. A friend or family member who knows some construction doesn't count. We can't stop work for an inspection, so it has to fit our build schedule. Tell me early, and I'll help you line it up with our superintendent.
+Yes. You can hire your own licensed home inspector to check the home before the drywall goes up, and again before closing. A friend or family member who knows some construction doesn't count. Work doesn't stop for an inspection, so it has to fit the build schedule. Tell me early, and I'll help you line it up with the builder's superintendent.
 
 ### What happens with what my inspector finds?
 
-You or your inspector can send the report straight to our superintendent. Reports often list a lot of items, and that's normal. We build every home to the local building code. If something doesn't meet code, we'll take care of it. Some items are suggestions or preferences rather than code issues. For those, our superintendent looks at each one and decides what we can do. Our superintendent will get back to you on the items.
+You or your inspector can send the report straight to the builder's superintendent. Reports often list a lot of items, and that's normal. The superintendent reviews each item and gets back to you. What gets fixed, and how, is set by your purchase agreement and the builder's warranty, so read both.
 
 ## What is the biggest red flag in a home inspection?
 
@@ -60,7 +60,7 @@ Small things like paint touch-ups and drywall marks are normal punch list items.
 
 ## After the inspection
 
-1. Send the report to our superintendent right away.
+1. Send the report to the builder's superintendent right away.
 2. Keep a copy, and note what you hear back.
 3. Check the fixes at your final walkthrough.
 

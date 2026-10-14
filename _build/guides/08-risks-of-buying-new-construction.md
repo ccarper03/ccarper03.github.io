@@ -9,7 +9,7 @@ pillar: psych
 keyword: downsides of buying new construction
 answer: The real risks are delays, build quality you can't see yet, a neighborhood still being built, a developer-run HOA at first, and less room on price. Each one has a fix. Get dates and terms in writing, inspect at the right times, read the HOA documents, and compare incentives instead of chasing a lower price.
 next: questions-to-ask-a-home-builder
-related: questions-to-ask-a-home-builder, new-construction-inspections, buying-early-in-a-new-development, why-buyers-say-no-to-new-construction
+related: questions-to-ask-a-home-builder, new-construction-inspections, buying-early-in-a-new-development
 ---
 ## What are the downsides of buying a new construction home?
 
@@ -25,7 +25,7 @@ Build dates move. Weather, inspections, materials and crews can all push a closi
 
 When you buy before a home is finished, you're trusting work that hasn't happened yet. Every home is built by many crews, and mistakes happen.
 
-**What to do:** At Collins Ridge, homes are built first, so you can often buy a home that's done and see the work yourself. Local building inspectors check the work at set stages. You can also hire your own licensed inspector. At Collins Ridge, that can be once before drywall and once before closing, on our build schedule. Then read the warranty so you know how fixes are handled after you move in.
+**What to do:** At Collins Ridge, homes are built first, so you can often buy a home that's done and see the work yourself. Local building inspectors check the work at set stages. You can also hire your own licensed inspector. At Collins Ridge, that can be once before drywall and once before closing, on the build schedule. Then read the warranty so you know how fixes are handled after you move in.
 
 ### A neighborhood still being built
 

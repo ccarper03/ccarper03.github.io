@@ -43,7 +43,7 @@ I work for one builder, so I won't rank builders. Here's how to judge any of the
 - Will I get a walkthrough before drywall?
 - How does the final walkthrough and punch list work?
 
-**At Collins Ridge:** yes, you can bring a licensed home inspector before drywall and again before closing, on our build schedule. [How inspections work here](/faq#inspections)
+**At Collins Ridge:** yes, you can bring a licensed home inspector before drywall and again before closing, on the build schedule. [How inspections work here](/faq#inspections)
 
 ### The community
 
@@ -87,7 +87,7 @@ The best one is the one you actually use. Here's how I'd organize it:
 
 - **What's standard?** Every home comes with the same included features. There's no design center and no upgrade list. See [how picking finishes works](/guides/design-center-upgrades-worth-it).
 - **What in the model isn't standard?** The furniture and decor, plus the fridge, washer, dryer and blinds.
-- **Can I bring my own inspector?** Yes, a licensed home inspector before drywall and again before closing, on our build schedule.
+- **Can I bring my own inspector?** Yes, a licensed home inspector before drywall and again before closing, on the build schedule.
 - **What's the warranty?** A 10-year structural warranty through RWC. See [what a new home warranty covers](/guides/new-home-warranty-coverage).
 - **What does the HOA cover?** Common areas like the entrances, landscaping and stormwater ponds. The [Collins Ridge FAQ](/faq#hoa) has the details.
 - **Who do you represent?** I represent the builder as the seller. You're always welcome to bring your own agent.

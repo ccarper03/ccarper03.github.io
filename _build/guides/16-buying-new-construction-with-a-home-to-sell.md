@@ -14,7 +14,7 @@ related: how-long-does-new-construction-take, prequalified-vs-preapproved, closi
 
 Yes. Lots of people do. The real questions are how you'll qualify for the loan, and how you'll pay for two homes if they overlap.
 
-Your lender has to count your current house payment when you apply for the new loan. If your home isn't under contract yet, you need to qualify with both payments. If you use a bridge loan, Fannie Mae counts it in your debt-to-income ratio, unless you show a signed contract on your current home with its financing contingencies cleared.
+Your lender has to count your current house payment when you apply for the new loan. If your home isn't under contract yet, you need to qualify with both payments. If you use a bridge loan, ask your lender how it counts when you qualify.
 
 That's why the order matters.
 
@@ -47,15 +47,7 @@ The catch: build dates move. Weather, inspections and materials can push them. L
 
 Sell first if you can't comfortably pay for two homes, or if your down payment comes from the sale. Buy first if you can qualify for both and don't want to move twice.
 
-For many of the downsizers and move-up buyers I talk with, the answer is in between. Pick a home that's starting soon or early in the build. List your current home partway through. Then close both close together. A good listing agent and a lender who has done this before make all the difference.
-
-## Can you avoid capital gains by buying a new house?
-
-Not by buying another home. What protects most homeowners is the home sale exclusion.
-
-The IRS lets you leave out up to $250,000 of gain when you sell your main home, or up to $500,000 on a joint return. You generally need to have owned the home, and lived in it as your main home, for at least two of the five years before the sale. You generally can't use it if you used it on another home in the past two years.
-
-If you don't meet the full test, a partial exclusion may apply when the main reason you sold was a new job, health or certain other events you couldn't plan for. Talk to a tax professional about your situation.
+For many people I talk with who have a home to sell, the answer is in between. Pick a home that's starting soon or early in the build. List your current home partway through. Then close both close together. A good listing agent and a lender who has done this before make all the difference.
 
 ## Questions to ask before you choose
 

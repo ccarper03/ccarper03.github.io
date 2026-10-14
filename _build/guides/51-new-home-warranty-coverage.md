@@ -45,7 +45,7 @@ On a new home, a service contract may cover things that are already covered. Com
 
 ## Does FHA require a 10 year warranty on new construction?
 
-Not always. Under HUD's FHA handbook, a home that's being built, or was finished less than a year ago, is usually limited to a 90% loan-to-value. The exceptions are homes that meet HUD's pre-approval rules or have a HUD-accepted 10-year protection plan. A 10-year plan with a final inspection is also one way a lender can document a new home.
+Not always. FHA has its own rules for homes that are new or still being built, and a 10-year protection plan is one way to meet them.
 
 Your lender will know which one applies to your loan.
 

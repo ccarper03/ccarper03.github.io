@@ -41,7 +41,7 @@ North Carolina's building code lists the routine inspections the local building 
 
 A recent state ruling also says local departments can't add other routine inspections without approval.
 
-Those inspections check that the work meets code. Many buyers also hire their own inspector, often before drywall and before closing. At Collins Ridge, you can do both with a licensed home inspector, on our build schedule.
+Those inspections check that the work meets code. Many buyers also hire their own inspector, often before drywall and before closing. At Collins Ridge, you can do both with a licensed home inspector, on the build schedule.
 
 ## How many man hours does it take to build a 1500 sq ft house?
 

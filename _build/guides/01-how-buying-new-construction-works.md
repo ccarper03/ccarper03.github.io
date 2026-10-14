@@ -57,9 +57,9 @@ What I'd avoid is deciding halfway. If you want an agent, bring them in at the s
 
 ## Who pays the realtor when buying a new build house?
 
-It depends on your written agreement with your agent. Since August 2024, buyers working with a REALTOR sign a written buyer agreement before touring homes. NAR says it has to state what the agent will be paid, and that the amount is negotiable.
+That's between you and your agent, and it's spelled out in your written buyer agreement. Ask your agent to walk you through it.
 
-The builder I sell for works with buyers' agents. If you have one, ask me how agents are taken care of, and make sure your buyer agreement matches.
+The builder I sell for works with buyers' agents. If you have one, bring them in from your first visit.
 
 ## What happens if I don't have an agent?
 

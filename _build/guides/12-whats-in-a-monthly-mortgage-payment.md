@@ -40,7 +40,7 @@ I don't quote payments, and you shouldn't trust anyone who does without your ful
 
 Lenders answer this with your debt-to-income ratio. That's all your monthly debt payments, including the new house payment, divided by your monthly income before taxes.
 
-The CFPB notes that different loans and lenders set different limits. Fannie Mae's guidelines, for example, cap it at 36% on loans reviewed by hand, up to 45% with strong credit and savings, and up to 50% through its automated system.
+The CFPB notes that different loans and lenders set different limits. Your lender will tell you yours.
 
 The most a lender will allow isn't the same as comfortable. I'd look at the payment next to your take-home pay, your savings goals and the other costs of owning. Then pick a number you'd be fine with in a tight month.
 

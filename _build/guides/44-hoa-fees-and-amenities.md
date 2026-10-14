@@ -60,7 +60,7 @@ The right question isn't the average. It's what you get for the fee. Ask for the
 
 ## A note on builder credits
 
-Loan programs let a seller cover some of a buyer's closing costs, within limits. Fannie Mae's guidelines also let that money pay HOA dues for up to 12 months after closing. If a builder offers help with dues, ask how it's applied.
+Loan programs let a seller cover some of a buyer's costs, within limits. If a builder offers help with HOA dues, ask your lender how it's applied.
 
 ## At Collins Ridge
 

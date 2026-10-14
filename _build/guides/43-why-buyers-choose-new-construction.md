@@ -9,7 +9,7 @@ pillar: psych
 keyword: benefits of buying new construction
 answer: People choose new construction for the condition, the layout, the efficiency, the warranty, and the chance to walk the real home before they buy. The trade-offs are time, lot size and a neighborhood still filling in. It's a good choice when those benefits matter more to you than the trade-offs.
 next: questions-to-ask-a-home-builder
-related: new-construction-vs-resale-cost, why-buyers-say-no-to-new-construction, how-buying-new-construction-works, first-time-buyer-new-construction
+related: new-construction-vs-resale-cost, how-buying-new-construction-works, first-time-buyer-new-construction
 ---
 ## What are the benefits of buying new construction?
 
@@ -49,15 +49,6 @@ The trade-offs, honestly:
 In his 2010 letter to Berkshire Hathaway shareholders, Buffett said home ownership makes sense for most Americans, but he didn't treat a home mainly as an investment. He said he'd likely have made more money renting and investing, yet he valued the decades his family spent in the house he bought.
 
 He also warned that a house turns into a nightmare when a buyer's eyes are bigger than his wallet. His point was that families should buy homes they can afford, not their dream houses. I agree with that, and I sell houses for a living.
-
-## For agents: reading a client's motivation
-
-Before a first builder visit, it helps to know which reason is driving your client:
-
-- **Life event** (new job, new baby, downsizing): timeline matters most. Look at homes already underway.
-- **Tired of repairs:** condition and warranty matter most. Show the standard features and the warranty.
-- **Wants to choose:** look at homes starting soon, where there's still time to pick the interior color scheme.
-- **Just curious:** a first visit to learn. No pressure, and a lender conversation before the second.
 
 ## Sources
 

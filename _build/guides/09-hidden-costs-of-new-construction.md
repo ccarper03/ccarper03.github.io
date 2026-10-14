@@ -74,9 +74,9 @@ The spirit is right: don't drain your savings to close, and don't buy a home you
 
 There's no single answer. It depends on your rate, your down payment, taxes, insurance, HOA dues and your other debts.
 
-Lenders use your debt-to-income ratio, which is your monthly debts, including the new housing payment, divided by your gross monthly income. The CFPB notes that limits vary by loan and lender. Fannie Mae's guidelines, for example, top out at 36% on manually underwritten loans, up to 45% with strong credit and reserves, and up to 50% through its automated system.
+Lenders use your debt-to-income ratio, which is your monthly debts, including the new housing payment, divided by your gross monthly income. The limit depends on your loan and lender, so ask yours.
 
-Use those as ceilings. Then build your budget on the full monthly cost, including the items above, not just the loan.
+Treat that limit as a ceiling. Then build your budget on the full monthly cost, including the items above, not just the loan.
 
 ## A simple way to plan
 

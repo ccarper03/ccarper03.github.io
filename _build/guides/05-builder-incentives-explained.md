@@ -8,7 +8,7 @@ stage: mid
 pillar: money
 keyword: builder incentives
 answer: A builder incentive is money or value the builder puts toward your purchase, like closing cost help, a rate buydown or a price reduction. They aren't equal. Judge each one by what it does to your cash to close and your monthly payment, and get it in writing.
-related: rate-buydowns-explained, closing-costs-new-construction, negotiating-with-a-home-builder, new-construction-vs-resale-cost
+related: rate-buydowns-explained, closing-costs-new-construction, new-construction-vs-resale-cost
 ---
 ## What are builder incentives and how do they work?
 
@@ -48,7 +48,7 @@ It's $10,000 the builder agrees to contribute toward your purchase, but the labe
 3. **Can I use all of it?** Seller contributions toward closing costs can't exceed your actual closing costs.
 4. **Where will it show up?** It should appear on your Closing Disclosure at the end.
 
-Loan programs also cap how much a seller or builder can contribute. Fannie Mae, for example, limits these "interested party contributions" on a primary residence to 3%, 6% or 9% of the price or appraised value, depending on how much you're borrowing compared with the home's value. Anything over the limit gets treated as a price reduction instead. Your lender knows the limits for your loan.
+Loan programs also cap how much a seller or builder can contribute. Your lender knows the limit for your loan.
 
 ## The lender question
 
