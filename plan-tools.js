@@ -729,7 +729,10 @@
   }
   function mpText(a, code) {
     var p = movingPlan(a);
-    return 'Hi Charles, I used your moving plan. It says: ' + p.title + ' Here’s my plan: charlescarper.com/moving-plan#' + code + ' Can we talk it through?';
+    return ['Hi Charles, I used your moving plan.',
+      'My path: ' + p.title.replace(/\.$/, ''),
+      'My plan: charlescarper.com/moving-plan#' + code,
+      'Can we talk it through?'].join('\n');
   }
 
   function renderMovingPlan(a, code) {
@@ -756,12 +759,21 @@
     return html;
   }
 
+  // The text is a labeled list, so each answer reads with its question attached.
   function fpText(top, a) {
     var names = top.map(function (r) { return 'the ' + r.name; }).join(' and ');
-    var bits = [labelOf(FP_STEPS, 'stories', a.stories, a), a.beds + '+ bedrooms'];
-    if (a.room && a.size !== 'unknown') bits.push({ more: 'more room than now', same: 'about the same room', less: 'less room than now' }[a.room]);
-    (a.wants || []).forEach(function (w) { bits.push(WANT_TEXT[w]); });
-    return 'Hi Charles, I’d like to walk ' + names + ' at Collins Ridge. What I’m after: ' + bits.join(', ') + '. Good times for me: ';
+    var lines = ['Hi Charles, I’d like to walk ' + names + ' at Collins Ridge.'];
+    var st = { one: 'one story only', main: 'two is OK if the primary bedroom is on the main floor',
+      two: 'two stories is fine', any: 'no preference' }[a.stories];
+    if (st) lines.push('Stories: ' + st);
+    if (a.beds) lines.push('Bedrooms: ' + a.beds + ' or more');
+    if (a.room && a.size && a.size !== 'unknown') lines.push('Size: ' + { more: 'bigger than my home now',
+      same: 'about the same as my home now', less: 'smaller than my home now' }[a.room]);
+    if ((a.wants || []).length) lines.push('Must-haves: ' + a.wants.map(function (w) { return WANT_TEXT[w].replace(/^an? /, ''); }).join(', '));
+    var ty = { sf: 'single-family', th: 'townhome', either: 'either one' }[a.type];
+    if (ty) lines.push('Home type: ' + ty);
+    lines.push('Good times for me: ');
+    return lines.join('\n');
   }
 
   function renderFloorPlans(a, code) {
