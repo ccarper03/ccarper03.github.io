@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,600..800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@500&display=swap">
-<link rel="stylesheet" href="/site.css?v=202610141300">
+<link rel="stylesheet" href="/site.css?v=202610141950">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4Y130WZZEZ"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4Y130WZZEZ');</script>
 <script type="text/javascript">
@@ -61,16 +61,17 @@
 </section>
 
 <section class="section" style="padding-bottom:0">
-  <div class="wrap split">
+  <div class="wrap">
+  <div class="split even">
     <div class="card-plain">
       <p class="eyebrow" style="color:var(--ink-2)">Option 1</p>
       <h2 style="font-size:clamp(30px,3.6vw,42px)">Talk for 15 minutes</h2>
       <p>Tell me where you are. I'll tell you what I'd do, and whether Hillsborough even fits. Have a home to sell? <a class="textlink" href="/moving-plan">Get your moving plan</a> first, and send it with your text.</p>
+      <p class="quiet small">I'll call you at the number you give. My days off are Wednesday and Thursday. Text me anytime, and I'll get back to you on my next work day.</p>
       <div class="actions">
         <a class="btn btn-amber" href="#call" data-reveal="call" aria-controls="panel-call" aria-expanded="false">Pick a call time</a>
         <a class="btn btn-ink" href="sms:+19843282788?&amp;body=Hi%20Charles%2C%20I%27d%20like%20a%2015-minute%20call.%20Good%20times%20for%20me%3A%20" data-sms-body="Hi Charles, I'd like a 15-minute call. Good times for me: ">Text me instead</a>
       </div>
-      <p class="quiet small" style="margin-top:14px">I'll call you at the number you give. My days off are Wednesday and Thursday. Text me anytime, and I'll get back to you on my next work day.</p>
     </div>
     <div class="card-plain">
       <p class="eyebrow" style="color:var(--ink-2)">Option 2</p>
@@ -83,12 +84,12 @@
       <div class="actions"><a class="btn btn-amber" href="#visit" data-reveal="visit" aria-controls="panel-visit" aria-expanded="false">Pick a visit time</a></div>
     </div>
   </div>
+  <p class="agency-note book-note">Just so you know before we talk: I represent the builder as the seller. You're always welcome to bring your own agent, and I'm happy to work with them. <a href="https://www.ncrec.gov/Publications/Pubs" target="_blank" rel="noopener">How agency works in NC</a></p>
+  </div>
 </section>
 
-<section class="section" style="padding-top:clamp(40px, 5vw, 64px);padding-bottom:0">
+<section class="section" style="padding-top:0;padding-bottom:0">
   <div class="wrap">
-    <p class="agency-note">Just so you know before we talk: I represent the builder as the seller. You're always welcome to bring your own agent, and I'm happy to work with them. <a href="https://www.ncrec.gov/Publications/Pubs" target="_blank" rel="noopener">How agency works in NC</a></p>
-    <p class="quiet" id="pick-hint" hidden>Pick a call or a visit above to see open times.</p>
     <div class="booking-panel" id="panel-call">
     <h2 id="call" class="booking-h">Pick a time for a 15-minute call</h2>
     <div class="booking-card" id="booking">
@@ -110,11 +111,9 @@
 <script>
 (function () {
   var panels = { call: document.getElementById('panel-call'), visit: document.getElementById('panel-visit') };
-  var hint = document.getElementById('pick-hint');
   var btns = document.querySelectorAll('[data-reveal]');
   function show(which, scroll) {
     Object.keys(panels).forEach(function (k) { panels[k].hidden = (k !== which); });
-    hint.hidden = !!which;
     btns.forEach(function (b) { b.setAttribute('aria-expanded', b.getAttribute('data-reveal') === which ? 'true' : 'false'); });
     if (which && scroll) document.getElementById(which).scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
@@ -135,7 +134,7 @@
 })();
 </script>
 <section class="section" style="padding-top:clamp(48px, 6vw, 80px)">
-  <div class="wrap split">
+  <div class="wrap split even">
     <div class="card-plain">
       <h3>Where to find me</h3>
       <p class="quiet small">Collins Ridge sales office: <a href="https://www.google.com/maps/dir/?api=1&amp;destination=116%20Sea%20Trail%20St%2C%20Hillsborough%2C%20NC%2027278" target="_blank" rel="noopener">116 Sea Trail St, Hillsborough, NC 27278</a></p>

@@ -611,3 +611,9 @@ button.next-path { font: inherit; color: inherit; text-align: left; cursor: poin
 .ask-tools { font-size: 14.5px; margin: 14px 0 4px; }
 .ask-tools a { font-weight: 600; text-underline-offset: 3px; text-decoration-color: var(--amber); }
 .ask-fine { font-size: 13px; color: var(--ink-2); margin: 6px 0 0; }
+
+/* Equal-height card pairs: buttons line up at the bottom */
+.split.even { align-items: stretch; }
+.split.even > .card-plain { display: flex; flex-direction: column; }
+.split.even > .card-plain > .actions { margin-top: auto; padding-top: 24px; }
+.agency-note.book-note { max-width: none; margin: clamp(20px, 2.5vw, 28px) 0 0; }
