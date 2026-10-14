@@ -60,7 +60,7 @@
       <h2 style="font-size:clamp(30px,3.6vw,42px)">Talk for 15 minutes</h2>
       <p>Tell me where you are. I'll tell you what I'd do, and whether Hillsborough even fits. Have a home to sell? <a class="textlink" href="/moving-plan">Get your moving plan</a> first, and send it with your text.</p>
       <div class="actions">
-        <a class="btn btn-amber" href="#call">Pick a call time</a>
+        <a class="btn btn-amber" href="#call" data-reveal="call" aria-controls="panel-call" aria-expanded="false">Pick a call time</a>
         <a class="btn btn-ink" href="sms:+19843282788?&amp;body=Hi%20Charles%2C%20I%27d%20like%20a%2015-minute%20call.%20Good%20times%20for%20me%3A%20" data-sms-body="Hi Charles, I'd like a 15-minute call. Good times for me: ">Text me instead</a>
       </div>
       <p class="quiet small" style="margin-top:14px">I'll call you at the number you give. My days off are Wednesday and Thursday. Text me anytime, and I'll get back to you on my next work day.</p>
@@ -73,7 +73,7 @@
         <li><div><b>We walk the homes that fit.</b><br><span class="quiet">The model, and homes ready now or being built.</span></div></li>
         <li><div><b>You leave with a short list.</b><br><span class="quiet">No pressure to decide that day.</span></div></li>
       </ol>
-      <div class="actions"><a class="btn btn-amber" href="#visit">Pick a visit time</a></div>
+      <div class="actions"><a class="btn btn-amber" href="#visit" data-reveal="visit" aria-controls="panel-visit" aria-expanded="false">Pick a visit time</a></div>
     </div>
   </div>
 </section>
@@ -81,20 +81,52 @@
 <section class="section" style="padding-top:clamp(40px, 5vw, 64px);padding-bottom:0">
   <div class="wrap">
     <p class="agency-note">Just so you know before we talk: I represent the builder as the seller. You're always welcome to bring your own agent, and I'm happy to work with them. <a href="https://www.ncrec.gov/Publications/Pubs" target="_blank" rel="noopener">How agency works in NC</a></p>
+    <p class="quiet" id="pick-hint" hidden>Pick a call or a visit above to see open times.</p>
+    <div class="booking-panel" id="panel-call">
     <h2 id="call" class="booking-h">Pick a time for a 15-minute call</h2>
     <div class="booking-card" id="booking">
       <iframe class="booking-frame" src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3cw7jvoA1zLMv16S7_4RMyfNGmYtW2w39wFeBwaVV0Msfd9rnRX8cDYqhESc7mQjj3Eqa9gGZm?gv=true" title="Pick a time for a 15-minute call with Charles Carper" loading="lazy"></iframe>
     </div>
     <p class="quiet small" style="margin-top:12px">Calendar not loading? <a href="https://calendar.app.google/d6v5iNEtpqDeTvEE9" target="_blank" rel="noopener">Open it in a new tab</a>, or call or text <a href="tel:+19843282788">984-328-2788</a>.</p>
+    </div>
 
+    <div class="booking-panel" id="panel-visit">
     <h2 id="visit" class="booking-h">Pick a time to visit</h2>
     <p class="quiet">Plan on about an hour at the Collins Ridge sales office.</p>
     <div class="booking-card">
       <iframe class="booking-frame" src="https://meetings-na2.hubspot.com/charles-carper?embed=true" title="Pick a time to visit Collins Ridge with Charles Carper" loading="lazy"></iframe>
     </div>
     <p class="quiet small" style="margin-top:12px">Calendar not loading? <a href="https://meetings-na2.hubspot.com/charles-carper" target="_blank" rel="noopener">Open it in a new tab</a>, or call or text <a href="tel:+19843282788">984-328-2788</a>.</p>
+    </div>
   </div>
 </section>
+<script>
+(function () {
+  var panels = { call: document.getElementById('panel-call'), visit: document.getElementById('panel-visit') };
+  var hint = document.getElementById('pick-hint');
+  var btns = document.querySelectorAll('[data-reveal]');
+  function show(which, scroll) {
+    Object.keys(panels).forEach(function (k) { panels[k].hidden = (k !== which); });
+    hint.hidden = !!which;
+    btns.forEach(function (b) { b.setAttribute('aria-expanded', b.getAttribute('data-reveal') === which ? 'true' : 'false'); });
+    if (which && scroll) document.getElementById(which).scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  btns.forEach(function (b) {
+    b.addEventListener('click', function (e) {
+      e.preventDefault();
+      var w = b.getAttribute('data-reveal');
+      show(w, true);
+      if (history.replaceState) history.replaceState(null, '', '#' + w);
+    });
+  });
+  var start = location.hash.replace('#', '');
+  show(panels[start] ? start : null, !!panels[start]);
+  window.addEventListener('hashchange', function () {
+    var h = location.hash.replace('#', '');
+    if (panels[h]) show(h, true);
+  });
+})();
+</script>
 <section class="section" style="padding-top:clamp(48px, 6vw, 80px)">
   <div class="wrap split">
     <div class="card-plain">
