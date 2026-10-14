@@ -67,7 +67,7 @@
       '<button class="lead-close x-close ask-close" type="button" aria-label="Close">&times;</button>' +
       '<h2 id="tp-h" style="font-size:30px">Text this from your phone</h2>' +
       '<p>On a computer, texting doesn’t work from the page. Send this to <b>' + PHONE_SHOW + '</b>. Edit it however you like.</p>' +
-      '<textarea class="tp-text" rows="5" style="width:100%;font:inherit;padding:12px;border:1.5px solid var(--rule);border-radius:6px">' + esc(body) + '</textarea>' +
+      '<textarea class="tp-text" rows="' + Math.max(5, body.split('\n').length + 1) + '" style="width:100%;font:inherit;padding:12px;border:1.5px solid var(--rule);border-radius:6px">' + esc(body) + '</textarea>' +
       '<div class="actions" style="margin-top:16px"><button class="btn btn-amber" type="button" data-tp="copy">Copy the text</button>' +
       (window.HubSpotConversations ? '<button class="btn btn-ink" type="button" data-tp="chat">Message me here instead</button>' : '') +
       '</div><p class="small quiet" role="status" data-tp-note style="margin-top:10px"></p></div>';
