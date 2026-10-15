@@ -198,14 +198,26 @@
     });
   }
 
+  var whereOf = function (a) { return a.closest('main') ? 'page' : a.closest('header') ? 'header' : a.closest('footer') ? 'footer' : 'other'; };
+  // The words the visitor actually saw (the bold line on cards, the visible half of the header button)
+  var labelOf = function (a) { var s = a.querySelector('b, .path-go') || a; return ((s.innerText || s.textContent || '') + '').replace(/\s+/g, ' ').trim().slice(0, 60); };
+  // One cta_click for every button-style link, so CTAs can be compared by their wording.
+  // Capture phase, so it still counts when a text link's own handler stops the click on a computer.
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a || !a.matches('.btn, .next-path, .path, .ask-opt, .toc-cta a')) return;
+    var href = a.getAttribute('href') || '';
+    var to = /^(tel|sms|mailto):/.test(href) ? href.split(':')[0] : href.split('?')[0].slice(0, 100);
+    track('cta_click', { cta_text: labelOf(a), cta_to: to, where: whereOf(a) });
+  }, true);
+
   // Conversion events: calls, texts, email, booking and finder clicks.
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[href]');
     if (!a) return;
-    var href = a.getAttribute('href') || '', where = a.closest('main') ? 'page' : a.closest('header') ? 'header' : a.closest('footer') ? 'footer' : 'other';
-    var label = (a.textContent || '').trim().slice(0, 60);
+    var href = a.getAttribute('href') || '', where = whereOf(a), label = labelOf(a);
     if (href.indexOf('tel:') === 0) track('click_call', { where: where });
-    else if (href.indexOf('sms:') === 0) track('click_text', { where: where });
+    else if (href.indexOf('sms:') === 0) track('click_text', { where: where, label: label });
     else if (href.indexOf('mailto:') === 0) track('click_email', { where: where });
     else if (/^\/book\b/.test(href)) track('click_book', { where: where, label: label });
     else if (/^\/match\b/.test(href)) track('click_finder', { where: where, label: label });
