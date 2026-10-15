@@ -589,7 +589,7 @@
       '<label class="field full">Phone <span class="hint">(optional)</span><input type="tel" name="phone" autocomplete="tel"></label></div>' +
       '<input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px">' +
       '<p class="hint" style="margin-top:12px">By sending this, you agree I may email you about your plan. If you add a phone number, you agree I may call or text you. Consent isn’t required to buy a home. Message and data rates may apply. Reply STOP to opt out. Unsubscribe anytime.</p>' +
-      '<div class="actions" style="margin-top:12px"><button class="btn btn-amber" type="submit">Send it to me</button></div>' +
+      '<div class="actions" style="margin-top:12px"><button class="btn btn-amber" type="submit">Email me my plan</button></div>' +
       '<p class="form-note" role="status" hidden></p>';
     container.appendChild(f);
     f.addEventListener('submit', function (e) {
@@ -749,9 +749,9 @@
     html += '</div></div>';
     html += '<section class="plan-next" aria-labelledby="pn-h"><h3 id="pn-h">Your next step</h3><p>I’ll look at your plan, tell you what I’d change, and show you the homes that fit it. No pressure.</p>';
     html += '<div class="next-paths">' +
-      '<a class="next-path primary" data-track="plan_text" data-sms-body="' + esc(mpText(a, code)) + '" href="' + esc(smsHref(mpText(a, code))) + '"><span class="who">Fastest</span><b>Text me this plan</b></a>' +
-      '<a class="next-path" data-track="plan_call" href="/book#call"><span class="who">Talk it through</span><b>Book a 15-minute call</b></a>' +
-      '<button class="next-path" type="button" data-email><span class="who">Keep a copy</span><b>Email me this plan</b></button>' +
+      '<a class="next-path primary" data-track="plan_text" data-sms-body="' + esc(mpText(a, code)) + '" href="' + esc(smsHref(mpText(a, code))) + '"><span class="who">Fastest, by text</span><b>Get my plan reviewed</b></a>' +
+      '<a class="next-path" data-track="plan_call" href="/book#call"><span class="who">Talk it through</span><b>Get my answers in 15 minutes</b></a>' +
+      '<button class="next-path" type="button" data-email><span class="who">Keep a copy</span><b>Email me my plan</b></button>' +
       '</div><div data-email-slot></div>';
     html += '<p class="small quiet" style="margin-top:14px">Or call <a href="tel:' + PHONE + '">' + PHONE_SHOW + '</a> · <button class="linkish" type="button" data-print>Print or save it</button> · <button class="linkish" type="button" data-restart>Start over</button></p></section>';
     html += '<p class="small quiet plan-fine">This is a starting plan from five answers, not legal, tax or lending advice. Program terms, rates and build dates change. Your lender, listing agent and purchase agreement set the real numbers and dates.</p>';
@@ -791,9 +791,9 @@
     var t = fpText(top, a);
     html += '<section class="plan-next" aria-labelledby="fn-h"><h3 id="fn-h">See them in person</h3><p>I’ll have the homes that match open when you get there, and tell you which ones are ready now, being built or starting soon.</p>';
     html += '<div class="next-paths">' +
-      '<a class="next-path primary" data-track="plans_text" data-sms-body="' + esc(t) + '" href="' + esc(smsHref(t)) + '"><span class="who">Fastest</span><b>Text me to walk these</b></a>' +
-      '<a class="next-path" href="/book#visit"><span class="who">Pick a time</span><b>Book a visit</b></a>' +
-      '<a class="next-path" href="/moving-plan"><span class="who">Have a home to sell?</span><b>Get your moving plan</b></a>' +
+      '<a class="next-path primary" data-track="plans_text" data-sms-body="' + esc(t) + '" href="' + esc(smsHref(t)) + '"><span class="who">Fastest, by text</span><b>Have these ready for my visit</b></a>' +
+      '<a class="next-path" href="/book#visit"><span class="who">Pick a time</span><b>See these in person</b></a>' +
+      '<a class="next-path" href="/moving-plan"><span class="who">Have a home to sell?</span><b>Get my moving plan</b></a>' +
       '</div>';
     html += '<p class="small quiet" style="margin-top:14px"><button class="linkish" type="button" data-print>Print or save these</button> · <button class="linkish" type="button" data-restart>Start over</button></p></section>';
     html += '<p class="small quiet plan-fine">Plan names and room counts come from the builder’s published plan information. Options, features and availability vary by homesite and change often. Ask me before you decide. Nothing here is an offer.</p>';
@@ -815,7 +815,7 @@
       resultType: function (a) { return movingPlan(a).type; },
       preset: { sell: function () { return { living: 'own_sell' }; }, rent: function () { return { living: 'rent' }; }, keep: function () { return { living: 'own_keep' }; } } });
     var fp = document.querySelector('[data-tool="floor-plans"]');
-    if (fp) runner(fp, { key: 'plans', steps: FP_STEPS, finishLabel: 'Show my two', render: renderFloorPlans,
+    if (fp) runner(fp, { key: 'plans', steps: FP_STEPS, finishLabel: 'Show my top two', render: renderFloorPlans,
       summary: function (a, code) { var r = matchPlans(a); return 'Floor plan match: ' + r[0].name + ', ' + r[1].name + '\nLink: https://charlescarper.com/floor-plans#' + code; },
       resultType: function (a) { return matchPlans(a)[0].name; } });
     document.querySelectorAll('[data-start-tool]').forEach(function (b) {

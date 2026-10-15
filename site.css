@@ -162,6 +162,7 @@ h3 { font-size: clamp(24px, 2.6vw, 30px); font-weight: 700; line-height: 1.05; }
   .js .nav .nav-book { display: inline-flex; order: 1; min-height: 40px; padding: 8px 14px; }
   .js .nav .nav-toggle { order: 2; }
   .nav-book .nb-more { display: none; }
+  .nav .nav-book .nb-short { display: inline; }
   html:not(.js) .nav-list { flex-wrap: wrap; }
 }
 @media (max-width: 420px) {
@@ -443,6 +444,7 @@ label.field { display: grid; gap: 6px; font-weight: 500; font-size: 15.5px; }
   .stack .schedule td:last-child { display: block; margin-top: 4px; color: var(--ink-2); font-size: 15px; }
 }
 .nav-book { gap: 0; }
+.nav-book .nb-short { display: none; }
 
 /* Guide pages */
 .guide-meta { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 14.5px; color: var(--line); margin-top: 18px; }

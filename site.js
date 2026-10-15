@@ -119,7 +119,7 @@
     '<div class="ask-opts">' + ASK.map(function (o) {
       return '<a class="ask-opt" data-ask="' + o.id + '" href="' + esc(smsHref(o.text + ' ' + o.ask)) + '">' + esc(o.label) + '</a>';
     }).join('') + '</div>' +
-    '<p class="ask-tools"><a href="/moving-plan">Get your moving plan</a> · <a href="/floor-plans">Find your floor plan</a></p>' +
+    '<p class="ask-tools"><a href="/moving-plan">Get my moving plan</a> · <a href="/floor-plans">Find my top two plans</a></p>' +
     '<p class="ask-fine">Opens a text to ' + PHONE_SHOW + '. I’m off Wednesdays and Thursdays and reply on my next work day.</p>';
   document.body.appendChild(askBtn); document.body.appendChild(panel);
 
