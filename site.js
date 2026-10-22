@@ -1,4 +1,4 @@
-// charlescarper.com — shared behavior: sticky header, mobile menu, chat links, realtor registration,
+// charlescarper.com: shared behavior. Sticky header, mobile menu, Ask Charles text links, agent registration,
 // and conversion events for Google Analytics.
 (function () {
   document.documentElement.classList.add('js');
@@ -92,15 +92,16 @@
   // If someone is on a plan or floor plan result, send the link with their text.
   var resultLink = function () {
     var h = location.hash || '';
-    if (/^\/moving-plan/.test(location.pathname) && h.indexOf('living=') > 0) return ' Here’s my plan: charlescarper.com/moving-plan' + h;
-    if (/^\/floor-plans/.test(location.pathname) && h.indexOf('stories=') > 0) return ' Here are my floor plan picks: charlescarper.com/floor-plans' + h;
+    if (/^\/plan\/sell-and-buy/.test(location.pathname) && h.indexOf('living=') > 0) return ' Here’s my plan: charlescarper.com/plan/sell-and-buy/' + h;
+    if (/^\/plan\/floor-plan-match/.test(location.pathname) && h.indexOf('stories=') > 0) return ' Here are my floor plan picks: charlescarper.com/plan/floor-plan-match/' + h;
     return '';
   };
 
   var ASK = [
     { id: 'sell', label: 'I have a home to sell first', text: 'Hi Charles, I have a home to sell and I’m thinking about buying new.', ask: 'Can you help me figure out the timing?' },
     { id: 'rent', label: 'I’m renting and ready to own', text: 'Hi Charles, I’m renting and thinking about buying new.', ask: 'My lease ends around: ' },
-    { id: 'see', label: 'I want to see homes', text: 'Hi Charles, I’d like to see homes at Collins Ridge.', ask: 'Good days and times for me: ' },
+    { id: 'see', label: 'I want to see homes', text: 'Hi Charles, I’d like to see some homes.', ask: 'Good days and times for me: ' },
+    { id: 'list', label: 'Send me the move-in ready list', text: 'Hi Charles, can you send me your move-in ready list?', ask: 'What I’m looking for: ' },
     { id: 'call', label: 'Set up a 15-minute call', text: 'Hi Charles, I’d like a 15-minute call.', ask: 'Good times for me: ' },
     { id: 'plan', label: 'I have a floor plan question', text: 'Hi Charles, I have a floor plan question.', ask: 'Which plan, and what I’d like to know: ' },
     { id: 'agent', label: 'I’m an agent with a buyer', text: 'Hi Charles, I’m an agent with a buyer who may fit Collins Ridge.', ask: 'My name and brokerage: ' }
@@ -119,7 +120,7 @@
     '<div class="ask-opts">' + ASK.map(function (o) {
       return '<a class="ask-opt" data-ask="' + o.id + '" href="' + esc(smsHref(o.text + ' ' + o.ask)) + '">' + esc(o.label) + '</a>';
     }).join('') + '</div>' +
-    '<p class="ask-tools"><a href="/moving-plan">Get my moving plan</a> · <a href="/floor-plans">Find my top two plans</a></p>' +
+    '<p class="ask-tools"><a href="/plan/sell-and-buy/">Get my sell &amp; buy plan</a> · <a href="/move-in-ready/">See move-in ready homes</a></p>' +
     '<p class="ask-fine">Opens a text to ' + PHONE_SHOW + '. I’m off Wednesdays and Thursdays and reply on my next work day.</p>';
   document.body.appendChild(askBtn); document.body.appendChild(panel);
 
@@ -160,7 +161,7 @@
     });
   }
 
-  // Realtor registration: sends to HubSpot (same portal and form as the floor plan finder).
+  // Agent registration: sends to HubSpot (same portal and form as the site's other forms).
   var reg = document.querySelector('form[data-realtor-register]');
   if (reg) {
     reg.addEventListener('submit', function (e) {
@@ -205,7 +206,7 @@
   // Capture phase, so it still counts when a text link's own handler stops the click on a computer.
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[href]');
-    if (!a || !a.matches('.btn, .next-path, .path, .ask-opt, .toc-cta a')) return;
+    if (!a || !a.matches('.btn, .next-path, .tile, .tool-tile, .arrow, .ask-opt, .toc-cta a')) return;
     var href = a.getAttribute('href') || '';
     var to = /^(tel|sms|mailto):/.test(href) ? href.split(':')[0] : href.split('?')[0].slice(0, 100);
     track('cta_click', { cta_text: labelOf(a), cta_to: to, where: whereOf(a) });
@@ -219,9 +220,9 @@
     if (href.indexOf('tel:') === 0) track('click_call', { where: where });
     else if (href.indexOf('sms:') === 0) track('click_text', { where: where, label: label });
     else if (href.indexOf('mailto:') === 0) track('click_email', { where: where });
-    else if (/^\/book\b/.test(href)) track('click_book', { where: where, label: label });
-    else if (/^\/match\b/.test(href)) track('click_finder', { where: where, label: label });
-    else if (/^\/collins-ridge-plans\//.test(href)) track('click_plans', { where: where, label: label });
+    else if (/^\/visit\//.test(href)) track('click_book', { where: where, label: label });
+    else if (/^\/plan\//.test(href)) track('click_tool', { where: where, label: label });
+    else if (/^\/buyers\//.test(href)) track('click_situation', { where: where, label: label });
   });
   // Email links assembled on click, so the address isn't in the page source
   document.querySelectorAll('[data-mail-u]').forEach(function (a) {

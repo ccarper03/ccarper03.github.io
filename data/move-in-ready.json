@@ -1,0 +1,62 @@
+{
+  "asOf": "2026-10-21",
+  "source": "https://www.drhorton.com/north-carolina/raleigh-durham/inventory",
+  "sample": true,
+  "note": "Sample list for the rebuild preview. The Monday refresh replaces it: keep finished and almost-finished (M9+) homes across Raleigh-Durham, plus every Collins Ridge home. Prices are drhorton.com list prices as of asOf.",
+  "homes": [
+    {
+      "community": "Collins Ridge",
+      "town": "Hillsborough",
+      "plan": "Calhoun",
+      "price": 474299,
+      "beds": 4,
+      "baths": 3.5,
+      "sqft": 2628,
+      "garage": 2,
+      "stories": 2,
+      "type": "single-family",
+      "rearLoad": true,
+      "status": "ready",
+      "readyBy": null,
+      "address": null,
+      "url": null,
+      "photo": null
+    },
+    {
+      "community": "Baker Farm",
+      "town": "Youngsville",
+      "plan": null,
+      "price": 415790,
+      "beds": 4,
+      "baths": 2.5,
+      "sqft": 2824,
+      "garage": 2,
+      "stories": 2,
+      "type": "single-family",
+      "rearLoad": false,
+      "status": "ready",
+      "readyBy": null,
+      "address": null,
+      "url": null,
+      "photo": null
+    },
+    {
+      "community": "Anderson Farm",
+      "town": "Wendell",
+      "plan": null,
+      "price": 404340,
+      "beds": 5,
+      "baths": 3,
+      "sqft": 2511,
+      "garage": 2,
+      "stories": 2,
+      "type": "single-family",
+      "rearLoad": false,
+      "status": "ready",
+      "readyBy": null,
+      "address": null,
+      "url": null,
+      "photo": null
+    }
+  ]
+}

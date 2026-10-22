@@ -1,5 +1,5 @@
-// charlescarper.com: the Moving Plan (5 questions) and the Floor Plan Match (5 taps).
-// Nothing a visitor taps is stored or sent anywhere unless they choose to text or email it.
+// charlescarper.com: the Sell & Buy Planner (/plan/sell-and-buy/) and the Floor Plan Match (/plan/floor-plan-match/).
+// Nothing a visitor taps is sent anywhere unless they ask for their full plan (forms.js ccGate) or text it.
 // Analytics get only the step number and the result type, never the answers.
 (function (root) {
   'use strict';
@@ -35,7 +35,7 @@
   ];
 
   var MP_STEPS = [
-    { id: 'living', q: 'Where do you live now?',
+    { id: 'living', q: 'Do you own or rent now?',
       why: 'This shapes the whole plan. Your answers stay on your screen.',
       opts: [
         { v: 'own_sell', c: 's', label: "I own, and I'd sell it to buy" },
@@ -53,12 +53,19 @@
         { v: 'contract', c: 'c', label: "It's under contract" }
       ] },
     { id: 'carry', when: function (a) { return a.living === 'own_sell'; },
-      q: 'Could you buy the new home before yours sells?',
-      why: "A lender counts your current house payment until your home is sold, or under contract with your buyer’s loan approved. This is the question that decides your path.",
+      q: 'Could you pay two house payments for a few months?',
+      why: "Buying first works well for a lot of people. A lender counts your current house payment until your home is sold, or under contract with your buyer’s loan approved.",
       opts: [
-        { v: 'yes', c: 'y', label: 'Yes. I could carry both payments and the down payment' },
-        { v: 'need_sale', c: 'n', label: 'No. I need the money from my sale first' },
-        { v: 'unsure', c: 'u', label: "Not sure. I haven't asked a lender" }
+        { v: 'yes', c: 'y', label: 'Yes, I could pay both for a few months' },
+        { v: 'unsure', c: 'u', label: "Maybe. I haven't asked a lender yet" },
+        { v: 'need_sale', c: 'n', label: 'No. I need the money from my sale first' }
+      ] },
+    { id: 'agent', when: function (a) { return a.living === 'own_sell'; },
+      q: 'Do you have a listing agent yet?',
+      why: "I don't list homes. A good listing agent and I can line up your sale with the build.",
+      opts: [
+        { v: 'yes', c: 'y', label: 'Yes' },
+        { v: 'no', c: 'n', label: 'Not yet' }
       ] },
     { id: 'keep_use', when: function (a) { return a.living === 'own_keep'; },
       q: 'What would you do with your current home?',
@@ -78,7 +85,7 @@
       ] },
     { id: 'lease', when: function (a) { return a.living === 'rent'; },
       q: 'When does your lease end?',
-      why: 'Your lease date picks which homes fit: ready now, being built or starting soon.',
+      why: 'Your lease date picks which homes fit: move-in ready, being built or not started yet.',
       opts: [
         { v: 'soon', c: 's', label: 'Within 3 months' },
         { v: 'mid', c: 'm', label: '3 to 6 months' },
@@ -87,7 +94,7 @@
       ] },
     { id: 'timing', when: function (a) { return a.living !== 'rent'; },
       q: 'When do you want to be moved in?',
-      why: 'A home that’s ready now, being built or starting soon. Your timing picks the one that fits.',
+      why: 'A home that’s move-in ready, being built or not started yet. Your timing picks the one that fits.',
       opts: TIMING_OPTS },
     { id: 'loan', when: function (a) { return a.living === 'rent' || a.living === 'other'; },
       q: 'Where are you with a lender?',
@@ -109,10 +116,10 @@
   // Moving Plan: the plan
   // ---------------------------------------------------------------------------
   var STAGE = {
-    ready: { name: 'Ready now', text: 'a home that’s ready now or close to done' },
+    ready: { name: 'Move-in ready', text: 'a home that’s move-in ready or almost done' },
     building: { name: 'Being built', text: 'a home that’s already being built' },
-    starting: { name: 'Starting soon', text: 'a home that’s starting soon (plan on several months to build)' },
-    any: { name: 'Any of the three', text: 'whichever home you like best: ready now, being built or starting soon' }
+    starting: { name: 'Not started yet', text: 'a home that hasn’t started yet (plan on several months to build)' },
+    any: { name: 'Any of the three', text: 'whichever home you like best: move-in ready, being built or not started yet' }
   };
   function stageFromTiming(t, flexDefault) {
     return t === 'soon' ? 'ready' : t === 'mid' ? 'building' : t === 'later' ? 'starting' : (flexDefault || 'any');
@@ -134,9 +141,9 @@
       watch: 'Your home could take longer to sell than you expect. Know how many months of two payments you can carry before you start.'
     },
     together: {
-      title: 'Line up both closings with a home that’s starting soon.',
+      title: 'Line up both closings with a home that hasn’t started yet.',
       sum: 'Pick a home early in the build. Sell yours while it goes up. Aim both closings at the same week and move once.',
-      backup: 'Pick a home that’s starting soon, sell yours during the build, and close both the same week.',
+      backup: 'Pick a home that hasn’t started yet, sell yours during the build, and close both the same week.',
       serves: ['once', 'money', 'certain'],
       watch: 'Build dates move. Weather, inspections and materials can push them. Leave a few weeks of room, and know where you’d stay if the dates split.'
     },
@@ -149,10 +156,10 @@
     },
     sellfirst: {
       title: 'Sell first, then buy with your money in hand.',
-      sum: 'Sell your home first. Then buy a home that’s ready now, with the money from your sale already in hand.',
-      backup: 'Sell first, ask your buyer for a rent-back, and buy a home that’s ready now.',
+      sum: 'Sell your home first. Then buy a home that’s move-in ready, with the money from your sale already in hand.',
+      backup: 'Sell first, ask your buyer for a rent-back, and buy a home that’s move-in ready.',
       serves: ['certain', 'money'],
-      watch: 'If you sell before your next home is lined up, you might move twice. A rent-back from your buyer, or a home that’s ready now, keeps that gap short.'
+      watch: 'If you sell before your next home is lined up, you might move twice. A rent-back from your buyer, or a home that’s move-in ready, keeps that gap short.'
     },
     contingency: {
       title: 'Buy with a home-sale contingency.',
@@ -297,7 +304,7 @@
       summary: 'Keep your current home and buy the new one. The whole plan rests on one thing: qualifying with both payments.',
       stage: stage, why: why, steps: steps,
       watch: 'If the lender can’t count the rent, you’ll need to qualify with both full payments. Check that before you fall for a home.',
-      backup: 'If the numbers don’t work, selling may. Take the plan again and pick “I’d sell it.”',
+      backup: 'If the numbers don’t work, selling may. Take the planner again and pick “I’d sell it.”',
       lender: ['Will you count rent from my current home? What do you need to see?', 'Can I qualify with both payments if you don’t count the rent?', 'How much do I need in savings with two homes?']
     };
   }
@@ -317,7 +324,7 @@
 
     var title = stage === 'any' ? 'Pick the home first. Your timing has room.'
       : renter ? 'Line up your move with your lease.' : 'Pick the home that fits your timing.';
-    var summary = stage === 'any' ? 'Since your timing is flexible, you can pick from homes that are ready now, being built or starting soon.'
+    var summary = stage === 'any' ? 'Since your timing is flexible, you can pick from homes that are move-in ready, being built or not started yet.'
       : 'Your timing points to ' + STAGE[stage].text + '. That keeps your move and your ' + (renter ? 'lease' : 'plans') + ' lined up.';
     var why = [
       renter ? (a.lease === 'flexible' ? 'Your lease is flexible, so you can move when the right home is ready.' : 'Your lease ends ' + WHEN_SAY[a.lease] + '.')
@@ -326,11 +333,11 @@
       { timing: 'Timing matters most to you, so the plan is built around your date.', payment: 'A payment you feel good about matters most. Ask your lender for the payment they’d recommend, not just the most you qualify for.', choice: 'More choice matters most to you. A little flexibility on timing opens up the most homes.', easy: 'You want it simple. Fewer moving parts is the goal.' }[a.priority]
     ];
     var watch = renter && a.lease === 'soon' && a.loan === 'none'
-      ? 'Three months is tight if you haven’t talked to a lender. Start there this week, and look at homes that are ready now.'
+      ? 'Three months is tight if you haven’t talked to a lender. Start there this week, and look at move-in ready homes.'
       : renter ? 'Don’t give notice on your lease until your closing date is firm. Build dates move.'
-      : 'Build dates move. If your date is firm, a home that’s ready now or almost done is the safer pick.';
+      : 'Build dates move. If your date is firm, a move-in ready home is the safer pick.';
     var backup = renter && a.lease === 'soon' ? 'If the timing gets tight, ask your landlord about a short month-to-month extension.'
-      : renter ? 'If a home that’s ready now is the one, you could move sooner. Know what it costs to end your lease early first.'
+      : renter ? 'If a move-in ready home is the one, you could move sooner. Know what it costs to end your lease early first.'
       : 'If the home you love is further out, plan a short stay and pick the home anyway.';
     var lender = ['What monthly payment would you recommend for me, not just the most I qualify for?', 'Are there down payment programs I qualify for?', 'How long is my approval good for, and when should I lock my rate?'];
     if (a.priority === 'payment') lender[2] = 'If the builder offers an incentive, how would it change my payment or my cash to close?';
@@ -653,7 +660,7 @@
       var later = function () { setTimeout(function () { if (idx === at && !stage.hidden) next(); }, 220); };
       form.addEventListener('change', function (e) {
         var t = e.target;
-        if (!started) { started = true; track(cfg.key + '_start'); }
+        if (!started) { started = true; track(cfg.key + '_start'); track('tool_start', { tool: cfg.key }); }
         if (t.name === name + '-also') { a[s.also.id] = t.value; }
         else if (s.multi) {
           var picked = [].slice.call(form.querySelectorAll('input[name="' + name + '"]:checked')).map(function (x) { return x.value; });
@@ -695,16 +702,21 @@
       stage.hidden = true; result.hidden = false;
       result.innerHTML = cfg.render(a, code);
       bindTextLinks(result);
-      var emailBtn = result.querySelector('[data-email]');
-      if (emailBtn) emailBtn.addEventListener('click', function () {
-        emailBtn.hidden = true; emailForm(result.querySelector('[data-email-slot]'), cfg.summary(a, code), cfg.key);
+      var gate = result.querySelector('[data-mp-gate]'), locked = result.querySelector('[data-mp-locked]');
+      if (gate && root.ccGate) root.ccGate(gate.querySelector('[data-gate-form]'), {
+        tool: cfg.key, label: 'Send me my plan', summary: function () { return cfg.summary(a, code); },
+        onUnlock: function (o) {
+          gate.hidden = true; locked.hidden = false; bindTextLinks(locked);
+          if (o && o.first) { var n = document.createElement('p'); n.className = 'form-note ok'; n.textContent = 'Thanks, ' + o.first + '. Here’s your full plan. I’ll send you a copy too.'; locked.insertBefore(n, locked.firstChild); }
+        }
       });
+      if (cfg.onResult) cfg.onResult(a);
       var printBtn = result.querySelector('[data-print]');
       if (printBtn) printBtn.addEventListener('click', function () { track(cfg.key + '_print'); root.print(); });
       result.querySelectorAll('[data-restart]').forEach(function (b) {
         b.addEventListener('click', function () { a = {}; idx = 0; try { history.replaceState(null, '', location.pathname); } catch (e) {} renderStep(); focusLegend(); });
       });
-      track(cfg.key + '_result', { result: cfg.resultType(a) });
+      track(cfg.key + '_result', { result: cfg.resultType(a) }); track('tool_finish', { tool: cfg.key });
       var h = result.querySelector('h2'); if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
       el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
@@ -725,36 +737,66 @@
   function mpSummary(a, code) {
     var p = movingPlan(a), bits = [];
     activeSteps(MP_STEPS, a).forEach(function (s) { bits.push(labelOf(MP_STEPS, s.id, a[s.id], a)); });
-    return 'Moving plan: ' + p.title + '\nMy answers: ' + bits.join(' / ') + '\nLink: https://charlescarper.com/moving-plan#' + code;
+    return 'Tool: Sell & Buy Planner\nResult: ' + p.title + '\nAnswers: ' + bits.join(' / ') + '\nLink: https://charlescarper.com/plan/sell-and-buy/#' + code;
   }
   function mpText(a, code) {
     var p = movingPlan(a);
-    return ['Hi Charles, I used your moving plan.',
+    return ['Hi Charles, I used your Sell & Buy Planner.',
       'My path: ' + p.title.replace(/\.$/, ''),
-      'My plan: charlescarper.com/moving-plan#' + code,
+      'My plan: charlescarper.com/plan/sell-and-buy/#' + code,
       'Can we talk it through?'].join('\n');
   }
 
+  // Key dates for the full plan, counted from today.
+  var TARGET_MONTHS = { soon: 2, mid: 4.5, later: 9, flexible: 6 };
+  function addMonths(m) { var d = new Date(); d.setDate(1); d.setMonth(d.getMonth() + Math.round(m)); return d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' }); }
+  function keyDates(a, p) {
+    var t = a.living === 'rent' ? a.lease : a.timing, m = TARGET_MONTHS[t] || 6, out = [['Move in', 'Around ' + addMonths(m)]];
+    var path = (p.type || '').replace('sell-', '');
+    if (path === 'together') out.unshift(['List your home', 'Around ' + addMonths(Math.max(1, m / 2))]);
+    else if (path === 'sellfirst' || path === 'contingency') out.unshift(['List your home', a.sale === 'listed' ? 'It’s listed. Keep it priced to sell.' : 'This month']);
+    else if (path === 'buyfirst' || path === 'bridge') out.push(['List your old home', 'Right after you move, around ' + addMonths(m + 0.5)]);
+    out.unshift(['Talk to a lender', 'This week']);
+    return out;
+  }
+  function agentQs(a) {
+    var q = ['What would you list my home for, and how long are homes like mine taking to sell right now?',
+      'Can you time my listing to a build date, and plan for a rent-back if I need one?',
+      'What should I fix, and what should I skip, before I list?'];
+    return q;
+  }
+
   function renderMovingPlan(a, code) {
-    var p = movingPlan(a), html = '';
+    var p = movingPlan(a), html = '', owner = a.living === 'own_sell';
     html += '<div class="plan-result">';
     html += '<p class="eyebrow">' + esc(p.kicker) + '</p><h2>' + esc(p.title) + '</h2><p class="lead">' + esc(p.summary) + '</p>';
     html += '<div class="plan-grid"><div>';
     html += '<h3>Why this fits you</h3>' + list(p.why, 'plan-why');
-    html += '<h3>Your timeline</h3><ol class="plan-timeline">' + p.steps.map(function (s) { return '<li><b>' + esc(s.when) + '</b><span>' + esc(s.what) + '</span></li>'; }).join('') + '</ol>';
     html += '</div><div>';
-    html += '<div class="plan-box"><h3>Watch out for</h3><p>' + esc(p.watch) + '</p></div>';
+    html += '<h3>Your timeline</h3><ol class="plan-timeline">' + p.steps.map(function (s) { return '<li><b>' + esc(s.when) + '</b><span>' + esc(s.what) + '</span></li>'; }).join('') + '</ol>';
+    html += '</div></div>';
+    if (owner) html += '<p style="margin-top:20px"><a class="arrow" href="#numbers">See the numbers for all three ways</a></p>';
+    if (a.living === 'rent') html += '<p style="margin-top:20px"><a class="arrow" href="/plan/lease-to-keys/">Get exact dates in the Lease-to-Keys Planner</a></p>';
+    // The unlock
+    html += '<div class="gate" data-mp-gate><h3>Want the full plan? I’ll send it to you.</h3><p class="quiet small">Your key dates, your backup plan, what to ask your lender' + (owner ? ' and your listing agent' : '') + ', and a 15-minute review with me.</p><div data-gate-form></div></div>';
+    // The full plan
+    html += '<div class="locked unlocked" data-mp-locked hidden><h2 style="font-size:32px;margin-bottom:12px">Your full plan</h2><div class="plan-grid"><div>';
+    html += '<h3>Key dates</h3><ol class="plan-timeline">' + keyDates(a, p).map(function (d) { return '<li><b>' + esc(d[0]) + '</b><span>' + esc(d[1]) + '</span></li>'; }).join('') + '</ol>';
+    html += '<div class="plan-box" style="margin-top:20px"><h3>Watch out for</h3><p>' + esc(p.watch) + '</p></div>';
     html += '<div class="plan-box"><h3>Your backup plan</h3><p>' + esc(p.backup) + '</p></div>';
-    html += '<div class="plan-box"><h3>Ask your lender</h3>' + list(p.lender) + '</div>';
+    html += '</div><div>';
+    html += '<div class="plan-box"><h3>Ask your lender</h3>' + list(p.lender) + '<p class="small" style="margin-top:8px">Laura Hall at DHI Mortgage can help, or use any lender you like.</p></div>';
+    if (owner) html += '<div class="plan-box"><h3>Ask your listing agent</h3>' + list(agentQs(a)) + (a.agent === 'no' ? '<p class="small" style="margin-top:8px">Don’t have one yet? Pick an agent you trust. I don’t list homes, but I’ll work with yours on the timing.</p>' : '') + '</div>';
     html += '</div></div>';
     html += '<section class="plan-next" aria-labelledby="pn-h"><h3 id="pn-h">Your next step</h3><p>I’ll look at your plan, tell you what I’d change, and show you the homes that fit it. No pressure.</p>';
     html += '<div class="next-paths">' +
-      '<a class="next-path primary" data-track="plan_text" data-sms-body="' + esc(mpText(a, code)) + '" href="' + esc(smsHref(mpText(a, code))) + '"><span class="who">Fastest, by text</span><b>Get my plan reviewed</b></a>' +
-      '<a class="next-path" data-track="plan_call" href="/book#call"><span class="who">Talk it through</span><b>Get my answers in 15 minutes</b></a>' +
-      '<button class="next-path" type="button" data-email><span class="who">Keep a copy</span><b>Email me my plan</b></button>' +
-      '</div><div data-email-slot></div>';
-    html += '<p class="small quiet" style="margin-top:14px">Or call <a href="tel:' + PHONE + '">' + PHONE_SHOW + '</a> · <button class="linkish" type="button" data-print>Print or save it</button> · <button class="linkish" type="button" data-restart>Start over</button></p></section>';
-    html += '<p class="small quiet plan-fine">This is a starting plan from five answers, not legal, tax or lending advice. Program terms, rates and build dates change. Your lender, listing agent and purchase agreement set the real numbers and dates.</p>';
+      '<a class="next-path primary" href="/visit/"><span class="who">Bring your plan</span><b>Book a visit</b></a>' +
+      '<a class="next-path" data-track="plan_call" href="/visit/#call"><span class="who">Talk it through</span><b>A 15-minute review</b></a>' +
+      '<a class="next-path" data-track="plan_text" data-sms-body="' + esc(mpText(a, code)) + '" href="' + esc(smsHref(mpText(a, code))) + '"><span class="who">Fastest, by text</span><b>Text me my plan</b></a>' +
+      '</div>';
+    html += '<p class="small quiet" style="margin-top:14px"><a href="/move-in-ready/">See move-in ready homes</a> · <a href="' + (a.living === 'rent' ? '/buyers/renting/' : '/buyers/home-to-sell/') + '">' + (a.living === 'rent' ? 'I’m renting' : 'I have a home to sell') + '</a> · <button class="linkish" type="button" data-print>Print or save it</button></p></section></div>';
+    html += '<p class="small quiet" style="margin-top:14px"><button class="linkish" type="button" data-restart>Start over</button></p>';
+    html += '<p class="small quiet plan-fine">This is a starting plan from your answers, not legal, tax or lending advice. Program terms, rates and build dates change. Your lender, listing agent and purchase agreement set the real numbers and dates.</p>';
     html += '</div>';
     return html;
   }
@@ -789,14 +831,14 @@
     }).join('') + '</div>';
     if (also) html += '<p class="quiet" style="margin-top:18px">Also worth a look: the <b>' + esc(also.name) + '</b>.</p>';
     var t = fpText(top, a);
-    html += '<section class="plan-next" aria-labelledby="fn-h"><h3 id="fn-h">See them in person</h3><p>I’ll have the homes that match open when you get there, and tell you which ones are ready now, being built or starting soon.</p>';
+    html += '<section class="plan-next" aria-labelledby="fn-h"><h3 id="fn-h">See them in person</h3><p>I’ll have the homes that match open when you get there, and tell you which ones are move-in ready, being built or not started yet.</p>';
     html += '<div class="next-paths">' +
       '<a class="next-path primary" data-track="plans_text" data-sms-body="' + esc(t) + '" href="' + esc(smsHref(t)) + '"><span class="who">Fastest, by text</span><b>Have these ready for my visit</b></a>' +
-      '<a class="next-path" href="/book#visit"><span class="who">Pick a time</span><b>See these in person</b></a>' +
-      '<a class="next-path" href="/moving-plan"><span class="who">Have a home to sell?</span><b>Get my moving plan</b></a>' +
+      '<a class="next-path" href="/visit/?home=' + encodeURIComponent(top[0].name + ' and ' + top[1].name + ' plans at Collins Ridge') + '"><span class="who">Pick a time</span><b>See these in person</b></a>' +
+      '<a class="next-path" href="/plan/sell-and-buy/"><span class="who">Have a home to sell?</span><b>Get my sell &amp; buy plan</b></a>' +
       '</div>';
     html += '<p class="small quiet" style="margin-top:14px"><button class="linkish" type="button" data-print>Print or save these</button> · <button class="linkish" type="button" data-restart>Start over</button></p></section>';
-    html += '<p class="small quiet plan-fine">Plan names and room counts come from the builder’s published plan information. Options, features and availability vary by homesite and change often. Ask me before you decide. Nothing here is an offer.</p>';
+    html += '<p class="small quiet plan-fine">Plan names and room counts come from D.R. Horton’s published plan information. Options, features and availability vary by homesite and change often. Ask me before you decide. Nothing here is an offer.</p>';
     html += '</div>';
     return html;
   }
@@ -811,12 +853,14 @@
   function boot() {
     bindTextLinks(document.querySelector('main') || document);
     var mp = document.querySelector('[data-tool="moving-plan"]');
-    if (mp) runner(mp, { key: 'plan', steps: MP_STEPS, finishLabel: 'Show my plan', render: renderMovingPlan, summary: mpSummary,
+    if (mp) runner(mp, { key: 'sell_and_buy', steps: MP_STEPS, finishLabel: 'Show my plan', render: renderMovingPlan, summary: mpSummary,
       resultType: function (a) { return movingPlan(a).type; },
+      onResult: function (a) { try { root.dispatchEvent(new CustomEvent('cc:path', { detail: { path: (movingPlan(a).type || '').replace('sell-', '') } })); } catch (e) {} },
       preset: { sell: function () { return { living: 'own_sell' }; }, rent: function () { return { living: 'rent' }; }, keep: function () { return { living: 'own_keep' }; } } });
     var fp = document.querySelector('[data-tool="floor-plans"]');
-    if (fp) runner(fp, { key: 'plans', steps: FP_STEPS, finishLabel: 'Show my top two', render: renderFloorPlans,
-      summary: function (a, code) { var r = matchPlans(a); return 'Floor plan match: ' + r[0].name + ', ' + r[1].name + '\nLink: https://charlescarper.com/floor-plans#' + code; },
+    if (fp) runner(fp, { key: 'floor_plan_match', steps: FP_STEPS, finishLabel: 'Show my top two', render: renderFloorPlans,
+      preset: { one: function () { return { stories: 'one' }; }, main: function () { return { stories: 'main' }; } },
+      summary: function (a, code) { var r = matchPlans(a); return 'Floor plan match: ' + r[0].name + ', ' + r[1].name + '\nLink: https://charlescarper.com/plan/floor-plan-match/#' + code; },
       resultType: function (a) { return matchPlans(a)[0].name; } });
     document.querySelectorAll('[data-start-tool]').forEach(function (b) {
       b.addEventListener('click', function (e) {
