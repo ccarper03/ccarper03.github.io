@@ -192,7 +192,7 @@
   }
   function loadHomes(maxPrice) {
     var slot = document.querySelector('[data-bp-homes]'); if (!slot) return;
-    fetch('/data/move-in-ready.json').then(function (x) { return x.json(); }).then(function (d) {
+    fetch((window.CC_ROOT || '/') + 'data/move-in-ready.json').then(function (x) { return x.json(); }).then(function (d) {
       var list = d.homes.filter(function (h) { return h.price <= maxPrice * 1.02; }).sort(function (a, b) { return a.price - b.price; }).slice(0, 4);
       if (!list.length) { slot.innerHTML = '<p>None on this week\'s list yet. <a href="/move-in-ready/">Get the Monday list</a>, and you\'ll see new ones first.</p>'; return; }
       slot.innerHTML = '<ul class="links-list">' + list.map(function (h) {

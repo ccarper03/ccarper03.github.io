@@ -15,6 +15,7 @@
 
   // contact: { email, first, last, phone }, message: plain text for Charles
   function ccSubmit(contact, message) {
+    if (root.CC_PREVIEW) return Promise.resolve({ ok: true, preview: true }); // preview builds never send
     var fields = [{ name: 'email', value: contact.email }, { name: 'message', value: message }];
     if (contact.first) fields.push({ name: 'firstname', value: contact.first });
     if (contact.last) fields.push({ name: 'lastname', value: contact.last });
