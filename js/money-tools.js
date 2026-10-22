@@ -194,7 +194,7 @@
     var slot = document.querySelector('[data-bp-homes]'); if (!slot) return;
     fetch((window.CC_ROOT || '/') + 'data/move-in-ready.json').then(function (x) { return x.json(); }).then(function (d) {
       var list = d.homes.filter(function (h) { return h.price <= maxPrice * 1.02; }).sort(function (a, b) { return a.price - b.price; }).slice(0, 4);
-      if (!list.length) { slot.innerHTML = '<p>None on this week\'s list yet. <a href="/move-in-ready/">Get the Monday list</a>, and you\'ll see new ones first.</p>'; return; }
+      if (!list.length) { slot.innerHTML = '<p>None on this week\'s list yet. <a href="/move-in-ready/">Get the weekly list</a>, and you\'ll see new ones first.</p>'; return; }
       slot.innerHTML = '<ul class="links-list">' + list.map(function (h) {
         var label = (h.plan ? h.plan + ' at ' : '') + h.community + ', ' + h.town;
         return '<li><a href="/visit/?home=' + encodeURIComponent(label) + '">' + esc(label) + '<span>' + money(h.price) + ' as of ' + esc(d.asOf) + ' · ' + h.beds + ' bed · ' + h.baths + ' bath</span></a></li>';
@@ -262,7 +262,7 @@
       '<h3>Your dated plan</h3><ol class="plan-timeline">' + steps.map(function (s) { return '<li><b>' + esc(s[0]) + '</b><span>' + esc(s[1]) + '</span></li>'; }).join('') + '</ol>' +
       '<h3 style="margin-top:24px">What a miss would cost</h3>' + cost + (cheaper ? '<p style="margin-top:10px">' + cheaper + '</p>' : '') + '</div><div>' +
       '<div class="plan-box"><h3>Homes that fit your window</h3><p>' + (r.stage === 'ready'
-        ? '<a href="/move-in-ready/">See move-in ready homes</a>. They\'re finished or almost finished, updated every Monday.'
+        ? '<a href="/move-in-ready/">See move-in ready homes</a>. They\'re finished or almost finished, updated weekly.'
         : 'Collins Ridge has homes being built and homes that haven\'t started yet. <a href="/collins-ridge/">See Collins Ridge</a>, or <a href="/move-in-ready/">see move-in ready homes</a>.') + '</p></div>' +
       lenderBox() +
       '<div class="plan-box"><h3>Watch out for</h3><p>Build dates can move. Don\'t give notice on your lease until your closing date is firm.</p></div></div></div>' +

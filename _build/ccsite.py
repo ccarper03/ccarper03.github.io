@@ -235,9 +235,9 @@ def tool_tiles(keys):
 
 
 def signup(where='home'):
-    """The Monday move-in ready list. Email only, per the Page map."""
+    """The weekly move-in ready list sign-up. Email only, per the Page map."""
     return ('<form class="card brass-top inline-form" data-signup="monday-list" data-where="' + where + '" novalidate>'
-            '<div class="intro"><b>New homes get added every Monday.</b><span>Want to see them first? I\'ll email you the list.</span></div>'
+            '<div class="intro"><b>Get this list once a week.</b><span>I\'ll email it to you each time I update it.</span></div>'
             '<label class="field">First name<input type="text" name="first" autocomplete="given-name"></label>'
             '<label class="field">Email<input type="email" name="email" autocomplete="email" required></label>'
             '<input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">'

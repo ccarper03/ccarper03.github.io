@@ -35,7 +35,7 @@ def home():
 <section class="section" id="homes">
   <div class="wrap">
     <div class="head-row">
-      <div><h2>Move-in ready homes</h2><p class="quiet">D.R. Horton homes around Raleigh-Durham that are finished or almost finished. I update this list every Monday.</p></div>
+      <div><h2>Move-in ready homes</h2><p class="quiet">D.R. Horton homes around Raleigh-Durham that are finished or almost finished. I update this list weekly. Homes can sell before the list catches up, so text me to check one before you come.</p></div>
       <a class="arrow" href="/move-in-ready/">See all move-in ready homes</a>
     </div>
     {homes_grid(3)}
@@ -105,7 +105,7 @@ def home():
 '''
     schema = [{"@context": "https://schema.org", "@type": "WebSite", "name": "Charles Carper", "url": SITE + "/"}, PERSON_LD]
     write('/', page('/', 'Charles Carper | New D.R. Horton Homes in Raleigh-Durham',
-                    'New D.R. Horton homes around Raleigh-Durham, with a plan for your move. Move-in ready homes every Monday, quick planners for selling, renting and budgeting, and straight answers from Charles Carper.',
+                    'New D.R. Horton homes around Raleigh-Durham, with a plan for your move. A move-in ready list updated weekly, quick planners for selling, renting and budgeting, and straight answers from Charles Carper.',
                     body, active=None, scripts=['/js/forms.js'], schema=schema))
 
 
@@ -113,14 +113,14 @@ def move_in_ready():
     d = load_homes()
     towns = sorted({h['town'] for h in d['homes']})
     sample = ('<p class="callout small" style="margin-bottom:24px"><b>Preview:</b> these are sample homes from drhorton.com on ' + long_date(d['asOf']) +
-              '. The Monday refresh fills in the full list.</p>') if d.get('sample') else ''
+              '. The weekly refresh fills in the full list.</p>') if d.get('sample') else ''
     town_opts = ''.join('<option>' + esc(t) + '</option>' for t in towns)
     body = f'''
 <section class="page-head">
   <div class="wrap">
     {crumbs([('Home', '/'), ('Move-in ready homes', None)])}
     <h1>Move-in ready homes</h1>
-    <p class="lead">D.R. Horton homes around Raleigh-Durham that are finished or almost finished. I update this list every Monday.</p>
+    <p class="lead">D.R. Horton homes around Raleigh-Durham that are finished or almost finished. I update this list weekly. Homes can sell before the list catches up, so text me to check one before you come.</p>
     <p class="quiet">Every Collins Ridge home is here too, including the ones still being built. {len(d['homes'])} homes as of {long_date(d['asOf'])}.</p>
   </div>
 </section>
@@ -157,12 +157,12 @@ def move_in_ready():
   </div>
 </section>
 <section class="section tight bg-white">
-  <div class="wrap"><p class="note measure">Prices and homes come from drhorton.com as of {long_date(d['asOf'])}. Homes sell fast, so text me before you come. For a home outside Hillsborough, I'll set up your visit with the sales consultant there.</p></div>
+  <div class="wrap"><p class="note measure">This list is updated weekly, not the moment a home sells. Prices and homes come from drhorton.com as of {long_date(d['asOf'])}. Text me to check a home before you come. For a home outside Hillsborough, I'll set up your visit with the sales consultant there.</p></div>
 </section>
 {closing('Found one you like? Let\'s go see it.', after=True)}
 '''
     write('/move-in-ready/', page('/move-in-ready/', 'Move-In Ready D.R. Horton Homes in Raleigh-Durham | Charles Carper',
-                                  'Finished and almost-finished D.R. Horton homes around Raleigh-Durham, updated every Monday. Prices shown with their date. Book a visit to any home.',
+                                  'Finished and almost-finished D.R. Horton homes around Raleigh-Durham, updated weekly. Prices shown with their date. Book a visit to any home.',
                                   body, active='homes', scripts=['/js/forms.js', '/js/homes.js']))
 
 
@@ -395,7 +395,7 @@ def floor_plans():
 <section class="section tight">
   <div class="wrap">
     <ul class="plan-cards">{cards}</ul>
-    <p class="note measure" style="margin-top:28px">Prices from drhorton.com on {PLANS_ASOF}. They're refreshed every Monday and always shown with their date. Options, features and availability vary by homesite and change often. Room counts come from D.R. Horton's published plan information.</p>
+    <p class="note measure" style="margin-top:28px">Prices from drhorton.com on {PLANS_ASOF}. They're refreshed weekly and always shown with their date. Options, features and availability vary by homesite and change often. Room counts come from D.R. Horton's published plan information.</p>
   </div>
 </section>
 {closing('Pick two. Then walk them in person.', cta='Book a visit')}
@@ -572,7 +572,7 @@ def agents():
   </div>
 </section>
 <section class="section bg-white" id="monday">
-  <div class="wrap">{signup('agents').replace("Want to see them first? I'll email you the list.", "Get the move-in ready list every Monday, before your buyers ask.")}</div>
+  <div class="wrap">{signup('agents').replace("I'll email it to you each time I update it.", "The move-in ready list by email each week, before your buyers ask.")}</div>
 </section>
 '''
     write('/agents/', page('/agents/', 'For Agents: Register a Client | Charles Carper, D.R. Horton',
@@ -592,7 +592,7 @@ def privacy():
   <h2>Who sees it</h2>
   <p>Me, and D.R. Horton, the builder I work for. If you're looking at a home in another community, the D.R. Horton sales consultant there. I don't sell your information.</p>
   <h2>Email and texts</h2>
-  <p>Texts only go out if you checked the box to allow them, and you can reply STOP anytime. The Monday list is email. Every email has a way to unsubscribe.</p>
+  <p>Texts only go out if you checked the box to allow them, and you can reply STOP anytime. The weekly move-in ready list is email. Every email has a way to unsubscribe.</p>
   <h2>Questions</h2>
   <p>Call or text <a href="{sms()}">{PHONE_SHOW}</a>.</p>
 </div></section>
@@ -608,7 +608,7 @@ def disclosures():
   <p>I'm a new home sales consultant, and I work for D.R. Horton. This is my own website, not a D.R. Horton website. I work for the builder, which is the seller. You're always welcome to bring your own real estate agent.</p>
   <p>I don't list homes for sale. If you have a home to sell, pick a listing agent you like, and I'll work with them on your timing.</p>
   <h2>Prices and homes</h2>
-  <p>Prices and homes come from drhorton.com and change often. Every price on this site is shown with the date I checked it. Homes sell fast, so text me before you come.</p>
+  <p>Prices and homes come from drhorton.com and change often. Every price on this site is shown with the date I checked it. The move-in ready list is updated weekly, so a home can sell before the list catches up. Text me to check a home before you come.</p>
   <h2>The planners</h2>
   <p>{ESTIMATE_LINE} You type in your own numbers. No rate is filled in for you. For a real answer, talk to a lender: Laura Hall at DHI Mortgage, or any lender you like.</p>
   <h2>Special offers</h2>

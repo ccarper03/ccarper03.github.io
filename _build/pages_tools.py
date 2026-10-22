@@ -115,7 +115,7 @@ def sell_and_buy():
 </section>''' + after([
         ('Could you carry both payments?', '/plan/two-mortgages/', 'The Two-Mortgage Check, about two minutes'),
         ('I have a home to sell', '/buyers/home-to-sell/', 'The whole plan, and the homes that fit'),
-        ('See move-in ready homes', '/move-in-ready/', 'Finished or almost finished, updated every Monday'),
+        ('See move-in ready homes', '/move-in-ready/', 'Finished or almost finished, updated weekly'),
         ('Book a visit', '/visit/', 'Bring your plan. We\'ll walk the homes that fit your timing.'),
     ])
     path = TOOLS['sell-and-buy'][0]
@@ -172,7 +172,7 @@ def two_mortgages():
 </section>''' + after([
         ('Should you sell first or buy first?', '/plan/sell-and-buy/', 'The Sell & Buy Planner'),
         ('I have a home to sell', '/buyers/home-to-sell/', 'The whole plan, and the homes that fit'),
-        ('See move-in ready homes', '/move-in-ready/', 'Finished or almost finished, updated every Monday'),
+        ('See move-in ready homes', '/move-in-ready/', 'Finished or almost finished, updated weekly'),
         ('Book a visit', '/visit/', 'Bring your numbers. We\'ll walk the homes that fit.'),
     ])
     path = TOOLS['two-mortgages'][0]
@@ -205,7 +205,7 @@ def buying_power():
 </section>''' + after([
         ("I'm renting", '/buyers/renting/', 'Time your lease and buy'),
         ('When should you buy?', '/plan/lease-to-keys/', 'The Lease-to-Keys Planner'),
-        ('See move-in ready homes', '/move-in-ready/', 'Finished or almost finished, updated every Monday'),
+        ('See move-in ready homes', '/move-in-ready/', 'Finished or almost finished, updated weekly'),
         ('Book a visit', '/visit/', 'Bring your number. We\'ll walk the homes that fit it.'),
     ])
     path = TOOLS['buying-power'][0]
@@ -237,7 +237,7 @@ def lease_to_keys():
 </section>''' + after([
         ("I'm renting", '/buyers/renting/', 'The whole plan, and the homes that fit'),
         ('How much home can you afford?', '/plan/buying-power/', 'The Buying Power Estimate'),
-        ('See move-in ready homes', '/move-in-ready/', 'Finished or almost finished, updated every Monday'),
+        ('See move-in ready homes', '/move-in-ready/', 'Finished or almost finished, updated weekly'),
         ('Book a visit', '/visit/', 'Bring your dates. We\'ll find homes that land in your window.'),
     ])
     path = TOOLS['lease-to-keys'][0]

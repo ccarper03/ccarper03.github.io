@@ -1,6 +1,6 @@
 // charlescarper.com: lead capture shared by every page.
 // - ccSubmit: sends a contact to HubSpot (same portal and form the site already uses).
-// - The Monday move-in ready list sign-up (form[data-signup]).
+// - The weekly move-in ready list sign-up (form[data-signup]).
 // - ccGate: the "Want the full plan? I'll send it to you." unlock used by every tool.
 // Answers are only sent when someone asks for their plan. Analytics get event names, never answers.
 (function (root) {
@@ -31,7 +31,7 @@
     note.setAttribute('tabindex', '-1'); note.focus({ preventScroll: false });
   }
 
-  // ---------- Monday list ----------
+  // ---------- Weekly move-in ready list ----------
   document.querySelectorAll('form[data-signup]').forEach(function (f) {
     f.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -41,11 +41,11 @@
       if (!EMAIL_RE.test(email)) { say(note, 'Please enter a valid email address.'); f.email.focus(); return; }
       btn.disabled = true;
       ccSubmit({ email: email, first: first },
-        'Monday move-in ready list: please add me.\nSigned up on: ' + (f.getAttribute('data-where') || location.pathname))
+        'Weekly move-in ready list: please add me.\nSigned up on: ' + (f.getAttribute('data-where') || location.pathname))
         .then(function () {
           track('generate_lead', { form: 'monday_list' }); track('unlock', { tool: 'monday_list' });
           f.querySelectorAll('.field, button').forEach(function (x) { x.remove(); });
-          say(note, 'You\'re on the list' + (first ? ', ' + first : '') + '. The first one comes Monday.', true);
+          say(note, 'You\'re on the list' + (first ? ', ' + first : '') + '. You\'ll get the next one when I update it.', true);
         })
         .catch(function () { btn.disabled = false; say(note, 'That didn\'t go through. Text me at ' + PHONE_SHOW + ' and I\'ll add you.'); });
     });
