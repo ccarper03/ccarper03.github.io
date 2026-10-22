@@ -121,6 +121,7 @@ def move_in_ready():
     {crumbs([('Home', '/'), ('Move-in ready homes', None)])}
     <h1>Move-in ready homes</h1>
     <p class="lead">D.R. Horton homes around Raleigh-Durham that are finished or almost finished. I update this list every Monday.</p>
+    <p class="quiet">Every Collins Ridge home is here too, including the ones still being built. {len(d['homes'])} homes as of {long_date(d['asOf'])}.</p>
   </div>
 </section>
 <section class="section tight">

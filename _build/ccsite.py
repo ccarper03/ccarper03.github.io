@@ -191,11 +191,10 @@ def home_card(h, asof, i=0):
     if baths: specs.append(('%g' % baths) + ' bath')
     if sqft: specs.append('{:,}'.format(sqft) + ' sq ft')
     if garage: specs.append(str(garage) + '-car')
-    if h.get('status') == 'ready':
-        badge = '<span class="badge badge-ready">Move-in ready</span>'
-    else:
-        month = dt.date.fromisoformat(h['readyBy'] + '-01').strftime('%B') if h.get('readyBy') else 'soon'
-        badge = '<span class="badge badge-soon">Ready in ' + month + '</span>'
+    badge = {'ready': '<span class="badge badge-ready">Move-in ready</span>',
+             'almost': '<span class="badge badge-soon">Almost finished</span>',
+             'building': '<span class="badge badge-build">Being built</span>',
+             'notstarted': '<span class="badge badge-build">Not started yet</span>'}.get(h.get('status'), '')
     label = (h.get('plan') + ' at ' if h.get('plan') else '') + h['community'] + ', ' + h['town']
     if h.get('address'):
         label += ' (' + h['address'] + ')'
@@ -204,11 +203,12 @@ def home_card(h, asof, i=0):
              else HOUSE_SVG[i % 3] + '<span class="media-label">Home photo · from drhorton.com</span>')
     attrs = ' '.join('data-' + k + '="' + esc(v) + '"' for k, v in [
         ('town', h['town']), ('price', h.get('price', 0)), ('beds', beds or 0), ('sqft', sqft or 0),
-        ('stories', h.get('stories', 2)), ('type', h.get('type', 'single-family')), ('rear', 'yes' if h.get('rearLoad') else 'no')])
+        ('stories', h.get('stories', 2)), ('type', h.get('type', 'single-family')), ('rear', 'yes' if h.get('rearLoad') else 'no'),
+        ('status', h.get('status', ''))])
     return ('<li class="home-card" ' + attrs + '><div class="home-media">' + media + '</div><div class="home-body">'
             '<div class="home-where">' + esc(h['community']) + ' · ' + esc(h['town']) + '</div>'
             '<div class="home-price"><b>' + money(h['price']) + '</b><small>as of ' + short_date(asof) + '</small></div>'
-            + ('<div class="home-plan">The ' + esc(h['plan']) + ' plan' + (' · ' + esc(h['typeLabel']) if h.get('typeLabel') else '') + '</div>' if h.get('plan') else '') +
+            + ('<div class="home-plan">' + ('The ' + esc(h['plan']) + ' plan' if h.get('plan') else '') + (' · ' if h.get('plan') and h.get('type') == 'townhome' else '') + ('Townhome' if h.get('type') == 'townhome' else '') + '</div>' if h.get('plan') or h.get('type') == 'townhome' else '') +
             '<div class="specs">' + ' · '.join(specs) + '</div>' + badge +
             '<a class="arrow" href="/visit/?' + q + '">Book a visit to see this home</a></div></li>')
 
