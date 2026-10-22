@@ -498,7 +498,7 @@ def about():
       <h1>I built homes before I sold them.</h1>
       <p class="lead">Hi, I'm Charles. I sell new D.R. Horton homes around Raleigh-Durham. My home base is Collins Ridge in Hillsborough.</p>
     </div>
-    {shot(4, 'Charles Carper', 'Tight headshot on a plain light wall in the sales office. Solid navy or charcoal blazer, open collar.', img=None, scene=None, ar='4 / 5', ghost='half', gx='50%')}
+    {shot(4, 'Charles Carper', 'Tight headshot on a plain light wall in the sales office. Solid navy or charcoal blazer, open collar.', img='/assets/images/cc-about.jpg', scene=None, ar='4 / 5', ghost='half', gx='50%')}
   </div>
 </section>
 <section class="section tight">

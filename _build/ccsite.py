@@ -31,7 +31,7 @@ CALL_EMBED = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ
 CALL_LINK = 'https://calendar.app.google/d6v5iNEtpqDeTvEE9'
 
 # Placeholder labels on stand-in photos. Set to False once the real shoot is in.
-SHOW_PLACEHOLDERS = True
+SHOW_PLACEHOLDERS = False
 
 VERSION = dt.datetime.now().strftime('%Y%m%d%H%M')
 TODAY = dt.date.today().isoformat()
@@ -141,9 +141,20 @@ SCENES = {
 }
 
 
+IMG_ALT = {
+    'cc-hayden-living.jpg': 'The great room in the Hayden model home at Collins Ridge, staged',
+    'cc-hayden-kitchen.jpg': 'The kitchen in the Hayden model home at Collins Ridge, staged',
+    'cc-hayden-flex.jpg': 'The flex room in the Hayden model home at Collins Ridge, staged',
+    'cc-hayden-bedroom.jpg': 'A bedroom in the Hayden model home at Collins Ridge, staged',
+    'cc-about.jpg': 'Charles Carper at the Collins Ridge model home',
+}
+
+
 def shot(n, alt, note, img=None, scene=None, ar='4 / 3', ghost='stand', gx='60%', caption=None, eager=False):
     """A photo slot. Until the shoot is in, it shows a stand-in with the shot number and the direction."""
     inner = ''
+    if img and not SHOW_PLACEHOLDERS:
+        alt = IMG_ALT.get(img.rsplit('/', 1)[-1], alt)  # describe the photo that's really there, not the planned shot
     if img:
         inner += '<img src="' + img + '" alt="' + esc(alt) + '"' + ('' if eager else ' loading="lazy"') + ' width="960" height="720">'
     elif scene:
@@ -153,7 +164,13 @@ def shot(n, alt, note, img=None, scene=None, ar='4 / 3', ghost='stand', gx='60%'
     inner += '<span class="shot-label">Shot ' + str(n) + ' · placeholder</span>'
     if note:
         inner += '<span class="shot-note">' + esc(note) + '</span>'
-    fig = '<figure class="shot" style="--ar:' + ar + ';--gx:' + gx + '"' + ('' if img else ' role="img" aria-label="' + esc(alt) + '"') + '>' + inner + '</figure>'
+    if img:
+        a11y = ''
+    elif SHOW_PLACEHOLDERS:
+        a11y = ' role="img" aria-label="' + esc(alt) + '"'
+    else:
+        a11y = ' aria-hidden="true"'  # a drawing stands in until the shoot; nothing to announce
+    fig = '<figure class="shot" style="--ar:' + ar + ';--gx:' + gx + '"' + a11y + '>' + inner + '</figure>'
     if caption:
         fig = '<div>' + fig + '<p class="shot-cap">' + esc(caption) + '</p></div>'
     return fig
@@ -200,7 +217,7 @@ def home_card(h, asof, i=0):
         label += ' (' + h['address'] + ')'
     q = __import__('urllib.parse').parse.urlencode({'home': label})
     media = ('<img src="' + esc(h['photo']) + '" alt="' + esc(label) + '" loading="lazy">' if h.get('photo')
-             else HOUSE_SVG[i % 3] + '<span class="media-label">Home photo · from drhorton.com</span>')
+             else HOUSE_SVG[i % 3] + ('<span class="media-label">Home photo · from drhorton.com</span>' if SHOW_PLACEHOLDERS else ''))
     attrs = ' '.join('data-' + k + '="' + esc(v) + '"' for k, v in [
         ('town', h['town']), ('price', h.get('price', 0)), ('beds', beds or 0), ('sqft', sqft or 0),
         ('stories', h.get('stories', 2)), ('type', h.get('type', 'single-family')), ('rear', 'yes' if h.get('rearLoad') else 'no'),
