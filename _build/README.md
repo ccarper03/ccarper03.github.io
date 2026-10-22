@@ -7,7 +7,7 @@ Run from the repo root:
 ## What it builds (2026 rebuild)
 
 - `ccsite.py`: the shared head, top strip, header, footer, mobile bar and disclosures, plus the components
-  (photo slots, home cards, tiles, tool cards, the Monday sign-up). Change the nav or the footer disclosure here
+  (photo slots, home cards, tiles, tool cards, the weekly sign-up). Change the nav or the footer disclosure here
   and every page picks it up on the next build.
 - `pages_core.py`: home, move-in ready, Book a visit, Collins Ridge (overview, floor plans, FAQ), Plan your move,
   About, For agents, Privacy, Disclosures, 404 and the unlisted team tools page.
