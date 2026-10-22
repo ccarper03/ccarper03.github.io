@@ -27,6 +27,14 @@ The copy comes from the Page map and copy tab of the lead strategy doc. Edit the
 replaces it: finished and almost-finished (M9+) homes from the public drhorton.com Raleigh-Durham inventory page,
 plus every Collins Ridge home, each price with its date. Set `"sample": false` once it's real data.
 
+## Weekly flyer
+
+`python3 _build/flyer.py` makes a one-page letter flyer from the same data: Collins Ridge homes first (up to 4
+cards), the rest of Raleigh-Durham as a by-town summary, Charles's photo, the text number, and a Book a visit QR
+(`_build/flyer/qr-book.svg`, tagged `utm_source=flyer`). It writes a PDF for print, a PNG for email and the HTML
+source to `_build/flyer/out/` (not committed). It warns and exits 2 if anything runs off the page.
+Swap the photo in `PHOTO_ME` after the shoot. Fonts are Fraunces and Inter (OFL), bundled in `_build/flyer/fonts/`.
+
 ## Photos
 
 Photo slots show a numbered stand-in with the shot direction until the shoot is in. When the real photos land,
@@ -35,7 +43,7 @@ swap each slot's image in the page file and set `SHOW_PLACEHOLDERS = False` in `
 ## Scripts
 
 - `site.js`: header, menu, Ask Charles text panel, agent registration, click tracking.
-- `js/forms.js`: HubSpot submit, the Monday list sign-up, and `ccGate`, the unlock every tool uses.
+- `js/forms.js`: HubSpot submit, the weekly list sign-up, and `ccGate`, the unlock every tool uses.
 - `plan-tools.js`: the Sell & Buy Planner questions and paths, and Floor Plan Match.
 - `js/sell-buy-calc.js`: the four-slider calculator (ported from the home-to-sell-planner repo).
 - `js/money-tools.js`: Two-Mortgage Check, Buying Power Estimate, Lease-to-Keys Planner. The debt-to-income
