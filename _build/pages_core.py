@@ -184,7 +184,7 @@ def visit():
   <div class="wrap">
     <h2 style="font-size:32px;margin-bottom:24px">What happens at a visit</h2>
     <ol class="steps-num">
-      <li><h3>We talk for about 10 minutes</h3><p>What you need, your timing, and anything that would make it a no.</p></li>
+      <li><h3>We talk for a few minutes</h3><p>What you need, when you want to move, and what matters most to you.</p></li>
       <li><h3>We walk the homes</h3><p>The model, then real homes that match.</p></li>
       <li><h3>You leave with a short list</h3><p>No pressure to decide that day.</p></li>
     </ol>
@@ -246,6 +246,8 @@ def visit():
       <div class="card">
         <h3>Another community</h3>
         <p class="quiet" style="margin-top:6px">Looking at a home outside Hillsborough? I'll set up your visit with the sales consultant there.</p>
+        <div class="actions" style="margin-top:16px"><a class="btn btn-line" href="{esc(sms("Hi Charles, I'd like to see a D.R. Horton home in another community. It's in: "))}" data-sms-body="Hi Charles, I'd like to see a D.R. Horton home in another community. It's in: ">Text me the community</a></div>
+        <p class="small quiet" style="margin-top:10px">Or call {PHONE_SHOW}.</p>
       </div>
     </div>
   </div>
