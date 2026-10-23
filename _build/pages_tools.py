@@ -186,6 +186,8 @@ def buying_power():
             field('What you earn each month, before taxes', 'income', hint='All borrowers, together') +
             field('Monthly bills', 'debts', hint='Car, student loans, credit card minimums') +
             field('Money saved for a down payment and closing costs', 'savings') +
+            '<label class="field"><span>Loan type</span><span><select name="loan"><option value="">Regular (conventional or FHA)</option>'
+            '<option value="va">VA loan</option></select></span></label>' +
             field('An interest rate', 'rate', kind='pct', hint='Ask a lender', step='0.01') +
             field('What monthly payment feels comfortable?', 'comfort', hint='Optional. Include taxes and insurance', full=True) +
             '<p class="small quiet full" style="margin:0">' + RATE_HELP + '</p>'

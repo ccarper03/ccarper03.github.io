@@ -16,11 +16,11 @@
 
   function apply() {
     var town = form.town.value, price = +form.price.value || 0, beds = +form.beds.value || 0, sqft = +form.sqft.value || 0;
-    var one = form.onefloor.checked, th = form.townhome.checked, rear = form.rear.checked, shown = 0;
+    var one = form.onefloor.checked, th = form.townhome.checked, rear = form.rear.checked, down = form.beddown && form.beddown.checked, shown = 0;
     cards.forEach(function (c) {
       var d = c.dataset;
       var ok = (!town || d.town === town) && (!price || +d.price < price) && (!beds || +d.beds >= beds) && (!sqft || +d.sqft >= sqft) &&
-        (!one || d.stories === '1') && (!th || d.type === 'townhome') && (!rear || d.rear === 'yes');
+        (!one || d.stories === '1') && (!th || d.type === 'townhome') && (!rear || d.rear === 'yes') && (!down || d.beddown === 'yes');
       if (ok) shown++;
       c.hidden = !ok || shown > limit;
     });
@@ -44,5 +44,11 @@
     if (!touched) { touched = true; if (window.ccTrack) window.ccTrack('filter_homes'); }
   });
   form.addEventListener('submit', function (e) { e.preventDefault(); });
+  // A link can open the list with filters on, like /move-in-ready/?townhome=1 from the low-maintenance page
+  var qs = new URLSearchParams(location.search);
+  ['onefloor', 'townhome', 'rear', 'beddown'].forEach(function (k) { if (qs.get(k) === '1' && form[k]) form[k].checked = true; });
+  ['town', 'price', 'beds', 'sqft'].forEach(function (k) {
+    var v = qs.get(k); if (v && form[k] && [].some.call(form[k].options, function (o) { return o.value === v; })) form[k].value = v;
+  });
   apply();
 })();

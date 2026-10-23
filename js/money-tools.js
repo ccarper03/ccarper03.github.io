@@ -142,19 +142,20 @@
   // ---------------------------------------------------------------------------
   // Buying Power Estimate
   // ---------------------------------------------------------------------------
-  function paymentFor(price, savings, R) {
+  function paymentFor(price, savings, R, va) {
     var down = Math.max(0, savings - price * CLOSE_RATE), loan = Math.max(0, price - down);
-    var mi = down / price < 0.2 ? loan * MI_RATE / 12 : 0;
+    var mi = !va && down / price < 0.2 ? loan * MI_RATE / 12 : 0;  // VA loans have no monthly mortgage insurance
     return pmt(loan, R) + price * TI_RATE / 12 + mi;
   }
-  function priceFor(pay, savings, R) {
+  function priceFor(pay, savings, R, va) {
     if (pay <= 0) return 0;
     var lo = 0, hi = 3000000;
-    for (var i = 0; i < 60; i++) { var mid = (lo + hi) / 2; if (paymentFor(mid, savings, R) > pay) hi = mid; else lo = mid; }
+    for (var i = 0; i < 60; i++) { var mid = (lo + hi) / 2; if (paymentFor(mid, savings, R, va) > pay) hi = mid; else lo = mid; }
     return lo;
   }
   function bpCompute(f) {
     var I = num(f, 'income'), D = num(f, 'debts'), S = num(f, 'savings'), R = num(f, 'rate'), C = num(f, 'comfort');
+    var VA = !!(f.loan && f.loan.value === 'va');
     if (!(I > 0)) return { error: 'Add what you earn each month, before taxes.', field: 'income' };
     if (isNaN(D)) D = 0;
     if (!(S >= 0)) return { error: 'Add what you\'ve saved for a down payment and closing costs. Put 0 if nothing yet.', field: 'savings' };
@@ -162,9 +163,9 @@
     var easy = Math.min(I * FRONT, I * BACK - D), max = I * BACK_MAX - D;
     if (C > 0) easy = Math.min(easy, C);
     var lowPay = Math.max(0, easy), highPay = Math.max(lowPay, max);
-    var lowPrice = priceFor(lowPay, S, R), highPrice = priceFor(highPay, S, R);
+    var lowPrice = priceFor(lowPay, S, R, VA), highPrice = priceFor(highPay, S, R, VA);
     var band = highPay <= 0 ? 'no' : 'good';
-    return { I: I, D: D, S: S, R: R, C: C, lowPay: lowPay, highPay: highPay, lowPrice: lowPrice, highPrice: highPrice, band: band };
+    return { VA: VA, I: I, D: D, S: S, R: R, C: C, lowPay: lowPay, highPay: highPay, lowPrice: lowPrice, highPrice: highPrice, band: band };
   }
   function bpFree(r) {
     if (r.band === 'no') return '<div class="answer"><p class="eyebrow">Your answer</p><p class="verdict stretch">Your monthly bills come first.</p>' +
@@ -181,7 +182,9 @@
       '<tr><td>Comfortable payment (28% of pay, and 36% with your bills)</td><td>' + money(r.lowPay) + '</td></tr>' +
       '<tr><td>Stretch payment (43% of pay with your bills)</td><td>' + money(r.highPay) + '</td></tr>' +
       '<tr><td>Savings, after about 3% for closing costs, at the high end</td><td>' + money(down) + '</td></tr></tbody></table>' +
-      '<p class="small quiet" style="margin-top:10px">' + r.R + '% for ' + YEARS + ' years. Taxes and insurance estimated at about 1.5% of the price a year, and mortgage insurance at about 0.5% of the loan a year when you put down less than 20%. HOA dues are extra.</p>' +
+      '<p class="small quiet" style="margin-top:10px">' + r.R + '% for ' + YEARS + ' years. Taxes and insurance estimated at about 1.5% of the price a year' +
+      (r.VA ? '. VA loans have no monthly mortgage insurance. A one-time VA funding fee may apply, and this leaves it out, so ask your lender. Some veterans don\'t pay it.'
+            : ', and mortgage insurance at about 0.5% of the loan a year when you put down less than 20%.') + ' HOA dues are extra.</p>' +
       '<h3 style="margin-top:24px">Move-in ready homes in your range</h3><div data-bp-homes><p class="quiet">Loading…</p></div></div><div>' +
       lenderBox() +
       '<div class="plan-box"><h3>Ask your lender</h3><ul><li>What monthly payment would you recommend for me, not just the most I qualify for?</li><li>Are there first-time buyer or down payment programs I qualify for?</li><li>How long is a preapproval good for?</li></ul></div>' +
@@ -203,7 +206,7 @@
   }
   function bpSummary(r) {
     return 'Tool: Buying Power Estimate\nResult: ' + (r.band === 'no' ? 'Bills high vs. income' : money(r.lowPrice) + ' to ' + money(r.highPrice) + ', payment ' + money(r.lowPay) + ' to ' + money(r.highPay)) +
-      '\nNumbers: income ' + money(r.I) + '/mo, bills ' + money(r.D) + ', savings ' + money(r.S) + ', rate ' + r.R + '%' + (r.C > 0 ? ', comfortable payment ' + money(r.C) : '');
+      '\nNumbers: income ' + money(r.I) + '/mo, bills ' + money(r.D) + ', savings ' + money(r.S) + ', rate ' + r.R + '%' + (r.C > 0 ? ', comfortable payment ' + money(r.C) : '') + (r.VA ? ', VA loan' : '');
   }
 
   // ---------------------------------------------------------------------------
@@ -279,5 +282,8 @@
     'buying-power': { tool: 'buying_power', compute: bpCompute, free: bpFree, full: bpFull, summary: bpSummary },
     'lease-to-keys': { tool: 'lease_to_keys', compute: ltkCompute, free: ltkFree, full: ltkFull, summary: ltkSummary }
   };
+  // A link from the VA page opens the Buying Power Estimate with the VA option picked
+  var loanPick = document.querySelector('[data-money-form] select[name="loan"]');
+  if (loanPick && new URLSearchParams(location.search).get('loan') === 'va') loanPick.value = 'va';
   $$(document, '[data-money]').forEach(function (shell) { var cfg = TOOLS[shell.getAttribute('data-money')]; if (cfg) setup(shell, cfg); });
 })();

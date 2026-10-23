@@ -141,7 +141,7 @@ ul, ol { margin: 0 0 1em; }
   min-height: 44px; padding: 8px 14px; font: 600 15px var(--sans); cursor: pointer; }
 .nav-book { white-space: nowrap; }
 
-@media (max-width: 1020px) {
+@media (max-width: 1180px) {
   .js .nav-toggle { display: inline-flex; align-items: center; }
   .js .nav-list { display: none; position: absolute; left: 0; right: 0; top: 100%; flex-direction: column; gap: 0;
     background: var(--lime); border-bottom: 1px solid var(--hair); padding: 4px var(--gutter) 16px;

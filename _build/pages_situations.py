@@ -1,6 +1,7 @@
 """The 8 situation pages. Copy comes from the Page map tab. Named for the need, never the person."""
 import re
-from ccsite import esc, page, write, shot, crumbs, closing, guide_links, plan_link, tool_tiles, disclose_line, sms
+from ccsite import (esc, page, write, shot, crumbs, closing, guide_links, plan_link, tool_tiles, disclose_line, sms, load_homes, home_card,
+                    money, long_date, PRIMARY_DOWN, SUITE_DOWN, OFFICE)
 
 # Each step: "Lead: rest" splits into a heading and a line.
 S = [
@@ -42,7 +43,7 @@ S = [
          stakes='Another year of rent. Another rent increase. A lease-break fee you didn\'t plan for.',
          success='You get your keys about when your lease ends, at a payment you planned for.',
          homes=[('Plans to start with', [('Robie', None), ('Landon', None), ('Sierra', None)])], homes_list=True,
-         guides=['how-buying-new-construction-works', 'closing-costs-new-construction', 'prequalified-vs-preapproved', 'first-time-buyer-new-construction'],
+         guides=['how-buying-new-construction-works', 'closing-costs-new-construction', 'prequalified-vs-preapproved', 'first-time-buyer-new-construction', 'down-payment-options-new-construction'],
          close='Bring your numbers. We\'ll find the homes that fit your lease.'),
     dict(slug='moving-to-raleigh-durham', crumb="I'm moving to Raleigh-Durham",
          title='Moving to Raleigh-Durham? Buy a New Home in One Trip | Charles Carper',
@@ -88,7 +89,7 @@ S = [
          desc='Plans with a full suite on the first floor, so everyone gets their own space. See which Collins Ridge plans put a full bath next to the downstairs bedroom.',
          h1='A bedroom downstairs isn\'t enough. It needs its own bathroom.',
          sub='Plans with a full suite on the first floor, so everyone gets their own space.',
-         tool=('See plans with a downstairs suite', '/plan/floor-plan-match/'),
+         tool=('See plans with a downstairs suite', '/plan/floor-plan-match/?start=guest'),
          shot=dict(n=7, alt='A downstairs bedroom and its full bath in a finished home', note='Room only, no person. Corner to corner, with the bath door showing so it reads as a suite. Calhoun or Landon, finished.', img='/assets/images/cc-hayden-bedroom.jpg', ghost=None),
          problem='Someone is moving in with you, or may soon. Every bedroom in your home now is upstairs.',
          empathy='You want a room that feels like theirs, not a guest room squeezed in.',
@@ -107,7 +108,7 @@ S = [
          desc='Floor plans with a real office, or two, plus drive times to RTP, Duke and UNC for your office days. Come close the door in the model flex room yourself.',
          h1='A flex room is only flexible if it has a door.',
          sub='Floor plans with a real office, or two, plus the drive time for your office days.',
-         tool=('Find plans with an office', '/plan/floor-plan-match/'),
+         tool=('Find plans with an office', '/plan/floor-plan-match/?start=office'),
          shot=dict(n=6, alt='Closing the flex-room door in the model home', note='From inside the model flex room, closing the door. Show the hand and the door, not a face.', img='/assets/images/cc-hayden-flex.jpg', ghost=None),
          problem='You take calls from the kitchen table. If two of you work from home, you talk over each other all day.',
          empathy='You don\'t want more square feet. You want the right rooms.',
@@ -136,7 +137,8 @@ S = [
                'Talk to a lender who does VA loans often: Laura Hall at DHI Mortgage does, or use any lender you like.',
                'Pick a home and time it with your lease or your job.'],
          extras=[('The funding fee', 'Ask your lender how it applies to you. Some veterans don\'t pay it.')],
-         tools=['buying-power', 'lease-to-keys'],
+         tools=['buying-power', 'lease-to-keys'], tool_qs={'buying-power': '?loan=va'},
+         tools_note='Free, and about two minutes. The Buying Power Estimate has a VA loan option, with no monthly mortgage insurance.',
          stakes='Renting longer because of a myth.',
          success='Your benefit, used the right way. A brand-new home. No surprises.',
          homes=[('Plans to start with', [('Landon', None), ('Robie', None), ('Cali', None)])],
@@ -147,7 +149,7 @@ S = [
          desc='Own your home and skip the yard work. Collins Ridge townhomes where the HOA takes care of the lawn and the outside of the home. See exactly what the HOA covers.',
          h1='Own your home. Skip the yard work.',
          sub='Townhomes where the HOA takes care of the lawn and the outside of the home. More time for the things you\'d rather do.',
-         tool=('See low-maintenance homes', '#homes'),
+         tool=('See townhomes ready now', '#ready'),
          shot=dict(n=9, alt='A row of finished Collins Ridge townhomes with 2-car garages', note='The townhome row and its 2-car garages. Finished Savannah or Linville. No people.', scene='townhomes', ghost=None),
          problem='Your days are full. Maybe you work long shifts. Maybe you\'re done spending weekends on the lawn, the gutters and the trim. Either way, you want a home that doesn\'t take your free time.',
          empathy='You want a place that\'s yours, without a long list of chores.',
@@ -163,6 +165,58 @@ S = [
          guides=['hoa-fees-and-amenities', 'true-cost-of-owning-a-home', 'new-home-maintenance-checklist'],
          close='Come see the townhomes, and read the HOA papers with me.'),
 ]
+
+
+CR_ORDER = {'ready': 0, 'almost': 1, 'building': 2, 'notstarted': 3}
+# What "homes that fit" means for each profile, at Collins Ridge, from the weekly list.
+READY = {
+    'home-to-sell': dict(h='At Collins Ridge right now', mix=True,
+                         note='Ready now if you want to move soon. Being built if you need a few months to sell.'),
+    'renting': dict(h='Ready now at Collins Ridge', price_line=True),
+    'moving-to-raleigh-durham': dict(h='Finished homes I can walk you through on video'),
+    'one-floor': dict(h='Ready now, with your bedroom downstairs', q='?beddown=1',
+                      pick=lambda h: h.get('stories') == 1 or h.get('plan') in PRIMARY_DOWN),
+    'downstairs-suite': dict(h='Ready now, with a bedroom and full bath downstairs', q='?beddown=1',
+                             pick=lambda h: h.get('plan') in SUITE_DOWN),
+    'work-from-home': dict(h='Ready now, with room for an office', pick=lambda h: h.get('plan') in OFFICE),
+    'va-loan': dict(h='Ready now at Collins Ridge', price_line=True),
+    'low-maintenance': dict(h='Townhomes ready now', q='?townhome=1', pick=lambda h: h.get('type') == 'townhome'),
+}
+
+
+def ready_block(slug):
+    """Collins Ridge homes from this week's list that fit the profile. The Monday refresh rebuilds it."""
+    cfg = READY[slug]
+    d = load_homes()
+    pick = cfg.get('pick', lambda h: True)
+    cr = sorted([h for h in d['homes'] if h['community'].startswith('Collins Ridge') and pick(h)],
+                key=lambda h: (CR_ORDER.get(h['status'], 9), h['price']))
+    done = [h for h in cr if h['status'] in ('ready', 'almost')]
+    later = [h for h in cr if h['status'] not in ('ready', 'almost')]
+    show = (done[:2] + later[:1]) if cfg.get('mix') else done[:3]
+    rest = [h for h in later if h not in show]
+    intro = ''
+    if cfg.get('price_line'):
+        cr_all = [h['price'] for h in d['homes'] if h['community'].startswith('Collins Ridge')]
+        near = [h['price'] for h in d['homes'] if not h['community'].startswith('Collins Ridge') and h['status'] in ('ready', 'almost')]
+        if cr_all and near:
+            intro = ('Collins Ridge homes start at ' + money(min(cr_all)) + ' right now. Move-in ready homes around Raleigh-Durham start at ' +
+                     money(min(near)) + '. ')
+    intro += cfg.get('note', '') + (' ' if cfg.get('note') else '')
+    intro += ('Prices as of ' + long_date(d['asOf']) + '. I update this list weekly, and homes can sell before it catches up, so text me to check one.')
+    if show:
+        cards = '<ul class="homes">' + ''.join(home_card(h, d['asOf'], i) for i, h in enumerate(show)) + '</ul>'
+    else:
+        cards = ('<div class="callout"><p style="margin:0">None ready at Collins Ridge this week. <a href="' +
+                 esc(sms("Hi Charles, tell me when a home that fits me is ready at Collins Ridge. I need: ")) +
+                 '">Text me what you need</a>, and I\'ll tell you when one comes up.</p></div>')
+    more = ''
+    if rest and not cfg.get('mix'):
+        more = ('<p class="quiet" style="margin-top:16px">Also being built: ' +
+                '; '.join('the ' + esc(h.get('plan') or 'home') + ' (' + money(h['price']) + ')' for h in rest[:3]) + '. Ask me when they\'ll be ready.</p>')
+    return ('<section class="section bg-white" id="ready"><div class="wrap"><div class="head-row"><div><h2>' + esc(cfg['h']) + '</h2>'
+            '<p class="quiet">' + esc(intro) + '</p></div><a class="arrow" href="/move-in-ready/' + cfg.get('q', '') + '">See more move-in ready homes</a></div>' +
+            cards + more + '</div></section>')
 
 
 def step(text):
@@ -208,13 +262,14 @@ def situation(d):
     {('<div class="grid">' + extras + '</div>') if extras else ''}
   </div>
 </section>
-<section class="section bg-white" id="tools">
+{ready_block(d['slug'])}
+<section class="section" id="tools">
   <div class="wrap">
     <div class="head"><h2>Get a quick answer first.</h2><p class="quiet">{esc(d.get('tools_note', 'Free, and about two minutes. You type in your own numbers, so the answer is an estimate, not a loan offer.'))}</p></div>
-    {tool_tiles(d['tools'])}
+    {tool_tiles(d['tools'], d.get('tool_qs'))}
   </div>
 </section>
-<section class="section">
+<section class="section bg-white">
   <div class="wrap">
     <div class="stakes">
       <div><p class="eyebrow">What's at stake</p><p class="pull" style="color:var(--ink)">{esc(d['stakes'])}</p></div>
@@ -222,12 +277,12 @@ def situation(d):
     </div>
   </div>
 </section>
-<section class="section bg-white" id="homes">
+<section class="section" id="homes">
   <div class="wrap split top">
     <div>
-      <h2 style="margin-bottom:24px">Homes that fit</h2>
+      <h2 style="margin-bottom:24px">Plans that fit</h2>
       {homes}
-      <div class="actions"><a class="arrow" href="/move-in-ready/">See move-in ready homes</a><a class="arrow" href="/collins-ridge/floor-plans/">See all 12 plans</a></div>
+      <div class="actions"><a class="arrow" href="/collins-ridge/floor-plans/">See all 12 plans</a></div>
     </div>
     <div>
       <h2 style="margin-bottom:24px">Learn more</h2>

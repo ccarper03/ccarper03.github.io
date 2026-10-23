@@ -133,6 +133,7 @@ def move_in_ready():
       <label class="field">Bedrooms<select name="beds"><option value="">Any</option><option value="3">3 or more</option><option value="4">4 or more</option><option value="5">5 or more</option></select></label>
       <label class="field">Square feet<select name="sqft"><option value="">Any size</option><option value="1500">1,500 or more</option><option value="2000">2,000 or more</option><option value="2500">2,500 or more</option><option value="3000">3,000 or more</option></select></label>
       <label class="check-pill"><input type="checkbox" name="onefloor">One floor</label>
+      <label class="check-pill"><input type="checkbox" name="beddown">Bedroom downstairs</label>
       <label class="check-pill"><input type="checkbox" name="townhome">Townhome</label>
       <label class="check-pill"><input type="checkbox" name="rear">Rear-load garage</label>
       <p class="filters-count" data-count role="status" aria-live="polite"></p>

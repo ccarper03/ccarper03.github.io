@@ -52,6 +52,7 @@ NAV = [
     ('plan', '/plan/', 'Plan your move'),
     ('guides', '/guides/', 'Guides'),
     ('about', '/about/', 'About'),
+    ('agents', '/agents/', 'For agents'),
 ]
 
 SITUATIONS = [
@@ -181,6 +182,17 @@ HOUSE_SVG = ['<svg aria-hidden="true" viewBox="0 0 400 300"><rect width="400" he
              '<svg aria-hidden="true" viewBox="0 0 400 300"><rect width="400" height="300" fill="#E9E4DA"/><rect y="232" width="400" height="68" fill="#D3D9C4"/><rect x="104" y="112" width="196" height="120" fill="#D9CFC0"/><polygon points="92,116 202,52 312,116" fill="#8F8678"/><rect x="210" y="170" width="78" height="62" fill="#EFEBE4"/><rect x="136" y="176" width="24" height="56" fill="#7A7064"/><rect x="136" y="128" width="26" height="24" fill="#F5F2EC"/><rect x="228" y="128" width="26" height="24" fill="#F5F2EC"/></svg>']
 
 
+# Collins Ridge layouts, from the plan data the Floor Plan Match uses (plan-tools.js).
+PRIMARY_DOWN = {'Cali', 'Savannah', 'Sierra', 'Calhoun'}                     # primary bedroom on the main floor
+BED_DOWN = PRIMARY_DOWN | {'Robie', 'Linville', 'Hayden', 'Alec', 'Landon', 'Jackson'}  # any bedroom on the main floor
+SUITE_DOWN = {'Calhoun', 'Alec', 'Linville'}                                 # bedroom with its own full bath downstairs, per the site copy
+OFFICE = {'Galen', 'Robie', 'Hayden', 'Hanover', 'Landon'}                   # flex room, or a second living area for an office
+
+
+def bed_down(h):
+    return h.get('stories') == 1 or (h['community'].startswith('Collins Ridge') and h.get('plan') in BED_DOWN)
+
+
 def load_homes():
     p = os.path.join(ROOT, 'data', 'move-in-ready.json')
     with open(p, encoding='utf-8') as f:
@@ -221,7 +233,7 @@ def home_card(h, asof, i=0):
     attrs = ' '.join('data-' + k + '="' + esc(v) + '"' for k, v in [
         ('town', h['town']), ('price', h.get('price', 0)), ('beds', beds or 0), ('sqft', sqft or 0),
         ('stories', h.get('stories', 2)), ('type', h.get('type', 'single-family')), ('rear', 'yes' if h.get('rearLoad') else 'no'),
-        ('status', h.get('status', ''))])
+        ('status', h.get('status', '')), ('beddown', 'yes' if bed_down(h) else 'no')])
     return ('<li class="home-card" ' + attrs + '><div class="home-media">' + media + '</div><div class="home-body">'
             '<div class="home-where">' + esc(h['community']) + ' · ' + esc(h['town']) + '</div>'
             '<div class="home-price"><b>' + money(h['price']) + '</b><small>as of ' + short_date(asof) + '</small></div>'
@@ -242,11 +254,11 @@ def tiles():
         for s, t, line, _ in SITUATIONS) + '</ul>'
 
 
-def tool_tiles(keys):
+def tool_tiles(keys, qs=None):
     out = []
     for k in keys:
         path, name, q = TOOLS[k]
-        out.append('<li><a class="tool-tile" href="' + path + '"><span class="eyebrow">2 minutes</span><b>' + esc(name) +
+        out.append('<li><a class="tool-tile" href="' + path + ((qs or {}).get(k, '')) + '"><span class="eyebrow">2 minutes</span><b>' + esc(name) +
                    '</b><span>' + esc(q) + '</span><i>Get my answer &rarr;</i></a></li>')
     return '<ul class="tool-cards">' + ''.join(out) + '</ul>'
 

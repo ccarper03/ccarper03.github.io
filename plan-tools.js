@@ -725,7 +725,7 @@
     var hash = (location.hash || '').slice(1).replace(/[.,;:!?)\]]+$/, '');
     if (hash) { var pre = decodeAnswers(cfg.steps, decodeURIComponent(hash)); if (complete(cfg.steps, pre)) { a = pre; finish(); return; } }
     var qs = new URLSearchParams(location.search), preset = qs.get('start');
-    if (preset && cfg.preset && cfg.preset[preset]) { a = cfg.preset[preset](); idx = 1; }
+    if (preset && cfg.preset && cfg.preset[preset]) { a = cfg.preset[preset](); idx = ('_idx' in a) ? a._idx : 1; delete a._idx; }
     renderStep();
   }
 
@@ -859,7 +859,8 @@
       preset: { sell: function () { return { living: 'own_sell' }; }, rent: function () { return { living: 'rent' }; }, keep: function () { return { living: 'own_keep' }; } } });
     var fp = document.querySelector('[data-tool="floor-plans"]');
     if (fp) runner(fp, { key: 'floor_plan_match', steps: FP_STEPS, finishLabel: 'Show my top two', render: renderFloorPlans,
-      preset: { one: function () { return { stories: 'one' }; }, main: function () { return { stories: 'main' }; } },
+      preset: { one: function () { return { stories: 'one' }; }, main: function () { return { stories: 'main' }; },
+        guest: function () { return { _idx: 0, wants: ['guest'] }; }, office: function () { return { _idx: 0, wants: ['office'] }; } },
       summary: function (a, code) { var r = matchPlans(a); return 'Floor plan match: ' + r[0].name + ', ' + r[1].name + '\nLink: https://charlescarper.com/plan/floor-plan-match/#' + code; },
       resultType: function (a) { return matchPlans(a)[0].name; } });
     document.querySelectorAll('[data-start-tool]').forEach(function (b) {
