@@ -11,8 +11,8 @@ def home():
   <div class="wrap hero-grid">
     <div>
       <p class="eyebrow">Hillsborough · Raleigh-Durham</p>
-      <h1>New D.R.&nbsp;Horton homes. I'll guide you home.</h1>
-      <p class="lead">I'm Charles. I worked on job sites before I sold homes. Tell me your budget and your timing, and I'll walk you through the homes that fit, from your first visit to move-in day.</p>
+      <h1>New D.R.&nbsp;Horton homes. I'll guide you, start to finish.</h1>
+      <p class="lead">I'm Charles. I worked on job sites before I started selling. Tell me your budget and your timing, and I'll show you what fits, from your first visit to move-in day.</p>
       <div class="actions">
         <a class="btn btn-brass" href="/visit/">Book a visit</a>
         <a class="arrow" href="/move-in-ready/">See move-in ready homes</a>
