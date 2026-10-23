@@ -9,7 +9,9 @@
   var PHONE_SHOW = '984-328-2788';
   var EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
-  function track(name, params) { try { if (root.gtag) root.gtag('event', name, params || {}); } catch (e) {} }
+  // Events go through the shared tracker in site.js (GA4 + Clarity). GA-only fallback if it's missing.
+  function gaOnly(name, params) { try { if (root.gtag) root.gtag('event', name, params || {}); } catch (e) {} }
+  function track(name, params) { (root.ccTrack || gaOnly)(name, params); }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
   function store(k, v) { try { if (v === undefined) return root.sessionStorage.getItem(k); root.sessionStorage.setItem(k, v); } catch (e) { return null; } }
 
@@ -56,7 +58,7 @@
   function ccGate(host, opts) {
     var key = 'cc.unlock.' + opts.tool;
     if (store(key) === '1') { opts.onUnlock({ again: true }); return; }
-    var f = document.createElement('form'); f.noValidate = true;
+    var f = document.createElement('form'); f.noValidate = true; f.setAttribute('data-form', opts.tool);
     f.innerHTML = '<div class="form-grid">' +
       '<label class="field">First name<input type="text" name="first" autocomplete="given-name"></label>' +
       '<label class="field">Email<input type="email" name="email" autocomplete="email" required></label>' +
@@ -88,5 +90,5 @@
 
   root.ccSubmit = ccSubmit;
   root.ccGate = ccGate;
-  root.ccTrack = track;
+  if (!root.ccTrack) root.ccTrack = gaOnly;
 })(window);

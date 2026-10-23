@@ -588,7 +588,7 @@ def agents():
           <label class="field full">Buyer's name<input type="text" name="buyer" required></label>
           <label class="field">When they'd like to move <span class="hint">Optional</span><select name="timing"><option value="">Choose one</option><option>In the next 3 months</option><option>In 3 to 6 months</option><option>In 6 to 12 months</option><option>Just looking</option></select></label>
           <label class="field">Preferred visit day <span class="hint">Optional</span><input type="text" name="visit_day" placeholder="For example: Saturday morning"></label>
-          <label class="field full">What they need <span class="hint">Optional: beds, budget range, must-haves</span><textarea name="notes"></textarea></label>
+          <label class="field full">What they need <span class="hint">Optional: beds, budget range, must-haves</span><textarea name="notes" data-clarity-mask="True"></textarea></label>
         </div>
         <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
         <label class="check"><input type="checkbox" name="textok" value="yes"><span>Text me about this registration. Message and data rates may apply. Reply STOP to opt out.</span></label>

@@ -515,7 +515,11 @@
   // Shared helpers: text links, the desktop text panel, HubSpot email, analytics
   // ---------------------------------------------------------------------------
   function smsHref(body) { return 'sms:' + PHONE + '?&body=' + encodeURIComponent(body); }
-  function track(name, params) { try { if (root.gtag) root.gtag('event', name, params || {}); } catch (e) {} }
+  // Events go through the shared tracker in site.js (GA4 + Clarity). GA-only fallback if it's missing.
+  function track(name, params) {
+    if (root.ccTrack) return root.ccTrack(name, params);
+    try { if (root.gtag) root.gtag('event', name, params || {}); } catch (e) {}
+  }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (ch) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[ch]; }); }
   var fineMouse = function () { return root.matchMedia && root.matchMedia('(hover: hover) and (pointer: fine)').matches; };
 
@@ -553,6 +557,7 @@
   function bindTextLinks(scope) {
     scope.querySelectorAll('a[data-sms-body]').forEach(function (link) {
       link.addEventListener('click', function (e) {
+        e.ccTracked = true; // counted here, so site.js doesn't count it again
         track('click_text', { where: 'tool', label: link.getAttribute('data-track') || '' });
         if (!fineMouse()) return; // phones open Messages with the text filled in
         e.preventDefault(); e.stopPropagation();
@@ -568,7 +573,7 @@
       '<button class="lead-close x-close" type="button" aria-label="Close">&times;</button>' +
       '<h2 id="tp-h" style="font-size:30px">Text this from your phone</h2>' +
       '<p>On a computer, texting doesn’t work from the page. Send this to <b>' + PHONE_SHOW + '</b>, or paste it into the chat.</p>' +
-      '<textarea class="tp-text" rows="6" style="width:100%;font:inherit;padding:12px;border:1.5px solid var(--rule);border-radius:6px">' + esc(body) + '</textarea>' +
+      '<textarea class="tp-text" data-clarity-mask="True" rows="6" style="width:100%;font:inherit;padding:12px;border:1.5px solid var(--rule);border-radius:6px">' + esc(body) + '</textarea>' +
       '<div class="actions" style="margin-top:16px"><button class="btn btn-amber" type="button" data-tp="copy">Copy the text</button>' +
       (root.HubSpotConversations && root.HubSpotConversations.widget ? '<button class="btn btn-ink" type="button" data-tp="chat">Open the chat</button>' : '') +
       '</div><p class="small quiet" role="status" data-tp-note style="margin-top:10px"></p></div>';
@@ -589,7 +594,7 @@
   }
 
   function emailForm(container, summary, formName) {
-    var f = document.createElement('form'); f.className = 'tool-email'; f.noValidate = true;
+    var f = document.createElement('form'); f.className = 'tool-email'; f.noValidate = true; f.setAttribute('data-form', formName);
     f.innerHTML = '<div class="form-grid">' +
       '<label class="field">Email<input type="email" name="email" autocomplete="email" required></label>' +
       '<label class="field">First name <span class="hint">(optional)</span><input type="text" name="first" autocomplete="given-name"></label>' +

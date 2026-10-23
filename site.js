@@ -1,10 +1,50 @@
 // charlescarper.com: shared behavior. Sticky header, mobile menu, Ask Charles text links, agent registration,
-// and conversion events for Google Analytics.
+// and conversion events for Google Analytics and Microsoft Clarity.
 (function () {
   document.documentElement.classList.add('js');
 
-  // GA4 events. Safe no-op if analytics is blocked.
-  var track = function (name, params) { try { if (window.gtag) window.gtag('event', name, params || {}); } catch (e) {} };
+  // ---------- Analytics: one tracker for Google Analytics and Microsoft Clarity ----------
+  // Every event goes to GA4 with its details, and to Clarity as a custom event, so recordings can be
+  // filtered by what someone did. Lead actions also tag the Clarity session and keep its recording.
+  // Event names and page context only. Never what someone typed. Safe no-op if either is blocked.
+  var LEADS = { generate_lead: 1, book_visit: 1, chat_started: 1, click_call: 1, click_text: 1, click_email: 1 };
+  var pageType = (function (p) {
+    if (p === '/' || p === '/index.html') return 'home';
+    var m = p.match(/^\/([a-z0-9-]+)/), k = m ? m[1] : '';
+    return { guides: 'guide', plan: 'tool', buyers: 'situation', 'move-in-ready': 'homes', visit: 'visit', 'collins-ridge': 'community',
+      agents: 'agents', about: 'about', privacy: 'legal', disclosures: 'legal' }[k] || 'other';
+  })(location.pathname);
+  var clarity = function () { try { if (typeof window.clarity === 'function') window.clarity.apply(window, arguments); } catch (e) {} };
+  clarity('set', 'page_type', pageType);
+  var lastHit = {};
+  var track = function (name, params) {
+    params = params || {};
+    var key = name + '|' + JSON.stringify(params), now = Date.now();
+    if (lastHit[key] && now - lastHit[key] < 800) return; // one tap, one event
+    lastHit[key] = now;
+    try { if (window.gtag) window.gtag('event', name, params); } catch (e) {}
+    clarity('event', name);
+    if (LEADS[name]) { clarity('set', 'lead_action', name); clarity('upgrade', name); }
+  };
+  window.ccTrack = track;
+
+  // Where a link sits, the words on it, and the section it's in, so the same button in different spots can be compared.
+  var whereOf = function (a) {
+    return a.closest('[data-mbar]') ? 'phone_bar' : a.closest('.ask-panel') ? 'ask_panel' : a.closest('.lead-overlay') ? 'text_panel' :
+      a.closest('main') ? 'page' : a.closest('.site-header, header') ? 'header' : a.closest('.site-footer, footer') ? 'footer' : 'other';
+  };
+  // The words the visitor actually saw (the bold line on cards, the visible half of the header button)
+  var labelOf = function (a) { var s = a.querySelector('b, .path-go') || a; return ((s.innerText || s.textContent || '') + '').replace(/\s+/g, ' ').trim().slice(0, 60); };
+  var sectionOf = function (a) {
+    var s = a.closest('main section, main article, main aside'); if (!s) return '';
+    if (s.id) return s.id;
+    var c = (s.className || '').split(/\s+/).filter(function (x) { return x && x !== 'section' && !/^bg-|^tight$/.test(x); })[0];
+    if (c) return c;
+    var h = s.querySelector('h1, h2, h3');
+    return h ? (h.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 50) : '';
+  };
+  // The home named on a "Book a visit to see this home" link (page content, not anything typed)
+  var homeOf = function (href) { var m = href.match(/[?&]home=([^&#]*)/); try { return m ? decodeURIComponent(m[1].replace(/\+/g, ' ')).slice(0, 90) : ''; } catch (e) { return ''; } };
 
   // Sticky header: add a shadow once the page scrolls under it.
   var header = document.querySelector('.site-header');
@@ -48,6 +88,16 @@
   var fineMouse = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
 
+  // A chat that actually starts is a lead. HubSpot calls this once its chat API is ready.
+  var onChatReady = function () {
+    var hc = window.HubSpotConversations;
+    if (!hc || !hc.on || hc.ccBound) return;
+    hc.ccBound = true;
+    hc.on('conversationStarted', function () { track('chat_started', { page_type: pageType }); });
+  };
+  if (window.HubSpotConversations) onChatReady();
+  else (window.hsConversationsOnReady = window.hsConversationsOnReady || []).push(onChatReady);
+
   // HubSpot chat loads only when someone asks for it (see hsConversationsSettings in each page).
   var openHubChat = function () {
     var hc = window.HubSpotConversations;
@@ -67,7 +117,7 @@
       '<button class="lead-close x-close ask-close" type="button" aria-label="Close">&times;</button>' +
       '<h2 id="tp-h" style="font-size:30px">Text this from your phone</h2>' +
       '<p>On a computer, texting doesn’t work from the page. Send this to <b>' + PHONE_SHOW + '</b>. Edit it however you like.</p>' +
-      '<textarea class="tp-text" rows="' + Math.max(5, body.split('\n').length + 1) + '" style="width:100%;font:inherit;padding:12px;border:1.5px solid var(--rule);border-radius:6px">' + esc(body) + '</textarea>' +
+      '<textarea class="tp-text" data-clarity-mask="True" rows="' + Math.max(5, body.split('\n').length + 1) + '" style="width:100%;font:inherit;padding:12px;border:1.5px solid var(--rule);border-radius:6px">' + esc(body) + '</textarea>' +
       '<div class="actions" style="margin-top:16px"><button class="btn btn-amber" type="button" data-tp="copy">Copy the text</button>' +
       (window.HubSpotConversations ? '<button class="btn btn-ink" type="button" data-tp="chat">Message me here instead</button>' : '') +
       '</div><p class="small quiet" role="status" data-tp-note style="margin-top:10px"></p></div>';
@@ -80,6 +130,7 @@
     ov.querySelector('[data-tp="copy"]').addEventListener('click', function () {
       var ta = ov.querySelector('.tp-text'), note = ov.querySelector('[data-tp-note]');
       var done = function () { note.textContent = 'Copied. Paste it into a text to ' + PHONE_SHOW + '.'; };
+      track('text_copy', { page_type: pageType });
       if (navigator.clipboard) navigator.clipboard.writeText(ta.value).then(done, function () { ta.select(); document.execCommand('copy'); done(); });
       else { ta.select(); document.execCommand('copy'); done(); }
     });
@@ -156,7 +207,8 @@
       e.preventDefault();
       var m = (a.getAttribute('href') || '').match(/body=([^&]*)/);
       var body = a.getAttribute('data-sms-body') || (m ? decodeURIComponent(m[1]) : 'Hi Charles, ');
-      track('click_text', { where: 'page', device: 'computer' });
+      e.ccTracked = true; // counted here, so the conversion listener below skips it
+      track('click_text', { where: whereOf(a), label: labelOf(a), device: 'computer' });
       textPanel(body);
     });
   }
@@ -199,36 +251,54 @@
     });
   }
 
-  var whereOf = function (a) { return a.closest('main') ? 'page' : a.closest('header') ? 'header' : a.closest('footer') ? 'footer' : 'other'; };
-  // The words the visitor actually saw (the bold line on cards, the visible half of the header button)
-  var labelOf = function (a) { var s = a.querySelector('b, .path-go') || a; return ((s.innerText || s.textContent || '') + '').replace(/\s+/g, ' ').trim().slice(0, 60); };
-  // One cta_click for every button-style link, so CTAs can be compared by their wording.
+  // One cta_click for every button-style link, so CTAs can be compared by their wording, spot and section.
   // Capture phase, so it still counts when a text link's own handler stops the click on a computer.
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[href]');
     if (!a || !a.matches('.btn, .next-path, .tile, .tool-tile, .arrow, .ask-opt, .toc-cta a')) return;
     var href = a.getAttribute('href') || '';
     var to = /^(tel|sms|mailto):/.test(href) ? href.split(':')[0] : href.split('?')[0].slice(0, 100);
-    track('cta_click', { cta_text: labelOf(a), cta_to: to, where: whereOf(a) });
+    track('cta_click', { cta_text: labelOf(a), cta_to: to, where: whereOf(a), section: sectionOf(a), page_type: pageType });
   }, true);
 
-  // Conversion events: calls, texts, email, booking and finder clicks.
+  // Conversion events: calls, texts, email, booking, tools, situations and directions.
+  // Skips clicks another handler already counted (e.ccTracked), and text links a computer turned into
+  // the copy panel (defaultPrevented), so one tap is one event.
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[href]');
-    if (!a) return;
+    if (!a || e.ccTracked) return;
     var href = a.getAttribute('href') || '', where = whereOf(a), label = labelOf(a);
-    if (href.indexOf('tel:') === 0) track('click_call', { where: where });
-    else if (href.indexOf('sms:') === 0) track('click_text', { where: where, label: label });
-    else if (href.indexOf('mailto:') === 0) track('click_email', { where: where });
-    else if (/^\/visit\//.test(href)) track('click_book', { where: where, label: label });
-    else if (/^\/plan\//.test(href)) track('click_tool', { where: where, label: label });
-    else if (/^\/buyers\//.test(href)) track('click_situation', { where: where, label: label });
+    if (href.indexOf('tel:') === 0) track('click_call', { where: where, page_type: pageType });
+    else if (href.indexOf('sms:') === 0) { if (!e.defaultPrevented) track('click_text', { where: where, label: label, page_type: pageType }); }
+    else if (href.indexOf('mailto:') === 0) track('click_email', { where: where, page_type: pageType });
+    else if (/^\/visit\//.test(href)) {
+      var p = { where: where, label: label, page_type: pageType }, home = homeOf(href);
+      if (home) p.home = home;
+      track('click_book', p);
+    }
+    else if (/^\/plan\//.test(href)) track('click_tool', { where: where, label: label, page_type: pageType });
+    else if (/^\/buyers\//.test(href)) track('click_situation', { where: where, label: label, page_type: pageType });
+    else if (/^https?:\/\/(www\.)?(google\.[a-z.]+\/maps|maps\.google\.|maps\.app\.goo\.gl|maps\.apple\.com)/.test(href)) track('click_directions', { where: where, page_type: pageType });
   });
+
+  // First touch on a lead form, so drop-off between starting a form and sending it shows up.
+  var formName = function (f) {
+    return f.getAttribute('data-form') || (f.hasAttribute('data-visit-form') && 'visit') || (f.hasAttribute('data-signup') && 'monday_list') ||
+      (f.hasAttribute('data-realtor-register') && 'realtor_registration') || (f.hasAttribute('data-other') && 'other_community') || '';
+  };
+  var formsStarted = {};
+  document.addEventListener('focusin', function (e) {
+    var f = e.target.closest && e.target.closest('form'); if (!f) return;
+    var n = formName(f); if (!n || formsStarted[n]) return;
+    formsStarted[n] = 1;
+    track('form_start', { form: n, page_type: pageType });
+  });
+
   // Email links assembled on click, so the address isn't in the page source
   document.querySelectorAll('[data-mail-u]').forEach(function (a) {
     a.addEventListener('click', function (e) {
-      e.preventDefault();
-      track('click_email', { where: a.closest('main') ? 'page' : 'other' });
+      e.preventDefault(); e.ccTracked = true;
+      track('click_email', { where: whereOf(a), page_type: pageType });
       window.location.href = 'mailto:' + a.getAttribute('data-mail-u') + '@' + a.getAttribute('data-mail-d');
     });
   });

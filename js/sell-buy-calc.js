@@ -153,12 +153,12 @@
   var touched = false;
   var onInput = function () {
     render();
-    if (!touched) { touched = true; try { if (window.gtag) window.gtag('event', 'calculator_use', { tool: 'sell_and_buy' }); } catch (e) {} }
+    if (!touched) { touched = true; if (window.ccTrack) window.ccTrack('calculator_use', { tool: 'sell_and_buy' }); }
   };
   ids.forEach(function (id) { $(id).addEventListener('input', onInput); });
   $('cProg').addEventListener('change', function () {
     onInput();
-    try { if (window.gtag) window.gtag('event', 'calculator_program', { on: $('cProg').checked ? 'yes' : 'no' }); } catch (e) {}
+    if (window.ccTrack) window.ccTrack('calculator_program', { on: $('cProg').checked ? 'yes' : 'no' });
   });
   render();
 })();
