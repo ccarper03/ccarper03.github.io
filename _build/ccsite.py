@@ -258,7 +258,7 @@ def signup(where='home'):
             '<label class="field">First name<input type="text" name="first" autocomplete="given-name"></label>'
             '<label class="field">Email<input type="email" name="email" autocomplete="email" required></label>'
             '<input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">'
-            '<button class="btn btn-brass" type="submit">Send me the list</button>'
+            '<button class="btn btn-ink" type="submit">Send me the list</button>'
             '<p class="form-note" role="status" hidden style="flex:1 1 100%"></p></form>')
 
 
@@ -266,7 +266,7 @@ def offer_band():
     return ('<section class="offer bg-ink" aria-label="Special offer"><div class="wrap"><div style="flex:1 1 520px;min-width:0">'
             '<p class="display">There\'s a special offer this month.</p>'
             '<p>It changes often, so if you\'re interested, just text me and I\'ll send you the details.</p></div>'
-            '<a class="btn btn-brass" href="' + esc(sms("Hi Charles, can you send me this month's special offer?")) +
+            '<a class="btn btn-line" href="' + esc(sms("Hi Charles, can you send me this month's special offer?")) +
             '" data-sms-body="Hi Charles, can you send me this month\'s special offer?">Text me</a></div></section>')
 
 
@@ -326,7 +326,11 @@ def header(active):
             '<a class="btn btn-brass btn-sm nav-book" href="/visit/">Book a visit</a></nav></div></header>')
 
 
-def footer():
+MBAR = {'/visit/': ('Pick a visit time', '#book'), '/agents/': ('Protect my client', '#register')}
+
+
+def footer(path='/'):
+    label, href = MBAR.get(path, ('Book a visit', '/visit/'))
     return ('<footer class="site-footer"><div class="wrap"><div class="footer-grid">'
             '<div><div class="f-name">Charles Carper</div><div class="f-title">New Home Sales Consultant · D.R. Horton, Raleigh-Durham</div></div>'
             '<div><h2>Reach me</h2><ul><li><a href="tel:' + PHONE + '">Call ' + PHONE_SHOW + '</a></li>'
@@ -336,7 +340,7 @@ def footer():
             '<li><a href="/plan/">Plan your move</a></li><li><a href="/guides/">Guides</a></li><li><a href="/agents/">For agents</a></li></ul></div>'
             '</div><div class="footer-legal">' + EHO_SVG + '<p>' + esc(FOOTER_DISCLOSURE) +
             ' <a href="/disclosures/">Disclosures</a> · <a href="/privacy/">Privacy</a></p></div></div></footer>\n'
-            '<div class="mbar"><a class="btn btn-brass" href="/visit/">Book a visit</a><a class="btn btn-line" href="' + sms() + '">Text</a></div>')
+            '<div class="mbar" data-mbar><a class="btn btn-brass" href="' + href + '">' + esc(label) + '</a><a class="btn btn-line" href="' + sms() + '">Text</a></div>')
 
 
 def page(path, title, description, body, active=None, scripts=(), robots=None, schema=(), og_image='/assets/images/cc-share.jpg', canonical=None, head_extra=''):
@@ -360,7 +364,7 @@ def page(path, title, description, body, active=None, scripts=(), robots=None, s
             '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap">\n'
             '<link rel="stylesheet" href="/site.css?v=' + VERSION + '">\n' + head_extra + ANALYTICS + '\n' + ld +
             '</head>\n<body>\n<a class="skip" href="#main">Skip to content</a>\n' + header(active) + '\n<main id="main">\n' + body.strip() +
-            '\n</main>\n' + footer() + '\n<script src="/site.js?v=' + VERSION + '" defer></script>\n' + page_scripts + HUBSPOT_CHAT + '\n</body>\n</html>\n')
+            '\n</main>\n' + footer(path) + '\n<script src="/site.js?v=' + VERSION + '" defer></script>\n' + page_scripts + HUBSPOT_CHAT + '\n</body>\n</html>\n')
 
 
 def out_path(path):
@@ -439,6 +443,25 @@ def fix_links(s):
     return re.sub(r'href="(/[^"]*)"', repl, s)
 
 
+def guide_ctas(main):
+    """UX pass: one primary action per screen in the guides."""
+    # Table of contents: a quiet link, not a second brass button near the top of the article
+    main = main.replace('<div class="toc-cta"><a class="btn btn-brass" href="/plan/sell-and-buy/">Get my moving plan</a>',
+                        '<div class="toc-cta"><a class="arrow" href="/plan/sell-and-buy/">Get my moving plan</a>')
+    # End of article: keep the primary and one secondary; drop the extra row of links
+    main = re.sub(r'(<section class="next-step".*?</div>)<p class="small" style="margin-top:14px">.*?</p>(</section>)', r'\1\2', main, flags=re.S)
+    # Guides hub: three places to go next, then one primary and one quiet text link
+    main = re.sub(r'<div class="next-paths funnel-strip">.*?</section>',
+                  '<div class="next-paths funnel-strip">'
+                  '<a class="next-path" href="/collins-ridge/"><span class="who">The community</span><b>New homes at Collins Ridge</b></a>'
+                  '<a class="next-path" href="/plan/floor-plan-match/"><span class="who">The plans</span><b>Narrow the floor plans to yours</b></a>'
+                  '<a class="next-path" href="/collins-ridge/faq/"><span class="who">Quick answers</span><b>Collins Ridge FAQ</b></a></div>'
+                  '<div class="actions" style="margin-top:24px"><a class="btn btn-brass" href="/visit/">Book a visit</a>'
+                  '<a class="arrow" href="' + esc(sms('Hi Charles, I have a question: ')) + '" data-sms-body="Hi Charles, I have a question: ">Or text me a question</a></div></section>',
+                  main, count=1, flags=re.S)
+    return main
+
+
 def reskin_guides():
     gdir = os.path.join(ROOT, 'guides')
     count = 0
@@ -460,6 +483,7 @@ def reskin_guides():
             main = main.replace(a, b)
         main = fix_links(main)
         main = main.replace('class="agency-note"', 'class="note"')
+        main = guide_ctas(main)
         # JSON-LD text fixes too (FAQ answers repeat the body copy)
         lds_s = json.dumps(lds, ensure_ascii=False)
         for a, b in TEXT_FIXES[:8]:

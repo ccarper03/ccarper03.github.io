@@ -232,4 +232,24 @@
       window.location.href = 'mailto:' + a.getAttribute('data-mail-u') + '@' + a.getAttribute('data-mail-d');
     });
   });
+
+  // ---------- Phone bar: step aside when the page already shows the main action ----------
+  // Hides while a brass button, a form or the footer is on screen, and while someone is typing,
+  // so a phone screen never shows two "Book a visit" buttons or covers a form.
+  var bar = document.querySelector('[data-mbar]');
+  if (bar && 'IntersectionObserver' in window) {
+    var seen = new Set(), typing = false;
+    var sync = function () {
+      var hide = typing || seen.size > 0;
+      bar.classList.toggle('is-hidden', hide);
+      if (hide) bar.setAttribute('inert', ''); else bar.removeAttribute('inert');
+    };
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) seen.add(e.target); else seen.delete(e.target); });
+      sync();
+    }, { rootMargin: '0px' });
+    document.querySelectorAll('main .btn-brass, main form, .site-footer').forEach(function (el) { io.observe(el); });
+    document.addEventListener('focusin', function (e) { if (e.target.matches && e.target.matches('input, select, textarea')) { typing = true; sync(); } });
+    document.addEventListener('focusout', function () { typing = false; sync(); });
+  }
 })();

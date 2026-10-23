@@ -76,7 +76,6 @@ def home():
       <li><h3>We make a plan together</h3><p>Your timing, your budget and your next step. No pressure.</p></li>
       <li><h3>See the homes that fit</h3><p>Walk the model, then real homes that match your plan.</p></li>
     </ol>
-    <a class="btn btn-brass" href="/visit/">Book a visit</a>
   </div>
 </section>
 
@@ -94,7 +93,7 @@ def home():
       <h2 style="margin-bottom:20px">Collins Ridge, a short walk from downtown Hillsborough.</h2>
       <p>Townhomes, one-story homes and two-story homes. There's a saltwater pool, a gym, pickleball courts and walking trails. I-85 and I-40 are less than 2 miles away.</p>
       <p>Come see the furnished model at 116 Sea Trail St, Hillsborough.</p>
-      <div class="actions"><a class="btn btn-brass" href="/visit/">Tour the model</a><a class="arrow" href="/collins-ridge/floor-plans/">See the floor plans</a></div>
+      <div class="actions"><a class="btn btn-line" href="/collins-ridge/">Explore Collins Ridge</a><a class="arrow" href="/collins-ridge/floor-plans/">See the floor plans</a></div>
     </div>
     {shot(3, 'Charles Carper walking on a Collins Ridge sidewalk', 'Walking toward the camera on the sidewalk, finished homes behind you, the hour before sunset.', scene='street', gx='52%')}
   </div>
@@ -317,7 +316,7 @@ def collins_ridge():
     <div>
       <h2 style="margin-bottom:16px">The floor plans</h2>
       <p>12 plans, from townhomes to one-story homes. Not sure where to start? Answer five quick questions and I'll show you your top two.</p>
-      <div class="actions"><a class="btn btn-brass" href="/plan/floor-plan-match/">Find my top 2 plans</a><a class="arrow" href="/collins-ridge/floor-plans/">See all 12 plans</a></div>
+      <div class="actions"><a class="btn btn-line" href="/plan/floor-plan-match/">Find my top 2 plans</a><a class="arrow" href="/collins-ridge/floor-plans/">See all 12 plans</a></div>
       <p class="small quiet" style="margin-top:20px">Need everything on one floor, or a bedroom and bath downstairs? <a href="/buyers/one-floor/">One-floor homes</a> · <a href="/buyers/downstairs-suite/">Bedroom and bath downstairs</a></p>
     </div>
     <div class="card">
@@ -454,7 +453,7 @@ def faq():
 <section class="section tight">
   <div class="wrap"><div class="faq measure" style="max-width:820px"><nav class="faq-toc" aria-label="On this page">{toc}</nav>{secs}
     <div class="callout" style="margin-top:40px"><h3>Still have a question?</h3><p style="margin-top:6px">Text me. I answer fast on work days.</p>
-    <div class="actions" style="margin-top:12px"><a class="btn btn-brass" href="/visit/">Book a visit</a><a class="arrow" href="{sms('Hi Charles, I have a question about Collins Ridge: ')}" data-sms-body="Hi Charles, I have a question about Collins Ridge: ">Text me</a></div></div>
+    <div class="actions" style="margin-top:12px"><a class="btn btn-brass" href="{sms('Hi Charles, I have a question about Collins Ridge: ')}" data-sms-body="Hi Charles, I have a question about Collins Ridge: ">Text me your question</a><a class="arrow" href="/visit/">Or book a visit</a></div></div>
   </div></div>
 </section>
 '''
@@ -517,7 +516,6 @@ def about():
       <p>You may see my AI assistant in some videos. It's made from my face and voice, and I write what it says. When you want the real me, text me.</p>
       {disclose_line()}
       <div class="actions"><a class="btn btn-brass" href="/visit/">Book a visit</a><a class="arrow" href="/move-in-ready/">See move-in ready homes</a></div>
-      <p style="margin-top:24px"><a class="arrow" href="/guides/">Read the guides</a></p>
     </div>
   </div>
 </section>

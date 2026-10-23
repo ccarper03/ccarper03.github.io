@@ -205,8 +205,7 @@ def situation(d):
   <div class="wrap">
     <h2 style="margin-bottom:40px">Here's the plan.</h2>
     <ol class="steps-num">{''.join(step(s) for s in d['plan'])}</ol>
-    {('<div class="grid" style="margin-bottom:40px">' + extras + '</div>') if extras else ''}
-    <div class="actions"><a class="btn btn-brass" href="{primary[1]}">{esc(primary[0])}</a><a class="arrow" href="{tool_href}">{esc(tool_label)}</a></div>
+    {('<div class="grid">' + extras + '</div>') if extras else ''}
   </div>
 </section>
 <section class="section bg-white" id="tools">

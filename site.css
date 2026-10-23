@@ -32,6 +32,8 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 12px); }
+html, body { overflow-x: clip; } /* nothing can push the page wider than the phone and zoom it out */
+[hidden] { display: none !important; } /* filtered-out home cards and closed panels really disappear */
 body {
   margin: 0; background: var(--lime); color: var(--ink);
   font: 400 17px/1.6 var(--sans);
@@ -94,8 +96,8 @@ ul, ol { margin: 0 0 1em; }
 .specs { font: 500 12px/1.5 var(--sans); letter-spacing: .1em; text-transform: uppercase; color: var(--slate); font-variant-numeric: tabular-nums; }
 .num { font-variant-numeric: tabular-nums; }
 .textlink, .arrow { font-weight: 600; color: var(--brass-dk); }
-.arrow { text-decoration: none; }
-.arrow::after { content: " \2192"; }
+.arrow { text-decoration: none; display: inline-flex; align-items: center; min-height: 44px; } /* 44px tap target */
+.arrow::after { content: "\00a0\2192"; }
 .arrow:hover { text-decoration: underline; }
 .bg-ink .arrow, .bg-ink .textlink { color: var(--brass-lt); }
 
@@ -170,7 +172,7 @@ ul, ol { margin: 0 0 1em; }
 .page-head .lead { max-width: 52ch; color: var(--ink); }
 .page-head.with-media .split { align-items: center; }
 .crumbs { font-size: 14px; color: var(--slate); margin: 0 0 18px; }
-.crumbs a { color: var(--slate); }
+.crumbs a { color: var(--slate); display: inline-block; padding: 6px 0; }
 .crumbs a:hover { color: var(--ink); }
 .crumbs span[aria-hidden] { margin: 0 6px; }
 
@@ -356,7 +358,9 @@ details.more summary, .more-times summary { cursor: pointer; font-weight: 600; c
   .mbar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 55; gap: 10px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
     background: rgba(245, 242, 236, .98); border-top: 1px solid var(--hair); }
   .mbar a { flex: 1 1 0; min-height: 48px; }
-  body { padding-bottom: 76px; }
+  .mbar { transition: transform .2s ease, visibility .2s; }
+  .mbar.is-hidden { transform: translateY(110%); visibility: hidden; }
+  .site-footer { padding-bottom: 116px; } /* room for the bar, in the footer's own color */
   .ask-btn { display: none !important; }
 }
 
@@ -615,7 +619,7 @@ table.schedule th, table.schedule td { text-align: left; padding: 12px; border-b
   .form-grid, .calc-form, .choices { grid-template-columns: minmax(0, 1fr); }
   .footer-grid { grid-template-columns: minmax(0, 1fr); }
   .btn { width: 100%; }
-  .actions .arrow, .actions .textlink { width: 100%; text-align: center; }
+  .actions .arrow, .actions .textlink { width: 100%; text-align: center; justify-content: center; }
   .tool-shell { padding: 20px 16px; }
   .plans-table th:nth-child(2), .plans-table td:nth-child(2) { display: none; }
 }
@@ -627,3 +631,9 @@ table.schedule th, table.schedule td { text-align: left; padding: 12px; border-b
   body { background: #fff; padding: 0; }
   .tool-shell { border: 0; padding: 0; }
 }
+
+/* UX pass, Oct 22 2026: one primary action per screen */
+.bg-ink .btn-line, .offer .btn-line { border-color: var(--fog); color: var(--white); }
+.bg-ink .btn-line:hover, .offer .btn-line:hover { background: var(--white); color: var(--ink); }
+.homes-more { display: flex; justify-content: center; margin-top: 28px; }
+.homes-more[hidden] { display: none; }
