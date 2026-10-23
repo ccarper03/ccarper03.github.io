@@ -152,8 +152,8 @@ def move_in_ready():
     </div>
     <div class="card">
       <h2 style="font-size:30px;margin-bottom:10px">Not sure where?</h2>
-      <p>Not sure which town fits? Tell me where you work and what you need. I'll point you to the two best areas.</p>
-      <div class="actions"><a class="arrow" href="{esc(sms('Hi Charles, help me find my best areas. I work near: ' + chr(10) + 'I need: '))}" data-sms-body="Hi Charles, help me find my best areas. I work near: &#10;I need: ">Find my best areas</a></div>
+      <p>Not sure which town fits? Tell me what you want to be close to and what you need in a home. I'll point you to the two best areas.</p>
+      <div class="actions"><a class="arrow" href="{esc(sms('Hi Charles, help me find my best areas.' + chr(10) + 'I want to be close to: ' + chr(10) + 'I need in a home: '))}" data-sms-body="Hi Charles, help me find my best areas.&#10;I want to be close to: &#10;I need in a home: ">Find my best areas</a></div>
     </div>
   </div>
 </section>
