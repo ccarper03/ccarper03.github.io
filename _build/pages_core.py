@@ -10,24 +10,25 @@ def home():
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="eyebrow">New D.R. Horton homes · Raleigh-Durham</p>
-      <h1>Move once. On your date.</h1>
-      <p class="lead">Every move is different. Tell me where you are right now. We'll work out your next step together, and I'll show you the D.R. Horton homes that fit.</p>
+      <p class="eyebrow">Hillsborough · Raleigh-Durham</p>
+      <h1>New D.R.&nbsp;Horton homes. I'll guide you home.</h1>
+      <p class="lead">I'm Charles. I worked on job sites before I sold homes. Tell me your budget and your timing, and I'll walk you through the homes that fit, from your first visit to move-in day.</p>
       <div class="actions">
         <a class="btn btn-brass" href="/visit/">Book a visit</a>
         <a class="arrow" href="/move-in-ready/">See move-in ready homes</a>
       </div>
+      <p class="hero-micro">Free, no pressure. Bring your agent if you have one.</p>
       <ul class="trust" aria-label="About Charles">
-        <li>Built homes for almost 2 years</li><li>Bought a new home in 2009</li><li>Veteran</li><li>Sells D.R. Horton homes every day</li>
+        <li>Almost 2 years on job sites</li><li>Bought new myself in 2009</li><li>Veteran</li><li>Prices updated weekly</li>
       </ul>
     </div>
-    {shot(1, 'Charles Carper in the Collins Ridge model great room', 'Stand on the right third, three-quarter length, relaxed smile. Camera at chest height. Window light from the left.', img='/assets/images/cc-hayden-living.jpg', ar='4 / 5', gx='62%', eager=True)}
+    {shot(1, 'Charles Carper in the Collins Ridge model great room', 'Stand on the right third, three-quarter length, relaxed smile. Camera at chest height. Window light from the left.', img='/assets/images/cc-about.jpg', ar='4 / 5', gx='62%', eager=True)}
   </div>
 </section>
 
 <section class="section bg-white" id="situations">
   <div class="wrap">
-    <div class="head"><h2>Where are you right now?</h2><p class="quiet">Pick the one that sounds like you. Each one has its own plan.</p></div>
+    <div class="head"><h2>Where are you right now?</h2><p class="quiet">Pick the one that sounds like you. I'll walk you through the plan that fits.</p></div>
     {tiles()}
   </div>
 </section>
@@ -70,7 +71,7 @@ def home():
 
 <section class="section tight">
   <div class="wrap">
-    <h2 style="margin-bottom:40px">Here's how it works.</h2>
+    <h2 style="margin-bottom:40px">Here's how I'll guide you.</h2>
     <ol class="steps-num">
       <li><h3>Tell me where you are</h3><p>Use a quick planner, or just text me. It takes about two minutes.</p></li>
       <li><h3>We make a plan together</h3><p>Your timing, your budget and your next step. No pressure.</p></li>
@@ -104,7 +105,7 @@ def home():
 '''
     schema = [{"@context": "https://schema.org", "@type": "WebSite", "name": "Charles Carper", "url": SITE + "/"}, PERSON_LD]
     write('/', page('/', 'Charles Carper | New D.R. Horton Homes in Raleigh-Durham',
-                    'New D.R. Horton homes around Raleigh-Durham, with a plan for your move. A move-in ready list updated weekly, quick planners for selling, renting and budgeting, and straight answers from Charles Carper.',
+                    'New D.R. Horton homes around Raleigh-Durham, and a guide from your first visit to move-in day. A move-in ready list updated weekly, quick planners for selling, renting and budgeting, and straight answers from Charles Carper.',
                     body, active=None, scripts=['/js/forms.js'], schema=schema))
 
 

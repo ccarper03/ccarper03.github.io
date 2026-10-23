@@ -637,3 +637,4 @@ table.schedule th, table.schedule td { text-align: left; padding: 12px; border-b
 .bg-ink .btn-line:hover, .offer .btn-line:hover { background: var(--white); color: var(--ink); }
 .homes-more { display: flex; justify-content: center; margin-top: 28px; }
 .homes-more[hidden] { display: none; }
+.hero-micro { margin: 12px 0 0; font-size: 14px; color: var(--slate); }
