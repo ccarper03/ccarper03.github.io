@@ -75,3 +75,34 @@
   if (callBtn) callBtn.addEventListener('click', openCall);
   if (location.hash === '#call' && callBtn) openCall();
 })();
+
+// Another community: their picks fill in a text to Charles. Skipped answers stay blank in the text,
+// so they can type them in Messages before sending.
+(function () {
+  'use strict';
+  var form = document.querySelector('form[data-other]');
+  if (!form) return;
+  var send = form.querySelector('[data-other-send]'), preview = form.querySelector('[data-preview]');
+  var PHONE = '+19843282788';
+  var LINES = [['area', 'Area'], ['beds', 'Bedrooms'], ['baths', 'Bathrooms'], ['when', 'Moving'], ['price', 'Price range'], ['sell', 'Need to sell first']];
+  function text() {
+    var out = ["Hi Charles, I'm looking at D.R. Horton homes outside Hillsborough. Can you help me set up a visit?"];
+    LINES.forEach(function (l) { var v = (form[l[0]].value || '').trim(); out.push(l[1] + ': ' + v); });
+    out.push('My name: ');
+    return out.join('\n');
+  }
+  function update() {
+    var body = text();
+    preview.textContent = body;
+    send.setAttribute('data-sms-body', body);
+    send.setAttribute('href', 'sms:' + PHONE + '?&body=' + encodeURIComponent(body));
+  }
+  form.addEventListener('input', update);
+  form.addEventListener('change', update);
+  form.addEventListener('submit', function (e) { e.preventDefault(); });
+  send.addEventListener('click', function () {
+    var filled = LINES.filter(function (l) { return (form[l[0]].value || '').trim(); }).length;
+    if (window.ccTrack) window.ccTrack('other_community_text', { filled: filled });
+  });
+  update();
+})();

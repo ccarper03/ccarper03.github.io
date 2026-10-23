@@ -638,3 +638,10 @@ table.schedule th, table.schedule td { text-align: left; padding: 12px; border-b
 .homes-more { display: flex; justify-content: center; margin-top: 28px; }
 .homes-more[hidden] { display: none; }
 .hero-micro { margin: 12px 0 0; font-size: 14px; color: var(--slate); }
+/* Visit page: another community, quick picks that fill a text */
+.mini-form { display: grid; gap: 12px; margin-top: 16px; }
+.mini-form .field { margin: 0; }
+.mini-two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.text-preview { white-space: pre-wrap; background: var(--lime); border: 1px solid var(--hair); border-radius: 14px 14px 14px 4px;
+  padding: 12px 14px; font-size: 14px; line-height: 1.5; color: var(--ink); }
+.mini-form .btn { width: 100%; }

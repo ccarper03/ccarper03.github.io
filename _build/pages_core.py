@@ -167,6 +167,32 @@ def move_in_ready():
                                   body, active='homes', scripts=['/js/forms.js', '/js/homes.js']))
 
 
+def other_community_form():
+    """Quick picks that fill in a text to Charles. Anything skipped stays blank in the text for them to fill in."""
+    d = load_homes()
+    towns = sorted({h['town'] for h in d['homes'] if h['town'] != 'Hillsborough'})
+    comms = sorted({h['community'] + ' (' + h['town'] + ')' for h in d['homes'] if not h['community'].startswith('Collins Ridge')})
+    opts = lambda first, items: '<option value="">' + first + '</option>' + ''.join('<option>' + esc(i) + '</option>' for i in items)
+    body = "Hi Charles, I'm looking at D.R. Horton homes outside Hillsborough. Can you help me set up a visit?"
+    return ('<form class="mini-form" data-other novalidate>'
+            '<label class="field full"><span>Where are you looking?</span><input name="area" list="cc-areas" placeholder="A town or a community" autocomplete="off"></label>'
+            '<datalist id="cc-areas">' + ''.join('<option value="' + esc(t) + '">' for t in towns + comms) + '</datalist>'
+            '<div class="mini-two">'
+            '<label class="field"><span>Bedrooms</span><select name="beds">' + opts('Pick', ['2', '3', '4', '5 or more']) + '</select></label>'
+            '<label class="field"><span>Bathrooms</span><select name="baths">' + opts('Pick', ['2', '2.5', '3', '3.5 or more']) + '</select></label></div>'
+            '<label class="field full"><span>When do you want to move?</span><select name="when">' +
+            opts('Pick one', ['In the next 3 months', 'In 3 to 6 months', 'In 6 to 12 months', 'Just looking for now']) + '</select></label>'
+            '<label class="field full"><span>Price range</span><select name="price">' +
+            opts('Pick one', ['Under $300K', '$300K to $400K', '$400K to $500K', '$500K to $600K', 'Over $600K']) + '</select></label>'
+            '<label class="field full"><span>Do you need to sell a home to buy?</span><select name="sell">' +
+            opts('Pick one', ['Yes, I need to sell first', 'I have one to sell, but I could buy first', 'No', 'Not sure yet']) + '</select></label>'
+            '<p class="small quiet" style="margin:4px 0 0">Your text to me will say:</p>'
+            '<div class="text-preview" data-preview aria-live="polite"></div>'
+            '<a class="btn btn-line" data-other-send href="' + esc(sms(body)) + '" data-sms-body="' + esc(body) + '">Text me these details</a>'
+            '<p class="small quiet" style="margin:0">It opens a text with your answers filled in. Change anything before you send it. Or call ' + PHONE_SHOW + '.</p>'
+            '</form>')
+
+
 def visit():
     sit_opts = ''.join('<option>' + esc(label) + '</option>' for _, _, _, label in SITUATIONS)
     body = f'''
@@ -244,11 +270,10 @@ def visit():
         <div data-call-slot hidden style="margin-top:16px"><iframe data-src="{CALL_EMBED}" title="Pick a time for a 15-minute call with Charles Carper" style="width:100%;min-height:640px;border:0"></iframe>
           <p class="small quiet">Calendar not loading? <a href="{CALL_LINK}" target="_blank" rel="noopener">Open it in a new tab</a>.</p></div>
       </div>
-      <div class="card">
+      <div class="card" id="other">
         <h3>Another community</h3>
-        <p class="quiet" style="margin-top:6px">Looking at a home outside Hillsborough? I'll set up your visit with the sales consultant there.</p>
-        <div class="actions" style="margin-top:16px"><a class="btn btn-line" href="{esc(sms("Hi Charles, I'd like to see a D.R. Horton home in another community. It's in: "))}" data-sms-body="Hi Charles, I'd like to see a D.R. Horton home in another community. It's in: ">Text me the community</a></div>
-        <p class="small quiet" style="margin-top:10px">Or call {PHONE_SHOW}.</p>
+        <p class="quiet" style="margin-top:6px">Looking at a home outside Hillsborough? Tell me a few things, and I'll set up your visit with the sales consultant there.</p>
+        {other_community_form()}
       </div>
     </div>
   </div>
