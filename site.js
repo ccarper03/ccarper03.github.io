@@ -291,7 +291,7 @@
     var f = e.target.closest && e.target.closest('form'); if (!f) return;
     var n = formName(f); if (!n || formsStarted[n]) return;
     formsStarted[n] = 1;
-    track('form_start', { form: n, page_type: pageType });
+    track('lead_form_start', { form: n, page_type: pageType });
   });
 
   // Email links assembled on click, so the address isn't in the page source
