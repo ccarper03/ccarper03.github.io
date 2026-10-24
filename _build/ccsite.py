@@ -363,7 +363,9 @@ def fine_print(keys, revised=None):
 # ---------------------------------------------------------------------------
 # Chrome
 # ---------------------------------------------------------------------------
-FOOTER_DISCLOSURE = ("I'm a new home sales consultant, and I work for D.R. Horton. This is my own website, not a D.R. Horton website. "
+# Firm name exactly as licensed with NCREC (58A .0105). Confirmed with Charles's BIC, Oct 23, 2026.
+FIRM = 'D.R. Horton, Inc.'
+FOOTER_DISCLOSURE = ("I'm a new home sales consultant with " + FIRM + " This is my own website, not a D.R. Horton website. "
                      "I work for the builder, which is the seller. You're always welcome to bring your own real estate agent. "
                      "Prices and homes come from drhorton.com and change often. Nothing here is an offer, a loan quote or legal advice. "
                      "D.R. Horton is an Equal Housing Opportunity Builder.")
@@ -386,7 +388,7 @@ PERSON_LD = {"@context": "https://schema.org", "@type": "Person", "name": "Charl
 def header(active):
     items = ''.join('<li><a href="' + href + '"' + (' aria-current="page"' if key == active else '') + '>' + esc(label) + '</a></li>'
                     for key, href, label in NAV)
-    return ('<div class="topstrip">Charles Carper · New Home Sales Consultant at D.R. Horton · This is my own site, not D.R. Horton\'s</div>\n'
+    return ('<div class="topstrip">Charles Carper · New Home Sales Consultant with D.R. Horton, Inc. · This is my own site, not D.R. Horton\'s</div>\n'
             '<header class="site-header"><div class="wrap header-row">'
             '<a class="brand" href="/" aria-label="Charles Carper, home"><span class="brand-name">Charles Carper</span><span class="brand-tag">New homes · Raleigh-Durham</span></a>'
             '<nav class="nav" aria-label="Main"><button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-list">Menu</button>'

@@ -648,7 +648,7 @@ def disclosures():
 <section class="page-head"><div class="wrap">{crumbs([('Home', '/'), ('Disclosures', None)])}<h1>Disclosures</h1><p class="lead">Who I work for, where the prices come from, and what the planners can and can't tell you.</p></div></section>
 <section class="section tight"><div class="wrap prose">
   <h2>Who I work for</h2>
-  <p>I'm a new home sales consultant, and I work for D.R. Horton. This is my own website, not a D.R. Horton website. I work for the builder, which is the seller. You're always welcome to bring your own real estate agent.</p>
+  <p>I'm a new home sales consultant with D.R. Horton, Inc. This is my own website, not a D.R. Horton website. I work for the builder, which is the seller. You're always welcome to bring your own real estate agent.</p>
   <p>I don't list homes for sale. If you have a home to sell, pick a listing agent you like, and I'll work with them on your timing.</p>
   <h2>Prices and homes</h2>
   <p>Prices and homes come from drhorton.com and change often. Every price on this site is shown with the date I checked it. The move-in ready list is updated weekly, so a home can sell before the list catches up. Text me to check a home before you come.</p>
