@@ -38,7 +38,7 @@ S = [
          why='I\'ll walk you through every step, in plain words, at your pace.',
          plan=['Get a rough number: what you can afford, using your own numbers.',
                'Line up the timing: pick a home that\'s ready about when your lease ends.',
-               'Talk to a lender and get preapproved: Laura Hall at DHI Mortgage can help, or use any lender you like. Ask about first-time buyer programs too.'],
+               'Talk to a lender and get preapproved: pick a lender you trust. I\'m happy to share names. Ask about first-time buyer programs too.'],
          extras=[], tools=['lease-to-keys', 'buying-power'],
          stakes='Another year of rent. Another rent increase. A lease-break fee you didn\'t plan for.',
          success='You get your keys about when your lease ends, at a payment you planned for.',
@@ -105,7 +105,7 @@ S = [
          close='Walk the downstairs suites before anyone moves in.'),
     dict(slug='work-from-home', crumb='I work from home',
          title='Floor Plans With a Real Home Office, Hillsborough NC | Charles Carper',
-         desc='Floor plans with a real office, or two, plus drive times to RTP, Duke and UNC for your office days. Come close the door in the model flex room yourself.',
+         desc='Floor plans with a real office, or two, plus distances to RTP, Duke and UNC. Come close the door in the model flex room yourself.',
          h1='A flex room is only flexible if it has a door.',
          sub='Floor plans with a real office, or two, plus the drive time for your office days.',
          tool=('Find plans with an office', '/plan/floor-plan-match/?start=office'),
@@ -114,9 +114,9 @@ S = [
          empathy='You don\'t want more square feet. You want the right rooms.',
          why='I\'ll show you where each plan puts the office, and how far it sits from the kitchen and living room.',
          plan=['Count your offices: one or two, and whether each needs a door.',
-               'Check the drive: real drive times to RTP, Duke and UNC for your office days.',
+               'Check the drive: real distances to RTP, Duke and UNC, then try it on an office day.',
                'Stand in the room: close the door in the model\'s flex room and see how it feels.'],
-         extras=[('Drive times from the model', 'Duke University Hospital, about 18 minutes. Franklin Street in Chapel Hill, about 23. Research Triangle Park, about 31. Approximate, off-peak, no traffic. <a href="/collins-ridge/#area">See all drive times</a>')],
+         extras=[('Distances from the model', 'Duke University Hospital, about 11.7 miles. Franklin Street in Chapel Hill, about 11.9. Research Triangle Park, about 21. <a href="/collins-ridge/#area">See all distances</a>')],
          tools=['floor-plan-match', 'buying-power'],
          stakes='Another year of calls from the kitchen table.',
          success='A door that closes, and a short drive on office days.',
@@ -134,11 +134,11 @@ S = [
          empathy='You earned this benefit. You want a straight answer.',
          why='I\'m a veteran too. I\'ll give it to you straight.',
          plan=['Get your Certificate of Eligibility: a lender can pull it for you.',
-               'Talk to a lender who does VA loans often: Laura Hall at DHI Mortgage does, or use any lender you like.',
+               'Talk to a lender who does VA loans often: I\'m happy to share names.',
                'Pick a home and time it with your lease or your job.'],
          extras=[('The funding fee', 'Ask your lender how it applies to you. Some veterans don\'t pay it.')],
          tools=['buying-power', 'lease-to-keys'], tool_qs={'buying-power': '?loan=va'},
-         tools_note='Free, and about two minutes. The Buying Power Estimate has a VA loan option, with no monthly mortgage insurance.',
+         tools_note='About two minutes. The Buying Power Estimate has a VA loan option, with no monthly mortgage insurance.',
          stakes='Renting longer because of a myth.',
          success='Your benefit, used the right way. A brand-new home. No surprises.',
          homes=[('Plans to start with', [('Landon', None), ('Robie', None), ('Cali', None)])],
@@ -151,7 +151,7 @@ S = [
          sub='Townhomes where the HOA takes care of the lawn and the outside of the home. More time for the things you\'d rather do.',
          tool=('See townhomes ready now', '#ready'),
          shot=dict(n=9, alt='A row of finished Collins Ridge townhomes with 2-car garages', note='The townhome row and its 2-car garages. Finished Savannah or Linville. No people.', scene='townhomes', ghost=None),
-         problem='Your days are full. Maybe you work long shifts. Maybe you\'re done spending weekends on the lawn, the gutters and the trim. Either way, you want a home that doesn\'t take your free time.',
+         problem='Your days are full. Maybe you work long shifts. Maybe you\'re done spending weekends on the lawn, the gutters and the trim. Either way, you want a home that doesn\'t take all your time.',
          empathy='You want a place that\'s yours, without a long list of chores.',
          why='Before you decide, I\'ll show you exactly what the HOA covers, right in the HOA papers.',
          plan=['Tell me what you\'re done taking care of.',
@@ -160,7 +160,7 @@ S = [
          extras=[('What the HOA covers', 'At Collins Ridge, the townhome HOA takes care of the outside of the home, the roof shingles, the gutters and the lawn. Ask me for the current HOA papers.')],
          tools=['sell-and-buy', 'buying-power'], tools_note='The Sell & Buy Planner if you have a home to sell. The Buying Power Estimate if you rent.',
          stakes='More weekends on yard work. More of your time on the house, less on your life.',
-         success='A home that\'s yours. Your free time stays yours. Lock the door and go.',
+         success='A home that\'s yours. Your time stays yours. Lock the door and go.',
          homes=[('Townhomes', [('Savannah', 'primary bedroom downstairs'), ('Linville', 'bedroom and full bath downstairs')])], homes_note='Both are townhomes with a 2-car garage.',
          guides=['hoa-fees-and-amenities', 'true-cost-of-owning-a-home', 'new-home-maintenance-checklist'],
          close='Come see the townhomes, and read the HOA papers with me.'),
@@ -265,7 +265,7 @@ def situation(d):
 {ready_block(d['slug'])}
 <section class="section" id="tools">
   <div class="wrap">
-    <div class="head"><h2>Get a quick answer first.</h2><p class="quiet">{esc(d.get('tools_note', 'Free, and about two minutes. You type in your own numbers, so the answer is an estimate, not a loan offer.'))}</p></div>
+    <div class="head"><h2>Get a quick answer first.</h2><p class="quiet">{esc(d.get('tools_note', 'About two minutes. You type in your own numbers, so the answer is an estimate, not a loan offer.'))}</p></div>
     {tool_tiles(d['tools'], d.get('tool_qs'))}
   </div>
 </section>
@@ -297,7 +297,8 @@ def situation(d):
     schema = [{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://charlescarper.com/"},
         {"@type": "ListItem", "position": 2, "name": d['crumb'], "item": "https://charlescarper.com" + path}]}]
-    write(path, page(path, d['title'], d['desc'], body, schema=schema))
+    fine = ['prices', 'sqft'] + (['model'] if 'cc-hayden' in d['shot'].get('img', '') else [])
+    write(path, page(path, d['title'], d['desc'], body, schema=schema, fine=fine, revised=load_homes()['asOf']))
 
 
 def build():

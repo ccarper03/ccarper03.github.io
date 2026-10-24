@@ -64,7 +64,7 @@ SITUATIONS = [
     ('downstairs-suite', 'I need a bedroom and bath downstairs', 'A full suite on the first floor, so everyone gets their own space.', 'I need a bedroom and bath downstairs'),
     ('work-from-home', 'I work from home', 'Floor plans with a real office, and a door that closes.', 'I work from home'),
     ('va-loan', "I'm using my VA loan", "Yes, you can use it on a brand-new home. Here's how.", "I'm using my VA loan"),
-    ('low-maintenance', 'I want a low-maintenance home', 'Townhomes where the HOA takes care of the lawn and the outside. More free time for you.', 'I want a low-maintenance home'),
+    ('low-maintenance', 'I want a low-maintenance home', 'Townhomes where the HOA takes care of the lawn and the outside. More time for you.', 'I want a low-maintenance home'),
 ]
 
 TOOLS = {
@@ -76,20 +76,23 @@ TOOLS = {
 }
 
 # Collins Ridge plans. Lines from the Page map tab; room counts from the builder's published plan info.
+# "From the $X" prices move in $10,000 steps only ($410s, never $418s), per D.R. Horton Marketing Guidelines III.E.1.
+# At least 10% of homes for sale must be at or below each "from" price (the 10% rule).
 PLANS_ASOF = 'Oct 20, 2026'
+PLANS_ASOF_ISO = '2026-10-20'
 PLANS = [
     ('Savannah', 'Townhome', 4, '2.5', 2, 'The primary bedroom is on the first floor, with a big loft upstairs', '$380s'),
     ('Linville', 'Townhome', 4, '3', 2, 'A bedroom and full bath on the first floor', '$390s'),
-    ('Robie', 'Single-family', 5, '3', 2, '5 bedrooms on a 40-foot homesite, with a bedroom and full bath downstairs', '$418s'),
-    ('Sierra', 'Single-family', 4, '2.5', 2, 'The primary bedroom is on the first floor; secondary bedrooms and a living room upstairs', '$419s'),
+    ('Robie', 'Single-family', 5, '3', 2, '5 bedrooms on a 40-foot homesite, with a bedroom and full bath downstairs', '$410s'),
+    ('Sierra', 'Single-family', 4, '2.5', 2, 'The primary bedroom is on the first floor; secondary bedrooms and a living room upstairs', '$410s'),
     ('Cali', 'Single-family', 4, '2', 1, 'The one-story plan: everything on one level', '$430s'),
-    ('Landon', 'Single-family', 4, '3', 2, 'A bedroom and full bath downstairs, and a second living room upstairs', '$431s'),
-    ('Galen', 'Single-family', 3, '2.5', 2, 'A flex room on the first floor that works as an office', '$445s'),
+    ('Landon', 'Single-family', 4, '3', 2, 'A bedroom and full bath downstairs, and a second living room upstairs', '$430s'),
+    ('Galen', 'Single-family', 3, '2.5', 2, 'A flex room on the first floor that works as an office', '$440s'),
     ('Hayden', 'Single-family', 5, '3', 2, "A bedroom, full bath and flex room downstairs. It's the furnished model.", '$460s'),
     ('Alec', 'Single-family', 4, '3', 2, 'The garage is in back, so the front porch faces the street', '$470s'),
-    ('Hanover', 'Single-family', 4, '2.5', 2, 'The biggest plan, with an option for a 5th bedroom and full bath downstairs', '$477s'),
+    ('Hanover', 'Single-family', 4, '2.5', 2, 'The biggest plan, with an option for a 5th bedroom and full bath downstairs', '$470s'),
     ('Calhoun', 'Single-family', 4, '3.5', 2, 'Dual primary: one primary suite upstairs and one on the first floor', '$480s'),
-    ('Jackson', 'Single-family', 5, '3', 2, "5 bedrooms, one downstairs with a full bath, plus a butler's pantry", '$485s'),
+    ('Jackson', 'Single-family', 5, '3', 2, "5 bedrooms, one downstairs with a full bath, plus a butler's pantry", '$480s'),
 ]
 PLAN_NAMES = [p[0] for p in PLANS]
 
@@ -301,6 +304,61 @@ def disclose_line():
 
 ESTIMATE_LINE = 'Estimate only. This is not a loan approval, a prequalification or a rate quote. Only a lender can tell you if you qualify.'
 
+# No lender is named on the site until DHI Mortgage Compliance 911 approves the wording (Guidelines II.B, IV.C.9).
+LENDER_LINE = "Talk to a lender you trust. I'm happy to share names."
+
+# ---------------------------------------------------------------------------
+# Disclaimers: exact wording from D.R. Horton's Marketing Guidelines and Disclaimers (rev. 7/28/2025).
+# A page carries only the lines for what it shows (IV.B.1). Pass the keys to page(fine=[...]).
+# ---------------------------------------------------------------------------
+COPY_REVISED = '2026-10-23'   # bump when page copy changes; pages with prices use the newer of this and the price date
+
+DISCLAIMERS = {
+    'prices': ('Home and community information, including pricing, included features, terms, availability and amenities, are subject to change '
+               'at any time without notice or obligation. Homes subject to prior sale. Prices do not include closing costs or other fees that are '
+               'payable by the homebuyer.'),
+    'base': ('Prices shown are base home prices and do not include lot premiums, options, upgrades, modifications to plans and custom features, '
+             'which may substantially increase the final cost of the home.'),
+    'sqft': 'Square footages are approximate.',
+    'plans': ('Drawings, renderings, photos, square footages, floor plans and sizes are approximate and for illustration purposes only and will '
+              'vary from the homes as built. Not all features available on all plans. Elevations and exterior materials may vary.'),
+    'model': ('Images are of model home and may include custom design features not available in other homes. Furnishings and decorative items '
+              'are not included with home purchase.'),
+    'appliances': ('Appliances include a gas range, microwave and dishwasher. Appliance make and model may vary due to supply availability. '
+                   'See sales agent for complete appliance details.'),
+    'features': ('D.R. Horton reserves the right to make changes or substitutions to materials for those of substantially equal or greater '
+                 "utility and quality without buyer's consent. Make and model may vary due to supply availability."),
+    'smart': ('A D.R. Horton Smart Home is equipped with technology that includes some or all of the following Internet-connected devices: a video '
+              'doorbell, a programmable thermostat; a door lock; a smart light switch; and a touchscreen smart home control device, all of which '
+              'are integrated by an automation platform hosted by Alarm.com. D.R. Horton reserves the right, without prior notice, to substitute '
+              'other products for those listed above. Other Smart Home technology features may be offered for an additional charge. For Smart Home '
+              'technology included in the home to work, homeowners must obtain and pay for their own Internet service and may need to purchase '
+              'compatible devices and to maintain accounts with third parties for the services. D.R. Horton makes no representation or warranty '
+              'that any or all of the Smart Home technology is secure, will meet any homeowner needs or will provide any level of physical or '
+              'cyber security for the home – even if the technology is working as intended. See a D.R. Horton representative for complete information.'),
+    'warranty': 'See sales agent for complete warranty details.',   # name the warranty (RWC Limited Warranty) in the page copy too (IV.C.23)
+    'hoa': 'HOA dues are subject to change as provided in the governing documents for the community.',
+    'schools': ('Buyer should conduct his or her own investigation of the present and future availability of school districts and school '
+                'assignments. Seller has no control or responsibility for any changes to school districts or school assignments should they '
+                'occur in the future.'),
+    'options': 'Options and upgrades are available at an additional cost and are subject to construction cut-off dates.',
+    'dates': 'Move-in dates are estimates only and are subject to change.',
+}
+DISCLAIMER_ORDER = ['prices', 'base', 'sqft', 'plans', 'model', 'appliances', 'features', 'smart', 'warranty', 'options', 'dates', 'hoa', 'schools']
+
+
+def mmddyyyy(iso):
+    d = dt.date.fromisoformat(iso)
+    return d.strftime('%m/%d/%Y')
+
+
+def fine_print(keys, revised=None):
+    """The page's own disclaimer lines, in a fixed order, ending with the revision date (IV.A.3)."""
+    keys = [k for k in DISCLAIMER_ORDER if k in set(keys or ())]
+    rev = max(COPY_REVISED, revised) if revised else COPY_REVISED
+    text = ' '.join(DISCLAIMERS[k] for k in keys)
+    return '<p class="fine-print">' + esc((text + ' ' if text else '') + 'Revised ' + mmddyyyy(rev) + '.') + '</p>'
+
 
 # ---------------------------------------------------------------------------
 # Chrome
@@ -308,10 +366,8 @@ ESTIMATE_LINE = 'Estimate only. This is not a loan approval, a prequalification 
 FOOTER_DISCLOSURE = ("I'm a new home sales consultant, and I work for D.R. Horton. This is my own website, not a D.R. Horton website. "
                      "I work for the builder, which is the seller. You're always welcome to bring your own real estate agent. "
                      "Prices and homes come from drhorton.com and change often. Nothing here is an offer, a loan quote or legal advice. "
-                     "Equal Housing Opportunity.")
-
-EHO_SVG = ('<svg role="img" aria-label="Equal Housing Opportunity" viewBox="0 0 40 40"><path d="M4 18 L20 6 L36 18 L36 34 L4 34 Z" fill="none" stroke="#E9E4DA" stroke-width="2"/>'
-           '<rect x="12" y="20" width="16" height="3" fill="#E9E4DA"/><rect x="12" y="26" width="16" height="3" fill="#E9E4DA"/></svg>')
+                     "D.R. Horton is an Equal Housing Opportunity Builder.")
+# The statement alone meets Guidelines IV.A.1(a). The drawn house icon that used to sit here wasn't the HUD logo, so it's gone.
 
 ANALYTICS = """<script async src="https://www.googletagmanager.com/gtag/js?id=G-4Y130WZZEZ"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-4Y130WZZEZ');</script>
@@ -341,7 +397,7 @@ def header(active):
 MBAR = {'/visit/': ('Pick a visit time', '#book'), '/agents/': ('Protect my client', '#register')}
 
 
-def footer(path='/'):
+def footer(path='/', fine=None, revised=None):
     label, href = MBAR.get(path, ('Book a visit', '/visit/'))
     return ('<footer class="site-footer"><div class="wrap"><div class="footer-grid">'
             '<div><div class="f-name">Charles Carper</div><div class="f-title">New Home Sales Consultant · D.R. Horton, Raleigh-Durham</div></div>'
@@ -350,12 +406,13 @@ def footer(path='/'):
             '<li><a href="' + MODEL_MAP + '" target="_blank" rel="noopener">Model home: ' + MODEL_ADDRESS + '</a></li></ul></div>'
             '<div><h2>On this site</h2><ul><li><a href="/move-in-ready/">Move-in ready homes</a></li><li><a href="/collins-ridge/">Collins Ridge</a></li>'
             '<li><a href="/plan/">Plan your move</a></li><li><a href="/guides/">Guides</a></li><li><a href="/agents/">For agents</a></li></ul></div>'
-            '</div><div class="footer-legal">' + EHO_SVG + '<p>' + esc(FOOTER_DISCLOSURE) +
-            ' <a href="/disclosures/">Disclosures</a> · <a href="/privacy/">Privacy</a></p></div></div></footer>\n'
+            '</div><div class="footer-legal"><p>' + esc(FOOTER_DISCLOSURE) +
+            ' <a href="/disclosures/">Disclosures</a> · <a href="/privacy/">Privacy</a></p>' + fine_print(fine, revised) + '</div></div></footer>\n'
             '<div class="mbar" data-mbar><a class="btn btn-brass" href="' + href + '">' + esc(label) + '</a><a class="btn btn-line" href="' + sms() + '">Text</a></div>')
 
 
-def page(path, title, description, body, active=None, scripts=(), robots=None, schema=(), og_image='/assets/images/cc-share.jpg', canonical=None, head_extra=''):
+def page(path, title, description, body, active=None, scripts=(), robots=None, schema=(), og_image='/assets/images/cc-share.jpg', canonical=None, head_extra='',
+         fine=None, revised=None):
     canonical = canonical or (SITE + path)
     ld = ''.join('<script type="application/ld+json">' + json.dumps(s, ensure_ascii=False) + '</script>\n' for s in schema)
     page_scripts = ''.join('<script src="' + s + '?v=' + VERSION + '" defer></script>\n' for s in scripts)
@@ -376,7 +433,7 @@ def page(path, title, description, body, active=None, scripts=(), robots=None, s
             '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap">\n'
             '<link rel="stylesheet" href="/site.css?v=' + VERSION + '">\n' + head_extra + ANALYTICS + '\n' + ld +
             '</head>\n<body>\n<a class="skip" href="#main">Skip to content</a>\n' + header(active) + '\n<main id="main">\n' + body.strip() +
-            '\n</main>\n' + footer(path) + '\n<script src="/site.js?v=' + VERSION + '" defer></script>\n' + page_scripts + HUBSPOT_CHAT + '\n</body>\n</html>\n')
+            '\n</main>\n' + footer(path, fine, revised) + '\n<script src="/site.js?v=' + VERSION + '" defer></script>\n' + page_scripts + HUBSPOT_CHAT + '\n</body>\n</html>\n')
 
 
 def out_path(path):
@@ -474,6 +531,21 @@ def guide_ctas(main):
     return main
 
 
+def guide_fine(main):
+    """Disclaimer lines a guide needs, from what its text mentions (IV.B.1)."""
+    t = html.unescape(re.sub(r'<[^>]+>', ' ', main))
+    keys = []
+    if re.search(r'HOA (dues|fees?)', t, re.I):
+        keys.append('hoa')
+    if re.search(r'school (district|assignment)', t, re.I):
+        keys.append('schools')
+    if re.search(r'smart home', t, re.I):
+        keys.append('smart')
+    if 'RWC' in t or any('Collins Ridge' in x and re.search(r'warrant', x, re.I) for x in re.split(r'(?<=[.!?])\s+', t)):
+        keys.append('warranty')
+    return keys
+
+
 def reskin_guides():
     gdir = os.path.join(ROOT, 'guides')
     count = 0
@@ -504,7 +576,7 @@ def reskin_guides():
         path = canon.replace(SITE, '') or '/guides/'
         with open(p, 'w', encoding='utf-8') as fh:
             fh.write(page(path, title, desc, main, active='guides', schema=lds,
-                          og_image=og.group(1) if og else '/assets/images/cc-share.jpg', canonical=canon))
+                          og_image=og.group(1) if og else '/assets/images/cc-share.jpg', canonical=canon, fine=guide_fine(main)))
         WRITTEN.append(path)
         count += 1
     return count

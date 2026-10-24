@@ -1,7 +1,7 @@
 """Core pages: home, move-in ready, visit, Collins Ridge (3), plan hub, about, agents, privacy, disclosures, 404, team tools."""
 from ccsite import (esc, sms, page, write, shot, tiles, tool_tiles, homes_grid, signup, offer_band, closing, crumbs,
                   disclose_line, load_homes, long_date, short_date, PLANS, PLANS_ASOF, SITUATIONS, TOOLS, PHONE, PHONE_SHOW,
-                  MODEL_ADDRESS, MODEL_MAP, HS_MEETING, CALL_EMBED, CALL_LINK, PERSON_LD, SITE, guide_links, plan_link, ESTIMATE_LINE)
+                  MODEL_ADDRESS, MODEL_MAP, HS_MEETING, CALL_EMBED, CALL_LINK, PERSON_LD, SITE, guide_links, plan_link, ESTIMATE_LINE, LENDER_LINE, PLANS_ASOF_ISO, DISCLAIMERS)
 
 
 def home():
@@ -17,7 +17,7 @@ def home():
         <a class="btn btn-brass" href="/visit/">Book a visit</a>
         <a class="arrow" href="/move-in-ready/">See move-in ready homes</a>
       </div>
-      <p class="hero-micro">Free, no pressure. Bring your agent if you have one.</p>
+      <p class="hero-micro">No pressure. Bring your agent if you have one.</p>
       <ul class="trust" aria-label="About Charles">
         <li>Almost 2 years on job sites</li><li>Bought new myself in 2009</li><li>Veteran</li><li>Prices updated weekly</li>
       </ul>
@@ -47,7 +47,7 @@ def home():
 <section class="section bg-white">
   <div class="wrap">
     <h2 style="max-width:22ch;margin-bottom:16px">Picking out the house is usually the easy part. The timing is the hard part.</h2>
-    <p class="quiet measure" style="margin-bottom:40px">Rates change, and the economy feels uncertain. It's easy to freeze, and then everything stays the same. A plan takes the guessing out.</p>
+    <p class="quiet measure" style="margin-bottom:40px">The market feels uncertain. It's easy to freeze, and then everything stays the same. A plan takes the guessing out.</p>
     <div class="stakes">
       <div><h3>Two payments, no plan</h3><p>Buying first works well for a lot of people. Just know your numbers before you start.</p></div>
       <div><h3>Moving twice</h3><p>Selling first works too. Without a plan, you may move out, store your things, then move again.</p></div>
@@ -82,7 +82,7 @@ def home():
 
 <section class="section bg-white" id="tools">
   <div class="wrap">
-    <div class="head"><h2>Get quick answers.</h2><p class="quiet">Free, and about two minutes each. You type in your own numbers, so the answer is an estimate, not a loan offer.</p></div>
+    <div class="head"><h2>Get quick answers.</h2><p class="quiet">About two minutes each. You type in your own numbers, so the answer is an estimate, not a loan offer.</p></div>
     {tool_tiles(['sell-and-buy', 'two-mortgages', 'lease-to-keys', 'buying-power'])}
   </div>
 </section>
@@ -106,7 +106,7 @@ def home():
     schema = [{"@context": "https://schema.org", "@type": "WebSite", "name": "Charles Carper", "url": SITE + "/"}, PERSON_LD]
     write('/', page('/', 'Charles Carper | New D.R. Horton Homes in Raleigh-Durham',
                     'New D.R. Horton homes around Raleigh-Durham, and a guide from your first visit to move-in day. A move-in ready list updated weekly, quick planners for selling, renting and budgeting, and straight answers from Charles Carper.',
-                    body, active=None, scripts=['/js/forms.js'], schema=schema))
+                    body, active=None, scripts=['/js/forms.js'], schema=schema, fine=['prices', 'sqft', 'model'], revised=d['asOf']))
 
 
 def move_in_ready():
@@ -164,7 +164,7 @@ def move_in_ready():
 '''
     write('/move-in-ready/', page('/move-in-ready/', 'Move-In Ready D.R. Horton Homes in Raleigh-Durham | Charles Carper',
                                   'Finished and almost-finished D.R. Horton homes around Raleigh-Durham, updated weekly. Prices shown with their date. Book a visit to any home.',
-                                  body, active='homes', scripts=['/js/forms.js', '/js/homes.js']))
+                                  body, active='homes', scripts=['/js/forms.js', '/js/homes.js'], fine=['prices', 'sqft'], revised=d['asOf']))
 
 
 def other_community_form():
@@ -282,20 +282,20 @@ def visit():
 '''
     write('/visit/', page('/visit/', 'Book a Visit | Charles Carper, D.R. Horton Raleigh-Durham',
                           'Pick a time to see the homes that fit. Plan on about an hour at the Collins Ridge model in Hillsborough. Bring anyone who is helping you decide, and your agent if you have one.',
-                          body, active=None, scripts=['/js/forms.js', '/js/visit.js']))
+                          body, active=None, scripts=['/js/forms.js', '/js/visit.js'], fine=['model']))
 
 
 AREA_TIMES = [
-    ('Close to home', [('Downtown Hillsborough (Weaver Street Market)', '1.2 mi · 3.5 min'), ('Occoneechee Mountain State Natural Area', '1.8 mi · 5 min'),
-                       ('Gold Park', '2.3 mi · 6 min'), ('Aldi', '2.4 mi · 7 min'), ('Walmart Supercenter', '2.6 mi · 8 min'),
-                       ('UNC Hospitals Hillsborough', '2.8 mi · 9 min'), ('Eno River, Pleasant Green Access', '7.6 mi · 13 min')]),
-    ('Durham and Chapel Hill', [('Duke University Hospital', '11.7 mi · 18 min'), ('Duke University Chapel', '12.2 mi · 21 min'),
-                                ('American Tobacco Campus, Durham', '13.9 mi · 21 min'), ('Franklin Street, Chapel Hill', '11.9 mi · 23 min'),
-                                ('Weaver Street Market, Carrboro', '12.2 mi · 24 min'), ('Duke Regional Hospital', '14.1 mi · 24 min'),
-                                ('UNC Hospitals, Chapel Hill', '12.6 mi · 26 min')]),
-    ('Work and travel', [('The Streets at Southpoint', '17.6 mi · 26 min'), ('Research Triangle Park', '21.2 mi · 31 min'),
-                         ('Raleigh-Durham Airport (RDU)', '27.2 mi · 40 min'), ('Downtown Raleigh', '37.3 mi · 53 min')]),
-    ('West, toward Mebane', [('Downtown Mebane', '10.7 mi · 17 min'), ('Downtown Burlington', '21.2 mi · 29 min')]),
+    ('Close to home', [('Downtown Hillsborough (Weaver Street Market)', '1.2 mi'), ('Occoneechee Mountain State Natural Area', '1.8 mi'),
+                       ('Gold Park', '2.3 mi'), ('Aldi', '2.4 mi'), ('Walmart Supercenter', '2.6 mi'),
+                       ('UNC Hospitals Hillsborough', '2.8 mi'), ('Eno River, Pleasant Green Access', '7.6 mi')]),
+    ('Durham and Chapel Hill', [('Duke University Hospital', '11.7 mi'), ('Duke University Chapel', '12.2 mi'),
+                                ('American Tobacco Campus, Durham', '13.9 mi'), ('Franklin Street, Chapel Hill', '11.9 mi'),
+                                ('Weaver Street Market, Carrboro', '12.2 mi'), ('Duke Regional Hospital', '14.1 mi'),
+                                ('UNC Hospitals, Chapel Hill', '12.6 mi')]),
+    ('Work and travel', [('The Streets at Southpoint', '17.6 mi'), ('Research Triangle Park', '21.2 mi'),
+                         ('Raleigh-Durham Airport (RDU)', '27.2 mi'), ('Downtown Raleigh', '37.3 mi')]),
+    ('West, toward Mebane', [('Downtown Mebane', '10.7 mi'), ('Downtown Burlington', '21.2 mi')]),
 ]
 
 
@@ -307,7 +307,7 @@ def area_lists():
         out += lst if i == 0 else ''
     more = ''.join('<h3 style="margin-top:20px">' + esc(h) + '</h3><ul class="area-list">' + ''.join(
         '<li><span>' + esc(a) + '</span><span>' + esc(b) + '</span></li>' for a, b in rows) + '</ul>' for h, rows in AREA_TIMES[1:])
-    return out + '<details class="more"><summary>Show all drive times</summary>' + more + '</details>'
+    return out + '<details class="more"><summary>Show all distances</summary>' + more + '</details>'
 
 
 def collins_ridge():
@@ -367,7 +367,7 @@ def collins_ridge():
       <ul class="ticks">
         <li>Quartz countertops</li><li>A stainless gas range, microwave and dishwasher</li>
         <li>A smart home: video doorbell, keypad lock, smart thermostat and alarm panel</li>
-        <li>Hardie siding</li><li>9-foot ceilings on the first floor</li><li>A 10-year structural warranty</li>
+        <li>Fiber cement siding</li><li>9-foot ceilings on the first floor</li><li>The RWC Limited Warranty, with 10-year structural coverage</li>
       </ul>
       <p class="note" style="margin-top:20px">The list can change, so get it in writing before you sign.</p>
       <h2 style="margin:40px 0 16px">In the community</h2>
@@ -376,8 +376,8 @@ def collins_ridge():
     </div>
     <div id="area">
       <h2 style="margin-bottom:16px">Around town</h2>
-      <p>Downtown Hillsborough is half a mile away, with shops, places to eat and the Riverwalk along the Eno River. Eno River State Park is close by.</p>
-      <p class="quiet small">Driving distance and time from the model at 116 Sea Trail St. Times are approximate, off-peak, with no traffic. Add time at rush hour.</p>
+      <p>Downtown Hillsborough is about half a mile from the community entrance, with shops, places to eat and the Riverwalk along the Eno River. Eno River State Park is close by.</p>
+      <p class="quiet small">Driving distance from the model at 116 Sea Trail St. Distances are approximate.</p>
       {area_lists()}
       <p style="margin-top:20px"><a class="arrow" href="/guides/living-in-hillsborough-nc">Living in Hillsborough, NC</a></p>
     </div>
@@ -402,7 +402,7 @@ def collins_ridge():
     schema = [{"@context": "https://schema.org", "@type": "Place", "name": "Collins Ridge", "address": {"@type": "PostalAddress", "streetAddress": "116 Sea Trail St", "addressLocality": "Hillsborough", "addressRegion": "NC", "postalCode": "27278", "addressCountry": "US"}}]
     write('/collins-ridge/', page('/collins-ridge/', 'Collins Ridge: New D.R. Horton Homes in Hillsborough, NC | Charles Carper',
                                   'Townhomes, one-story and two-story D.R. Horton homes a short walk from downtown Hillsborough. Saltwater pool, gym, pickleball and trails. Tour the furnished model at 116 Sea Trail St.',
-                                  body, active='collins', schema=schema))
+                                  body, active='collins', schema=schema, fine=['model', 'appliances', 'features', 'smart', 'warranty', 'options']))
 
 
 def floor_plans():
@@ -430,7 +430,7 @@ def floor_plans():
 '''
     write('/collins-ridge/floor-plans/', page('/collins-ridge/floor-plans/', 'Collins Ridge Floor Plans, Hillsborough NC | Charles Carper',
                                               'All 12 Collins Ridge floor plans by D.R. Horton, from townhomes to one-story homes, with what makes each one different and starting prices with their date.',
-                                              body, active='collins'))
+                                              body, active='collins', fine=['prices', 'base', 'plans'], revised=PLANS_ASOF_ISO))
 
 
 FAQ = [
@@ -442,7 +442,7 @@ FAQ = [
         ('Can I buy if I still have a home to sell?', 'Yes. You can sell first, buy first, or buy with a home-sale contingency, and there are programs that help you buy before you sell. Each D.R. Horton home has its own rules for contingencies, and they can change, so ask me about the home you like. <a href="/plan/sell-and-buy/">Get your sell &amp; buy plan</a>'),
         ('Can I get my own home inspection?', "Yes. You can hire your own licensed home inspector before the drywall goes up, and again before closing. Work doesn't stop for an inspection, so it has to fit the build schedule. Tell me early, and I'll help you line it up."),
         ('What happens with what my inspector finds?', 'You or your inspector can send the report to the builder. Reports often list a lot of items, and that\'s normal. Each item gets reviewed, and you hear back. What gets fixed, and how, is set by your purchase agreement and the warranty, so read both.'),
-        ('How does the warranty work?', 'Homes come with a builder warranty, including a 10-year structural warranty. Your warranty book has the terms and the timing. After you move in, you send requests through the online warranty portal. I\'ll show you where before you close. <a href="/guides/new-home-warranty-coverage">More on what a new home warranty covers</a>'),
+        ('How does the warranty work?', 'Homes come with the RWC Limited Warranty, including 10-year structural coverage. Your warranty book has the terms and the timing. After you move in, you send requests through the online warranty portal. I\'ll show you where before you close. <a href="/guides/new-home-warranty-coverage">More on what a new home warranty covers</a>'),
     ]),
     ('hoa', 'HOA', [
         ('What does the HOA cover?', 'The shared spaces: the entrances, community landscaping, the amenities and the stormwater ponds. Dues also pay for the HOA\'s insurance, its management, and savings for future repairs. On townhomes, the HOA also takes care of the outside of the home, the roof shingles, the gutters and the lawn. The HOA papers spell out exactly what. For the current dues and budget, ask me or HOA management.'),
@@ -486,7 +486,8 @@ def faq():
 '''
     write('/collins-ridge/faq/', page('/collins-ridge/faq/', 'Collins Ridge FAQ: Buying, HOA and Schools | Charles Carper',
                                       'Plain answers about buying at Collins Ridge in Hillsborough, NC: homes ready now, build times, what comes with the home, the HOA, schools and working with me.',
-                                      body, active='collins', schema=[{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": ld}]))
+                                      body, active='collins', schema=[{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": ld}],
+                                      fine=['features', 'smart', 'warranty', 'options', 'hoa', 'schools']))
 
 
 def plan_hub():
@@ -495,13 +496,13 @@ def plan_hub():
   <div class="wrap">
     {crumbs([('Home', '/'), ('Plan your move', None)])}
     <h1>Plan your move.</h1>
-    <p class="lead">Free, and about two minutes each. You type in your own numbers, so the answer is an estimate, not a loan offer.</p>
+    <p class="lead">About two minutes each. You type in your own numbers, so the answer is an estimate, not a loan offer.</p>
   </div>
 </section>
 <section class="section tight">
   <div class="wrap">
     {tool_tiles(['sell-and-buy', 'two-mortgages', 'lease-to-keys', 'buying-power', 'floor-plan-match'])}
-    <p class="note measure" style="margin-top:28px">{ESTIMATE_LINE} Laura Hall at DHI Mortgage can help, or use any lender you like.</p>
+    <p class="note measure" style="margin-top:28px">{ESTIMATE_LINE} {LENDER_LINE}</p>
   </div>
 </section>
 <section class="section bg-white">
@@ -512,8 +513,8 @@ def plan_hub():
 </section>
 {closing('Rather talk it through? Bring your plan to a visit.', cta='Book a visit')}
 '''
-    write('/plan/', page('/plan/', 'Plan Your Move: Free Home Buying Planners | Charles Carper',
-                         'Free two-minute planners for buying a new home in Raleigh-Durham: sell first or buy first, two mortgages, lease timing, buying power and floor plans.',
+    write('/plan/', page('/plan/', 'Plan Your Move: Home Buying Planners | Charles Carper',
+                         'Two-minute planners for buying a new home in Raleigh-Durham: sell first or buy first, two mortgages, lease timing, buying power and floor plans.',
                          body, active='plan'))
 
 
@@ -549,7 +550,7 @@ def about():
 '''
     write('/about/', page('/about/', 'About Charles Carper | New Home Sales Consultant, D.R. Horton Raleigh-Durham',
                           'Charles Carper sells new D.R. Horton homes around Raleigh-Durham, based at Collins Ridge in Hillsborough. He built homes for almost two years and bought a new home himself in 2009.',
-                          body, active='about', schema=[PERSON_LD]))
+                          body, active='about', schema=[PERSON_LD], fine=['model']))
 
 
 def agents():
@@ -627,6 +628,21 @@ def privacy():
     write('/privacy/', page('/privacy/', 'Privacy | Charles Carper', 'What charlescarper.com collects, why, and who sees it.', body, robots='noindex'))
 
 
+FINE_LABELS = [('prices', 'Prices'), ('base', 'Base plan prices'), ('sqft', 'Square footage'), ('plans', 'Floorplans'),
+               ('model', 'Model home photos'), ('appliances', 'Appliances'), ('features', 'Included features'), ('smart', 'Smart home'),
+               ('warranty', 'Warranty'), ('options', 'Options and upgrades'), ('dates', 'Move-in dates'), ('hoa', 'HOA dues'), ('schools', 'Schools')]
+
+
+def fine_print_list():
+    rows = []
+    for k, label in FINE_LABELS:
+        text = DISCLAIMERS[k]
+        if k == 'warranty':
+            text = 'Homes come with the RWC Limited Warranty. ' + text
+        rows.append('<li><b>' + esc(label) + '.</b> ' + esc(text) + '</li>')
+    return '<ul class="fine-list">' + ''.join(rows) + '</ul>'
+
+
 def disclosures():
     body = f'''
 <section class="page-head"><div class="wrap">{crumbs([('Home', '/'), ('Disclosures', None)])}<h1>Disclosures</h1><p class="lead">Who I work for, where the prices come from, and what the planners can and can't tell you.</p></div></section>
@@ -637,7 +653,7 @@ def disclosures():
   <h2>Prices and homes</h2>
   <p>Prices and homes come from drhorton.com and change often. Every price on this site is shown with the date I checked it. The move-in ready list is updated weekly, so a home can sell before the list catches up. Text me to check a home before you come.</p>
   <h2>The planners</h2>
-  <p>{ESTIMATE_LINE} You type in your own numbers. No rate is filled in for you. For a real answer, talk to a lender: Laura Hall at DHI Mortgage, or any lender you like.</p>
+  <p>{ESTIMATE_LINE} You type in your own numbers. No rate is filled in for you. For a real answer, talk to a lender you trust. I'm happy to share names.</p>
   <h2>Special offers</h2>
   <p>There's often a special offer. It changes often, so I share the details one-on-one. Nothing here is an offer.</p>
   <h2>Photos</h2>
@@ -645,7 +661,10 @@ def disclosures():
   <h2>My AI assistant</h2>
   <p>Some videos use my AI assistant. It's made from my face and voice, and I write what it says. Those videos are labeled.</p>
   <h2>Fair housing</h2>
-  <p>Equal Housing Opportunity. I'll help anyone find a home that fits.</p>
+  <p>D.R. Horton is an Equal Housing Opportunity Builder. I'll help anyone find a home that fits.</p>
+  <h2>The fine print</h2>
+  <p>Each page carries the lines for what it shows. Here they all are in one place.</p>
+  {fine_print_list()}
 </div></section>
 '''
     write('/disclosures/', page('/disclosures/', 'Disclosures | Charles Carper', 'Who Charles Carper works for, where prices come from, and what the planners on this site can and cannot tell you.', body))

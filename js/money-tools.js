@@ -4,7 +4,7 @@
 (function () {
   'use strict';
 
-  // Debt-to-income bands for the Two-Mortgage Check. Laura Hall (DHI Mortgage) signs off before launch.
+  // Debt-to-income bands for the Two-Mortgage Check. A lender signs off before launch; DHI Mortgage Compliance 911 reviews the page.
   var DTI_OK = 43, DTI_STRETCH = 50;
   // Buying Power: 28% of pay for housing and 36% for all debts is the comfortable end; 43% of pay is the stretch end.
   var FRONT = 0.28, BACK = 0.36, BACK_MAX = 0.43;
@@ -31,7 +31,7 @@
   }
 
   function lenderBox() {
-    return '<div class="plan-box"><h3>Talk to a lender</h3><p>Laura Hall at DHI Mortgage can price this for real, or use any lender you like. Bring these numbers.</p></div>';
+    return '<div class="plan-box"><h3>Talk to a lender</h3><p>A lender can price this for real. Bring these numbers. I\'m happy to share names.</p></div>';
   }
 
   // Shared flow: validate, show the free answer, offer the gate, then the full plan.
@@ -250,7 +250,7 @@
     var early = 2 * r.rent, lateM2M = r.m2m > 0 ? 2 * r.m2m : NaN;
     var noticeBy = addDays(r.lease, -60);
     var steps = [
-      ['Now', 'Talk to a lender and get preapproved. Laura Hall at DHI Mortgage can help, or use any lender you like.'],
+      ['Now', 'Talk to a lender and get preapproved. I\'m happy to share names.'],
       [r.stage === 'starting' && addDays(r.target, -180) > r.today ? 'By ' + fmtM(addDays(r.target, -180)) : 'Next', PICK[r.stage]],
       ['Once your closing date is firm', 'Give notice the way your lease says. Many leases ask for 30 to 60 days, so check yours. A safe target: ' + fmt(noticeBy) + ' or later, once the date is firm.'],
       ['Move-in', 'Close, get your keys and move between ' + fmt(r.start) + ' and ' + fmt(r.end) + '.']

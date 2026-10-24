@@ -1,8 +1,8 @@
 """Tool pages under /plan/. The free answer shows right away; the full plan unlocks with an email."""
-from ccsite import esc, page, write, crumbs, closing, shot, ESTIMATE_LINE, TOOLS, sms, PHONE, PHONE_SHOW
+from ccsite import esc, page, write, crumbs, closing, shot, ESTIMATE_LINE, LENDER_LINE, TOOLS, sms, PHONE, PHONE_SHOW
 
 SUB = 'About two minutes. You type in your own numbers. The answer is an estimate, not a loan offer.'
-LENDER = 'Talk to a lender: Laura Hall at DHI Mortgage, or any lender you like.'
+LENDER = LENDER_LINE
 RATE_HELP = ('<a href="https://www.freddiemac.com/pmms" target="_blank" rel="noopener">Freddie Mac\'s weekly national average</a> is a fair place to start. '
              'Your lender has your real rate.')
 
@@ -143,7 +143,7 @@ def floor_plan_match():
     path = TOOLS['floor-plan-match'][0]
     write(path, page(path, 'Floor Plan Match: Your Top 2 Collins Ridge Plans | Charles Carper',
                      'Five taps narrow the 12 Collins Ridge floor plans to the two that fit how you live: stories, bedrooms, size and your must-haves.',
-                     body, active='plan', scripts=['/js/forms.js', '/plan-tools.js']))
+                     body, active='plan', scripts=['/js/forms.js', '/plan-tools.js'], fine=['sqft', 'plans']))
 
 
 def two_mortgages():

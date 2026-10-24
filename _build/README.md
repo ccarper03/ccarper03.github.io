@@ -21,6 +21,14 @@ Run from the repo root:
 
 The copy comes from the Page map and copy tab of the lead strategy doc. Edit the copy in these files, then rebuild.
 
+## Disclaimers
+
+D.R. Horton's Marketing Guidelines and Disclaimers (rev. 7/28/2025) set the wording. The lines live in `DISCLAIMERS` in
+`ccsite.py`. Each page passes the keys for what it shows, `page(..., fine=['prices', 'sqft'])`, and the footer prints them
+with a "Revised" date. Guides get theirs from what their text mentions (`guide_fine`). The Disclosures page lists them all.
+Rules the copy follows: no drive times (distance only), no "free," no "realtor," "from the $X" prices in $10,000 steps,
+no lender named until Compliance 911 approves the wording. Bump `COPY_REVISED` when page copy changes.
+
 ## Data
 
 `data/move-in-ready.json` feeds the home cards on the home page and the move-in ready list. The Monday refresh
@@ -47,7 +55,7 @@ swap each slot's image in the page file and set `SHOW_PLACEHOLDERS = False` in `
 - `plan-tools.js`: the Sell & Buy Planner questions and paths, and Floor Plan Match.
 - `js/sell-buy-calc.js`: the four-slider calculator (ported from the home-to-sell-planner repo).
 - `js/money-tools.js`: Two-Mortgage Check, Buying Power Estimate, Lease-to-Keys Planner. The debt-to-income
-  bands at the top need Laura Hall's sign-off before launch.
+  bands at the top need a lender's sign-off, and the financing pages need DHI Mortgage Compliance 911 approval.
 - `js/homes.js`, `js/visit.js`: move-in ready filters, and the two-step visit booking.
 
 ## Older guide sources

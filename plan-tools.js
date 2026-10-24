@@ -790,7 +790,7 @@
     html += '<div class="plan-box" style="margin-top:20px"><h3>Watch out for</h3><p>' + esc(p.watch) + '</p></div>';
     html += '<div class="plan-box"><h3>Your backup plan</h3><p>' + esc(p.backup) + '</p></div>';
     html += '</div><div>';
-    html += '<div class="plan-box"><h3>Ask your lender</h3>' + list(p.lender) + '<p class="small" style="margin-top:8px">Laura Hall at DHI Mortgage can help, or use any lender you like.</p></div>';
+    html += '<div class="plan-box"><h3>Ask your lender</h3>' + list(p.lender) + '<p class="small" style="margin-top:8px">I\'m happy to share lender names.</p></div>';
     if (owner) html += '<div class="plan-box"><h3>Ask your listing agent</h3>' + list(agentQs(a)) + (a.agent === 'no' ? '<p class="small" style="margin-top:8px">Don’t have one yet? Pick an agent you trust. I don’t list homes, but I’ll work with yours on the timing.</p>' : '') + '</div>';
     html += '</div></div>';
     html += '<section class="plan-next" aria-labelledby="pn-h"><h3 id="pn-h">Your next step</h3><p>I’ll look at your plan, tell you what I’d change, and show you the homes that fit it. No pressure.</p>';

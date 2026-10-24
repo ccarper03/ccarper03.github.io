@@ -353,6 +353,10 @@ details.more summary, .more-times summary { cursor: pointer; font-weight: 600; c
 .footer-legal svg { width: 40px; height: 40px; flex: 0 0 40px; }
 .footer-legal p { margin: 0; flex: 1 1 480px; min-width: 0; }
 .footer-legal a { text-decoration: underline; }
+/* Page disclaimers: D.R. Horton Guidelines IV.A.5 asks for at least 9-point; 13px clears it */
+.footer-legal .fine-print { flex: 1 1 100%; margin: 0; padding-top: 14px; border-top: 1px solid #2A3540; }
+.fine-list { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 10px; font-size: 14px; line-height: 1.6; color: var(--slate); }
+.fine-list b { color: var(--ink); }
 .mbar { display: none; }
 @media (max-width: 720px) {
   .mbar { display: flex; position: fixed; left: 0; right: 0; bottom: 0; z-index: 55; gap: 10px; padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
